@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDGE IPTV - Your all-in-one IPTV player for iPhone & iPad</title>
+    <meta name="description"
+        content="EDGE IPTV is your all-in-one IPTV player for iPhone and iPad. Fast setup, Chromecast support, offline viewing, and multilingual interface. Download now on App Store.">
+    <meta name="keywords"
+        content="IPTV, IPTV player, iPhone, iPad, Chromecast, streaming, Xtream, offline viewing, mobile IPTV">
+    <meta name="author" content="EDGE IPTV">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edge-iptv.app/">
+    
+    <!-- Hreflang links -->
+    <link rel="alternate" hreflang="en" href="https://edge-iptv.app/">
+    <link rel="alternate" hreflang="fr" href="https://edge-iptv.app/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://edge-iptv.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edge-iptv.app/">
+    <meta property="og:title" content="EDGE IPTV - Your all-in-one IPTV player for iPhone & iPad">
+    <meta property="og:description"
+        content="EDGE IPTV is your all-in-one IPTV player for iPhone and iPad. Fast setup, Chromecast support, offline viewing, and multilingual interface.">
+    <meta property="og:image" content="https://edge-iptv.app/images/iphone-series-3d.png">
+    <meta property="og:site_name" content="EDGE IPTV">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://edge-iptv.app/">
+    <meta property="twitter:title" content="EDGE IPTV - Your all-in-one IPTV player for iPhone & iPad">
+    <meta property="twitter:description"
+        content="EDGE IPTV is your all-in-one IPTV player for iPhone and iPad. Fast setup, Chromecast support, offline viewing, and multilingual interface.">
+    <meta property="twitter:image" content="https://edge-iptv.app/images/iphone-series-3d.png">
+
+    <!-- App Store meta -->
+    <meta name="apple-itunes-app" content="app-id=6745966143">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Favicon and icons -->
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="apple-touch-icon" href="images/icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Performance optimization -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="Fri, 01 Oct 2026 00:00:00 GMT">
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://apps.apple.com">
+    <link rel="preload" href="images/iphone-series-3d.png" as="image" fetchpriority="high">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "EDGE IPTV",
+      "description": "Your all-in-one IPTV player for iPhone and iPad. Fast setup, Chromecast support, offline viewing, and multilingual interface.",
+      "operatingSystem": "iOS",
+      "applicationCategory": "EntertainmentApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "downloadUrl": "https://apps.apple.com/ca/app/edge-iptv/id6745966143",
+      "author": {
+        "@type": "Organization",
+        "name": "EDGE IPTV"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "100"
+      },
+        "screenshot": [
+        "https://edge-iptv.app/images/language-selection.jpeg",
+        "https://edge-iptv.app/images/series-view.png",
+        "https://edge-iptv.app/images/movie-details.png"
+      ],
+      "featureList": [
+        "Quick Xtream setup",
+        "Chromecast support",
+        "Offline viewing",
+        "Multilingual interface",
+        "Favorites management",
+        "Fast streaming"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema for better SERP features -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is EDGE IPTV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDGE IPTV is an all-in-one IPTV player for iPhone and iPad that allows you to stream your favorite channels, movies, and series with Xtream connection support."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does EDGE IPTV support Chromecast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, EDGE IPTV supports Chromecast, allowing you to enjoy your content on the big screen."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I watch content offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, EDGE IPTV allows you to download content and watch it offline without an internet connection."
+        }
+      }]
+    }
+    </script>
+    <!-- Critical CSS inlined -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        .hero-description {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        .phone-mockup {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-fit: contain;
+        }
+        @media (max-width: 768px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Google Analytics (replace GA_MEASUREMENT_ID with your actual ID) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</head>
+
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+        <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/icon.png" alt="EDGE IPTV" class="logo-img">
+                <span class="logo-text">EDGE IPTV</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-fr="Votre lecteur IPTV tout-en-un"
+                        data-en="Your all-in-one IPTV player">
+                        Your all-in-one IPTV player
+                    </h1>
+                    <p class="hero-subtitle"
+                        data-fr="Conçu pour la vitesse, la simplicité et une expérience de visionnage fluide."
+                        data-en="Designed for speed, simplicity and a smooth viewing experience.">
+                        Designed for speed, simplicity and a smooth viewing experience.
+                    </p>
+                    <p class="hero-description"
+                        data-fr="Ajoutez votre connexion Xtream en quelques secondes et commencez à regarder vos chaînes, films et séries préférés instantanément."
+                        data-en="Add your Xtream connection in seconds and start watching your favorite channels, movies and series instantly.">
+                        Add your Xtream connection in seconds and start watching your favorite channels, movies and series instantly.
+                    </p>
+
+                    <div class="download-buttons">
+                        <a href="https://apps.apple.com/ca/app/edge-iptv/id6745966143" class="btn btn-primary"
+                            rel="noopener" target="_blank"
+                            aria-label="Download EDGE IPTV for iPhone and iPad on App Store">
+                            <svg class='apple-logo' viewBox='0 0 24 24' width='18' height='18'>
+                                <path fill='currentColor'
+                                    d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z' />
+                            </svg>
+                            <span data-fr="Télécharger pour iPhone & iPad" data-en="Download for iPhone & iPad">Download for iPhone & iPad</span>
+                        </a>
+                        <a href="#features" class="btn btn-secondary" data-fr="En savoir plus" data-en="Learn more"
+                            aria-label="Learn more about EDGE IPTV features">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="images/iphone-series-3d.png"
+                        alt="EDGE IPTV app interface showing series selection on iPhone" class="phone-mockup"
+                        loading="eager" fetchpriority="high" width="400" height="800">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-fr="Pourquoi vous allez adorer Edge IPTV"
+                data-en="Why you'll love Edge IPTV">
+                Why you'll love Edge IPTV
+            </h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-fr="Installation rapide" data-en="Quick setup">Quick setup</h3>
+                    <p data-fr="Connexion Xtream en quelques étapes" data-en="Xtream connection in a few steps">
+                        Xtream connection in a few steps
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 data-fr="Fluide et rapide" data-en="Smooth and fast">Smooth and fast</h3>
+                    <p data-fr="Interface claire et réactive" data-en="Clear and responsive interface">
+                        Clear and responsive interface
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📺</div>
+                    <h3 data-fr="Diffusion sur TV" data-en="TV casting">TV casting</h3>
+                    <p data-fr="Profitez sur grand écran avec Chromecast"
+                        data-en="Enjoy on the big screen with Chromecast">
+                        Enjoy on the big screen with Chromecast
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⬇️</div>
+                    <h3 data-fr="Visionnage hors ligne" data-en="Offline viewing">Offline viewing</h3>
+                    <p data-fr="Téléchargez vos contenus et regardez sans internet"
+                        data-en="Download your content and watch without internet">
+                        Download your content and watch without internet
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3 data-fr="Favoris" data-en="Favorites">Favorites</h3>
+                    <p data-fr="Regroupez vos chaînes, films et séries préférés"
+                        data-en="Group your favorite channels, movies and series">
+                        Group your favorite channels, movies and series
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 data-fr="Multilingue" data-en="Multilingual">Multilingual</h3>
+                    <p data-fr="Anglais, Français, Espagnol, Portugais, Turc"
+                        data-en="English, French, Spanish, Portuguese, Turkish">
+                        English, French, Spanish, Portuguese, Turkish
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title" data-fr="Découvrez l'interface" data-en="Discover the interface">
+                Discover the interface
+            </h2>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="images/language-selection.jpeg"
+                        alt="EDGE IPTV language selection screen with multiple language options" class="screenshot-img"
+                        loading="lazy" decoding="async" width="300" height="650">
+                    <h3 data-fr="Sélection de langue" data-en="Language selection">Language selection</h3>
+                </div>
+
+                <div class="screenshot-item">
+                    <img src="images/series-view.png" alt="EDGE IPTV series browsing interface showing TV series grid"
+                        class="screenshot-img" loading="lazy" decoding="async" width="300" height="650">
+                    <h3 data-fr="Vue des séries" data-en="Series view">Series view</h3>
+                </div>
+
+                <div class="screenshot-item">
+                    <img src="images/movie-details.png"
+                        alt="EDGE IPTV movie details page with information and play options" class="screenshot-img"
+                        loading="lazy" decoding="async" width="300" height="650">
+                    <h3 data-fr="Détails du film" data-en="Movie details">Movie details</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-fr="Prêt à commencer ?" data-en="Ready to get started?">Ready to get started?</h2>
+                <p data-fr="Profitez-en à votre façon – diffusez en direct, envoyez sur votre TV ou téléchargez pour regarder hors ligne à tout moment."
+                    data-en="Enjoy it your way – stream live, cast to your TV or download to watch offline anytime.">
+                    Enjoy it your way – stream live, cast to your TV or download to watch offline anytime.
+                </p>
+                <a href="https://apps.apple.com/ca/app/edge-iptv/id6745966143" class="btn btn-primary btn-large"
+                    rel="noopener" target="_blank" aria-label="Download EDGE IPTV now on App Store">
+                    <svg class='apple-logo' viewBox='0 0 24 24' width='18' height='18'>
+                        <path fill='currentColor'
+                            d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z' />
+                    </svg>
+                    <span data-fr="Télécharger maintenant" data-en="Download now">Download now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/icon.png" alt="EDGE IPTV" class="footer-logo-img">
+                    <span>EDGE IPTV</span>
+                </div>
+
+                <div class="footer-contact">
+                    <p data-fr="Pour toute question :" data-en="For any questions:">Pour toute question :</p>
+                    <a href="mailto:contact@edge-iptv.app">contact@edge-iptv.app</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 EDGE IPTV. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous
+                        droits réservés.</span></p>
+                <div class="footer-links">
+                    <a href="how-to-install-iptv-iphone-ipad.html" data-fr="Guide d'Installation" data-en="Installation Guide">Installation Guide</a>
+                    <span class="separator"> | </span>
+                    <a href="privacy-policy.html" data-fr="Politique de Confidentialité"
+                        data-en="Privacy Policy">Politique de Confidentialité</a>
+                    <span class="separator"> | </span>
+                    <a href="terms-of-use.html" data-fr="Conditions d'Utilisation" data-en="Terms of Use">Conditions d'Utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

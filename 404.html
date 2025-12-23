@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - EDGE IPTV</title>
+    <meta name="description"
+        content="The page you're looking for doesn't exist. Return to EDGE IPTV homepage to discover our all-in-one IPTV player for iPhone and iPad.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://edge-iptv.app/">
+
+    <!-- Favicon and icons -->
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 20px 60px;
+        }
+
+        .error-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-number {
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .error-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .error-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .error-description {
+                font-size: 1.1rem;
+            }
+
+            .error-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+        <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/icon.png" alt="EDGE IPTV" class="logo-img">
+                    <span class="logo-text">EDGE IPTV</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 404 Error Page -->
+    <section class="error-page">
+        <div class="error-content">
+            <div class="error-icon">📺</div>
+            <div class="error-number">404</div>
+            <h1 class="error-title" data-fr="Page introuvable" data-en="Page Not Found">
+                Page Not Found
+            </h1>
+            <p class="error-description"
+                data-fr="Désolé, la page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil pour découvrir EDGE IPTV."
+                data-en="Sorry, the page you're looking for doesn't exist or has been moved. Return to the homepage to discover EDGE IPTV.">
+                Sorry, the page you're looking for doesn't exist or has been moved. Return to the homepage to discover
+                EDGE IPTV.
+            </p>
+
+            <div class="error-buttons">
+                <a href="index.html" class="btn btn-primary" data-fr="Retour à l'accueil" data-en="Back to Homepage">
+                    Back to Homepage
+                </a>
+                <a href="https://apps.apple.com/ca/app/edge-iptv/id6745966143" class="btn btn-secondary" rel="noopener"
+                    target="_blank" data-fr="Télécharger l'app" data-en="Download App">
+                    Download App
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/icon.png" alt="EDGE IPTV" class="footer-logo-img">
+                    <span>EDGE IPTV</span>
+                </div>
+
+                <div class="footer-contact">
+                    <p data-fr="Pour toute question :" data-en="For any questions:">For any questions:</p>
+                    <a href="mailto:contact@edge-iptv.app">contact@edge-iptv.app</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 EDGE IPTV. <span data-fr="Tous droits réservés." data-en="All rights reserved.">All
+                        rights reserved.</span></p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html" data-fr="Politique de Confidentialité"
+                        data-en="Privacy Policy">Privacy Policy</a>
+                    <span class="separator"> | </span>
+                    <a href="terms-of-use.html" data-fr="Conditions d'Utilisation" data-en="Terms of Use">Terms of
+                        Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
