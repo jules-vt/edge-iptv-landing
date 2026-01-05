@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EDGE IPTV Landing Page
 
-## Getting Started
+Landing page for EDGE IPTV - Premium IPTV Player for iOS. Built with Next.js 16, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
+
+- 🌍 Multi-language support (English/French)
+- 📱 Fully responsive design
+- ⚡ Static site generation for optimal performance
+- 🔍 SEO optimized with structured data (Schema.org)
+- 📊 FAQ sections with rich snippets
+- 🍞 Breadcrumb navigation
+- 🎨 Modern UI with Tailwind CSS
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: VPS with Nginx
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
+# Install dependencies
+yarn install
+
+# Run development server
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Automatic Deployment (CI/CD)
 
-## Learn More
+The project uses GitHub Actions for automatic deployment to the VPS. On every push to `main`, the workflow:
 
-To learn more about Next.js, take a look at the following resources:
+1. Builds the Next.js static site
+2. Deploys to VPS via rsync over SSH
+3. Updates the live site at https://edge-iptv.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Required GitHub Secrets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Configure these secrets in your GitHub repository (Settings → Secrets and variables → Actions):
 
-## Deploy on Vercel
+- `SSH_PRIVATE_KEY`: Private SSH key for VPS access
+- `VPS_HOST`: VPS IP address (e.g., `72.60.172.173`)
+- `VPS_USER`: SSH user (e.g., `root`)
+- `VPS_PATH`: Deployment path (e.g., `/var/www/edge-iptv.app`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Manual Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Build the project
+yarn build
+
+# Copy .htaccess to out folder
+cp .htaccess out/.htaccess
+
+# Deploy to VPS
+cd out
+rsync -avz --delete --progress \
+  --exclude='.DS_Store' --exclude='*.txt' \
+  -e ssh ./ root@YOUR_VPS_IP:/var/www/edge-iptv.app/
+```
+
+## 📁 Project Structure
+
+```
+├── app/                    # Next.js App Router pages
+│   ├── fr/                # French version pages
+│   ├── layout.tsx         # Root layout (EN)
+│   └── page.tsx           # Home page (EN)
+├── components/            # React components
+│   ├── breadcrumb.tsx    # Breadcrumb navigation
+│   ├── faq.tsx           # FAQ component
+│   ├── schema-org.tsx    # Structured data
+│   └── ...
+├── lib/                   # Utilities
+├── public/               # Static assets
+│   └── images/          # Images
+├── .github/workflows/   # GitHub Actions
+└── out/                 # Build output (static files)
+```
+
+## 🔧 Configuration
+
+### Nginx Configuration
+
+The VPS uses Nginx with the following configuration for handling routes:
+
+- Redirects `/fr/` to `/fr.html`
+- Serves `.html` files without extension
+- Custom error pages (403 → 404)
+- Disable directory listing
+
+See `.htaccess` for Apache configuration (reference only).
+
+## 📝 License
+
+Proprietary - All rights reserved
