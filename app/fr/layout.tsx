@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
-import './globals.css';
 import { SchemaOrg } from '@/components/schema-org';
 
 export const metadata: Metadata = {
-  title: 'EDGE IPTV - Best IPTV Player for iPhone & iPad 2026',
-  description: 'Download EDGE IPTV: The #1 IPTV player for iOS. Chromecast support, offline viewing, Xtream codes. Fast setup in 30 seconds. 10,000+ downloads.',
+  title: 'EDGE IPTV - Meilleur Lecteur IPTV iPhone & iPad 2026',
+  description: 'Téléchargez EDGE IPTV : Le lecteur IPTV #1 pour iOS. Chromecast, hors ligne, codes Xtream. Configuration en 30 secondes. +10 000 téléchargements.',
   authors: [{ name: 'EDGE IPTV' }],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://edge-iptv.app/',
+    canonical: 'https://edge-iptv.app/fr/',
     languages: {
       'en': 'https://edge-iptv.app/',
       'fr': 'https://edge-iptv.app/fr/',
@@ -17,17 +16,17 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://edge-iptv.app/',
-    title: 'EDGE IPTV - Best IPTV Player for iPhone & iPad 2026',
-    description: 'Download EDGE IPTV: The #1 IPTV player for iOS. Chromecast support, offline viewing, Xtream codes. Fast setup in 30 seconds.',
+    url: 'https://edge-iptv.app/fr/',
+    title: 'EDGE IPTV - Meilleur Lecteur IPTV iPhone & iPad 2026',
+    description: 'Téléchargez EDGE IPTV : Le lecteur IPTV #1 pour iOS. Chromecast, hors ligne, codes Xtream. Configuration en 30 secondes.',
     images: ['https://edge-iptv.app/images/iphone-series-3d.png'],
     siteName: 'EDGE IPTV',
-    locale: 'en_US',
+    locale: 'fr_FR',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EDGE IPTV - Best IPTV Player for iPhone & iPad 2026',
-    description: 'The #1 IPTV player for iOS. Chromecast, offline viewing, fast setup.',
+    title: 'EDGE IPTV - Meilleur Lecteur IPTV iPhone & iPad 2026',
+    description: 'Le lecteur IPTV #1 pour iOS. Chromecast, hors ligne, configuration rapide.',
     images: ['https://edge-iptv.app/images/iphone-series-3d.png'],
   },
   other: {
@@ -35,15 +34,15 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default function FrLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="fr" className="scroll-smooth">
       <head>
-        <SchemaOrg lang="en" />
+        <SchemaOrg lang="fr" />
       </head>
       <body className="antialiased min-h-screen bg-background font-sans">
         {children}

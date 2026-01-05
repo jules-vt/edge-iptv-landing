@@ -5,6 +5,7 @@ import { Download, Tv, Wifi, Globe, Star, Zap, Shield, CheckCircle2 } from 'luci
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { FAQ } from '@/components/faq';
 
 export default function HomeFR() {
   return (
@@ -38,8 +39,8 @@ export default function HomeFR() {
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
             <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1]">
-              L'Expérience IPTV <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Ultime</span>
+              Meilleur Lecteur IPTV <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">pour iPhone & iPad</span>
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Transformez votre iPhone et iPad en un puissant centre de streaming. Configuration rapide, visionnage hors ligne et une interface magnifique conçue pour le divertissement moderne.
@@ -77,7 +78,7 @@ export default function HomeFR() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
                 <Image 
                   src="/images/iphone-series-3d.png" 
-                  alt="Interface de l'application EDGE IPTV" 
+                  alt="Interface de l'application EDGE IPTV affichant les chaînes TV en direct, la bibliothèque de films et la fonction Chromecast sur iPhone 15 Pro" 
                   width={400} 
                   height={800}
                   priority
@@ -145,17 +146,17 @@ export default function HomeFR() {
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
              <ScreenshotCard 
                src="/images/language-selection.jpeg" 
-               alt="Sélection de la langue" 
+               alt="Interface multilingue EDGE IPTV montrant l'écran de sélection de langue avec options français, anglais, espagnol sur iPhone" 
                title="Configuration Facile"
              />
              <ScreenshotCard 
                src="/images/series-view.png" 
-               alt="Vue des séries" 
+               alt="Bibliothèque de séries EDGE IPTV affichant les émissions TV organisées avec vignettes et listes d'épisodes sur iPad" 
                title="Contenu Organisé"
              />
              <ScreenshotCard 
                src="/images/movie-details.png" 
-               alt="Détails du film" 
+               alt="Page de détails de film EDGE IPTV montrant titre, description, informations sur le casting et bouton Chromecast" 
                title="Détails Riches"
              />
           </div>
@@ -184,6 +185,9 @@ export default function HomeFR() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ lang="fr" />
 
       {/* Footer */}
       <footer className="bg-secondary/50 border-t border-border/50 py-12">

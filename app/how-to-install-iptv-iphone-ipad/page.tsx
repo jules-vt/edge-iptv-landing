@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Download, ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'How to Install IPTV on iPhone & iPad - Complete Setup Guide 2025',
-  description: 'Complete step-by-step guide to install and configure IPTV on iPhone and iPad. Learn how to set up Xtream codes, configure playlists, and enjoy streaming on iOS devices.',
-  keywords: 'IPTV iPhone, IPTV iPad, install IPTV iOS, Xtream codes iPhone, IPTV setup guide, iPhone streaming, iPad IPTV player',
+  title: 'How to Install IPTV on iPhone & iPad - Step-by-Step Guide 2026',
+  description: 'Complete step-by-step guide to install and configure EDGE IPTV on iPhone and iPad. Learn how to set up Xtream codes, configure playlists, and start streaming in 30 seconds.',
   alternates: {
     canonical: 'https://edge-iptv.app/how-to-install-iptv-iphone-ipad',
     languages: {
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://edge-iptv.app/how-to-install-iptv-iphone-ipad',
-    title: 'How to Install IPTV on iPhone & iPad - Complete Setup Guide 2025',
-    description: 'Complete step-by-step guide to install and configure IPTV on iPhone and iPad. Learn how to set up Xtream codes and enjoy streaming.',
+    title: 'How to Install IPTV on iPhone & iPad - Step-by-Step Guide 2026',
+    description: 'Complete step-by-step guide to install and configure EDGE IPTV on iPhone and iPad. Learn how to set up Xtream codes and start streaming.',
     images: ['https://edge-iptv.app/images/iphone-series-3d.png'],
     siteName: 'EDGE IPTV',
     locale: 'en_US',
@@ -27,8 +27,67 @@ export const metadata: Metadata = {
 };
 
 export default function HowToInstall() {
+  // Schema.org HowTo for SEO
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Install IPTV on iPhone & iPad",
+    "description": "Step-by-step guide to install and configure EDGE IPTV on iPhone and iPad using Xtream codes",
+    "image": "https://edge-iptv.app/images/iphone-series-3d.png",
+    "totalTime": "PT2M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "0"
+    },
+    "tool": [{
+      "@type": "HowToTool",
+      "name": "iPhone or iPad running iOS 12.0+"
+    }],
+    "supply": [{
+      "@type": "HowToSupply",
+      "name": "IPTV subscription with Xtream codes"
+    }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Download EDGE IPTV",
+        "text": "Download the best IPTV player from the App Store. EDGE IPTV is specifically designed for iPhone and iPad with Chromecast support and offline viewing.",
+        "url": "https://edge-iptv.app/how-to-install-iptv-iphone-ipad#step1"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Launch and Select Language",
+        "text": "Open EDGE IPTV and select your preferred language from the beautiful multilingual interface.",
+        "url": "https://edge-iptv.app/how-to-install-iptv-iphone-ipad#step2",
+        "image": "https://edge-iptv.app/images/language-selection.jpeg"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Configure Xtream Codes",
+        "text": "Tap Add Playlist, select Xtream Codes, and enter your server URL, username, and password provided by your IPTV provider. Then tap Connect.",
+        "url": "https://edge-iptv.app/how-to-install-iptv-iphone-ipad#step3"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Start Streaming",
+        "text": "Browse through channels, movies, and series. Start streaming immediately with EDGE IPTV's intuitive interface.",
+        "url": "https://edge-iptv.app/how-to-install-iptv-iphone-ipad#step4",
+        "image": "https://edge-iptv.app/images/series-view.png"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -53,13 +112,15 @@ export default function HowToInstall() {
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-3xl">
-          <div className="mb-8 text-sm text-gray-500">
-            <Link href="/" className="text-blue-600 hover:underline">Home</Link> / How to Install IPTV on iPhone & iPad
-          </div>
+          <Breadcrumb 
+            items={[{ label: 'Home', href: '/' }]} 
+            currentPage="How to Install IPTV on iPhone & iPad"
+            lang="en"
+          />
           
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              How to Install IPTV on iPhone & iPad: Complete 2025 Guide
+              How to Install IPTV on iPhone & iPad: Complete 2026 Guide
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
               Learn how to set up IPTV streaming on your iOS devices in just a few minutes. This comprehensive guide will walk you through the entire process using the best IPTV player available.
@@ -86,7 +147,7 @@ export default function HowToInstall() {
 
           <div className="space-y-12">
             {/* Step 1 */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
+            <div id="step1" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Download the Best IPTV Player for iOS</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
@@ -113,7 +174,7 @@ export default function HowToInstall() {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
+            <div id="step2" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">2</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Launch the App and Select Language</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -131,7 +192,7 @@ export default function HowToInstall() {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
+            <div id="step3" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">3</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Configure Xtream Codes</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
@@ -155,7 +216,7 @@ export default function HowToInstall() {
             </div>
 
             {/* Step 4 */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
+            <div id="step4" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">4</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Enjoy Your Content!</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
