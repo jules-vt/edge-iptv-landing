@@ -1,11 +1,13 @@
 import { MetadataRoute } from 'next'
+import { blogPosts } from '@/lib/blog-posts'
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://edge-iptv.app'
 
-  return [
+  // Static pages
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -19,10 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/how-to-install-iptv-iphone-ipad`,
+      url: `${baseUrl}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/fr/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/privacy-policy`,
@@ -37,12 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/fr/comment-installer-iptv-iphone-ipad`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/fr/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
@@ -55,4 +57,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
   ]
+
+  // Blog posts - dynamically generated
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: post.lang === 'en' 
+      ? `${baseUrl}/blog/${post.slug}`
+      : `${baseUrl}/fr/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...blogPages]
 }
