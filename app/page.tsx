@@ -20,6 +20,9 @@ export default function Home() {
             <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
           </div>
           <div className="flex items-center gap-4">
+            <Link href="/blog" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link href="/fr" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               FR
             </Link>

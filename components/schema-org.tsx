@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface SchemaOrgProps {
@@ -5,6 +7,16 @@ interface SchemaOrgProps {
 }
 
 export function SchemaOrg({ lang = 'en' }: SchemaOrgProps) {
+  // Use useEffect to only render on client to avoid hydration mismatch
+  const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Don't render on server to avoid hydration mismatch
+  }
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -19,8 +31,8 @@ export function SchemaOrg({ lang = 'en' }: SchemaOrgProps) {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "1250",
+      "ratingValue": "5",
+      "ratingCount": "1000",
       "bestRating": "5",
       "worstRating": "1"
     },

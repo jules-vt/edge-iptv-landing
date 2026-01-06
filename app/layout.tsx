@@ -4,7 +4,7 @@ import { SchemaOrg } from '@/components/schema-org';
 
 export const metadata: Metadata = {
   title: 'EDGE IPTV - Best IPTV Player for iPhone & iPad 2026',
-  description: 'Download EDGE IPTV: The #1 IPTV player for iOS. Chromecast support, offline viewing, Xtream codes. Fast setup in 30 seconds. 10,000+ downloads.',
+  description: 'Download EDGE IPTV: The #1 IPTV player for iOS with 5/5 stars rating. Chromecast support, offline viewing, Xtream codes. 1,000+ downloads.',
   authors: [{ name: 'EDGE IPTV' }],
   robots: 'index, follow',
   alternates: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://edge-iptv.app/',
     title: 'EDGE IPTV - Best IPTV Player for iPhone & iPad 2026',
-    description: 'Download EDGE IPTV: The #1 IPTV player for iOS. Chromecast support, offline viewing, Xtream codes. Fast setup in 30 seconds.',
+    description: 'Download EDGE IPTV: The #1 IPTV player for iOS with 5/5 stars rating. Chromecast support, offline viewing. 1,000+ downloads.',
     images: ['https://edge-iptv.app/images/iphone-series-3d.png'],
     siteName: 'EDGE IPTV',
     locale: 'en_US',

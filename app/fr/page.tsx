@@ -20,6 +20,9 @@ export default function HomeFR() {
             <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
           </div>
           <div className="flex items-center gap-4">
+            <Link href="/fr/blog" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               EN
             </Link>

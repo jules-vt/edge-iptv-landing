@@ -40,13 +40,9 @@ export default function FrLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className="scroll-smooth">
-      <head>
-        <SchemaOrg lang="fr" />
-      </head>
-      <body className="antialiased min-h-screen bg-background font-sans">
-        {children}
-      </body>
-    </html>
+    <>
+      <SchemaOrg lang="fr" />
+      {children}
+    </>
   );
 }
