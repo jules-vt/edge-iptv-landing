@@ -1,10 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Download, ArrowLeft, Calendar, Clock } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { BlogHeader } from '@/components/blog-header';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { getAlternateSlug } from '@/lib/blog-posts';
 
 interface ArticleLayoutProps {
   children: React.ReactNode;
@@ -12,8 +10,7 @@ interface ArticleLayoutProps {
   description: string;
   date: string;
   readTime: string;
-  lang?: 'en' | 'fr';
-  slug?: string; // Add slug for language switching
+  lang?: 'en' | 'fr' | 'es' | 'pt';
   breadcrumbItems?: Array<{ label: string; href: string }>;
 }
 
@@ -24,44 +21,24 @@ export function ArticleLayout({
   date, 
   readTime,
   lang = 'en',
-  slug,
   breadcrumbItems = []
 }: ArticleLayoutProps) {
-  const backLabel = lang === 'en' ? 'Back to Blog' : 'Retour au Blog';
-  const blogPath = lang === 'en' ? '/blog' : '/fr/blog';
-
-  // Generate language switch link using alternate slug
-  const alternateSlug = slug ? getAlternateSlug(slug, lang) : undefined;
-  const langSwitchHref = alternateSlug
-    ? (lang === 'en' ? `/fr/blog/${alternateSlug}` : `/blog/${alternateSlug}`)
-    : (lang === 'en' ? '/fr' : '/');
-  const langSwitchLabel = lang === 'en' ? 'FR' : 'EN';
+  const backLabel = 
+    lang === 'en' ? 'Back to Blog' :
+    lang === 'fr' ? 'Retour au Blog' :
+    lang === 'es' ? 'Volver al Blog' :
+    'Voltar ao Blog';
+  
+  const blogPath = 
+    lang === 'en' ? '/blog' :
+    lang === 'fr' ? '/fr/blog' :
+    lang === 'es' ? '/es/blog' :
+    '/pt/blog';
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/40">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href={lang === 'en' ? '/' : '/fr'} className="flex items-center gap-3">
-            <Image src="/images/icon.png" alt="EDGE IPTV Logo" width={40} height={40} className="rounded-lg" />
-            <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link 
-              href={langSwitchHref}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {langSwitchLabel}
-            </Link>
-            <Button asChild className="hidden sm:inline-flex rounded-full font-semibold shadow-lg shadow-primary/20">
-              <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
-                <Download className="mr-2 h-4 w-4" />
-                {lang === 'en' ? 'Download' : 'Télécharger'}
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      {/* Use unified BlogHeader component */}
+      <BlogHeader currentLang={lang} />
 
       {/* Article Content */}
       <main className="pt-24 pb-16">
@@ -92,11 +69,17 @@ export function ArticleLayout({
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 <time dateTime={date}>
-                  {new Date(date).toLocaleDateString(lang === 'en' ? 'en-US' : 'fr-FR', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}
+                  {new Date(date).toLocaleDateString(
+                    lang === 'en' ? 'en-US' : 
+                    lang === 'fr' ? 'fr-FR' :
+                    lang === 'es' ? 'es-ES' : 
+                    'pt-BR', 
+                    {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    }
+                  )}
                 </time>
               </div>
               <div className="flex items-center gap-2">
@@ -115,19 +98,23 @@ export function ArticleLayout({
           <div className="mt-16 pt-12 border-t border-border/50">
             <div className="bg-card rounded-2xl p-8 text-center shadow-lg border border-border/50">
               <h3 className="text-2xl font-bold mb-4">
-                {lang === 'en' ? 'Ready to Get Started?' : 'Prêt à commencer ?'}
+                {lang === 'en' ? 'Ready to Get Started?' : 
+                 lang === 'fr' ? 'Prêt à commencer ?' :
+                 lang === 'es' ? '¿Listo para Empezar?' :
+                 'Pronto para Começar?'}
               </h3>
               <p className="text-muted-foreground mb-6">
-                {lang === 'en' 
-                  ? 'Download EDGE IPTV now and start streaming in seconds.'
-                  : 'Téléchargez EDGE IPTV maintenant et commencez à streamer en quelques secondes.'}
+                {lang === 'en' ? 'Download EDGE IPTV now and start streaming in seconds.' :
+                 lang === 'fr' ? 'Téléchargez EDGE IPTV maintenant et commencez à streamer en quelques secondes.' :
+                 lang === 'es' ? 'Descarga EDGE IPTV ahora y comienza a transmitir en segundos.' :
+                 'Baixe o EDGE IPTV agora e comece a transmitir em segundos.'}
               </p>
-              <Button asChild size="lg" className="rounded-full shadow-xl shadow-primary/25">
-                <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
-                  <Download className="mr-2 h-5 w-5" />
-                  {lang === 'en' ? 'Download Now' : 'Télécharger'}
-                </Link>
-              </Button>
+              <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf" className="inline-flex items-center justify-center rounded-full px-8 py-3 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/25 transition-all">
+                {lang === 'en' ? 'Download Now' :
+                 lang === 'fr' ? 'Télécharger' :
+                 lang === 'es' ? 'Descargar Ahora' :
+                 'Baixar Agora'}
+              </Link>
             </div>
           </div>
         </article>
@@ -137,7 +124,10 @@ export function ArticleLayout({
       <footer className="bg-secondary/50 border-t border-border/50 py-8 mt-16">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} EDGE IPTV. {lang === 'en' ? 'All rights reserved.' : 'Tous droits réservés.'}
+            © {new Date().getFullYear()} EDGE IPTV. {lang === 'en' ? 'All rights reserved.' :
+                                                       lang === 'fr' ? 'Tous droits réservés.' :
+                                                       lang === 'es' ? 'Todos los derechos reservados.' :
+                                                       'Todos os direitos reservados.'}
           </p>
         </div>
       </footer>

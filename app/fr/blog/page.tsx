@@ -6,6 +6,7 @@ import { Download, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { BlogCard } from '@/components/blog-card';
+import { BlogHeader } from '@/components/blog-header';
 import { getPostsByLang } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
@@ -67,31 +68,7 @@ export default function BlogPageFR() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
 
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40 supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex justify-between items-center">
-          <Link href="/fr" className="flex items-center gap-3">
-            <div className="relative w-10 h-10 overflow-hidden rounded-xl shadow-sm">
-              <Image src="/images/icon.png" alt="Logo EDGE IPTV" fill className="object-cover" />
-            </div>
-            <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link href="/fr" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-              Accueil
-            </Link>
-            <Link href="/blog" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-              EN
-            </Link>
-            <Button asChild className="hidden sm:inline-flex rounded-full font-semibold shadow-lg shadow-primary/20">
-              <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
-                <Download className="mr-2 h-4 w-4" />
-                Télécharger
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <BlogHeader currentLang="fr" />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-secondary/30">

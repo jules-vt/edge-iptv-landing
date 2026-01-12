@@ -12,13 +12,26 @@ interface BlogCardProps {
 
 export function BlogCard({ post }: BlogCardProps) {
   const categoryLabels = {
-    tutorial: post.lang === 'en' ? 'Tutorial' : 'Tutoriel',
+    tutorial: post.lang === 'en' ? 'Tutorial' : 
+              post.lang === 'fr' ? 'Tutoriel' :
+              post.lang === 'es' ? 'Tutorial' :
+              'Tutorial',
     guide: 'Guide',
-    news: post.lang === 'en' ? 'News' : 'Actualités',
-    tips: post.lang === 'en' ? 'Tips' : 'Conseils'
+    news: post.lang === 'en' ? 'News' : 
+          post.lang === 'fr' ? 'Actualités' :
+          post.lang === 'es' ? 'Noticias' :
+          'Notícias',
+    tips: post.lang === 'en' ? 'Tips' : 
+          post.lang === 'fr' ? 'Conseils' :
+          post.lang === 'es' ? 'Consejos' :
+          'Dicas'
   };
 
-  const blogPath = post.lang === 'en' ? '/blog' : '/fr/blog';
+  const blogPath = 
+    post.lang === 'en' ? '/blog' :
+    post.lang === 'fr' ? '/fr/blog' :
+    post.lang === 'es' ? '/es/blog' :
+    '/pt/blog';
 
   return (
     <Link href={`${blogPath}/${post.slug}`} className="group">

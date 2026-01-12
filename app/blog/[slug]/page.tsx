@@ -115,7 +115,6 @@ export default async function BlogPostPage({ params }: PageProps) {
         date={post.date}
         readTime={post.readTime}
         lang="en"
-        slug={slug}
         breadcrumbItems={[
           { label: 'Home', href: '/' },
           { label: 'Blog', href: '/blog' }

@@ -7,7 +7,7 @@ interface FAQItem {
 }
 
 interface FAQProps {
-  lang?: 'en' | 'fr';
+  lang?: 'en' | 'fr' | 'es' | 'pt';
 }
 
 const faqsEN: FAQItem[] = [
@@ -80,12 +80,86 @@ const faqsFR: FAQItem[] = [
   }
 ];
 
+const faqsES: FAQItem[] = [
+  {
+    question: "¿Qué es IPTV y cómo funciona en iPhone?",
+    answer: "IPTV (Televisión por Protocolo de Internet) transmite contenido de TV a través de internet en lugar del cable o satélite tradicional. EDGE IPTV es una aplicación reproductora que se conecta a tu proveedor de servicio IPTV usando códigos Xtream, permitiéndote ver TV en vivo, películas y series en tu iPhone o iPad."
+  },
+  {
+    question: "¿EDGE IPTV es gratis?",
+    answer: "Sí, EDGE IPTV es completamente gratis para descargar y usar. Sin embargo, necesitarás una suscripción IPTV activa de un proveedor de servicios para acceder al contenido. La aplicación en sí no proporciona ningún contenido."
+  },
+  {
+    question: "¿Necesito una suscripción para usar EDGE IPTV?",
+    answer: "EDGE IPTV es una aplicación reproductora. Necesitarás una suscripción de servicio IPTV con códigos Xtream de tu proveedor preferido. Una vez que tengas tus credenciales, puedes configurarlas fácilmente en la aplicación en menos de 30 segundos."
+  },
+  {
+    question: "¿EDGE IPTV soporta Chromecast?",
+    answer: "¡Sí! EDGE IPTV cuenta con integración completa de Chromecast. Puedes transmitir tus películas, series y canales de TV en vivo favoritos directamente a tu televisor de pantalla grande con un solo toque."
+  },
+  {
+    question: "¿Puedo ver contenido sin conexión?",
+    answer: "Absolutamente. EDGE IPTV te permite descargar películas y series en tu dispositivo para verlas sin conexión. Mira tu contenido en cualquier lugar, en cualquier momento, incluso sin conexión a internet."
+  },
+  {
+    question: "¿Qué versión de iOS se requiere?",
+    answer: "EDGE IPTV requiere iOS 12.0 o posterior y es compatible con iPhone y iPad. Está optimizado para los últimos dispositivos incluyendo iPhone 15 Pro y iPad Pro."
+  },
+  {
+    question: "¿Están protegidos mis datos y privacidad?",
+    answer: "Sí. Respetamos tu privacidad. Solo se recopilan análisis globales anónimos para mejorar la aplicación. Todo tu contenido y procesamiento ocurre localmente en tu dispositivo. Nunca accedemos a tus credenciales IPTV ni a tu historial de visualización."
+  },
+  {
+    question: "¿Qué idiomas son compatibles?",
+    answer: "EDGE IPTV cuenta con una interfaz completamente localizada disponible en inglés, francés, español y más idiomas. La interfaz se adapta automáticamente al idioma de tu dispositivo para una experiencia nativa."
+  }
+];
+
+const faqsPT: FAQItem[] = [
+  {
+    question: "O que é IPTV e como funciona no iPhone?",
+    answer: "IPTV (Televisão por Protocolo de Internet) transmite conteúdo de TV pela internet em vez do cabo ou satélite tradicional. EDGE IPTV é um aplicativo player que se conecta ao seu provedor de serviço IPTV usando códigos Xtream, permitindo que você assista TV ao vivo, filmes e séries no seu iPhone ou iPad."
+  },
+  {
+    question: "EDGE IPTV é gratuito?",
+    answer: "Sim, EDGE IPTV é completamente gratuito para baixar e usar. No entanto, você precisará de uma assinatura IPTV ativa de um provedor de serviços para acessar o conteúdo. O aplicativo em si não fornece nenhum conteúdo."
+  },
+  {
+    question: "Preciso de uma assinatura para usar EDGE IPTV?",
+    answer: "EDGE IPTV é um aplicativo player. Você precisará de uma assinatura de serviço IPTV com códigos Xtream do seu provedor preferido. Depois de ter suas credenciais, você pode configurá-las facilmente no aplicativo em menos de 30 segundos."
+  },
+  {
+    question: "EDGE IPTV suporta Chromecast?",
+    answer: "Sim! EDGE IPTV possui integração completa com Chromecast. Você pode transmitir seus filmes, séries e canais de TV ao vivo favoritos diretamente para sua TV de tela grande com apenas um toque."
+  },
+  {
+    question: "Posso assistir conteúdo offline?",
+    answer: "Absolutamente. EDGE IPTV permite que você baixe filmes e séries no seu dispositivo para visualização offline. Assista seu conteúdo em qualquer lugar, a qualquer hora, mesmo sem conexão com a internet."
+  },
+  {
+    question: "Qual versão do iOS é necessária?",
+    answer: "EDGE IPTV requer iOS 12.0 ou posterior e é compatível com iPhone e iPad. É otimizado para os dispositivos mais recentes incluindo iPhone 15 Pro e iPad Pro."
+  },
+  {
+    question: "Meus dados e privacidade estão protegidos?",
+    answer: "Sim. Respeitamos sua privacidade. Apenas análises globais anônimas são coletadas para melhorar o aplicativo. Todo o seu conteúdo e processamento acontecem localmente no seu dispositivo. Nunca acessamos suas credenciais IPTV nem seu histórico de visualização."
+  },
+  {
+    question: "Quais idiomas são suportados?",
+    answer: "EDGE IPTV possui uma interface totalmente localizada disponível em inglês, francês, espanhol e mais idiomas. A interface se adapta automaticamente ao idioma do seu dispositivo para uma experiência nativa."
+  }
+];
+
 export function FAQ({ lang = 'en' }: FAQProps) {
-  const faqs = lang === 'en' ? faqsEN : faqsFR;
-  const title = lang === 'en' ? 'Frequently Asked Questions' : 'Questions Fréquentes';
+  const faqs = lang === 'en' ? faqsEN : lang === 'fr' ? faqsFR : lang === 'es' ? faqsES : faqsPT;
+  const title = lang === 'en' ? 'Frequently Asked Questions' : lang === 'fr' ? 'Questions Fréquentes' : lang === 'es' ? 'Preguntas Frecuentes' : 'Perguntas Frequentes';
   const subtitle = lang === 'en' 
     ? 'Everything you need to know about EDGE IPTV'
-    : 'Tout ce que vous devez savoir sur EDGE IPTV';
+    : lang === 'fr'
+      ? 'Tout ce que vous devez savoir sur EDGE IPTV'
+      : lang === 'es'
+        ? 'Todo lo que necesitas saber sobre EDGE IPTV'
+        : 'Tudo o que você precisa saber sobre EDGE IPTV';
 
   // Schema.org FAQPage
   const faqSchema = {

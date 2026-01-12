@@ -6,33 +6,34 @@ import { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Comment Installer IPTV sur iPhone et iPad - Guide Étape par Étape 2026',
-  description: 'Guide complet étape par étape pour installer et configurer EDGE IPTV sur iPhone et iPad. Apprenez à configurer les codes Xtream et commencez à streamer en 30 secondes.',
+  title: 'Cómo Instalar IPTV en iPhone y iPad - Guía Paso a Paso 2026',
+  description: 'Guía completa paso a paso para instalar y configurar EDGE IPTV en iPhone y iPad. Aprende a configurar códigos Xtream y comienza a transmitir en 30 segundos.',
   alternates: {
-    canonical: 'https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad',
+    canonical: 'https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad',
     languages: {
       'en': 'https://edge-iptv.app/how-to-install-iptv-iphone-ipad',
       'fr': 'https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad',
+      'es': 'https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad',
+      'pt': 'https://edge-iptv.app/pt/como-instalar-iptv-iphone-ipad',
     },
   },
   openGraph: {
     type: 'article',
-    url: 'https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad',
-    title: 'Comment Installer IPTV sur iPhone et iPad - Guide Étape par Étape 2026',
-    description: 'Guide complet étape par étape pour installer et configurer EDGE IPTV sur iPhone et iPad. Commencez à streamer en 30 secondes.',
+    url: 'https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad',
+    title: 'Cómo Instalar IPTV en iPhone y iPad - Guía Paso a Paso 2026',
+    description: 'Guía completa paso a paso para instalar y configurar EDGE IPTV en iPhone y iPad. Comienza a transmitir en 30 segundos.',
     images: ['https://edge-iptv.app/images/iphone-series-3d.png'],
     siteName: 'EDGE IPTV',
-    locale: 'fr_FR',
+    locale: 'es_ES',
   },
 };
 
-export default function HowToInstallFR() {
-  // Schema.org HowTo pour le SEO
+export default function HowToInstallES() {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "Comment Installer IPTV sur iPhone et iPad en 2 Minutes",
-    "description": "Guide complet étape par étape pour installer et configurer EDGE IPTV sur iPhone et iPad avec codes Xtream. Configuration en moins de 2 minutes sans compétences techniques.",
+    "name": "Cómo Instalar IPTV en iPhone y iPad en 2 Minutos",
+    "description": "Guía completa paso a paso para instalar y configurar EDGE IPTV en iPhone y iPad con códigos Xtream. Configuración en menos de 2 minutos sin conocimientos técnicos.",
     "image": {
       "@type": "ImageObject",
       "url": "https://edge-iptv.app/images/iphone-series-3d.png",
@@ -47,22 +48,22 @@ export default function HowToInstallFR() {
     },
     "tool": [{
       "@type": "HowToTool",
-      "name": "iPhone ou iPad avec iOS 12.0 ou ultérieur"
+      "name": "iPhone o iPad con iOS 12.0 o posterior"
     }, {
       "@type": "HowToTool",
-      "name": "Connexion Internet"
+      "name": "Conexión a Internet"
     }],
     "supply": [{
       "@type": "HowToSupply",
-      "name": "Abonnement IPTV avec API codes Xtream"
+      "name": "Suscripción IPTV con códigos API Xtream"
     }],
     "step": [
       {
         "@type": "HowToStep",
         "position": 1,
-        "name": "Télécharger EDGE IPTV depuis l'App Store",
-        "text": "Téléchargez le meilleur lecteur IPTV depuis l'App Store. EDGE IPTV est spécialement conçu pour iPhone et iPad avec support Chromecast, visionnage hors ligne et configuration rapide des codes Xtream. L'application est entièrement gratuite.",
-        "url": "https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad#step1",
+        "name": "Descargar EDGE IPTV desde App Store",
+        "text": "Descarga el mejor reproductor IPTV desde App Store. EDGE IPTV está especialmente diseñado para iPhone y iPad con soporte Chromecast, visualización offline y configuración rápida de códigos Xtream. La aplicación es completamente gratuita.",
+        "url": "https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad#step1",
         "image": {
           "@type": "ImageObject",
           "url": "https://edge-iptv.app/images/icon.png",
@@ -73,9 +74,9 @@ export default function HowToInstallFR() {
       {
         "@type": "HowToStep",
         "position": 2,
-        "name": "Lancer l'App et Sélectionner Votre Langue",
-        "text": "Ouvrez EDGE IPTV et sélectionnez votre langue préférée depuis l'interface multilingue. L'app supporte le français, anglais, espagnol, portugais et turc pour une expérience native.",
-        "url": "https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad#step2",
+        "name": "Iniciar la App y Seleccionar tu Idioma",
+        "text": "Abre EDGE IPTV y selecciona tu idioma preferido desde la interfaz multilingüe. La app soporta español, inglés, francés, portugués y turco para una experiencia nativa.",
+        "url": "https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad#step2",
         "image": {
           "@type": "ImageObject",
           "url": "https://edge-iptv.app/images/language-selection.jpeg",
@@ -86,16 +87,16 @@ export default function HowToInstallFR() {
       {
         "@type": "HowToStep",
         "position": 3,
-        "name": "Configurer Vos Codes Xtream",
-        "text": "Appuyez sur 'Ajouter Playlist' ou le bouton '+', sélectionnez l'option 'Codes Xtream', et entrez vos identifiants fournis par votre fournisseur IPTV : URL du serveur (ex: http://line.iptvdomain.com), Nom d'utilisateur, et Mot de passe. Puis appuyez sur 'Connexion'. L'app chargera automatiquement toutes vos chaînes, films et séries.",
-        "url": "https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad#step3"
+        "name": "Configurar tus Códigos Xtream",
+        "text": "Toca 'Agregar Playlist' o el botón '+', selecciona la opción 'Códigos Xtream', e ingresa tus credenciales proporcionadas por tu proveedor IPTV: URL del servidor (ej: http://line.iptvdomain.com), Nombre de usuario, y Contraseña. Luego toca 'Conectar'. La app cargará automáticamente todos tus canales, películas y series.",
+        "url": "https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad#step3"
       },
       {
         "@type": "HowToStep",
         "position": 4,
-        "name": "Commencer à Regarder Votre Contenu Préféré",
-        "text": "Parcourez vos chaînes, films et bibliothèque de séries. Utilisez l'interface intuitive pour rechercher, ajouter aux favoris, et commencer le streaming immédiatement. Diffusez sur Chromecast en un clic ou téléchargez du contenu pour visionnage hors ligne.",
-        "url": "https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad#step4",
+        "name": "Comenzar a Ver tu Contenido Favorito",
+        "text": "Navega por tus canales, películas y biblioteca de series. Usa la interfaz intuitiva para buscar, agregar a favoritos, y comenzar a transmitir inmediatamente. Transmite a Chromecast con un clic o descarga contenido para visualización offline.",
+        "url": "https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad#step4",
         "image": {
           "@type": "ImageObject",
           "url": "https://edge-iptv.app/images/series-view.png",
@@ -106,19 +107,19 @@ export default function HowToInstallFR() {
     ],
     "video": {
       "@type": "VideoObject",
-      "name": "Tutoriel : Comment Installer IPTV sur iPhone",
-      "description": "Guide vidéo montrant comment installer et configurer EDGE IPTV sur iPhone et iPad",
+      "name": "Tutorial: Cómo Instalar IPTV en iPhone",
+      "description": "Guía en video mostrando cómo instalar y configurar EDGE IPTV en iPhone y iPad",
       "thumbnailUrl": "https://edge-iptv.app/images/iphone-series-3d.png",
       "uploadDate": "2025-01-01"
     },
-    "inLanguage": "fr-FR"
+    "inLanguage": "es-ES"
   };
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Installer IPTV sur iPhone en 2 Minutes – Guide Facile",
-    "description": "Guide complet étape par étape pour installer et configurer IPTV sur iPhone et iPad. Compatible avec codes Xtream. Aucune compétence technique requise.",
+    "headline": "Instalar IPTV en iPhone en 2 Minutos – Guía Fácil",
+    "description": "Guía completa paso a paso para instalar y configurar IPTV en iPhone y iPad. Compatible con códigos Xtream. Sin conocimientos técnicos necesarios.",
     "image": {
       "@type": "ImageObject",
       "url": "https://edge-iptv.app/images/iphone-series-3d.png",
@@ -144,12 +145,12 @@ export default function HowToInstallFR() {
     "dateModified": "2026-01-12",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad"
+      "@id": "https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad"
     },
-    "keywords": "IPTV, iPhone, iPad, installer, tutoriel, codes Xtream, guide, streaming",
-    "articleSection": "Tutoriel",
+    "keywords": "IPTV, iPhone, iPad, instalar, tutorial, códigos Xtream, guía, streaming",
+    "articleSection": "Tutorial",
     "wordCount": 800,
-    "inLanguage": "fr-FR"
+    "inLanguage": "es-ES"
   };
 
   return (
@@ -162,10 +163,9 @@ export default function HowToInstallFR() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/fr" className="flex items-center gap-3">
+          <Link href="/es" className="flex items-center gap-3">
             <Image src="/images/icon.png" alt="Logo EDGE IPTV" width={40} height={40} className="rounded-lg" />
             <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
           </Link>
@@ -178,7 +178,7 @@ export default function HowToInstallFR() {
               className="hidden sm:inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all"
             >
               <Download size={16} />
-              Télécharger
+              Descargar
             </Link>
           </div>
         </div>
@@ -187,54 +187,53 @@ export default function HowToInstallFR() {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-3xl">
           <Breadcrumb 
-            items={[{ label: 'Accueil', href: '/fr' }]} 
-            currentPage="Comment Installer IPTV sur iPhone et iPad"
-            lang="fr"
+            items={[{ label: 'Inicio', href: '/es' }]} 
+            currentPage="Cómo Instalar IPTV en iPhone y iPad"
+            lang="es"
           />
           
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              Comment Installer IPTV sur iPhone et iPad : Guide Complet 2026
+              Cómo Instalar IPTV en iPhone y iPad: Guía Completa 2026
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Apprenez à configurer le streaming IPTV sur vos appareils iOS en quelques minutes seulement. Ce guide complet vous accompagnera dans tout le processus en utilisant le meilleur lecteur IPTV disponible.
+              Aprende a configurar streaming IPTV en tus dispositivos iOS en solo minutos. Esta guía completa te acompañará en todo el proceso usando el mejor reproductor IPTV disponible.
             </p>
           </div>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-10">
-            <h4 className="text-blue-800 font-bold mb-4 text-lg">Ce dont vous aurez besoin :</h4>
+            <h4 className="text-blue-800 font-bold mb-4 text-lg">Lo que necesitarás:</h4>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="text-green-600 font-bold">✓</span> iPhone ou iPad avec iOS 12.0 ou plus récent
+                <span className="text-green-600 font-bold">✓</span> iPhone o iPad con iOS 12.0 o más reciente
               </li>
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="text-green-600 font-bold">✓</span> Abonnement IPTV avec codes Xtream
+                <span className="text-green-600 font-bold">✓</span> Suscripción IPTV con códigos Xtream
               </li>
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="text-green-600 font-bold">✓</span> Connexion internet stable
+                <span className="text-green-600 font-bold">✓</span> Conexión a internet estable
               </li>
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="text-green-600 font-bold">✓</span> Application EDGE IPTV (recommandée pour la meilleure expérience)
+                <span className="text-green-600 font-bold">✓</span> Aplicación EDGE IPTV (recomendada para la mejor experiencia)
               </li>
             </ul>
           </div>
 
           <div className="space-y-12">
-            {/* Step 1 */}
             <div id="step1" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Téléchargez le Meilleur Lecteur IPTV pour iOS</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Descarga el Mejor Reproductor IPTV para iOS</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                La première étape consiste à télécharger un lecteur IPTV fiable. Nous recommandons vivement <strong>EDGE IPTV</strong> car il est spécialement conçu pour iPhone et iPad, offrant l'expérience de streaming la plus fluide avec des fonctionnalités avancées.
+                El primer paso es descargar un reproductor IPTV confiable. Recomendamos encarecidamente <strong>EDGE IPTV</strong> ya que está especialmente diseñado para iPhone y iPad, ofreciendo la experiencia de streaming más fluida con funciones avanzadas.
               </p>
               
               <div className="mb-6">
-                <strong className="block mb-2 text-gray-800">Pourquoi choisir EDGE IPTV ?</strong>
+                <strong className="block mb-2 text-gray-800">¿Por qué elegir EDGE IPTV?</strong>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Configuration Xtream rapide en quelques secondes</li>
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Support Chromecast pour visionner sur grand écran</li>
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Téléchargement hors ligne pour regarder sans internet</li>
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Interface multilingue (Anglais, Français, Espagnol, Portugais, Turc)</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Configuración Xtream rápida en segundos</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Soporte Chromecast para ver en pantalla grande</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Descarga offline para ver sin internet</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Interfaz multilingüe (Inglés, Francés, Español, Portugués, Turco)</li>
                 </ul>
               </div>
               
@@ -243,21 +242,20 @@ export default function HowToInstallFR() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:-translate-y-1"
               >
                 <Download size={20} />
-                Télécharger EDGE IPTV sur l'App Store
+                Descargar EDGE IPTV en App Store
               </Link>
             </div>
 
-            {/* Step 2 */}
             <div id="step2" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">2</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Lancez l'Application et Sélectionnez la Langue</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Inicia la Aplicación y Selecciona el Idioma</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Une fois installée, ouvrez EDGE IPTV. Vous serez accueilli par une interface magnifique où vous pourrez sélectionner votre langue préférée. L'application prend en charge plusieurs langues pour que vous vous sentiez chez vous.
+                Una vez instalada, abre EDGE IPTV. Serás recibido por una interfaz hermosa donde podrás seleccionar tu idioma preferido. La aplicación soporta múltiples idiomas para que te sientas como en casa.
               </p>
               <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
                 <Image 
                   src="/images/language-selection.jpeg" 
-                  alt="Sélection de la langue EDGE IPTV" 
+                  alt="Selección de idioma EDGE IPTV" 
                   width={600} 
                   height={400}
                   className="w-full h-auto"
@@ -265,42 +263,40 @@ export default function HowToInstallFR() {
               </div>
             </div>
 
-            {/* Step 3 */}
             <div id="step3" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">3</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Configurez les Codes Xtream</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Configura los Códigos Xtream</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                EDGE IPTV rend la connexion via codes Xtream incroyablement facile. Vous n'avez pas besoin de gérer des playlists M3U complexes.
+                EDGE IPTV hace que la conexión vía códigos Xtream sea increíblemente fácil. No necesitas gestionar complejas playlists M3U.
               </p>
               <ol className="list-decimal list-inside space-y-3 text-gray-600 mb-6 ml-2">
-                <li>Appuyez sur le bouton <strong>"Ajouter une Playlist"</strong> ou <strong>"+"</strong>.</li>
-                <li>Sélectionnez l'option <strong>"Xtream Codes"</strong>.</li>
-                <li>Entrez les détails fournis par votre fournisseur IPTV :
+                <li>Toca el botón <strong>"Agregar Playlist"</strong> o <strong>"+"</strong>.</li>
+                <li>Selecciona la opción <strong>"Códigos Xtream"</strong>.</li>
+                <li>Ingresa los detalles proporcionados por tu proveedor IPTV:
                   <ul className="list-disc list-inside ml-6 mt-2 space-y-1 text-gray-500">
-                    <li><strong>URL du Serveur :</strong> (ex: http://line.iptvdomain.com)</li>
-                    <li><strong>Nom d'utilisateur :</strong> Votre nom d'utilisateur</li>
-                    <li><strong>Mot de passe :</strong> Votre mot de passe</li>
+                    <li><strong>URL del Servidor:</strong> (ej: http://line.iptvdomain.com)</li>
+                    <li><strong>Nombre de usuario:</strong> Tu nombre de usuario</li>
+                    <li><strong>Contraseña:</strong> Tu contraseña</li>
                   </ul>
                 </li>
-                <li>Appuyez sur <strong>"Se connecter"</strong> ou <strong>"Login"</strong>.</li>
+                <li>Toca <strong>"Conectar"</strong> o <strong>"Login"</strong>.</li>
               </ol>
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800">
-                <strong>Note :</strong> Assurez-vous d'entrer les détails exactement comme fournis, en faisant attention aux majuscules et minuscules.
+                <strong>Nota:</strong> Asegúrate de ingresar los detalles exactamente como se proporcionan, prestando atención a mayúsculas y minúsculas.
               </div>
             </div>
 
-            {/* Step 4 */}
             <div id="step4" className="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-600 relative">
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">4</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Profitez de Votre Contenu !</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">¡Disfruta de tu Contenido!</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                C'est tout ! EDGE IPTV chargera vos chaînes, films et séries. Vous pouvez maintenant naviguer dans les catégories, rechercher votre contenu préféré et commencer le streaming immédiatement.
+                ¡Eso es todo! EDGE IPTV cargará tus canales, películas y series. Ahora puedes navegar por las categorías, buscar tu contenido favorito y comenzar a transmitir inmediatamente.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
                   <Image 
                     src="/images/series-view.png" 
-                    alt="Vue des séries" 
+                    alt="Vista de series" 
                     width={400} 
                     height={800}
                     className="w-full h-auto"
@@ -309,7 +305,7 @@ export default function HowToInstallFR() {
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
                   <Image 
                     src="/images/movie-details.png" 
-                    alt="Détails du film" 
+                    alt="Detalles de película" 
                     width={400} 
                     height={800}
                     className="w-full h-auto"
@@ -321,17 +317,16 @@ export default function HowToInstallFR() {
 
           <div className="mt-16 pt-8 border-t border-gray-200 text-center">
             <Link 
-              href="/fr" 
+              href="/es" 
               className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition-colors"
             >
               <ArrowLeft size={20} />
-              Retour à l'accueil
+              Volver al inicio
             </Link>
           </div>
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
@@ -340,13 +335,13 @@ export default function HowToInstallFR() {
               <span className="text-xl font-bold text-white">EDGE IPTV</span>
             </div>
             <div className="flex gap-6 text-sm">
-              <Link href="/fr/privacy-policy" className="hover:text-white transition-colors">Politique de Confidentialité</Link>
-              <Link href="/fr/terms-of-use" className="hover:text-white transition-colors">Conditions d'Utilisation</Link>
-              <Link href="/fr/comment-installer-iptv-iphone-ipad" className="text-white font-medium">Comment Installer</Link>
+              <Link href="/es/privacy-policy" className="hover:text-white transition-colors">Política de Privacidad</Link>
+              <Link href="/es/terms-of-use" className="hover:text-white transition-colors">Términos de Uso</Link>
+              <Link href="/es/como-instalar-iptv-iphone-ipad" className="text-white font-medium">Cómo Instalar</Link>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} EDGE IPTV. Tous droits réservés.</p>
+            <p>&copy; {new Date().getFullYear()} EDGE IPTV. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>

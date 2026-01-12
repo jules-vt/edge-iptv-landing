@@ -10,11 +10,11 @@ interface BreadcrumbItem {
 interface BreadcrumbProps {
   items: BreadcrumbItem[];
   currentPage: string;
-  lang?: 'en' | 'fr';
+  lang?: 'en' | 'fr' | 'es' | 'pt';
 }
 
 export function Breadcrumb({ items, currentPage, lang = 'en' }: BreadcrumbProps) {
-  const homeLabel = lang === 'en' ? 'Home' : 'Accueil';
+  const homeLabel = lang === 'en' ? 'Home' : lang === 'fr' ? 'Accueil' : lang === 'es' ? 'Inicio' : 'Início';
   
   // Generate Schema.org BreadcrumbList
   const breadcrumbSchema = {

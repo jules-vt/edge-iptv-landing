@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Download, Tv, Wifi, Globe, Star, Zap, Shield, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LanguageSwitcher } from '@/components/language-switcher';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { FAQ } from '@/components/faq';
@@ -23,9 +24,7 @@ export default function HomeFR() {
             <Link href="/fr/blog" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Blog
             </Link>
-            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-              EN
-            </Link>
+            <LanguageSwitcher currentLang="fr" />
             <Button asChild className="hidden sm:inline-flex rounded-full font-semibold shadow-lg shadow-primary/20">
               <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
                 <Download className="mr-2 h-4 w-4" />
