@@ -13,20 +13,21 @@ export interface BlogPost {
 }
 
 // Slug mapping between languages
-const slugMapping: Record<string, string> = {
-  'how-to-install-iptv-iphone-ipad': 'comment-installer-iptv-iphone-ipad',
-  'comment-installer-iptv-iphone-ipad': 'how-to-install-iptv-iphone-ipad',
-  'best-iptv-player-ios-2026': 'meilleur-lecteur-iptv-ios-2026',
-  'meilleur-lecteur-iptv-ios-2026': 'best-iptv-player-ios-2026',
-  'xtream-codes-setup-guide': 'configurer-codes-xtream-guide',
-  'configurer-codes-xtream-guide': 'xtream-codes-setup-guide',
-  'm3u-playlist-setup-guide': 'configurer-playlist-m3u-guide',
-  'configurer-playlist-m3u-guide': 'm3u-playlist-setup-guide',
-  'chromecast-iptv-streaming-guide': 'diffuser-iptv-chromecast-guide',
-  'diffuser-iptv-chromecast-guide': 'chromecast-iptv-streaming-guide',
-  'iptv-buffering-fix-guide': 'resoudre-buffering-iptv-guide',
-  'resoudre-buffering-iptv-guide': 'iptv-buffering-fix-guide'
-};
+// Slug mapping for alternate language versions (kept for potential future use)
+// const slugMapping: Record<string, string> = {
+//   'how-to-install-iptv-iphone-ipad': 'comment-installer-iptv-iphone-ipad',
+//   'comment-installer-iptv-iphone-ipad': 'how-to-install-iptv-iphone-ipad',
+//   'best-iptv-player-ios-2026': 'meilleur-lecteur-iptv-ios-2026',
+//   'meilleur-lecteur-iptv-ios-2026': 'best-iptv-player-ios-2026',
+//   'xtream-codes-setup-guide': 'configurer-codes-xtream-guide',
+//   'configurer-codes-xtream-guide': 'xtream-codes-setup-guide',
+//   'm3u-playlist-setup-guide': 'configurer-playlist-m3u-guide',
+//   'configurer-playlist-m3u-guide': 'm3u-playlist-setup-guide',
+//   'chromecast-iptv-streaming-guide': 'diffuser-iptv-chromecast-guide',
+//   'diffuser-iptv-chromecast-guide': 'chromecast-iptv-streaming-guide',
+//   'iptv-buffering-fix-guide': 'resoudre-buffering-iptv-guide',
+//   'resoudre-buffering-iptv-guide': 'iptv-buffering-fix-guide'
+// };
 
 export const blogPosts: BlogPost[] = [
   {

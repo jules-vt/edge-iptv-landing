@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Star, Check, X, AlertCircle, CheckCircle, Tv, Wifi, Cast, Activity, Settings, Zap, FileText, Download } from 'lucide-react';
+import { ArrowLeft, Star, Check, AlertCircle, CheckCircle, Cast, Activity, Settings, Zap, Download } from 'lucide-react';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/blog-posts';
