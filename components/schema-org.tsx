@@ -46,7 +46,7 @@ export function SchemaOrg({ lang = 'en' }: SchemaOrgProps) {
       : "Le lecteur IPTV #1 pour iPhone et iPad. Avec support Chromecast, visionnage hors ligne et configuration rapide des codes Xtream.",
     "image": "https://edge-iptv.app/images/icon.png",
     "url": lang === 'en' ? "https://edge-iptv.app" : "https://edge-iptv.app/fr",
-    "installUrl": "https://apps.apple.com/ca/app/edge-iptv/id6745966143",
+    "installUrl": "https://j-analytics.cloud/q/Z0m1Qmdtf",
     "screenshot": [
       "https://edge-iptv.app/images/language-selection.jpeg",
       "https://edge-iptv.app/images/series-view.png",

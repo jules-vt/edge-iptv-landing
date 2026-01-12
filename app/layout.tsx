@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { SchemaOrg } from '@/components/schema-org';
 
@@ -7,6 +8,9 @@ export const metadata: Metadata = {
   description: 'Download EDGE IPTV: The #1 IPTV player for iOS with 5/5 stars rating. Chromecast support, offline viewing, Xtream codes. 1,000+ downloads.',
   authors: [{ name: 'EDGE IPTV' }],
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.ico',
+  },
   alternates: {
     canonical: 'https://edge-iptv.app/',
     languages: {
@@ -46,6 +50,11 @@ export default function RootLayout({
         <SchemaOrg lang="en" />
       </head>
       <body className="antialiased min-h-screen bg-background font-sans">
+        <Script
+          src="https://j-analytics.cloud/script.js"
+          data-website-id="abb9c227-8240-433f-874c-1be6d86ff6f4"
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>

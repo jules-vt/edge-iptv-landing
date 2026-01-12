@@ -27,7 +27,7 @@ export default function Home() {
               FR
             </Link>
             <Button asChild className="hidden sm:inline-flex rounded-full font-semibold shadow-lg shadow-primary/20">
-              <Link href="https://apps.apple.com/ca/app/edge-iptv/id6745966143">
+              <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
                 <Download className="mr-2 h-4 w-4" />
                 Download
               </Link>
@@ -50,7 +50,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button asChild size="lg" className="rounded-full text-lg h-14 px-8 shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all">
-                <Link href="https://apps.apple.com/ca/app/edge-iptv/id6745966143">
+                <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
                   <Download className="mr-2 h-5 w-5" />
                   Download on App Store
                 </Link>
@@ -177,7 +177,7 @@ export default function Home() {
               Join thousands of users who have upgraded their streaming experience. Download EDGE IPTV today.
             </p>
             <Button asChild size="lg" className="rounded-full text-lg h-16 px-10 shadow-xl shadow-primary/25 hover:scale-105 transition-transform">
-              <Link href="https://apps.apple.com/ca/app/edge-iptv/id6745966143">
+              <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
                 <Download className="mr-2 h-6 w-6" />
                 Download Now
               </Link>

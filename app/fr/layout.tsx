@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description: 'Téléchargez EDGE IPTV : Le lecteur IPTV #1 pour iOS. Chromecast, hors ligne, codes Xtream. Configuration en 30 secondes. +10 000 téléchargements.',
   authors: [{ name: 'EDGE IPTV' }],
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.ico',
+  },
   alternates: {
     canonical: 'https://edge-iptv.app/fr/',
     languages: {

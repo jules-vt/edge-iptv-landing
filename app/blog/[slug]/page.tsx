@@ -225,7 +225,7 @@ function HowToInstallContent() {
         </div>
         
         <Link 
-          href="https://apps.apple.com/ca/app/edge-iptv/id6745966143" 
+          href="https://j-analytics.cloud/q/Z0m1Qmdtf" 
           className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all no-underline"
         >
           <Download size={20} />

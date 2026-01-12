@@ -83,7 +83,7 @@ export default function BlogPage() {
               FR
             </Link>
             <Button asChild className="hidden sm:inline-flex rounded-full font-semibold shadow-lg shadow-primary/20">
-              <Link href="https://apps.apple.com/ca/app/edge-iptv/id6745966143">
+              <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
                 <Download className="mr-2 h-4 w-4" />
                 Download
               </Link>
@@ -136,7 +136,7 @@ export default function BlogPage() {
               Download EDGE IPTV and transform your iPhone & iPad into the ultimate streaming device.
             </p>
             <Button asChild size="lg" className="rounded-full shadow-xl shadow-primary/25">
-              <Link href="https://apps.apple.com/ca/app/edge-iptv/id6745966143">
+              <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
                 <Download className="mr-2 h-5 w-5" />
                 Download Now - Free
               </Link>

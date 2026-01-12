@@ -100,7 +100,7 @@ export default function HowToInstall() {
               FR
             </Link>
             <Link 
-              href="https://apps.apple.com/ca/app/edge-iptv/id6745966143" 
+              href="https://j-analytics.cloud/q/Z0m1Qmdtf" 
               className="hidden sm:inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all"
             >
               <Download size={16} />
@@ -165,7 +165,7 @@ export default function HowToInstall() {
               </div>
               
               <Link 
-                href="https://apps.apple.com/ca/app/edge-iptv/id6745966143" 
+                href="https://j-analytics.cloud/q/Z0m1Qmdtf" 
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:-translate-y-1"
               >
                 <Download size={20} />
