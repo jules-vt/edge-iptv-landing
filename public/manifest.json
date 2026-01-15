@@ -1,0 +1,36 @@
+{
+  "name": "EDGE IPTV - Best iOS IPTV Player",
+  "short_name": "EDGE IPTV",
+  "description": "The #1 IPTV player for iPhone and iPad. Features Chromecast support, offline viewing, and fast Xtream codes setup.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["entertainment", "multimedia", "utilities"],
+  "screenshots": [
+    {
+      "src": "/images/series-view.png",
+      "sizes": "400x800",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/movie-details.png",
+      "sizes": "400x800",
+      "type": "image/png"
+    }
+  ]
+}

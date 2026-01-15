@@ -4,6 +4,7 @@ import { ArrowLeft, AlertCircle, CheckCircle, FileText } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'M3U Playlist Setup Guide 2026 | Complete Configuration Tutorial',
@@ -55,6 +56,15 @@ export default function M3UPlaylistGuide() {
       readTime="6 min read"
       lang="en"
     >
+      <Breadcrumb 
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' }
+        ]} 
+        currentPage="M3U Playlist Setup Guide"
+        lang="en"
+      />
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

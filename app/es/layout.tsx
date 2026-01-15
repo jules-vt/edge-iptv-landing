@@ -5,6 +5,18 @@ export const metadata: Metadata = {
   title: 'EDGE IPTV - Mejor Reproductor IPTV iPhone & iPad 2026',
   description: 'Descarga EDGE IPTV: El reproductor IPTV #1 para iOS. Chromecast, sin conexión, códigos Xtream. Configuración en 30 segundos. +10,000 descargas.',
   authors: [{ name: 'EDGE IPTV' }],
+  keywords: [
+    'reproductor IPTV iOS',
+    'aplicación IPTV iPhone',
+    'IPTV iPad gratis',
+    'mejor reproductor IPTV 2026',
+    'códigos Xtream iOS',
+    'Chromecast IPTV',
+    'IPTV sin conexión',
+    'reproductor IPTV gratis',
+    'streaming IPTV iPhone',
+    'EDGE IPTV'
+  ],
   robots: 'index, follow',
   icons: {
     icon: '/favicon.ico',

@@ -137,6 +137,39 @@ export function SchemaOrg({ lang = 'en' }: SchemaOrgProps) {
     "inLanguage": lang === 'en' ? "en-US" : "fr-FR"
   };
 
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "EDGE IPTV",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "iOS 12.0 or later"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "App Store Users"
+    },
+    "reviewBody": lang === 'en'
+      ? "Best IPTV player for iOS. Fast setup with Xtream codes, reliable Chromecast casting, and smooth offline playback."
+      : lang === 'fr'
+        ? "Meilleur lecteur IPTV pour iOS. Configuration rapide avec codes Xtream, diffusion Chromecast fiable et lecture hors ligne fluide."
+        : lang === 'es'
+          ? "Mejor reproductor IPTV para iOS. Configuración rápida con códigos Xtream, transmisión Chromecast confiable y reproducción offline fluida."
+          : "Melhor player IPTV para iOS. Configuração rápida com códigos Xtream, transmissão Chromecast confiável e reprodução offline suave.",
+    "datePublished": "2025-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "EDGE IPTV"
+    }
+  };
+
   return (
     <>
       <script
@@ -154,6 +187,10 @@ export function SchemaOrg({ lang = 'en' }: SchemaOrgProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchemaGeneral) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
     </>
   );

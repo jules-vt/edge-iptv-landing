@@ -4,6 +4,7 @@ import { ArrowLeft, AlertCircle, CheckCircle } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Xtream Codes Setup Guide 2026 | 2-Minute Configuration Tutorial',
@@ -55,6 +56,15 @@ export default function XtreamCodesGuide() {
       readTime="7 min read"
       lang="en"
     >
+      <Breadcrumb 
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' }
+        ]} 
+        currentPage="Xtream Codes Setup Guide"
+        lang="en"
+      />
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

@@ -8,15 +8,31 @@ export const metadata: Metadata = {
   title: 'EDGE IPTV: Best iOS IPTV Player 2026 | Free Download',
   description: '⭐ 5/5 stars. ✓ Setup in 2 minutes. ✓ Chromecast support. ✓ Offline viewing. Download the #1 IPTV app for iPhone & iPad now!',
   authors: [{ name: 'EDGE IPTV' }],
+  keywords: [
+    'IPTV player iOS',
+    'IPTV iPhone app',
+    'IPTV iPad app',
+    'best IPTV player 2026',
+    'Xtream codes iOS',
+    'Chromecast IPTV',
+    'IPTV offline viewing',
+    'free IPTV player',
+    'IPTV streaming app',
+    'EDGE IPTV'
+  ],
   robots: 'index, follow',
   icons: {
     icon: '/favicon.ico',
+    apple: '/images/icon.png',
   },
+  manifest: '/manifest.json',
   alternates: {
     canonical: 'https://edge-iptv.app/',
     languages: {
       'en': 'https://edge-iptv.app/',
       'fr': 'https://edge-iptv.app/fr/',
+      'es': 'https://edge-iptv.app/es/',
+      'pt': 'https://edge-iptv.app/pt/',
       'x-default': 'https://edge-iptv.app/',
     },
   },
@@ -52,6 +68,19 @@ export default function RootLayout({
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://j-analytics.cloud" />
         <link rel="dns-prefetch" href="https://j-analytics.cloud" />
+        {/* Preload critical images */}
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/iphone-series-3d.webp" 
+          type="image/webp"
+        />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/icon.webp"
+          type="image/webp"
+        />
       </head>
       <body className="antialiased min-h-screen bg-background font-sans">
         <WebVitals />

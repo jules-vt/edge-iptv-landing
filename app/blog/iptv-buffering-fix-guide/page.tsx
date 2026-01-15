@@ -4,6 +4,7 @@ import { ArrowLeft, AlertCircle, CheckCircle, Wifi, Activity, Settings, Zap } fr
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'How to Fix IPTV Buffering Issues: Complete 2026 Guide | EDGE IPTV',
@@ -110,6 +111,15 @@ export default function IPTVBufferingFixGuide() {
       readTime="10 min"
       lang="en"
     >
+      <Breadcrumb 
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' }
+        ]} 
+        currentPage="IPTV Buffering Fix Guide"
+        lang="en"
+      />
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

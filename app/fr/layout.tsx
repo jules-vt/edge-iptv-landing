@@ -5,6 +5,18 @@ export const metadata: Metadata = {
   title: 'EDGE IPTV - Meilleur Lecteur IPTV iPhone & iPad 2026',
   description: 'Téléchargez EDGE IPTV : Le lecteur IPTV #1 pour iOS. Chromecast, hors ligne, codes Xtream. Configuration en 30 secondes. +10 000 téléchargements.',
   authors: [{ name: 'EDGE IPTV' }],
+  keywords: [
+    'lecteur IPTV iOS',
+    'application IPTV iPhone',
+    'IPTV iPad gratuit',
+    'meilleur lecteur IPTV 2026',
+    'codes Xtream iOS',
+    'Chromecast IPTV',
+    'IPTV hors ligne',
+    'lecteur IPTV gratuit',
+    'streaming IPTV iPhone',
+    'EDGE IPTV'
+  ],
   robots: 'index, follow',
   icons: {
     icon: '/favicon.ico',
@@ -14,6 +26,8 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://edge-iptv.app/',
       'fr': 'https://edge-iptv.app/fr/',
+      'es': 'https://edge-iptv.app/es/',
+      'pt': 'https://edge-iptv.app/pt/',
       'x-default': 'https://edge-iptv.app/',
     },
   },

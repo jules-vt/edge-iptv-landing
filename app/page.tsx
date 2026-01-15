@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container mx-auto px-4 h-16 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="relative w-10 h-10 overflow-hidden rounded-xl shadow-sm">
-              <Image src="/images/icon.png" alt="EDGE IPTV Logo" fill className="object-cover" />
+              <Image src="/images/icon.png" alt="EDGE IPTV icon - Best IPTV player app for iPhone and iPad" fill className="object-cover" />
             </div>
             <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
           </div>
@@ -81,11 +81,12 @@ export default function Home() {
              <div className="relative z-10 transform hover:scale-105 transition-transform duration-700 ease-out rotate-y-12 hover:rotate-y-0">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
                 <Image 
-                  src="/images/iphone-series-3d.png" 
-                  alt="EDGE IPTV app interface displaying live TV channels, movies library and Chromecast casting feature on iPhone 15 Pro" 
+                  src="/images/iphone-series-3d.webp" 
+                  alt="EDGE IPTV iOS app interface showing live TV channels grid, HD movies library, series catalog and one-tap Chromecast streaming on iPhone 15 Pro with iOS 17" 
                   width={400} 
                   height={800}
                   priority
+                  quality={85}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
                   className="relative drop-shadow-2xl"
                 />
@@ -100,7 +101,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">Why Choose EDGE IPTV?</h2>
             <p className="text-lg text-muted-foreground">
-              Built with performance and user experience in mind. Everything you need for the perfect streaming session.
+              Built with performance and user experience in mind. <Link href="/blog/best-iptv-player-ios-2026" className="text-primary hover:underline">See why we're rated #1</Link> in comprehensive 2026 comparison tests.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -150,20 +151,20 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
              <ScreenshotCard 
-               src="/images/language-selection.jpeg" 
-               alt="EDGE IPTV multilingual interface showing language selection screen with English, French, Spanish options on iPhone" 
+               src="/images/language-selection.webp" 
+               alt="EDGE IPTV multilingual interface selection screen showing English, French, Spanish, Portuguese and Turkish language options on iPhone" 
                title="Easy Language Setup"
                loading="lazy"
              />
              <ScreenshotCard 
-               src="/images/series-view.png" 
-               alt="EDGE IPTV series library view displaying organized TV shows with thumbnails and episode lists on iPad" 
+               src="/images/series-view.webp" 
+               alt="EDGE IPTV series library interface displaying TV shows grid with posters, episode count and playback progress on iPad Pro" 
                title="Organized Content"
                loading="lazy"
              />
              <ScreenshotCard 
-               src="/images/movie-details.png" 
-               alt="EDGE IPTV movie details page showing title, description, cast information and Chromecast button" 
+               src="/images/movie-details.webp" 
+               alt="EDGE IPTV movie details page showing 4K quality badge, synopsis, cast information, trailer preview and download button on iPhone" 
                title="Rich Details"
                loading="lazy"
              />
@@ -179,7 +180,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
             <h2 className="text-3xl lg:text-5xl font-bold mb-6 tracking-tight">Ready to start streaming?</h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Join thousands of users who have upgraded their streaming experience. Download EDGE IPTV today.
+              Join thousands of users who have upgraded their streaming experience. <Link href="/how-to-install-iptv-iphone-ipad" className="text-primary hover:underline">Get started in 2 minutes</Link> with our step-by-step guide.
             </p>
             <DownloadButton location="home-cta-final" size="lg" className="rounded-full text-lg h-16 px-10 shadow-xl shadow-primary/25 hover:scale-105">
               Download Now
@@ -195,23 +196,114 @@ export default function Home() {
       <FAQ lang="en" />
 
       {/* Footer */}
-      <footer className="bg-secondary/50 border-t border-border/50 py-12">
+      <footer className="bg-muted/50 border-t border-border py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
-            <div className="flex items-center gap-3">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Colonne 1 : Product */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Product</h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link href="/how-to-install-iptv-iphone-ipad" className="text-muted-foreground hover:text-primary transition-colors">
+                    How to Install
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#features" className="text-muted-foreground hover:text-primary transition-colors">
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                    Blog & Tutorials
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Colonne 2 : Popular Guides */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Popular Guides</h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link href="/blog/best-iptv-player-ios-2026" className="text-muted-foreground hover:text-primary transition-colors">
+                    Best IPTV Players 2026
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/xtream-codes-setup-guide" className="text-muted-foreground hover:text-primary transition-colors">
+                    Xtream Codes Setup
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/chromecast-iptv-streaming-guide" className="text-muted-foreground hover:text-primary transition-colors">
+                    Chromecast Guide
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Colonne 3 : Support */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Support</h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link href="/blog/iptv-buffering-fix-guide" className="text-muted-foreground hover:text-primary transition-colors">
+                    Fix Buffering Issues
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/m3u-playlist-setup-guide" className="text-muted-foreground hover:text-primary transition-colors">
+                    M3U Playlist Setup
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Colonne 4 : Legal & Languages */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Legal & Languages</h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms-of-use" className="text-muted-foreground hover:text-primary transition-colors">
+                    Terms of Use
+                  </Link>
+                </li>
+                <li className="pt-2 border-t border-border mt-2">
+                  <Link href="/fr" className="text-muted-foreground hover:text-primary transition-colors">
+                    🇫🇷 Français
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/es" className="text-muted-foreground hover:text-primary transition-colors">
+                    🇪🇸 Español
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pt" className="text-muted-foreground hover:text-primary transition-colors">
+                    🇵🇹 Português
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Logo et copyright */}
+          <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border">
+            <div className="flex items-center gap-3 mb-4 md:mb-0">
               <div className="relative w-8 h-8 overflow-hidden rounded-lg grayscale opacity-80">
-                <Image src="/images/icon.png" alt="EDGE IPTV Logo" fill className="object-cover" />
+                <Image src="/images/icon.png" alt="EDGE IPTV icon - Best IPTV player app for iPhone and iPad" fill className="object-cover" />
               </div>
               <span className="text-lg font-bold text-foreground/80">EDGE IPTV</span>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 text-sm font-medium text-muted-foreground">
-              <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-              <Link href="/terms-of-use" className="hover:text-primary transition-colors">Terms of Use</Link>
-              <Link href="/how-to-install-iptv-iphone-ipad" className="hover:text-primary transition-colors">How to Install</Link>
-            </div>
-          </div>
-          <div className="border-t border-border/50 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} EDGE IPTV. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">
+              &copy; {new Date().getFullYear()} EDGE IPTV. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
@@ -247,6 +339,7 @@ function ScreenshotCard({ src, alt, title, loading }: { src: string, alt: string
           width={300} 
           height={600}
           loading={loading}
+          quality={75}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px"
           className="w-full h-auto"
         />

@@ -4,6 +4,7 @@ import { ArrowLeft, AlertCircle, CheckCircle, Tv, Wifi, Cast } from 'lucide-reac
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'How to Cast IPTV to Chromecast 2026 | Complete Streaming Guide',
@@ -56,6 +57,15 @@ export default function ChromecastIPTVGuide() {
       readTime="5 min"
       lang="en"
     >
+      <Breadcrumb 
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' }
+        ]} 
+        currentPage="Chromecast IPTV Streaming Guide"
+        lang="en"
+      />
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

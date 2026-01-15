@@ -5,6 +5,7 @@ import { ArrowLeft, Star, Check, X } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Best IPTV Player for iOS 2026 | Top 7 Apps Compared',
@@ -57,6 +58,15 @@ export default function BestIPTVPlayerArticle() {
       readTime="8 min read"
       lang="en"
     >
+      <Breadcrumb 
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' }
+        ]} 
+        currentPage="Best IPTV Player for iOS in 2026"
+        lang="en"
+      />
+      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
