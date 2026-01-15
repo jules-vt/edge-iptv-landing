@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://edge-iptv.app/how-to-install-iptv-iphone-ipad',
       'fr': 'https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad',
+      'es': 'https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad',
+      'pt': 'https://edge-iptv.app/pt/como-instalar-iptv-iphone-ipad',
     },
   },
   openGraph: {
