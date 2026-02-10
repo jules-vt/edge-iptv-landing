@@ -41,11 +41,11 @@ export default function HomePT() {
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
             <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1]">
-              Melhor Player IPTV <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">para iPhone & iPad</span>
+              EDGE IPTV - Melhor <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Player IPTV para iOS</span>
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Transforme seu iPhone e iPad em um poderoso centro de streaming. Configuração rápida, visualização offline e uma interface linda projetada para o entretenimento moderno.
+              <strong>EDGE IPTV</strong> transforma seu iPhone e iPad em um poderoso centro de streaming. O player IPTV #1 com configuração rápida, visualização offline e uma interface linda projetada para o entretenimento moderno.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button asChild size="lg" className="rounded-full text-lg h-14 px-8 shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all">
@@ -91,13 +91,36 @@ export default function HomePT() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* O que é EDGE IPTV Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="space-y-6">
+            <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-center mb-8">O que é EDGE IPTV?</h2>
+            <div className="prose prose-lg dark:prose-invert mx-auto space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                <strong>EDGE IPTV</strong> é o player IPTV mais avançado projetado exclusivamente para dispositivos iOS, incluindo iPhone e iPad. Como o aplicativo de streaming IPTV líder em 2026, EDGE IPTV revoluciona a forma como você assiste televisão ao vivo, filmes e séries em seus dispositivos Apple.
+              </p>
+              <p>
+                O que distingue <strong>EDGE IPTV</strong> de outros players IPTV é sua integração perfeita com os recursos do iOS, desempenho super rápido e interface amigável. Seja você um usuário iniciante de IPTV ou um streamer experiente, EDGE IPTV torna incrivelmente fácil acessar seu conteúdo favorito em apenas minutos.
+              </p>
+              <p>
+                Com <strong>EDGE IPTV</strong>, você obtém recursos poderosos como suporte Chromecast com um toque, recursos de visualização offline e integração completa da API Xtream Codes. O aplicativo suporta todos os principais protocolos IPTV, incluindo playlists M3U, tornando EDGE IPTV a solução IPTV mais versátil para usuários iOS. Nosso sistema de buffering inteligente garante reprodução suave mesmo em conexões mais lentas, enquanto nossa interface moderna oferece uma experiência de navegação intuitiva.
+              </p>
+              <p>
+                <strong>EDGE IPTV</strong> foi classificado como #1 em várias comparações independentes por sua estabilidade, conjunto de recursos e facilidade de uso. Junte-se a milhares de usuários satisfeitos que fizeram do EDGE IPTV seu player IPTV preferido para iPhone e iPad. Baixe EDGE IPTV hoje e experimente o futuro do streaming IPTV no iOS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}}
       <section id="features" className="py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">Por que escolher EDGE IPTV?</h2>
             <p className="text-lg text-muted-foreground">
-              Projetado pensando em desempenho e experiência do usuário. Tudo o que você precisa para a sessão de streaming perfeita.
+              EDGE IPTV é projetado pensando em desempenho e experiência do usuário. Tudo o que você precisa para a sessão de streaming perfeita.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
