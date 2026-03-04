@@ -43,6 +43,7 @@ jobs:
         run: |
           rsync -avz --delete \
             --exclude='.DS_Store' \
+            --include='app-ads.txt' \
             --exclude='*.txt' \
             -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
             ./out/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_PATH }}
