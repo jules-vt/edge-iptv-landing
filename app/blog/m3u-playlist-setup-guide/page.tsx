@@ -5,23 +5,32 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { buildAlternates, defaultOG, defaultTwitter, SITE } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'M3U Playlist Setup Guide 2026 | Complete Configuration Tutorial',
-  description: '📺 Master M3U playlist configuration in EDGE IPTV. Learn M3U vs M3U8, EPG setup, troubleshooting, and when to use M3U over Xtream codes.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/blog/m3u-playlist-setup-guide',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/m3u-playlist-setup-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/configurer-playlist-m3u-guide',
-    },
-  },
+  // Title optimized for: "what is m3u playlist", "m3u playlist url", "m3u url", "how to use m3u playlist"
+  title: 'What is an M3U Playlist? Setup Guide 2026 | Get Your M3U URL',
+  description:
+    'Learn what an M3U playlist is, how to get your M3U URL, add it to EDGE IPTV, and fix common errors. Complete 2026 guide for iPhone & iPad — free app.',
+  alternates: buildAlternates({
+    en: '/blog/m3u-playlist-setup-guide',
+    fr: '/fr/blog/configurer-playlist-m3u-guide',
+  }),
   openGraph: {
-    title: 'M3U Playlist Setup: Complete Tutorial 2026',
-    description: 'Complete guide to configure M3U playlists. Step-by-step setup, M3U vs M3U8, EPG configuration, and troubleshooting tips.',
-    images: ['https://edge-iptv.app/images/series-view.png'],
+    ...defaultOG,
+    title: 'What is an M3U Playlist? How to Get & Use Your M3U URL (2026)',
+    description:
+      'Complete guide: what M3U playlists are, how to find your M3U URL, configure it in EDGE IPTV, and troubleshoot M3U vs M3U8 issues.',
+    images: [`${SITE.url}/images/series-view.png`],
     type: 'article',
     publishedTime: '2026-01-12',
+    modifiedTime: '2026-03-11',
+  },
+  twitter: {
+    ...defaultTwitter,
+    title: 'What is an M3U Playlist? 2026 Setup Guide',
+    description:
+      'Discover what M3U playlists are, how to get your M3U URL, add it to EDGE IPTV on iPhone & iPad.',
   },
 };
 
@@ -45,7 +54,7 @@ export default function M3UPlaylistGuide() {
       }
     },
     "datePublished": "2026-01-12",
-    "dateModified": "2026-01-12"
+    "dateModified": "2026-03-11"
   };
 
   return (

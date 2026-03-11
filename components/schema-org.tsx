@@ -1,25 +1,18 @@
-"use client";
-
 import React from "react";
 
 interface SchemaOrgProps {
   lang?: "en" | "fr" | "es" | "pt";
 }
 
+/**
+ * Server component — renders JSON-LD schemas directly into the static HTML.
+ *
+ * ⚠️ Must stay a server component (no "use client"). The previous "use client"
+ * + useEffect/isClient pattern caused these schemas to be absent from the
+ * pre-rendered HTML, making them invisible to crawlers on first load.
+ */
 export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
-  // Use useEffect to only render on client to avoid hydration mismatch
-  const [isClient, setIsClient] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null; // Don't render on server to avoid hydration mismatch
-  }
-
   const websiteSchema = {
-    "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "EDGE IPTV",
     alternateName: ["EDGE IPTV Player", "EDGE IPTV App", "EDGE IPTV iOS"],

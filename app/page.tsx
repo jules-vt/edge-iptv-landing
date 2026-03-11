@@ -128,51 +128,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What is EDGE IPTV Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="space-y-6">
-            <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-center mb-8">
-              What is EDGE IPTV?
-            </h2>
-            <div className="prose prose-lg dark:prose-invert mx-auto space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                <strong>EDGE IPTV</strong> is the most advanced IPTV player
-                designed exclusively for iOS devices, including iPhone and iPad.
-                As the leading IPTV streaming application in 2026, EDGE IPTV
-                revolutionizes how you watch live television, movies, and series
-                on your Apple devices.
-              </p>
-              <p>
-                What sets <strong>EDGE IPTV</strong> apart from other IPTV
-                players is its seamless integration with iOS features,
-                lightning-fast performance, and user-friendly interface. Whether
-                you're a first-time IPTV user or an experienced streamer, EDGE
-                IPTV makes it incredibly easy to access your favorite content in
-                just minutes.
-              </p>
-              <p>
-                With <strong>EDGE IPTV</strong>, you get powerful features like
-                one-tap Chromecast support, offline viewing capabilities, and
-                full Xtream Codes API integration. The app supports all major
-                IPTV protocols including M3U playlists, making EDGE IPTV the
-                most versatile IPTV solution for iOS users. Our intelligent
-                buffering system ensures smooth playback even on slower
-                connections, while our modern UI provides an intuitive browsing
-                experience.
-              </p>
-              <p>
-                <strong>EDGE IPTV</strong> has been rated #1 in multiple
-                independent comparisons for its stability, feature set, and ease
-                of use. Join thousands of satisfied users who have made EDGE
-                IPTV their go-to IPTV player for iPhone and iPad. Download EDGE
-                IPTV today and experience the future of IPTV streaming on iOS.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section id="features" className="py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
@@ -260,6 +215,51 @@ export default function Home() {
               title="Rich Details"
               loading="lazy"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* What is EDGE IPTV Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="space-y-6">
+            <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-center mb-8">
+              What is EDGE IPTV?
+            </h2>
+            <div className="prose prose-lg dark:prose-invert mx-auto space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                <strong>EDGE IPTV</strong> is the most advanced IPTV player
+                designed exclusively for iOS devices, including iPhone and iPad.
+                As the leading IPTV streaming application in 2026, EDGE IPTV
+                revolutionizes how you watch live television, movies, and series
+                on your Apple devices.
+              </p>
+              <p>
+                What sets <strong>EDGE IPTV</strong> apart from other IPTV
+                players is its seamless integration with iOS features,
+                lightning-fast performance, and user-friendly interface. Whether
+                you're a first-time IPTV user or an experienced streamer, EDGE
+                IPTV makes it incredibly easy to access your favorite content in
+                just minutes.
+              </p>
+              <p>
+                With <strong>EDGE IPTV</strong>, you get powerful features like
+                one-tap Chromecast support, offline viewing capabilities, and
+                full Xtream Codes API integration. The app supports all major
+                IPTV protocols including M3U playlists, making EDGE IPTV the
+                most versatile IPTV solution for iOS users. Our intelligent
+                buffering system ensures smooth playback even on slower
+                connections, while our modern UI provides an intuitive browsing
+                experience.
+              </p>
+              <p>
+                <strong>EDGE IPTV</strong> has been rated #1 in multiple
+                independent comparisons for its stability, feature set, and ease
+                of use. Join thousands of satisfied users who have made EDGE
+                IPTV their go-to IPTV player for iPhone and iPad. Download EDGE
+                IPTV today and experience the future of IPTV streaming on iOS.
+              </p>
+            </div>
           </div>
         </div>
       </section>

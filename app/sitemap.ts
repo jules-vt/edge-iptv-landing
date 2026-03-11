@@ -1,298 +1,122 @@
 import { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog-posts";
+import { SITE } from "@/lib/seo-config";
 
 export const dynamic = "force-static";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://edge-iptv.app";
-  const currentDate = new Date();
+// ─── Dates ──────────────────────────────────────────────────────────────────
+// Use real modification dates instead of `new Date()`.
+// Sending `new Date()` on every build makes Google ignore the signal entirely.
+const DATES = {
+  launch: new Date("2025-01-01"),
+  v1: new Date("2026-01-12"),
+  lastSeoUpdate: new Date("2026-03-11"),
+} as const;
 
-  // Static pages - Main landing pages (highest priority)
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/fr`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/es`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/pt`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 1.0,
-    },
-    // Installation guides (critical for conversions)
-    {
-      url: `${baseUrl}/how-to-install-iptv-iphone-ipad`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/fr/comment-installer-iptv-iphone-ipad`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/es/como-instalar-iptv-iphone-ipad`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/pt/como-instalar-iptv-iphone-ipad`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    // Blog index pages
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/fr/blog`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/es/blog`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/pt/blog`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    // Legal pages (lower priority)
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms-of-use`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/fr/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/fr/terms-of-use`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/es/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/es/terms-of-use`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/pt/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/pt/terms-of-use`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    // Blog pages
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/fr/blog`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/es/blog`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/pt/blog`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    // Blog articles - English (High-value SEO content)
-    {
-      url: `${baseUrl}/blog/best-iptv-player-ios-2026`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95, // Comparison article - high conversion
-    },
-    {
-      url: `${baseUrl}/blog/xtream-codes-setup-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/blog/m3u-playlist-setup-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/blog/chromecast-iptv-streaming-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/blog/iptv-buffering-fix-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    // Blog articles - French
-    {
-      url: `${baseUrl}/fr/blog/meilleur-lecteur-iptv-ios-2026`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/fr/blog/configurer-codes-xtream-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/fr/blog/configurer-playlist-m3u-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/fr/blog/diffuser-iptv-chromecast-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/fr/blog/resoudre-buffering-iptv-guide`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    // Blog articles - Spanish
-    {
-      url: `${baseUrl}/es/blog/mejor-reproductor-iptv-ios-2026`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/es/blog/configurar-codigos-xtream-guia`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/es/blog/configurar-lista-m3u-guia`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/es/blog/guia-streaming-iptv-chromecast`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/es/blog/solucionar-buffering-iptv-guia`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    // Blog articles - Portuguese
-    {
-      url: `${baseUrl}/pt/blog/melhor-reprodutor-iptv-ios-2026`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/pt/blog/configurar-codigos-xtream-pt`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/pt/blog/configurar-lista-m3u-pt`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/pt/blog/guia-streaming-iptv-chromecast-pt`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/pt/blog/resolver-buffering-iptv-guia`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
+// ─── Locales ─────────────────────────────────────────────────────────────────
+const LOCALES = ["", "/fr", "/es", "/pt"] as const;
+
+// Shorthand: build a full URL from a path
+const u = (path: string) => `${SITE.url}${path}`;
+
+type Freq = MetadataRoute.Sitemap[number]["changeFrequency"];
+
+function entry(
+  path: string,
+  priority: number,
+  freq: Freq,
+  lastModified = DATES.lastSeoUpdate,
+): MetadataRoute.Sitemap[number] {
+  return { url: u(path), lastModified, changeFrequency: freq, priority };
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  // ── 1. Home pages (all locales) ───────────────────────────────────────────
+  const homePages = LOCALES.map((locale) =>
+    entry(locale || "/", 1.0, "weekly", DATES.lastSeoUpdate),
+  );
+
+  // ── 2. Installation guides (all locales) ─────────────────────────────────
+  const installSlugs: Record<string, string> = {
+    "": "/how-to-install-iptv-iphone-ipad",
+    "/fr": "/fr/comment-installer-iptv-iphone-ipad",
+    "/es": "/es/como-instalar-iptv-iphone-ipad",
+    "/pt": "/pt/como-instalar-iptv-iphone-ipad",
+  };
+  const installPages = LOCALES.map((locale) =>
+    entry(installSlugs[locale], 0.95, "monthly", DATES.lastSeoUpdate),
+  );
+
+  // ── 3. Blog index pages ───────────────────────────────────────────────────
+  const blogIndexes = LOCALES.map((locale) =>
+    entry(`${locale}/blog`, 0.9, "weekly", DATES.lastSeoUpdate),
+  );
+
+type ArticleTuple = [path: string, priority: number, lastModified: Date];
+
+  // ── 4. English blog articles ──────────────────────────────────────────────
+  const enArticles: ArticleTuple[] = [
+    ['/blog/best-iptv-app-for-iphone',       0.95, DATES.lastSeoUpdate],
+    ['/blog/best-iptv-player-ios-2026',      0.90, DATES.lastSeoUpdate],
+    ['/blog/m3u-playlist-setup-guide',       0.90, DATES.lastSeoUpdate],
+    ['/blog/xtream-codes-setup-guide',       0.85, DATES.v1],
+    ['/blog/chromecast-iptv-streaming-guide', 0.85, DATES.v1],
+    ['/blog/iptv-buffering-fix-guide',       0.85, DATES.lastSeoUpdate],
   ];
 
-  // Blog posts - dynamically generated from content
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url:
-      post.lang === "en"
-        ? `${baseUrl}/blog/${post.slug}`
-        : `${baseUrl}/${post.lang}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.75, // Dynamic blog posts slightly lower than featured guides
-  }));
+  // ── 5. French blog articles ───────────────────────────────────────────────
+  const frArticles: ArticleTuple[] = [
+    ["/fr/blog/meilleur-lecteur-iptv-ios-2026",   0.95, DATES.lastSeoUpdate],
+    ["/fr/blog/configurer-playlist-m3u-guide",    0.90, DATES.lastSeoUpdate],
+    ["/fr/blog/configurer-codes-xtream-guide",    0.85, DATES.v1],
+    ["/fr/blog/diffuser-iptv-chromecast-guide",   0.85, DATES.v1],
+    ["/fr/blog/resoudre-buffering-iptv-guide",    0.85, DATES.lastSeoUpdate],
+  ];
 
-  return [...staticPages, ...blogPages];
+  // ── 6. Spanish blog articles ──────────────────────────────────────────────
+  const esArticles: ArticleTuple[] = [
+    ["/es/blog/mejor-reproductor-iptv-ios-2026",  0.95, DATES.v1],
+    ["/es/blog/configurar-codigos-xtream-guia",   0.85, DATES.v1],
+    ["/es/blog/configurar-lista-m3u-guia",        0.85, DATES.v1],
+    ["/es/blog/guia-streaming-iptv-chromecast",   0.85, DATES.v1],
+    ["/es/blog/solucionar-buffering-iptv-guia",   0.85, DATES.v1],
+  ];
+
+  // ── 7. Portuguese blog articles ───────────────────────────────────────────
+  const ptArticles: ArticleTuple[] = [
+    ["/pt/blog/melhor-reprodutor-iptv-ios-2026",  0.95, DATES.v1],
+    ["/pt/blog/configurar-codigos-xtream-pt",     0.85, DATES.v1],
+    ["/pt/blog/configurar-lista-m3u-pt",          0.85, DATES.v1],
+    ["/pt/blog/guia-streaming-iptv-chromecast-pt", 0.85, DATES.v1],
+    ["/pt/blog/resolver-buffering-iptv-guia",     0.85, DATES.v1],
+  ];
+
+  const articles = [
+    ...enArticles,
+    ...frArticles,
+    ...esArticles,
+    ...ptArticles,
+  ].map(([path, priority, date]) => entry(path, priority, "monthly", date));
+
+  // ── 8. Legal pages ─────────────────────────────────────────────────────────
+  const legalPaths = [
+    "/privacy-policy",
+    "/terms-of-use",
+    "/fr/privacy-policy",
+    "/fr/terms-of-use",
+    "/es/privacy-policy",
+    "/es/terms-of-use",
+    "/pt/privacy-policy",
+    "/pt/terms-of-use",
+  ];
+  const legalPages = legalPaths.map((path) =>
+    entry(path, 0.3, "yearly", DATES.launch),
+  );
+
+  return [
+    ...homePages,
+    ...installPages,
+    ...blogIndexes,
+    ...articles,
+    ...legalPages,
+  ];
 }

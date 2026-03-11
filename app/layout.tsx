@@ -3,27 +3,27 @@ import Script from "next/script";
 import "./globals.css";
 import { SchemaOrg } from "@/components/schema-org";
 import { WebVitals } from "./web-vitals";
+import { SITE, buildAlternates, defaultOG, defaultTwitter } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-  title: "EDGE IPTV - Best iOS IPTV Player 2026 | iPhone & iPad App",
+  // Title optimized for: "best iptv app for iphone", "iptv player ios", "edge iptv"
+  title: "EDGE IPTV — Best IPTV App for iPhone & iPad 2026 | Free Download",
   description:
-    "⭐ EDGE IPTV - The #1 rated IPTV player for iOS. ✓ 2-minute setup ✓ Chromecast ✓ Offline viewing ✓ 4K streaming. Download EDGE IPTV free for iPhone & iPad!",
-  authors: [{ name: "EDGE IPTV" }],
+    "EDGE IPTV is the #1 IPTV player for iPhone & iPad. Watch live TV, movies and series with easy Xtream codes or M3U setup, Chromecast, offline viewing and 4K. Free download.",
+  authors: [{ name: SITE.name }],
   keywords: [
     "edge iptv",
-    "EDGE IPTV",
-    "edge iptv app",
-    "edge iptv player",
-    "edge iptv ios",
-    "IPTV player iOS",
-    "IPTV iPhone app",
-    "IPTV iPad app",
-    "best IPTV player 2026",
-    "Xtream codes iOS",
-    "Chromecast IPTV",
-    "IPTV offline viewing",
-    "free IPTV player",
-    "IPTV streaming app",
+    "best iptv app for iphone",
+    "iptv player ios",
+    "iptv iphone app",
+    "iptv ipad app",
+    "how to install iptv on iphone",
+    "xtream codes ios",
+    "m3u player iphone",
+    "chromecast iptv",
+    "iptv offline viewing",
+    "free iptv player iphone",
+    "best iptv player 2026",
   ],
   robots: "index, follow",
   icons: {
@@ -31,32 +31,25 @@ export const metadata: Metadata = {
     apple: "/images/icon.png",
   },
   manifest: "/manifest.json",
-  alternates: {
-    canonical: "https://edge-iptv.app/",
-    languages: {
-      en: "https://edge-iptv.app/",
-      fr: "https://edge-iptv.app/fr/",
-      es: "https://edge-iptv.app/es/",
-      pt: "https://edge-iptv.app/pt/",
-      "x-default": "https://edge-iptv.app/",
-    },
-  },
+  alternates: buildAlternates({
+    en: "/",
+    fr: "/fr/",
+    es: "/es/",
+    pt: "/pt/",
+  }),
   openGraph: {
+    ...defaultOG,
     type: "website",
-    url: "https://edge-iptv.app/",
-    title: "EDGE IPTV - Best iOS IPTV Player 2026 | iPhone & iPad",
+    url: SITE.url,
+    title: "EDGE IPTV — Best IPTV App for iPhone & iPad 2026",
     description:
-      "⭐ EDGE IPTV - #1 rated iOS IPTV player. 2-minute setup, Chromecast, offline viewing, 4K streaming. Free download!",
-    images: ["https://edge-iptv.app/images/iphone-series-3d.png"],
-    siteName: "EDGE IPTV",
-    locale: "en_US",
+      "The #1 IPTV player for iPhone & iPad. Live TV, movies and series with 2-minute setup, Chromecast, offline mode and 4K. Free download.",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "EDGE IPTV - Best iOS IPTV Player 2026 | Free Download",
+    ...defaultTwitter,
+    title: "EDGE IPTV — Best IPTV App for iPhone & iPad 2026",
     description:
-      "⭐ EDGE IPTV - #1 iOS IPTV player. 2-minute setup, Chromecast, offline viewing, 4K streaming.",
-    images: ["https://edge-iptv.app/images/iphone-series-3d.png"],
+      "The #1 IPTV player for iOS. Watch live TV and movies with Chromecast, offline mode and 4K. Free download.",
   },
   other: {
     "apple-itunes-app": "app-id=6745966143",

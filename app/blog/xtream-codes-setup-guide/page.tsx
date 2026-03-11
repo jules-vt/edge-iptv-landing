@@ -5,23 +5,30 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'Xtream Codes Setup Guide 2026 | 2-Minute Configuration Tutorial',
-  description: '📺 Learn how to configure Xtream codes in EDGE IPTV in under 2 minutes. Step-by-step setup with screenshots, common errors, and troubleshooting tips.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/blog/xtream-codes-setup-guide',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/xtream-codes-setup-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/configurer-codes-xtream-guide',
-    },
-  },
+  description:
+    'Learn how to configure Xtream codes in EDGE IPTV in under 2 minutes. Step-by-step setup with screenshots, common errors, and troubleshooting tips.',
+  alternates: buildAlternates({
+    en: '/blog/xtream-codes-setup-guide',
+    fr: '/fr/blog/configurer-codes-xtream-guide',
+  }),
   openGraph: {
+    ...defaultOG,
     title: 'Xtream Codes Setup: Complete Guide for Beginners 2026',
-    description: 'Complete guide to configure Xtream codes. Troubleshooting tips, common errors, and best practices for optimal IPTV streaming.',
+    description:
+      'Complete guide to configure Xtream codes. Troubleshooting tips, common errors, and best practices for optimal IPTV streaming.',
     images: ['https://edge-iptv.app/images/series-view.png'],
     type: 'article',
     publishedTime: '2026-01-12',
+    modifiedTime: '2026-03-11',
+  },
+  twitter: {
+    ...defaultTwitter,
+    title: 'Xtream Codes Setup Guide 2026',
+    description: 'Configure Xtream codes in EDGE IPTV in under 2 minutes. Step-by-step tutorial.',
   },
 };
 

@@ -106,29 +106,27 @@ FileETag None
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Enable rewrite engine
+# ─── URL rewriting ──────────────────────────────────────────────────────────
 RewriteEngine On
 
-# Force HTTPS (if using SSL)
+# Force HTTPS (uncomment on production)
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect /fr/ to /fr.html (Next.js static export format)
-RewriteRule ^fr/?$ /fr.html [L,R=301]
+# ─── 1. Redirect .html extension → clean URL (301) ──────────────────────────
+# Fixes duplicate-content issues where Google indexes both /page.html and /page.
+# Catches: /fr.html, /how-to-install-iptv-iphone-ipad.html, /terms-of-use.html…
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
 
-# Redirect directory access with trailing slash to .html files
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/([^/]+)/$
-RewriteCond %{DOCUMENT_ROOT}/%1.html -f
-RewriteRule ^([^/]+)/$ /$1.html [L,R=301]
-
-# Serve .html files without extension
+# ─── 2. Serve clean URLs by silently loading the matching .html file ─────────
+# Allows /how-to-install-iptv-iphone-ipad to return the built .html without redirect.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# Remove trailing slashes from files (not directories)
+# ─── 3. Redirect double slashes ──────────────────────────────────────────────
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{THE_REQUEST} /+([^?\s]*?)//+(?:[?\s]|$)
 RewriteRule ^ /%1? [R=301,L]

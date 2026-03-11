@@ -5,27 +5,33 @@ import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { DownloadButton } from '@/components/download-button';
+import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'Install IPTV on iPhone in 2 Minutes | Free Guide 2026',
-  description: '✓ Setup IPTV on iPhone/iPad in 2 minutes. ✓ Works with Xtream codes. ✓ No technical skills needed. Download EDGE IPTV now!',
-  alternates: {
-    canonical: 'https://edge-iptv.app/how-to-install-iptv-iphone-ipad',
-    languages: {
-      'en': 'https://edge-iptv.app/how-to-install-iptv-iphone-ipad',
-      'fr': 'https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad',
-      'es': 'https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad',
-      'pt': 'https://edge-iptv.app/pt/como-instalar-iptv-iphone-ipad',
-    },
-  },
+  // Title optimized for: "how to install iptv on iphone", "how to download iptv on iphone",
+  // "how to setup iptv on iphone", "how to get iptv on ipad"
+  title: 'How to Install IPTV on iPhone & iPad 2026 | Free 2-Minute Guide',
+  description:
+    'Step-by-step guide to install IPTV on iPhone or iPad in under 2 minutes. Works with any IPTV provider via Xtream codes or M3U URL. Download EDGE IPTV free.',
+  alternates: buildAlternates({
+    en: '/how-to-install-iptv-iphone-ipad',
+    fr: '/fr/comment-installer-iptv-iphone-ipad',
+    es: '/es/como-instalar-iptv-iphone-ipad',
+    pt: '/pt/como-instalar-iptv-iphone-ipad',
+  }),
   openGraph: {
+    ...defaultOG,
     type: 'article',
     url: 'https://edge-iptv.app/how-to-install-iptv-iphone-ipad',
-    title: 'Install IPTV on iPhone in 2 Minutes | Free Guide 2026',
-    description: '✓ Setup IPTV on iPhone/iPad in 2 minutes. ✓ Works with Xtream codes. ✓ No technical skills needed. Download EDGE IPTV now!',
-    images: ['https://edge-iptv.app/images/iphone-series-3d.png'],
-    siteName: 'EDGE IPTV',
-    locale: 'en_US',
+    title: 'How to Install IPTV on iPhone & iPad 2026 | 2-Minute Setup',
+    description:
+      'Step-by-step: install IPTV on iPhone or iPad in 2 minutes with any provider. Xtream codes or M3U URL supported. Free download.',
+  },
+  twitter: {
+    ...defaultTwitter,
+    title: 'How to Install IPTV on iPhone & iPad (2026)',
+    description:
+      'Complete guide: install IPTV on iPhone or iPad in 2 minutes. Xtream codes or M3U URL. Free EDGE IPTV app.',
   },
 };
 

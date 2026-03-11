@@ -5,23 +5,30 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'How to Cast IPTV to Chromecast 2026 | Complete Streaming Guide',
-  description: '📺 Learn how to cast IPTV from EDGE IPTV to your Chromecast device. Step-by-step setup, troubleshooting, and tips for the best streaming experience.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/blog/chromecast-iptv-streaming-guide',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/chromecast-iptv-streaming-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/diffuser-iptv-chromecast-guide',
-    },
-  },
+  description:
+    'Learn how to cast IPTV from EDGE IPTV to your Chromecast device. Step-by-step setup, troubleshooting, and tips for the best streaming experience.',
+  alternates: buildAlternates({
+    en: '/blog/chromecast-iptv-streaming-guide',
+    fr: '/fr/blog/diffuser-iptv-chromecast-guide',
+  }),
   openGraph: {
+    ...defaultOG,
     title: 'Cast IPTV to Chromecast: Complete Streaming Guide 2026',
-    description: 'Complete guide to casting IPTV content from your iPhone/iPad to Chromecast. Setup, troubleshooting, and pro tips.',
+    description:
+      'Complete guide to casting IPTV content from your iPhone/iPad to Chromecast. Setup, troubleshooting, and pro tips.',
     images: ['https://edge-iptv.app/images/series-view.png'],
     type: 'article',
     publishedTime: '2026-01-12',
+    modifiedTime: '2026-03-11',
+  },
+  twitter: {
+    ...defaultTwitter,
+    title: 'How to Cast IPTV to Chromecast 2026',
+    description: 'Complete guide: cast IPTV from iPhone/iPad to Chromecast with EDGE IPTV.',
   },
 };
 

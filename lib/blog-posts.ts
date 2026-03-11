@@ -30,6 +30,19 @@ export interface BlogPost {
 // };
 
 export const blogPosts: BlogPost[] = [
+  // ── Main English articles ────────────────────────────────────────────────
+  {
+    slug: 'best-iptv-app-for-iphone',
+    title: 'Best IPTV App for iPhone 2026: Top 5 Free Apps Tested',
+    description:
+      'We tested the 5 most popular free IPTV apps on iPhone to find the fastest, most reliable, and easiest to set up in 2026.',
+    date: '2026-03-11',
+    author: 'EDGE IPTV Team',
+    readTime: '7 min read',
+    image: '/images/iphone-series-3d.png',
+    lang: 'en',
+    category: 'guide',
+  },
   {
     slug: 'how-to-install-iptv-iphone-ipad',
     title: 'How to Install IPTV on iPhone & iPad',

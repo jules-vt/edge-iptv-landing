@@ -6,23 +6,29 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'Best IPTV Player for iOS 2026 | Top 7 Apps Compared',
-  description: '⭐ Compare the 7 best IPTV players for iPhone & iPad in 2026. Features, pros, cons, and why EDGE IPTV ranks #1 for streaming.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/blog/best-iptv-player-ios-2026',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/best-iptv-player-ios-2026',
-      'fr': 'https://edge-iptv.app/fr/blog/meilleur-lecteur-iptv-ios-2026',
-    },
-  },
+  description:
+    'Compare the 7 best IPTV players for iPhone & iPad in 2026. Features, pros, cons, and why EDGE IPTV ranks #1 for streaming.',
+  alternates: buildAlternates({
+    en: '/blog/best-iptv-player-ios-2026',
+    fr: '/fr/blog/meilleur-lecteur-iptv-ios-2026',
+  }),
   openGraph: {
+    ...defaultOG,
     title: 'Best IPTV Player for iOS 2026 | Top 7 Apps Compared',
-    description: 'Compare the 7 best IPTV players for iPhone & iPad. Features, pros, cons, and expert recommendations.',
-    images: ['https://edge-iptv.app/images/iphone-series-3d.png'],
+    description:
+      'Compare the 7 best IPTV players for iPhone & iPad. Features, pros, cons, and expert recommendations.',
     type: 'article',
     publishedTime: '2026-01-12',
+    modifiedTime: '2026-03-11',
+  },
+  twitter: {
+    ...defaultTwitter,
+    title: 'Best IPTV Player for iOS 2026 | Top 7 Apps Compared',
+    description: 'Compare the 7 best IPTV players for iPhone & iPad in 2026.',
   },
 };
 

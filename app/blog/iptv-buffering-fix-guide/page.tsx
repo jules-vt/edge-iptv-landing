@@ -5,31 +5,32 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'How to Fix IPTV Buffering Issues: Complete 2026 Guide | EDGE IPTV',
-  description: '🔧 Solve IPTV buffering problems permanently. Learn the 10+ causes, diagnostic tests, network optimizations, and how EDGE IPTV features help reduce buffering.',
-  keywords: 'iptv buffering, iptv buffering fix, iptv stops buffering, fix iptv lag, iptv keeps buffering, iptv streaming issues, iptv buffering 2026',
-  alternates: {
-    canonical: 'https://edge-iptv.app/blog/iptv-buffering-fix-guide',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/iptv-buffering-fix-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/resoudre-buffering-iptv-guide',
-    },
-  },
+  description:
+    'Solve IPTV buffering problems permanently. Learn the 10+ causes, diagnostic tests, network optimizations, and how EDGE IPTV features help reduce buffering.',
+  keywords:
+    'iptv buffering, iptv buffering fix, iptv stops buffering, fix iptv lag, iptv keeps buffering, iptv streaming issues, iptv buffering 2026',
+  alternates: buildAlternates({
+    en: '/blog/iptv-buffering-fix-guide',
+    fr: '/fr/blog/resoudre-buffering-iptv-guide',
+  }),
   openGraph: {
+    ...defaultOG,
     title: 'How to Fix IPTV Buffering Issues: Complete 2026 Guide',
-    description: 'Comprehensive guide to solving IPTV buffering problems. Diagnostic tests, network optimizations, and pro tips to eliminate lag.',
+    description:
+      'Comprehensive guide to solving IPTV buffering problems. Diagnostic tests, network optimizations, and pro tips to eliminate lag.',
     images: ['https://edge-iptv.app/images/series-view.png'],
     type: 'article',
     publishedTime: '2026-01-12',
+    modifiedTime: '2026-03-11',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...defaultTwitter,
     title: 'How to Fix IPTV Buffering Issues: Complete Guide',
     description: 'Stop IPTV buffering for good. Diagnostic tests, optimizations, and EDGE IPTV features that help.',
-    images: ['https://edge-iptv.app/images/series-view.png'],
-    creator: '@edgeiptv',
   },
 };
 
