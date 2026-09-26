@@ -63,7 +63,7 @@ export default function HowToInstallFR() {
         "@type": "HowToStep",
         "position": 1,
         "name": "Télécharger EDGE IPTV depuis l'App Store",
-        "text": "Téléchargez le meilleur lecteur IPTV depuis l'App Store. EDGE IPTV est spécialement conçu pour iPhone et iPad avec support Chromecast, visionnage hors ligne et configuration rapide des codes Xtream. L'application est entièrement gratuite.",
+        "text": "Téléchargez le meilleur lecteur IPTV depuis l'App Store. EDGE IPTV est spécialement conçu pour iPhone et iPad avec guide TV en direct, support Chromecast & AirPlay, visionnage hors ligne et configuration rapide des codes Xtream. Gratuit à télécharger avec un essai gratuit de 7 jours.",
         "url": "https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad#step1",
         "image": {
           "@type": "ImageObject",
@@ -227,14 +227,15 @@ export default function HowToInstallFR() {
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Téléchargez le Meilleur Lecteur IPTV pour iOS</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                La première étape consiste à télécharger un lecteur IPTV fiable. Nous recommandons vivement <strong>EDGE IPTV</strong> car il est spécialement conçu pour iPhone et iPad, offrant l'expérience de streaming la plus fluide avec des fonctionnalités avancées.
+                La première étape consiste à télécharger un lecteur IPTV fiable. Nous recommandons vivement <strong>EDGE IPTV</strong> car il est spécialement conçu pour iPhone et iPad, offrant l'expérience de streaming la plus fluide avec des fonctionnalités avancées. Gratuit à télécharger avec un essai gratuit de 7 jours.
               </p>
               
               <div className="mb-6">
                 <strong className="block mb-2 text-gray-800">Pourquoi choisir EDGE IPTV ?</strong>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Configuration Xtream rapide en quelques secondes</li>
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Support Chromecast pour visionner sur grand écran</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Configuration M3U ou Xtream rapide en quelques secondes</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Guide TV en direct (EPG) et Picture in Picture</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Support Chromecast & AirPlay pour visionner sur grand écran</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Téléchargement hors ligne pour regarder sans internet</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Interface multilingue (Anglais, Français, Espagnol, Portugais, Turc)</li>
                 </ul>
@@ -309,10 +310,10 @@ export default function HowToInstallFR() {
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                  <Image 
-                    src="/images/movie-details.png" 
-                    alt="Détails du film" 
-                    width={400} 
+                  <Image
+                    src="/images/movie-details.png"
+                    alt="Guide TV en direct"
+                    width={400}
                     height={800}
                     className="w-full h-auto"
                   />

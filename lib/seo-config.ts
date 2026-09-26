@@ -9,7 +9,7 @@ export const SITE = {
   url: "https://edge-iptv.app",
   name: "EDGE IPTV",
   appStoreUrl:
-    "https://apps.apple.com/app/edge-iptv/id6745966143",
+    "https://apps.apple.com/ca/app/edge-iptv-m3u-xtream/id6812893793",
   defaultImage: "https://edge-iptv.app/images/iphone-series-3d.png",
   twitterHandle: "@edgeiptv",
 } as const;

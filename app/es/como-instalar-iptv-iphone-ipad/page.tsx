@@ -62,7 +62,7 @@ export default function HowToInstallES() {
         "@type": "HowToStep",
         "position": 1,
         "name": "Descargar EDGE IPTV desde App Store",
-        "text": "Descarga el mejor reproductor IPTV desde App Store. EDGE IPTV está especialmente diseñado para iPhone y iPad con soporte Chromecast, visualización offline y configuración rápida de códigos Xtream. La aplicación es completamente gratuita.",
+        "text": "Descarga el mejor reproductor IPTV desde App Store. EDGE IPTV está especialmente diseñado para iPhone y iPad con guía de TV en vivo, soporte Chromecast y AirPlay, visualización offline y configuración rápida de códigos Xtream. Gratis para descargar con una prueba gratuita de 7 días.",
         "url": "https://edge-iptv.app/es/como-instalar-iptv-iphone-ipad#step1",
         "image": {
           "@type": "ImageObject",
@@ -224,14 +224,15 @@ export default function HowToInstallES() {
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Descarga el Mejor Reproductor IPTV para iOS</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                El primer paso es descargar un reproductor IPTV confiable. Recomendamos encarecidamente <strong>EDGE IPTV</strong> ya que está especialmente diseñado para iPhone y iPad, ofreciendo la experiencia de streaming más fluida con funciones avanzadas.
+                El primer paso es descargar un reproductor IPTV confiable. Recomendamos encarecidamente <strong>EDGE IPTV</strong> ya que está especialmente diseñado para iPhone y iPad, ofreciendo la experiencia de streaming más fluida con funciones avanzadas. Gratis para descargar con una prueba gratuita de 7 días.
               </p>
               
               <div className="mb-6">
                 <strong className="block mb-2 text-gray-800">¿Por qué elegir EDGE IPTV?</strong>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Configuración Xtream rápida en segundos</li>
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Soporte Chromecast para ver en pantalla grande</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Configuración M3U o Xtream rápida en segundos</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Guía de TV en vivo (EPG) y Picture in Picture</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Soporte Chromecast y AirPlay para ver en pantalla grande</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Descarga offline para ver sin internet</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Interfaz multilingüe (Inglés, Francés, Español, Portugués, Turco)</li>
                 </ul>
@@ -303,10 +304,10 @@ export default function HowToInstallES() {
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                  <Image 
-                    src="/images/movie-details.png" 
-                    alt="Detalles de película" 
-                    width={400} 
+                  <Image
+                    src="/images/movie-details.png"
+                    alt="Guía de TV en vivo"
+                    width={400}
                     height={800}
                     className="w-full h-auto"
                   />

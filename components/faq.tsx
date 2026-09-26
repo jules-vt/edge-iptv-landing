@@ -17,11 +17,11 @@ const faqsEN: FAQItem[] = [
   },
   {
     question: "Is EDGE IPTV free to download?",
-    answer: "Yes, EDGE IPTV is completely free to download and use. However, you'll need an active IPTV subscription from a service provider to access content. The app itself doesn't provide any content."
+    answer: "EDGE IPTV is free to download and comes with a 7-day free trial. After the trial, a subscription is required to keep using the app. Note that EDGE IPTV is a player only — you'll separately need an active IPTV service subscription (M3U or Xtream codes) from a provider to access content."
   },
   {
     question: "Do I need a subscription to use EDGE IPTV?",
-    answer: "EDGE IPTV is a player app. You'll need an IPTV service subscription with Xtream codes from your preferred provider. Once you have your credentials, you can easily configure them in the app in under 30 seconds."
+    answer: "Yes, EDGE IPTV requires a subscription after the 7-day free trial to use the app. You'll also need an IPTV service subscription with M3U or Xtream codes from your preferred provider — once you have your credentials, you can configure them in the app in under 30 seconds."
   },
   {
     question: "Does EDGE IPTV support Chromecast?",
@@ -52,11 +52,11 @@ const faqsFR: FAQItem[] = [
   },
   {
     question: "EDGE IPTV est-il gratuit ?",
-    answer: "Oui, EDGE IPTV est entièrement gratuit à télécharger et utiliser. Cependant, vous aurez besoin d'un abonnement IPTV actif auprès d'un fournisseur de services pour accéder au contenu. L'application elle-même ne fournit aucun contenu."
+    answer: "EDGE IPTV est gratuit à télécharger et propose un essai gratuit de 7 jours. Passé cet essai, un abonnement est nécessaire pour continuer à utiliser l'application. Notez qu'EDGE IPTV est uniquement un lecteur : vous aurez séparément besoin d'un abonnement IPTV actif (M3U ou codes Xtream) auprès d'un fournisseur pour accéder au contenu."
   },
   {
     question: "Ai-je besoin d'un abonnement pour utiliser EDGE IPTV ?",
-    answer: "EDGE IPTV est une application lecteur. Vous aurez besoin d'un abonnement IPTV avec codes Xtream de votre fournisseur préféré. Une fois vos identifiants en main, vous pouvez les configurer facilement dans l'app en moins de 30 secondes."
+    answer: "Oui, un abonnement EDGE IPTV est nécessaire après l'essai gratuit de 7 jours pour utiliser l'application. Vous aurez aussi besoin d'un abonnement IPTV avec codes M3U ou Xtream de votre fournisseur préféré : une fois vos identifiants en main, vous pouvez les configurer facilement dans l'app en moins de 30 secondes."
   },
   {
     question: "EDGE IPTV supporte-t-il Chromecast ?",
@@ -87,11 +87,11 @@ const faqsES: FAQItem[] = [
   },
   {
     question: "¿EDGE IPTV es gratis?",
-    answer: "Sí, EDGE IPTV es completamente gratis para descargar y usar. Sin embargo, necesitarás una suscripción IPTV activa de un proveedor de servicios para acceder al contenido. La aplicación en sí no proporciona ningún contenido."
+    answer: "EDGE IPTV es gratis para descargar e incluye una prueba gratuita de 7 días. Después de la prueba, se requiere una suscripción para seguir usando la app. Ten en cuenta que EDGE IPTV es solo un reproductor: necesitarás por separado una suscripción IPTV activa (M3U o códigos Xtream) de un proveedor para acceder al contenido."
   },
   {
     question: "¿Necesito una suscripción para usar EDGE IPTV?",
-    answer: "EDGE IPTV es una aplicación reproductora. Necesitarás una suscripción de servicio IPTV con códigos Xtream de tu proveedor preferido. Una vez que tengas tus credenciales, puedes configurarlas fácilmente en la aplicación en menos de 30 segundos."
+    answer: "Sí, se requiere una suscripción a EDGE IPTV tras la prueba gratuita de 7 días para usar la app. También necesitarás una suscripción de servicio IPTV con códigos M3U o Xtream de tu proveedor preferido: una vez que tengas tus credenciales, puedes configurarlas fácilmente en la aplicación en menos de 30 segundos."
   },
   {
     question: "¿EDGE IPTV soporta Chromecast?",
@@ -122,11 +122,11 @@ const faqsPT: FAQItem[] = [
   },
   {
     question: "EDGE IPTV é gratuito?",
-    answer: "Sim, EDGE IPTV é completamente gratuito para baixar e usar. No entanto, você precisará de uma assinatura IPTV ativa de um provedor de serviços para acessar o conteúdo. O aplicativo em si não fornece nenhum conteúdo."
+    answer: "EDGE IPTV é gratuito para baixar e inclui um teste grátis de 7 dias. Após o teste, é necessária uma assinatura para continuar usando o aplicativo. Note que EDGE IPTV é apenas um player: você precisará separadamente de uma assinatura IPTV ativa (M3U ou códigos Xtream) de um provedor para acessar o conteúdo."
   },
   {
     question: "Preciso de uma assinatura para usar EDGE IPTV?",
-    answer: "EDGE IPTV é um aplicativo player. Você precisará de uma assinatura de serviço IPTV com códigos Xtream do seu provedor preferido. Depois de ter suas credenciais, você pode configurá-las facilmente no aplicativo em menos de 30 segundos."
+    answer: "Sim, é necessária uma assinatura do EDGE IPTV após o teste grátis de 7 dias para usar o aplicativo. Você também precisará de uma assinatura de serviço IPTV com códigos M3U ou Xtream do seu provedor preferido: depois de ter suas credenciais, você pode configurá-las facilmente no aplicativo em menos de 30 segundos."
   },
   {
     question: "EDGE IPTV suporta Chromecast?",

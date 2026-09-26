@@ -70,7 +70,7 @@ export default function HowToInstall() {
         "@type": "HowToStep",
         "position": 1,
         "name": "Download EDGE IPTV from App Store",
-        "text": "Download the best IPTV player from the App Store. EDGE IPTV is specifically designed for iPhone and iPad with Chromecast support, offline viewing, and fast Xtream codes setup. The app is completely free.",
+        "text": "Download the best IPTV player from the App Store. EDGE IPTV is specifically designed for iPhone and iPad with a live TV guide, Chromecast & AirPlay support, offline viewing, and fast Xtream codes setup. Free to download with a 7-day free trial.",
         "url": "https://edge-iptv.app/how-to-install-iptv-iphone-ipad#step1",
         "image": {
           "@type": "ImageObject",
@@ -108,8 +108,8 @@ export default function HowToInstall() {
         "image": {
           "@type": "ImageObject",
           "url": "https://edge-iptv.app/images/series-view.png",
-          "width": "400",
-          "height": "800"
+          "width": "1206",
+          "height": "2622"
         }
       }
     ],
@@ -232,14 +232,15 @@ export default function HowToInstall() {
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Download the Best IPTV Player for iOS</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                The first step is to download a reliable IPTV player. We highly recommend <strong>EDGE IPTV</strong> as it's specifically designed for iPhone and iPad, offering the smoothest streaming experience with advanced features.
+                The first step is to download a reliable IPTV player. We highly recommend <strong>EDGE IPTV</strong> as it's specifically designed for iPhone and iPad, offering the smoothest streaming experience with advanced features. It's free to download with a 7-day free trial.
               </p>
               
               <div className="mb-6">
                 <strong className="block mb-2 text-gray-800">Why choose EDGE IPTV?</strong>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Quick Xtream setup in seconds</li>
-                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Chromecast support for big screen viewing</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Quick M3U or Xtream setup in seconds</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Live TV guide (EPG) and Picture in Picture</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Chromecast & AirPlay support for big screen viewing</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Offline downloading to watch without internet</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>Multilingual interface (English, French, Spanish, Portuguese, Turkish)</li>
                 </ul>
@@ -275,7 +276,7 @@ export default function HowToInstall() {
               <h3 className="text-2xl font-bold mb-3">Ready to Get Started?</h3>
               <p className="mb-6 text-blue-100">Download EDGE IPTV now and start streaming in 2 minutes</p>
               <DownloadButton location="guide-intermediate" size="lg" variant="white">
-                Download Now - It&apos;s Free
+                Download Now - 7-Day Free Trial
               </DownloadButton>
             </div>
 
@@ -323,10 +324,10 @@ export default function HowToInstall() {
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                  <Image 
-                    src="/images/movie-details.png" 
-                    alt="Movie Details" 
-                    width={400} 
+                  <Image
+                    src="/images/movie-details.png"
+                    alt="Live TV Guide"
+                    width={400}
                     height={800}
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 400px"
@@ -344,7 +345,7 @@ export default function HowToInstall() {
               Join thousands of users who chose EDGE IPTV for the best streaming experience on iPhone and iPad. Setup takes less than 2 minutes.
             </p>
             <DownloadButton location="guide-final" size="xl" />
-            <p className="mt-4 text-sm text-gray-500">✓ No credit card required ✓ Works with all IPTV providers ✓ Chromecast support</p>
+            <p className="mt-4 text-sm text-gray-500">✓ 7-day free trial ✓ Works with all IPTV providers ✓ Chromecast & AirPlay support</p>
           </div>
 
           <div className="mt-16 pt-8 border-t border-gray-200 text-center">

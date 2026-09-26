@@ -6,10 +6,10 @@ import {
   Tv,
   Wifi,
   Globe,
-  Star,
   Zap,
-  Shield,
   CheckCircle2,
+  CalendarClock,
+  PictureInPicture2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -67,16 +67,17 @@ export default function HomePT() {
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
             <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1]">
-              EDGE IPTV - Melhor <br />
+              O Player IPTV <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                Player IPTV para iOS
+                para M3U e Xtream
               </span>
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               <strong>EDGE IPTV</strong> transforma seu iPhone e iPad em um
-              poderoso centro de streaming. O player IPTV #1 com configuração
-              rápida, visualização offline e uma interface linda projetada para
-              o entretenimento moderno.
+              poderoso centro de streaming para TV ao vivo, filmes e séries.
+              Guia de TV ao vivo, Picture in Picture, downloads offline e
+              transmissão Chromecast e AirPlay com um toque — tudo em uma
+              interface linda projetada para o entretenimento moderno.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button
@@ -117,12 +118,12 @@ export default function HomePT() {
             <div className="relative z-10 transform hover:scale-105 transition-transform duration-700 ease-out rotate-y-12 hover:rotate-y-0">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
               <Image
-                src="/images/iphone-series-3d.png"
-                alt="Interface do aplicativo EDGE IPTV mostrando canais de TV ao vivo, biblioteca de filmes e função Chromecast no iPhone 15 Pro"
+                src="/images/home-screen.webp"
+                alt="Tela inicial do aplicativo EDGE IPTV mostrando o catálogo de TV ao vivo, filmes e séries no iPhone"
                 width={400}
-                height={800}
+                height={870}
                 priority
-                className="relative drop-shadow-2xl"
+                className="relative drop-shadow-2xl rounded-[2.5rem] border-4 border-foreground/10"
               />
             </div>
           </div>
@@ -154,9 +155,10 @@ export default function HomePT() {
               </p>
               <p>
                 Com <strong>EDGE IPTV</strong>, você obtém recursos poderosos
-                como suporte Chromecast com um toque, recursos de visualização
-                offline e integração completa da API Xtream Codes. O aplicativo
-                suporta todos os principais protocolos IPTV, incluindo playlists
+                como transmissão Chromecast e AirPlay com um toque, um guia de
+                TV ao vivo (EPG), Picture in Picture, downloads offline e
+                integração completa da API Xtream Codes. O aplicativo suporta
+                todos os principais protocolos IPTV, incluindo playlists
                 M3U, tornando EDGE IPTV a solução IPTV mais versátil para
                 usuários iOS. Nosso sistema de buffering inteligente garante
                 reprodução suave mesmo em conexões mais lentas, enquanto nossa
@@ -192,33 +194,33 @@ export default function HomePT() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard
               icon={<Zap className="w-10 h-10 text-blue-500" />}
-              title="Configuração Rápida"
-              description="Comece em segundos com nossa integração otimizada de códigos Xtream. Nenhuma configuração complexa necessária."
+              title="Pronto para M3U e Xtream"
+              description="Comece em segundos com uma playlist M3U ou a integração Xtream Codes. Nenhuma configuração complexa necessária."
+            />
+            <FeatureCard
+              icon={<CalendarClock className="w-10 h-10 text-orange-500" />}
+              title="Guia de TV ao Vivo"
+              description="Um guia EPG claro mostra o que está passando agora e a seguir, para você nunca perder um canal."
             />
             <FeatureCard
               icon={<Tv className="w-10 h-10 text-purple-500" />}
-              title="Suporte Chromecast"
-              description="Transmita seus filmes e programas favoritos diretamente para sua tela grande com apenas um toque."
+              title="Chromecast e AirPlay"
+              description="Transmita seus canais ao vivo, filmes e programas favoritos diretamente para sua tela grande com apenas um toque."
+            />
+            <FeatureCard
+              icon={<PictureInPicture2 className="w-10 h-10 text-teal-500" />}
+              title="Picture in Picture"
+              description="Continue assistindo em uma janela flutuante enquanto navega pelo catálogo ou usa outros apps."
             />
             <FeatureCard
               icon={<Wifi className="w-10 h-10 text-green-500" />}
-              title="Visualização Offline"
-              description="Baixe conteúdo no seu dispositivo e assista em qualquer lugar, a qualquer hora, mesmo sem conexão com a internet."
+              title="Downloads Offline"
+              description="Baixe filmes e episódios no seu dispositivo e assista em qualquer lugar, mesmo sem conexão com a internet."
             />
             <FeatureCard
               icon={<Globe className="w-10 h-10 text-indigo-500" />}
               title="Multilíngue"
               description="Interface totalmente localizada disponível em inglês, francês, espanhol e mais para uma experiência nativa."
-            />
-            <FeatureCard
-              icon={<Star className="w-10 h-10 text-yellow-500" />}
-              title="Favoritos Inteligentes"
-              description="Organize seu entretenimento. Gerencie e acesse facilmente seus canais e séries favoritas."
-            />
-            <FeatureCard
-              icon={<Shield className="w-10 h-10 text-red-500" />}
-              title="Privacidade em Primeiro Lugar"
-              description="Respeitamos seus dados. Apenas análises globais anônimas são coletadas. Todo o seu conteúdo e processamento são feitos localmente no seu dispositivo."
             />
           </div>
         </div>
@@ -241,19 +243,19 @@ export default function HomePT() {
           </div>
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             <ScreenshotCard
-              src="/images/language-selection.jpeg"
-              alt="Interface multilíngue EDGE IPTV mostrando a tela de seleção de idioma com opções francês, inglês, espanhol no iPhone"
-              title="Configuração Fácil"
-            />
-            <ScreenshotCard
-              src="/images/series-view.png"
-              alt="Biblioteca de séries EDGE IPTV mostrando programas de TV organizados com miniaturas e listas de episódios no iPad"
+              src="/images/series-screen.webp"
+              alt="Biblioteca de séries EDGE IPTV mostrando programas de TV organizados com miniaturas e avaliações no iPhone"
               title="Conteúdo Organizado"
             />
             <ScreenshotCard
-              src="/images/movie-details.png"
-              alt="Página de detalhes de filme EDGE IPTV mostrando título, descrição, informações do elenco e botão Chromecast"
-              title="Detalhes Completos"
+              src="/images/epg-screen.webp"
+              alt="Guia de TV ao vivo (EPG) EDGE IPTV mostrando os programas atuais e seguintes de cada canal no iPhone"
+              title="Guia de TV ao Vivo"
+            />
+            <ScreenshotCard
+              src="/images/downloads-screen.webp"
+              alt="Tela de downloads EDGE IPTV mostrando filmes e episódios salvos para assistir offline no iPhone"
+              title="Downloads Offline"
             />
           </div>
         </div>
@@ -279,11 +281,12 @@ export default function HomePT() {
             >
               <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
                 <Download className="mr-2 h-6 w-6" />
-                Baixar Agora
+                Iniciar Teste Grátis
               </Link>
             </Button>
             <p className="mt-6 text-sm text-muted-foreground">
-              Requer iOS 12.0 ou posterior. Compatível com iPhone e iPad.
+              Teste grátis de 7 dias. Requer iOS 12.0 ou posterior. Compatível
+              com iPhone e iPad.
             </p>
           </div>
         </div>
