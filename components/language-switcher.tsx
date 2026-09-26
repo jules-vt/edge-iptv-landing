@@ -7,10 +7,10 @@ import { Globe, Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { blogPosts } from "@/lib/blog-posts"
+import { type Lang, getTranslations, postPath } from "@/lib/blog-posts"
 
 interface LanguageSwitcherProps {
-  currentLang: 'en' | 'fr' | 'es' | 'pt'
+  currentLang: Lang
 }
 
 const languages = {
@@ -20,81 +20,46 @@ const languages = {
   pt: { label: 'Português', flag: '🇵🇹' },
 }
 
-/**
- * Slug mapping for blog articles across all languages
- * Maps from any language slug to all other language versions
- */
-const blogSlugMapping: Record<string, Record<string, string>> = {
-  // Best IPTV Player iOS 2026
-  'best-iptv-player-ios-2026': { en: 'best-iptv-player-ios-2026', fr: 'meilleur-lecteur-iptv-ios-2026', es: 'mejor-reproductor-iptv-ios-2026', pt: 'melhor-reprodutor-iptv-ios-2026' },
-  'meilleur-lecteur-iptv-ios-2026': { en: 'best-iptv-player-ios-2026', fr: 'meilleur-lecteur-iptv-ios-2026', es: 'mejor-reproductor-iptv-ios-2026', pt: 'melhor-reprodutor-iptv-ios-2026' },
-  'mejor-reproductor-iptv-ios-2026': { en: 'best-iptv-player-ios-2026', fr: 'meilleur-lecteur-iptv-ios-2026', es: 'mejor-reproductor-iptv-ios-2026', pt: 'melhor-reprodutor-iptv-ios-2026' },
-  'melhor-reprodutor-iptv-ios-2026': { en: 'best-iptv-player-ios-2026', fr: 'meilleur-lecteur-iptv-ios-2026', es: 'mejor-reproductor-iptv-ios-2026', pt: 'melhor-reprodutor-iptv-ios-2026' },
-  
-  // Chromecast Guide
-  'chromecast-iptv-streaming-guide': { en: 'chromecast-iptv-streaming-guide', fr: 'diffuser-iptv-chromecast-guide', es: 'guia-streaming-iptv-chromecast', pt: 'guia-streaming-iptv-chromecast-pt' },
-  'diffuser-iptv-chromecast-guide': { en: 'chromecast-iptv-streaming-guide', fr: 'diffuser-iptv-chromecast-guide', es: 'guia-streaming-iptv-chromecast', pt: 'guia-streaming-iptv-chromecast-pt' },
-  'guia-streaming-iptv-chromecast': { en: 'chromecast-iptv-streaming-guide', fr: 'diffuser-iptv-chromecast-guide', es: 'guia-streaming-iptv-chromecast', pt: 'guia-streaming-iptv-chromecast-pt' },
-  'guia-streaming-iptv-chromecast-pt': { en: 'chromecast-iptv-streaming-guide', fr: 'diffuser-iptv-chromecast-guide', es: 'guia-streaming-iptv-chromecast', pt: 'guia-streaming-iptv-chromecast-pt' },
-  
-  // Buffering Fix Guide
-  'iptv-buffering-fix-guide': { en: 'iptv-buffering-fix-guide', fr: 'resoudre-buffering-iptv-guide', es: 'solucionar-buffering-iptv-guia', pt: 'resolver-buffering-iptv-guia' },
-  'resoudre-buffering-iptv-guide': { en: 'iptv-buffering-fix-guide', fr: 'resoudre-buffering-iptv-guide', es: 'solucionar-buffering-iptv-guia', pt: 'resolver-buffering-iptv-guia' },
-  'solucionar-buffering-iptv-guia': { en: 'iptv-buffering-fix-guide', fr: 'resoudre-buffering-iptv-guide', es: 'solucionar-buffering-iptv-guia', pt: 'resolver-buffering-iptv-guia' },
-  'resolver-buffering-iptv-guia': { en: 'iptv-buffering-fix-guide', fr: 'resoudre-buffering-iptv-guide', es: 'solucionar-buffering-iptv-guia', pt: 'resolver-buffering-iptv-guia' },
-  
-  // M3U Playlist Setup
-  'm3u-playlist-setup-guide': { en: 'm3u-playlist-setup-guide', fr: 'configurer-playlist-m3u-guide', es: 'configurar-lista-m3u-guia', pt: 'configurar-lista-m3u-pt' },
-  'configurer-playlist-m3u-guide': { en: 'm3u-playlist-setup-guide', fr: 'configurer-playlist-m3u-guide', es: 'configurar-lista-m3u-guia', pt: 'configurar-lista-m3u-pt' },
-  'configurar-lista-m3u-guia': { en: 'm3u-playlist-setup-guide', fr: 'configurer-playlist-m3u-guide', es: 'configurar-lista-m3u-guia', pt: 'configurar-lista-m3u-pt' },
-  'configurar-lista-m3u-pt': { en: 'm3u-playlist-setup-guide', fr: 'configurer-playlist-m3u-guide', es: 'configurar-lista-m3u-guia', pt: 'configurar-lista-m3u-pt' },
-  
-  // Xtream Codes Setup
-  'xtream-codes-setup-guide': { en: 'xtream-codes-setup-guide', fr: 'configurer-codes-xtream-guide', es: 'configurar-codigos-xtream-guia', pt: 'configurar-codigos-xtream-pt' },
-  'configurer-codes-xtream-guide': { en: 'xtream-codes-setup-guide', fr: 'configurer-codes-xtream-guide', es: 'configurar-codigos-xtream-guia', pt: 'configurar-codigos-xtream-pt' },
-  'configurar-codigos-xtream-guia': { en: 'xtream-codes-setup-guide', fr: 'configurer-codes-xtream-guide', es: 'configurar-codigos-xtream-guia', pt: 'configurar-codigos-xtream-pt' },
-  'configurar-codigos-xtream-pt': { en: 'xtream-codes-setup-guide', fr: 'configurer-codes-xtream-guide', es: 'configurar-codigos-xtream-guia', pt: 'configurar-codigos-xtream-pt' },
-};
+/** Language home, used whenever an article has no version in the target language. */
+function languageHome(lang: Lang): string {
+  return lang === 'en' ? '/' : `/${lang}`
+}
 
 /**
- * Get the appropriate path for a given language based on the current route
+ * Resolve the equivalent path in another language.
+ *
+ * Translated articles are looked up through `lib/blog-posts` — the single
+ * source of truth. A duplicated mapping table used to live here and had
+ * drifted out of sync, sending readers to URLs that did not exist.
  */
-function getPathForLanguage(currentPath: string, currentLang: 'en' | 'fr' | 'es' | 'pt', targetLang: 'en' | 'fr' | 'es' | 'pt'): string {
-  // Check if we're on a blog article route
-  const blogArticleRegex = /\/(en|fr|es|pt)?\/?(blog\/[^\/]+)$/;
-  const match = currentPath.match(blogArticleRegex);
-  
-  if (match) {
-    const slugPart = match[2]; // "blog/some-article-slug"
-    const currentSlug = slugPart.split('/')[1]; // "some-article-slug"
-    
-    // Get the target slug for the target language
-    const mapping = blogSlugMapping[currentSlug];
-    if (mapping && mapping[targetLang]) {
-      const targetSlug = mapping[targetLang];
-      
-      // Build the path for the target language
-      if (targetLang === 'en') {
-        return `/blog/${targetSlug}`;
-      } else {
-        return `/${targetLang}/blog/${targetSlug}`;
-      }
-    }
+function getPathForLanguage(currentPath: string, currentLang: Lang, targetLang: Lang): string {
+  // Strip the language prefix and any trailing slash to get the bare route.
+  const withoutLang =
+    currentLang === 'en'
+      ? currentPath
+      : currentPath.replace(new RegExp(`^/${currentLang}(?=/|$)`), '')
+  const route = withoutLang.replace(/\/$/, '') || '/'
+
+  if (route === '/') return languageHome(targetLang)
+
+  // Translated content: blog articles (/blog/<slug>) and the install guide
+  // (/<slug> at the root). Both live in blogPosts, keyed by translationGroup.
+  const slug = route.startsWith('/blog/')
+    ? route.slice('/blog/'.length)
+    : route.slice(1)
+
+  if (slug && !slug.includes('/')) {
+    const translations = getTranslations(slug, currentLang)
+    const target = translations[targetLang]
+    if (target) return postPath(target)
+
+    // Known article with no version in that language — the language home is a
+    // dead end but an honest one; a guessed URL would 404.
+    if (translations[currentLang]) return languageHome(targetLang)
   }
-  
-  // For non-article routes, use the simple language prefix replacement
-  let basePath = currentPath;
-  if (currentLang !== 'en') {
-    basePath = currentPath.replace(`/${currentLang}`, '') || '/';
-  }
-  
-  // If target is English, use the base path without prefix
-  if (targetLang === 'en') {
-    return basePath === '/' ? '/' : basePath;
-  }
-  
-  // For other languages, add the language prefix
-  return basePath === '/' ? `/${targetLang}` : `/${targetLang}${basePath}`;
+
+  // Everything else (privacy-policy, terms-of-use, /blog index) keeps its slug.
+  return targetLang === 'en' ? route : `/${targetLang}${route}`
 }
 
 export function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
@@ -136,7 +101,7 @@ export function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
             className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-neutral-200 py-1 z-50 overflow-hidden"
           >
             {Object.entries(languages).map(([code, { label, flag }]) => {
-              const targetLang = code as 'en' | 'fr' | 'es' | 'pt';
+              const targetLang = code as Lang;
               const targetPath = getPathForLanguage(pathname, currentLang, targetLang);
               
               return (

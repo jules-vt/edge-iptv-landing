@@ -4,19 +4,12 @@ import { ArrowLeft, AlertCircle, CheckCircle } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guia de Configuração de Códigos Xtream 2026 | Tutorial de 2 Minutos',
   description: '📺 Aprenda como configurar códigos Xtream no EDGE IPTV em menos de 2 minutos. Guia passo a passo com capturas de tela, erros comuns e dicas de solução de problemas.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/pt/blog/configurar-codigos-xtream-pt',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/xtream-codes-setup-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/configurer-codes-xtream-guide',
-      'es': 'https://edge-iptv.app/es/blog/configurar-codigos-xtream-guia',
-      'pt': 'https://edge-iptv.app/pt/blog/configurar-codigos-xtream-pt',
-    },
-  },
+  alternates: buildBlogAlternates('configurar-codigos-xtream-pt', 'pt'),
   openGraph: {
     title: 'Configuração de Códigos Xtream: Guia Completo 2026',
     description: 'Guia completo para configurar códigos Xtream. Dicas de solução de problemas, erros comuns e melhores práticas.',
@@ -54,7 +47,7 @@ export default function GuiaCodigosXtream() {
     <ArticleLayout
       title="Configuração de Códigos Xtream: Guia Completo 2026"
       description="Tutorial abrangente sobre como configurar códigos Xtream em reprodutores IPTV."
-      date="12 de janeiro de 2026"
+      date="2026-01-12"
       readTime="7 min de leitura"
       lang="pt"
     >

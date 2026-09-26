@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Download } from 'lucide-react';
 import { ArticleLayout } from '@/components/article-layout';
-import { getAllPostSlugs, getPostBySlug } from '@/lib/blog-posts';
+import { buildBlogAlternates, getBlogSlugs, getPostBySlug } from '@/lib/blog-posts';
 
 interface PageProps {
   params: {
@@ -15,7 +15,7 @@ interface PageProps {
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
-  const slugs = getAllPostSlugs();
+  const slugs = getBlogSlugs('fr');
   return slugs.map((slug) => ({
     slug: slug,
   }));
@@ -35,13 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} - Blog EDGE IPTV`,
     description: post.description,
-    alternates: {
-      canonical: `https://edge-iptv.app/fr/blog/${post.slug}`,
-      languages: {
-        'en': `https://edge-iptv.app/blog/${post.slug}`,
-        'fr': `https://edge-iptv.app/fr/blog/${post.slug}`,
-      },
-    },
+    alternates: buildBlogAlternates(post.slug, 'fr'),
     openGraph: {
       type: 'article',
       url: `https://edge-iptv.app/fr/blog/${post.slug}`,
@@ -146,7 +140,7 @@ function CommentInstallerContent() {
     },
     "tool": [{
       "@type": "HowToTool",
-      "name": "iPhone ou iPad avec iOS 12.0+"
+      "name": "iPhone ou iPad avec iOS 17.0+"
     }],
     "supply": [{
       "@type": "HowToSupply",
@@ -193,7 +187,7 @@ function CommentInstallerContent() {
         <h4 className="text-blue-800 font-bold mb-4 text-lg">Ce dont vous aurez besoin :</h4>
         <ul className="space-y-2 mb-0">
           <li className="flex items-start gap-2 text-gray-700">
-            <span className="text-green-600 font-bold">✓</span> iPhone ou iPad avec iOS 12.0 ou version ultérieure
+            <span className="text-green-600 font-bold">✓</span> iPhone ou iPad avec iOS 17.0 ou version ultérieure
           </li>
           <li className="flex items-start gap-2 text-gray-700">
             <span className="text-green-600 font-bold">✓</span> Abonnement IPTV avec codes Xtream

@@ -6,16 +6,14 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Best IPTV Player for iOS 2026 | Top 7 Apps Compared',
   description:
     'Compare the 7 best IPTV players for iPhone & iPad in 2026. Features, pros, cons, and why EDGE IPTV ranks #1 for streaming.',
-  alternates: buildAlternates({
-    en: '/blog/best-iptv-player-ios-2026',
-    fr: '/fr/blog/meilleur-lecteur-iptv-ios-2026',
-  }),
+  alternates: buildBlogAlternates('best-iptv-player-ios-2026', 'en'),
   openGraph: {
     ...defaultOG,
     title: 'Best IPTV Player for iOS 2026 | Top 7 Apps Compared',
@@ -60,7 +58,7 @@ export default function BestIPTVPlayerArticle() {
     <ArticleLayout
       title="Best IPTV Player for iOS in 2026: Complete Comparison"
       description="In-depth comparison of the top 7 IPTV players for iPhone and iPad in 2026."
-      date="January 12, 2026"
+      date="2026-01-12"
       readTime="8 min read"
       lang="en"
     >
@@ -241,7 +239,7 @@ export default function BestIPTVPlayerArticle() {
 
         <h4 className="text-xl font-bold mt-6 mb-3">Cons:</h4>
         <ul className="list-none space-y-2">
-          <li className="flex items-start gap-2"><X className="w-5 h-5 text-gray-400 mt-1" /><span>Requires iOS 12.0 or later (not compatible with older devices)</span></li>
+          <li className="flex items-start gap-2"><X className="w-5 h-5 text-gray-400 mt-1" /><span>Requires iOS 17.0 or later (not compatible with older devices)</span></li>
         </ul>
 
         <div className="bg-blue-50 rounded-xl p-6 my-6">
@@ -594,7 +592,7 @@ export default function BestIPTVPlayerArticle() {
 
         <h3 className="text-xl font-bold mt-6 mb-3">Is EDGE IPTV compatible with my iPhone?</h3>
         <p>
-          EDGE IPTV requires iOS 12.0 or later and works perfectly on iPhone and iPad, including the latest iPhone 15 Pro and iPad Pro models.
+          EDGE IPTV requires iOS 17.0 or later and works perfectly on iPhone and iPad, including the latest iPhone 15 Pro and iPad Pro models.
         </p>
 
         <div className="mt-12 pt-8 border-t border-gray-200">

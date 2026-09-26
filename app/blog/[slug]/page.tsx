@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Download, ArrowLeft } from 'lucide-react';
 import { ArticleLayout } from '@/components/article-layout';
-import { getAllPostSlugs, getPostBySlug } from '@/lib/blog-posts';
+import { buildBlogAlternates, getBlogSlugs, getPostBySlug } from '@/lib/blog-posts';
 
 interface PageProps {
   params: {
@@ -15,7 +15,7 @@ interface PageProps {
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
-  const slugs = getAllPostSlugs();
+  const slugs = getBlogSlugs('en');
   return slugs.map((slug) => ({
     slug: slug,
   }));
@@ -35,13 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} - EDGE IPTV Blog`,
     description: post.description,
-    alternates: {
-      canonical: `https://edge-iptv.app/blog/${post.slug}`,
-      languages: {
-        'en': `https://edge-iptv.app/blog/${post.slug}`,
-        'fr': `https://edge-iptv.app/fr/blog/${post.slug}`,
-      },
-    },
+    alternates: buildBlogAlternates(post.slug, 'en'),
     openGraph: {
       type: 'article',
       url: `https://edge-iptv.app/blog/${post.slug}`,
@@ -143,7 +137,7 @@ function HowToInstallContent() {
     },
     "tool": [{
       "@type": "HowToTool",
-      "name": "iPhone or iPad running iOS 12.0+"
+      "name": "iPhone or iPad running iOS 17.0+"
     }],
     "supply": [{
       "@type": "HowToSupply",
@@ -190,7 +184,7 @@ function HowToInstallContent() {
         <h4 className="text-blue-800 font-bold mb-4 text-lg">What You'll Need:</h4>
         <ul className="space-y-2 mb-0">
           <li className="flex items-start gap-2 text-gray-700">
-            <span className="text-green-600 font-bold">✓</span> iPhone or iPad running iOS 12.0 or later
+            <span className="text-green-600 font-bold">✓</span> iPhone or iPad running iOS 17.0 or later
           </li>
           <li className="flex items-start gap-2 text-gray-700">
             <span className="text-green-600 font-bold">✓</span> IPTV subscription with Xtream codes

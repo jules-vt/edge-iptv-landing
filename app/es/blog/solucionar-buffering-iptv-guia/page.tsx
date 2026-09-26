@@ -4,19 +4,12 @@ import { ArrowLeft, Check } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Cómo Solucionar el Buffering de IPTV 2026 | Guía Completa',
   description: '📺 Soluciona problemas de buffering y lag en IPTV. 10 soluciones probadas para streaming sin interrupciones.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/es/blog/solucionar-buffering-iptv-guia',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/iptv-buffering-fix-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/resoudre-buffering-iptv-guide',
-      'es': 'https://edge-iptv.app/es/blog/solucionar-buffering-iptv-guia',
-      'pt': 'https://edge-iptv.app/pt/blog/resolver-buffering-iptv-guia',
-    },
-  },
+  alternates: buildBlogAlternates('solucionar-buffering-iptv-guia', 'es'),
   openGraph: {
     title: 'Cómo Solucionar el Buffering de IPTV 2026',
     description: 'Guía completa con 10 soluciones para eliminar el buffering y lag en IPTV.',
@@ -31,7 +24,7 @@ export default function GuiaBuffering() {
     <ArticleLayout
       title="Cómo Solucionar el Buffering de IPTV 2026"
       description="Guía completa con soluciones probadas para eliminar buffering en IPTV."
-      date="12 de enero de 2026"
+      date="2026-01-12"
       readTime="6 min de lectura"
       lang="es"
     >

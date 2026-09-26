@@ -101,17 +101,21 @@ FileETag None
     H2PushResource /images/iphone-series-3d.png
 </IfModule>
 
-# Force HTTPS (uncomment if using SSL)
-# RewriteEngine On
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 # ─── URL rewriting ──────────────────────────────────────────────────────────
 RewriteEngine On
 
-# Force HTTPS (uncomment on production)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ─── 0a. Force HTTPS (301) ───────────────────────────────────────────────────
+# Behind a reverse proxy %{HTTPS} stays "off", so X-Forwarded-Proto is checked
+# too — without it this rule would loop forever on a proxied setup.
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ─── 0b. Redirect www → apex (301) ───────────────────────────────────────────
+# Google indexed www.edge-iptv.app and edge-iptv.app as separate sites,
+# splitting ranking signals between them.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 
 # ─── 1. Redirect .html extension → clean URL (301) ──────────────────────────
 # Fixes duplicate-content issues where Google indexes both /page.html and /page.

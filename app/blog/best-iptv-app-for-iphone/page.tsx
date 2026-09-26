@@ -6,7 +6,8 @@ import { Star, Check, X, ChevronRight, Smartphone, Wifi, Download, Tv } from 'lu
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { buildAlternates, defaultOG, defaultTwitter, SITE, schemaPublisher } from '@/lib/seo-config';
+import { defaultOG, defaultTwitter, SITE, schemaPublisher } from '@/lib/seo-config';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 // Primary target: "best iptv app for iphone" (pos. 63 → top 5 goal)
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   title: 'Best IPTV App for iPhone 2026: Top 5 Free Apps Tested',
   description:
     'Looking for the best IPTV app for iPhone? We tested the top 5 free apps in 2026. See which app is fastest to set up, supports Chromecast, and works best on iOS.',
-  alternates: buildAlternates({
-    en: '/blog/best-iptv-app-for-iphone',
-  }),
+  alternates: buildBlogAlternates('best-iptv-app-for-iphone', 'en'),
   openGraph: {
     ...defaultOG,
     title: 'Best IPTV App for iPhone 2026 | Top 5 Free Apps Tested',
@@ -101,7 +100,7 @@ const faqSchema = {
       name: 'Does IPTV work with any iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'EDGE IPTV requires iOS 12.0 or later, so it works on any iPhone from iPhone 6s onwards, including the latest iPhone 16 Pro. It is also compatible with all iPad models.',
+        text: 'EDGE IPTV requires iOS 17.0 or later, so it works on iPhone XS and newer, including the latest iPhone 16 Pro. On iPad it supports iPad Pro (2nd generation), iPad Air (3rd generation), iPad (6th generation) and iPad mini (5th generation) or newer.',
       },
     },
   ],
@@ -374,7 +373,7 @@ export default function BestIPTVAppForIphone() {
                 'Download movies & series for offline viewing',
                 'Clean, native iOS interface with Dark Mode',
                 'Live TV, VOD, series — all in one app',
-                'Works on iPhone 6s and later (iOS 12+)',
+                'Works on iPhone XS and later (iOS 17+)',
               ].map((feature) => (
                 <div key={feature} className="flex items-start gap-2 text-sm">
                   <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />

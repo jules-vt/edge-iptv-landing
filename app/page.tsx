@@ -292,7 +292,7 @@ export default function Home() {
               Start Your Free Trial
             </DownloadButton>
             <p className="mt-6 text-sm text-muted-foreground">
-              7-day free trial. Requires iOS 12.0 or later. Compatible with
+              7-day free trial. Requires iOS 17.0 or later. Compatible with
               iPhone and iPad.
             </p>
           </div>

@@ -4,18 +4,13 @@ import { ArrowLeft, AlertCircle, CheckCircle, Wifi, Activity, Settings, Zap } fr
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Comment Résoudre les Problèmes de Buffering IPTV : Guide 2026',
   description: '🔧 Éliminez le buffering IPTV définitivement. Découvrez les 10+ causes, tests diagnostiques, optimisations réseau et fonctionnalités EDGE IPTV qui réduisent le buffering.',
   keywords: 'iptv buffering, buffering iptv, iptv qui freeze, iptv qui lag, résoudre buffering iptv, iptv saccadé, problème iptv buffering 2026',
-  alternates: {
-    canonical: 'https://edge-iptv.app/fr/blog/resoudre-buffering-iptv-guide',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/iptv-buffering-fix-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/resoudre-buffering-iptv-guide',
-    },
-  },
+  alternates: buildBlogAlternates('resoudre-buffering-iptv-guide', 'fr'),
   openGraph: {
     title: 'Comment Résoudre les Problèmes de Buffering IPTV : Guide 2026',
     description: 'Guide complet pour éliminer le buffering IPTV. Tests diagnostiques, optimisations réseau et astuces pro.',
@@ -106,7 +101,7 @@ export default function ResoudreBufferingIPTVGuide() {
     <ArticleLayout
       title="Comment Résoudre les Problèmes de Buffering IPTV : Guide 2026"
       description="Éliminez définitivement le buffering IPTV avec ce guide complet. Tests diagnostiques, optimisations réseau et comment EDGE IPTV aide."
-      date="12 janvier 2026"
+      date="2026-01-12"
       readTime="10 min"
       lang="fr"
     >

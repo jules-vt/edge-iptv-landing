@@ -4,19 +4,12 @@ import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guia de Configuração de Lista M3U 2026 | Tutorial Completo',
   description: '📺 Aprenda como configurar listas de reprodução M3U no EDGE IPTV. Guia passo a passo com dicas e solução de problemas.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/pt/blog/configurar-lista-m3u-pt',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/m3u-playlist-setup-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/configurer-playlist-m3u-guide',
-      'es': 'https://edge-iptv.app/es/blog/configurar-lista-m3u-guia',
-      'pt': 'https://edge-iptv.app/pt/blog/configurar-lista-m3u-pt',
-    },
-  },
+  alternates: buildBlogAlternates('configurar-lista-m3u-pt', 'pt'),
   openGraph: {
     title: 'Guia de Configuração de Lista M3U 2026',
     description: 'Aprenda como configurar listas M3U no seu reprodutor IPTV. Tutorial completo com exemplos.',
@@ -31,7 +24,7 @@ export default function GuiaM3U() {
     <ArticleLayout
       title="Guia de Configuração de Lista M3U 2026"
       description="Tutorial completo sobre como configurar listas de reprodução M3U."
-      date="12 de janeiro de 2026"
+      date="2026-01-12"
       readTime="6 min de leitura"
       lang="pt"
     >

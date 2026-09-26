@@ -4,19 +4,12 @@ import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guia de Streaming IPTV com Chromecast 2026 | Tutorial Completo',
   description: '📺 Aprenda como transmitir IPTV para sua TV com Chromecast usando EDGE IPTV. Guia passo a passo fácil.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/pt/blog/guia-streaming-iptv-chromecast-pt',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/chromecast-iptv-streaming-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/diffuser-iptv-chromecast-guide',
-      'es': 'https://edge-iptv.app/es/blog/guia-streaming-iptv-chromecast',
-      'pt': 'https://edge-iptv.app/pt/blog/guia-streaming-iptv-chromecast-pt',
-    },
-  },
+  alternates: buildBlogAlternates('guia-streaming-iptv-chromecast-pt', 'pt'),
   openGraph: {
     title: 'Guia de Streaming IPTV com Chromecast 2026',
     description: 'Tutorial completo sobre como transmitir IPTV para sua TV usando Chromecast.',
@@ -31,7 +24,7 @@ export default function GuiaChromecast() {
     <ArticleLayout
       title="Guia de Streaming IPTV com Chromecast 2026"
       description="Tutorial completo sobre como transmitir IPTV para sua TV usando Chromecast."
-      date="12 de janeiro de 2026"
+      date="2026-01-12"
       readTime="5 min de leitura"
       lang="pt"
     >
@@ -48,7 +41,7 @@ export default function GuiaChromecast() {
         <h2 className="text-3xl font-bold mt-12 mb-6">Requisitos</h2>
         <ul>
           <li>Um dispositivo Chromecast conectado à sua TV</li>
-          <li>iPhone ou iPad com iOS 12.0 ou superior</li>
+          <li>iPhone ou iPad com iOS 17.0 ou superior</li>
           <li>EDGE IPTV instalado</li>
           <li>Ambos os dispositivos na mesma rede Wi-Fi</li>
         </ul>

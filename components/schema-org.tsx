@@ -1,4 +1,5 @@
 import React from "react";
+import { SITE } from "@/lib/seo-config";
 
 interface SchemaOrgProps {
   lang?: "en" | "fr" | "es" | "pt";
@@ -10,6 +11,10 @@ interface SchemaOrgProps {
  * ⚠️ Must stay a server component (no "use client"). The previous "use client"
  * + useEffect/isClient pattern caused these schemas to be absent from the
  * pre-rendered HTML, making them invisible to crawlers on first load.
+ *
+ * ⚠️ Never add aggregateRating/Review blocks here unless they are backed by a
+ * real, user-submitted review system on the page. Self-assigned ratings are a
+ * Google structured-data policy violation and risk a manual action.
  */
 export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
   const websiteSchema = {
@@ -17,19 +22,12 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
     name: "EDGE IPTV",
     alternateName: ["EDGE IPTV Player", "EDGE IPTV App", "EDGE IPTV iOS"],
     applicationCategory: "MultimediaApplication",
-    operatingSystem: "iOS 12.0 or later",
+    operatingSystem: "iOS 17.0 or later",
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      ratingCount: "1000",
-      bestRating: "5",
-      worstRating: "1",
     },
     author: {
       "@type": "Organization",
@@ -61,17 +59,16 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
     image: "https://edge-iptv.app/images/icon.png",
     url:
       lang === "en" ? "https://edge-iptv.app" : `https://edge-iptv.app/${lang}`,
-    installUrl: "https://j-analytics.cloud/q/Z0m1Qmdtf",
-    downloadUrl: "https://j-analytics.cloud/q/Z0m1Qmdtf",
+    installUrl: SITE.appStoreUrl,
+    downloadUrl: SITE.appStoreUrl,
     screenshot: [
       "https://edge-iptv.app/images/language-selection.jpeg",
       "https://edge-iptv.app/images/series-view.png",
       "https://edge-iptv.app/images/movie-details.png",
     ],
-    softwareVersion: "1.0",
-    releaseNotes: "First public release with full IPTV streaming capabilities",
-    datePublished: "2025-01-01",
-    dateModified: "2026-01-12",
+    softwareVersion: "1.1",
+    datePublished: "2026-01-05",
+    dateModified: "2026-09-26",
     inLanguage:
       lang === "en"
         ? "en-US"
@@ -179,57 +176,30 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
     ],
   };
 
+  const localeRoot =
+    lang === "en" ? "https://edge-iptv.app" : `https://edge-iptv.app/${lang}`;
+
   const websiteSchemaGeneral = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "EDGE IPTV",
-    url: lang === "en" ? "https://edge-iptv.app" : "https://edge-iptv.app/fr",
+    url: localeRoot,
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate:
-          lang === "en"
-            ? "https://edge-iptv.app/blog?search={search_term_string}"
-            : "https://edge-iptv.app/fr/blog?search={search_term_string}",
+        urlTemplate: `${localeRoot}/blog?search={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
-    inLanguage: lang === "en" ? "en-US" : "fr-FR",
-  };
-
-  const reviewSchema = {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "SoftwareApplication",
-      name: "EDGE IPTV",
-      applicationCategory: "MultimediaApplication",
-      operatingSystem: "iOS 12.0 or later",
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    author: {
-      "@type": "Organization",
-      name: "App Store Users",
-    },
-    reviewBody:
+    inLanguage:
       lang === "en"
-        ? "Best IPTV player for iOS. Fast setup with Xtream codes, reliable Chromecast casting, and smooth offline playback."
+        ? "en-US"
         : lang === "fr"
-          ? "Meilleur lecteur IPTV pour iOS. Configuration rapide avec codes Xtream, diffusion Chromecast fiable et lecture hors ligne fluide."
+          ? "fr-FR"
           : lang === "es"
-            ? "Mejor reproductor IPTV para iOS. Configuración rápida con códigos Xtream, transmisión Chromecast confiable y reproducción offline fluida."
-            : "Melhor player IPTV para iOS. Configuração rápida com códigos Xtream, transmissão Chromecast confiável e reprodução offline suave.",
-    datePublished: "2025-01-01",
-    publisher: {
-      "@type": "Organization",
-      name: "EDGE IPTV",
-    },
+            ? "es-ES"
+            : "pt-BR",
   };
 
   return (
@@ -255,10 +225,6 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchemaGeneral),
         }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
     </>
   );

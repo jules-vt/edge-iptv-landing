@@ -5,17 +5,12 @@ import { ArrowLeft, Star, Check, X } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Meilleur Lecteur IPTV pour iOS 2026 | Comparatif des 7 Meilleures Apps',
   description: '⭐ Comparez les 7 meilleurs lecteurs IPTV pour iPhone & iPad en 2026. Fonctionnalités, avantages, inconvénients et pourquoi EDGE IPTV est #1.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/fr/blog/meilleur-lecteur-iptv-ios-2026',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/best-iptv-player-ios-2026',
-      'fr': 'https://edge-iptv.app/fr/blog/meilleur-lecteur-iptv-ios-2026',
-    },
-  },
+  alternates: buildBlogAlternates('meilleur-lecteur-iptv-ios-2026', 'fr'),
   openGraph: {
     title: 'Meilleur Lecteur IPTV pour iOS 2026 | Top 7 Comparés',
     description: 'Comparez les 7 meilleurs lecteurs IPTV pour iPhone & iPad. Fonctionnalités, avantages, inconvénients et recommandations d&apos;experts.',
@@ -54,7 +49,7 @@ export default function MeilleurLecteurIPTV() {
     <ArticleLayout
       title="Meilleur Lecteur IPTV pour iOS en 2026 : Comparatif Complet"
       description="Comparaison approfondie des 7 meilleurs lecteurs IPTV pour iPhone et iPad en 2026."
-      date="12 janvier 2026"
+      date="2026-01-12"
       readTime="8 min"
       lang="fr"
     >
@@ -226,7 +221,7 @@ export default function MeilleurLecteurIPTV() {
 
         <h4 className="text-xl font-bold mt-6 mb-3">Inconvénients :</h4>
         <ul className="list-none space-y-2">
-          <li className="flex items-start gap-2"><X className="w-5 h-5 text-gray-400 mt-1" /><span>Nécessite iOS 12.0 ou supérieur (non compatible avec les anciens appareils)</span></li>
+          <li className="flex items-start gap-2"><X className="w-5 h-5 text-gray-400 mt-1" /><span>Nécessite iOS 17.0 ou supérieur (non compatible avec les anciens appareils)</span></li>
         </ul>
 
         <div className="bg-blue-50 rounded-xl p-6 my-6">
@@ -579,7 +574,7 @@ export default function MeilleurLecteurIPTV() {
 
         <h3 className="text-xl font-bold mt-6 mb-3">EDGE IPTV est-il compatible avec mon iPhone ?</h3>
         <p>
-          EDGE IPTV nécessite iOS 12.0 ou supérieur et fonctionne parfaitement sur iPhone et iPad, incluant les derniers modèles iPhone 15 Pro et iPad Pro.
+          EDGE IPTV nécessite iOS 17.0 ou supérieur et fonctionne parfaitement sur iPhone et iPad, incluant les derniers modèles iPhone 15 Pro et iPad Pro.
         </p>
 
         <div className="mt-12 pt-8 border-t border-gray-200">

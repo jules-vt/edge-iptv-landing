@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { DownloadButton } from '@/components/download-button';
 import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { LanguageSwitcher } from '@/components/language-switcher';
 
 export const metadata: Metadata = {
   // Title optimized for: "how to install iptv on iphone", "how to download iptv on iphone",
@@ -56,7 +57,7 @@ export default function HowToInstall() {
     },
     "tool": [{
       "@type": "HowToTool",
-      "name": "iPhone or iPad running iOS 12.0 or later"
+      "name": "iPhone or iPad running iOS 17.0 or later"
     }, {
       "@type": "HowToTool",
       "name": "Internet connection"
@@ -112,14 +113,7 @@ export default function HowToInstall() {
           "height": "2622"
         }
       }
-    ],
-    "video": {
-      "@type": "VideoObject",
-      "name": "How to Install IPTV on iPhone Tutorial",
-      "description": "Video guide showing how to install and configure EDGE IPTV on iPhone and iPad",
-      "thumbnailUrl": "https://edge-iptv.app/images/iphone-series-3d.png",
-      "uploadDate": "2025-01-01"
-    }
+    ]
   };
 
   const articleSchema = {
@@ -148,7 +142,7 @@ export default function HowToInstall() {
         "height": 512
       }
     },
-    "datePublished": "2025-01-01",
+    "datePublished": "2026-01-05",
     "dateModified": "2026-01-12",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -178,9 +172,7 @@ export default function HowToInstall() {
             <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/fr/comment-installer-iptv-iphone-ipad" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
-              FR
-            </Link>
+            <LanguageSwitcher currentLang="en" />
             <div className="hidden sm:block">
               <DownloadButton location="guide-header-nav" size="md" className="!px-4 !py-2 !text-sm">
                 Download
@@ -212,7 +204,7 @@ export default function HowToInstall() {
             <h4 className="text-blue-800 font-bold mb-4 text-lg">What You'll Need:</h4>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="text-green-600 font-bold">✓</span> iPhone or iPad running iOS 12.0 or later
+                <span className="text-green-600 font-bold">✓</span> iPhone or iPad running iOS 17.0 or later
               </li>
               <li className="flex items-start gap-2 text-gray-700">
                 <span className="text-green-600 font-bold">✓</span> IPTV subscription with Xtream codes

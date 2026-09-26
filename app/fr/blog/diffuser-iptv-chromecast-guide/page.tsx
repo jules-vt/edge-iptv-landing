@@ -4,17 +4,12 @@ import { ArrowLeft, AlertCircle, CheckCircle, Tv, Wifi, Cast } from 'lucide-reac
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Comment Diffuser IPTV sur Chromecast 2026 | Guide Streaming Complet',
   description: '📺 Apprenez à diffuser IPTV depuis EDGE IPTV vers votre Chromecast. Configuration étape par étape, dépannage et astuces pour le meilleur streaming.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/fr/blog/diffuser-iptv-chromecast-guide',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/chromecast-iptv-streaming-guide',
-      'fr': 'https://edge-iptv.app/fr/blog/diffuser-iptv-chromecast-guide',
-    },
-  },
+  alternates: buildBlogAlternates('diffuser-iptv-chromecast-guide', 'fr'),
   openGraph: {
     title: 'Diffuser IPTV sur Chromecast : Guide Complet 2026',
     description: 'Guide complet pour diffuser le contenu IPTV depuis votre iPhone/iPad vers Chromecast. Configuration, dépannage et conseils pro.',
@@ -52,7 +47,7 @@ export default function GuideChromecastIPTV() {
     <ArticleLayout
       title="Comment Diffuser IPTV sur Chromecast : Guide Complet 2026"
       description="Guide complet pour streamer le contenu IPTV depuis votre iPhone ou iPad vers votre TV avec Chromecast."
-      date="12 janvier 2026"
+      date="2026-01-12"
       readTime="5 min"
       lang="fr"
     >

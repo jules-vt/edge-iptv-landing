@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft, Star, Check, AlertCircle, CheckCircle, Cast, Activity, Settings, Zap, FileText } from 'lucide-react';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
-import { getAllPostSlugs, getPostBySlug } from '@/lib/blog-posts';
+import { buildBlogAlternates, getBlogSlugs, getPostBySlug } from '@/lib/blog-posts';
 
 interface PageProps {
   params: {
@@ -16,7 +16,7 @@ interface PageProps {
 
 // Generate static paths for all Spanish blog posts
 export async function generateStaticParams() {
-  const slugs = getAllPostSlugs();
+  const slugs = getBlogSlugs('es');
   return slugs.map((slug) => ({
     slug: slug,
   }));
@@ -36,15 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} - Blog EDGE IPTV`,
     description: post.description,
-    alternates: {
-      canonical: `https://edge-iptv.app/es/blog/${post.slug}`,
-      languages: {
-        'en': `https://edge-iptv.app/blog/${post.alternateSlug || post.slug}`,
-        'fr': `https://edge-iptv.app/fr/blog/${post.alternateSlug || post.slug}`,
-        'es': `https://edge-iptv.app/es/blog/${post.slug}`,
-        'pt': `https://edge-iptv.app/pt/blog/${post.alternateSlug || post.slug}`,
-      },
-    },
+    alternates: buildBlogAlternates(post.slug, 'es'),
     openGraph: {
       type: 'article',
       url: `https://edge-iptv.app/es/blog/${post.slug}`,

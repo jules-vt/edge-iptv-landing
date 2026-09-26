@@ -285,7 +285,7 @@ export default function HomePT() {
               </Link>
             </Button>
             <p className="mt-6 text-sm text-muted-foreground">
-              Teste grátis de 7 dias. Requer iOS 12.0 ou posterior. Compatível
+              Teste grátis de 7 dias. Requer iOS 17.0 ou posterior. Compatível
               com iPhone e iPad.
             </p>
           </div>

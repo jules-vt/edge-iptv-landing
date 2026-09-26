@@ -5,17 +5,15 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { buildAlternates, defaultOG, defaultTwitter, SITE } from '@/lib/seo-config';
+import { defaultOG, defaultTwitter, SITE } from '@/lib/seo-config';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   // Title optimized for: "what is m3u playlist", "m3u playlist url", "m3u url", "how to use m3u playlist"
   title: 'What is an M3U Playlist? Setup Guide 2026 | Get Your M3U URL',
   description:
     'Learn what an M3U playlist is, how to get your M3U URL, add it to EDGE IPTV, and fix common errors. Complete 2026 guide for iPhone & iPad — free app.',
-  alternates: buildAlternates({
-    en: '/blog/m3u-playlist-setup-guide',
-    fr: '/fr/blog/configurer-playlist-m3u-guide',
-  }),
+  alternates: buildBlogAlternates('m3u-playlist-setup-guide', 'en'),
   openGraph: {
     ...defaultOG,
     title: 'What is an M3U Playlist? How to Get & Use Your M3U URL (2026)',
@@ -61,7 +59,7 @@ export default function M3UPlaylistGuide() {
     <ArticleLayout
       title="M3U Playlist Setup Guide: Complete Tutorial 2026"
       description="Comprehensive guide on configuring M3U playlists for IPTV streaming."
-      date="January 12, 2026"
+      date="2026-01-12"
       readTime="6 min read"
       lang="en"
     >

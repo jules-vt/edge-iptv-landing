@@ -5,19 +5,12 @@ import { ArrowLeft, Star, Check, X } from 'lucide-react';
 import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Mejor Reproductor IPTV para iOS 2026 | Top 7 Apps Comparadas',
   description: '⭐ Compara los 7 mejores reproductores IPTV para iPhone e iPad en 2026. Características, pros, contras y por qué EDGE IPTV es #1.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/es/blog/mejor-reproductor-iptv-ios-2026',
-    languages: {
-      'en': 'https://edge-iptv.app/blog/best-iptv-player-ios-2026',
-      'fr': 'https://edge-iptv.app/fr/blog/meilleur-lecteur-iptv-ios-2026',
-      'es': 'https://edge-iptv.app/es/blog/mejor-reproductor-iptv-ios-2026',
-      'pt': 'https://edge-iptv.app/pt/blog/melhor-reprodutor-iptv-ios-2026',
-    },
-  },
+  alternates: buildBlogAlternates('mejor-reproductor-iptv-ios-2026', 'es'),
   openGraph: {
     title: 'Mejor Reproductor IPTV para iOS 2026 | Top 7 Apps Comparadas',
     description: 'Compara los 7 mejores reproductores IPTV para iPhone e iPad. Características, pros, contras y recomendaciones.',
@@ -56,7 +49,7 @@ export default function MejorReproductorIPTVArticulo() {
     <ArticleLayout
       title="Mejor Reproductor IPTV para iOS en 2026: Comparación Completa"
       description="Comparación profunda de los 7 mejores reproductores IPTV para iPhone e iPad en 2026."
-      date="12 de enero de 2026"
+      date="2026-01-12"
       readTime="8 min de lectura"
       lang="es"
     >

@@ -33,7 +33,7 @@ const faqsEN: FAQItem[] = [
   },
   {
     question: "What iOS version is required?",
-    answer: "EDGE IPTV requires iOS 12.0 or later and is compatible with iPhone and iPad. It's optimized for the latest devices including iPhone 15 Pro and iPad Pro."
+    answer: "EDGE IPTV requires iOS 17.0 or later and is compatible with iPhone and iPad. It's optimized for the latest devices including iPhone 15 Pro and iPad Pro."
   },
   {
     question: "Is my data and privacy protected?",
@@ -68,7 +68,7 @@ const faqsFR: FAQItem[] = [
   },
   {
     question: "Quelle version iOS est requise ?",
-    answer: "EDGE IPTV nécessite iOS 12.0 ou ultérieur et est compatible avec iPhone et iPad. Il est optimisé pour les derniers appareils incluant iPhone 15 Pro et iPad Pro."
+    answer: "EDGE IPTV nécessite iOS 17.0 ou ultérieur et est compatible avec iPhone et iPad. Il est optimisé pour les derniers appareils incluant iPhone 15 Pro et iPad Pro."
   },
   {
     question: "Mes données et ma vie privée sont-elles protégées ?",
@@ -103,7 +103,7 @@ const faqsES: FAQItem[] = [
   },
   {
     question: "¿Qué versión de iOS se requiere?",
-    answer: "EDGE IPTV requiere iOS 12.0 o posterior y es compatible con iPhone y iPad. Está optimizado para los últimos dispositivos incluyendo iPhone 15 Pro y iPad Pro."
+    answer: "EDGE IPTV requiere iOS 17.0 o posterior y es compatible con iPhone y iPad. Está optimizado para los últimos dispositivos incluyendo iPhone 15 Pro y iPad Pro."
   },
   {
     question: "¿Están protegidos mis datos y privacidad?",
@@ -138,7 +138,7 @@ const faqsPT: FAQItem[] = [
   },
   {
     question: "Qual versão do iOS é necessária?",
-    answer: "EDGE IPTV requer iOS 12.0 ou posterior e é compatível com iPhone e iPad. É otimizado para os dispositivos mais recentes incluindo iPhone 15 Pro e iPad Pro."
+    answer: "EDGE IPTV requer iOS 17.0 ou posterior e é compatível com iPhone e iPad. É otimizado para os dispositivos mais recentes incluindo iPhone 15 Pro e iPad Pro."
   },
   {
     question: "Meus dados e privacidade estão protegidos?",

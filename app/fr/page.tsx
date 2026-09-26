@@ -290,7 +290,7 @@ export default function HomeFR() {
               </Link>
             </Button>
             <p className="mt-6 text-sm text-muted-foreground">
-              Essai gratuit de 7 jours. Nécessite iOS 12.0 ou version
+              Essai gratuit de 7 jours. Nécessite iOS 17.0 ou version
               ultérieure. Compatible avec iPhone et iPad.
             </p>
           </div>

@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft, Star, Check, AlertCircle, CheckCircle, Cast, Activity, Settings, Zap, Download } from 'lucide-react';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
-import { getAllPostSlugs, getPostBySlug } from '@/lib/blog-posts';
+import { buildBlogAlternates, getBlogSlugs, getPostBySlug } from '@/lib/blog-posts';
 
 interface PageProps {
   params: {
@@ -16,7 +16,7 @@ interface PageProps {
 
 // Generate static paths for all Portuguese blog posts
 export async function generateStaticParams() {
-  const slugs = getAllPostSlugs();
+  const slugs = getBlogSlugs('pt');
   return slugs.map((slug) => ({
     slug: slug,
   }));
@@ -36,15 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} - Blog EDGE IPTV`,
     description: post.description,
-    alternates: {
-      canonical: `https://edge-iptv.app/pt/blog/${post.slug}`,
-      languages: {
-        'en': `https://edge-iptv.app/blog/${post.alternateSlug || post.slug}`,
-        'fr': `https://edge-iptv.app/fr/blog/${post.alternateSlug || post.slug}`,
-        'es': `https://edge-iptv.app/es/blog/${post.alternateSlug || post.slug}`,
-        'pt': `https://edge-iptv.app/pt/blog/${post.slug}`,
-      },
-    },
+    alternates: buildBlogAlternates(post.slug, 'pt'),
     openGraph: {
       type: 'article',
       url: `https://edge-iptv.app/pt/blog/${post.slug}`,
@@ -1037,7 +1029,7 @@ function ComoInstalarContent() {
     },
     "tool": [{
       "@type": "HowToTool",
-      "name": "iPhone ou iPad com iOS 12.0+"
+      "name": "iPhone ou iPad com iOS 17.0+"
     }],
     "supply": [{
       "@type": "HowToSupply",
@@ -1084,7 +1076,7 @@ function ComoInstalarContent() {
         <h4 className="text-blue-800 font-bold mb-4 text-lg">O que você vai precisar:</h4>
         <ul className="space-y-2 mb-0">
           <li className="flex items-start gap-2 text-gray-700">
-            <span className="text-green-600 font-bold">✓</span> iPhone ou iPad com iOS 12.0 ou superior
+            <span className="text-green-600 font-bold">✓</span> iPhone ou iPad com iOS 17.0 ou superior
           </li>
           <li className="flex items-start gap-2 text-gray-700">
             <span className="text-green-600 font-bold">✓</span> Assinatura IPTV com códigos Xtream

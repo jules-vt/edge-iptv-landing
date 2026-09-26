@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Download, ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { LanguageSwitcher } from '@/components/language-switcher';
 
 export const metadata: Metadata = {
   title: 'Comment Installer IPTV sur iPhone et iPad - Guide Étape par Étape 2026',
@@ -49,7 +50,7 @@ export default function HowToInstallFR() {
     },
     "tool": [{
       "@type": "HowToTool",
-      "name": "iPhone ou iPad avec iOS 12.0 ou ultérieur"
+      "name": "iPhone ou iPad avec iOS 17.0 ou ultérieur"
     }, {
       "@type": "HowToTool",
       "name": "Connexion Internet"
@@ -106,13 +107,6 @@ export default function HowToInstallFR() {
         }
       }
     ],
-    "video": {
-      "@type": "VideoObject",
-      "name": "Tutoriel : Comment Installer IPTV sur iPhone",
-      "description": "Guide vidéo montrant comment installer et configurer EDGE IPTV sur iPhone et iPad",
-      "thumbnailUrl": "https://edge-iptv.app/images/iphone-series-3d.png",
-      "uploadDate": "2025-01-01"
-    },
     "inLanguage": "fr-FR"
   };
 
@@ -142,7 +136,7 @@ export default function HowToInstallFR() {
         "height": 512
       }
     },
-    "datePublished": "2025-01-01",
+    "datePublished": "2026-01-05",
     "dateModified": "2026-01-12",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -172,9 +166,7 @@ export default function HowToInstallFR() {
             <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/how-to-install-iptv-iphone-ipad" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
-              EN
-            </Link>
+            <LanguageSwitcher currentLang="fr" />
             <Link 
               href="https://j-analytics.cloud/q/Z0m1Qmdtf" 
               className="hidden sm:inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all"
@@ -207,7 +199,7 @@ export default function HowToInstallFR() {
             <h4 className="text-blue-800 font-bold mb-4 text-lg">Ce dont vous aurez besoin :</h4>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-gray-700">
-                <span className="text-green-600 font-bold">✓</span> iPhone ou iPad avec iOS 12.0 ou plus récent
+                <span className="text-green-600 font-bold">✓</span> iPhone ou iPad avec iOS 17.0 ou plus récent
               </li>
               <li className="flex items-start gap-2 text-gray-700">
                 <span className="text-green-600 font-bold">✓</span> Abonnement IPTV avec codes Xtream

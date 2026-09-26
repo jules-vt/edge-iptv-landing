@@ -5,7 +5,8 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'How to Fix IPTV Buffering Issues: Complete 2026 Guide | EDGE IPTV',
@@ -13,10 +14,7 @@ export const metadata: Metadata = {
     'Solve IPTV buffering problems permanently. Learn the 10+ causes, diagnostic tests, network optimizations, and how EDGE IPTV features help reduce buffering.',
   keywords:
     'iptv buffering, iptv buffering fix, iptv stops buffering, fix iptv lag, iptv keeps buffering, iptv streaming issues, iptv buffering 2026',
-  alternates: buildAlternates({
-    en: '/blog/iptv-buffering-fix-guide',
-    fr: '/fr/blog/resoudre-buffering-iptv-guide',
-  }),
+  alternates: buildBlogAlternates('iptv-buffering-fix-guide', 'en'),
   openGraph: {
     ...defaultOG,
     title: 'How to Fix IPTV Buffering Issues: Complete 2026 Guide',
@@ -108,7 +106,7 @@ export default function IPTVBufferingFixGuide() {
     <ArticleLayout
       title="How to Fix IPTV Buffering Issues: Complete 2026 Guide"
       description="Stop IPTV buffering permanently with this comprehensive troubleshooting guide. Learn diagnostic tests, network optimizations, and how EDGE IPTV helps."
-      date="January 12, 2026"
+      date="2026-01-12"
       readTime="10 min"
       lang="en"
     >

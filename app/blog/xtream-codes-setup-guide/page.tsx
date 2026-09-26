@@ -5,16 +5,14 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Xtream Codes Setup Guide 2026 | 2-Minute Configuration Tutorial',
   description:
     'Learn how to configure Xtream codes in EDGE IPTV in under 2 minutes. Step-by-step setup with screenshots, common errors, and troubleshooting tips.',
-  alternates: buildAlternates({
-    en: '/blog/xtream-codes-setup-guide',
-    fr: '/fr/blog/configurer-codes-xtream-guide',
-  }),
+  alternates: buildBlogAlternates('xtream-codes-setup-guide', 'en'),
   openGraph: {
     ...defaultOG,
     title: 'Xtream Codes Setup: Complete Guide for Beginners 2026',
@@ -59,7 +57,7 @@ export default function XtreamCodesGuide() {
     <ArticleLayout
       title="Xtream Codes Setup: Complete Guide for Beginners 2026"
       description="Comprehensive tutorial on how to configure Xtream codes on IPTV players."
-      date="January 12, 2026"
+      date="2026-01-12"
       readTime="7 min read"
       lang="en"
     >

@@ -77,7 +77,10 @@ export function ArticleLayout({
                     {
                       year: 'numeric',
                       month: 'long',
-                      day: 'numeric'
+                      day: 'numeric',
+                      // "2026-01-12" parses as UTC midnight; without this the
+                      // build machine's timezone shifts it back a day.
+                      timeZone: 'UTC'
                     }
                   )}
                 </time>

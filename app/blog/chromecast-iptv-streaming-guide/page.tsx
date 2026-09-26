@@ -5,16 +5,14 @@ import { Metadata } from 'next';
 import { ArticleLayout } from '@/components/article-layout';
 import { DownloadButton } from '@/components/download-button';
 import { Breadcrumb } from '@/components/breadcrumb';
-import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { defaultOG, defaultTwitter } from '@/lib/seo-config';
+import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'How to Cast IPTV to Chromecast 2026 | Complete Streaming Guide',
   description:
     'Learn how to cast IPTV from EDGE IPTV to your Chromecast device. Step-by-step setup, troubleshooting, and tips for the best streaming experience.',
-  alternates: buildAlternates({
-    en: '/blog/chromecast-iptv-streaming-guide',
-    fr: '/fr/blog/diffuser-iptv-chromecast-guide',
-  }),
+  alternates: buildBlogAlternates('chromecast-iptv-streaming-guide', 'en'),
   openGraph: {
     ...defaultOG,
     title: 'Cast IPTV to Chromecast: Complete Streaming Guide 2026',
@@ -60,7 +58,7 @@ export default function ChromecastIPTVGuide() {
     <ArticleLayout
       title="How to Cast IPTV to Chromecast: Complete Streaming Guide 2026"
       description="Complete guide to streaming IPTV content from your iPhone or iPad to your TV using Chromecast."
-      date="January 12, 2026"
+      date="2026-01-12"
       readTime="5 min"
       lang="en"
     >
