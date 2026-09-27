@@ -1,13 +1,7 @@
-export type Lang = "en" | "fr" | "es" | "pt";
+import { type Lang, LANGS, LOCALES, localePath } from "@/lib/i18n";
 
-export const LANGS: Lang[] = ["en", "fr", "es", "pt"];
-
-const HREFLANG: Record<Lang, string> = {
-  en: "en",
-  fr: "fr",
-  es: "es",
-  pt: "pt",
-};
+export type { Lang };
+export { LANGS };
 
 export interface BlogPost {
   slug: string;
@@ -389,12 +383,8 @@ export function getBlogSlugs(lang: Lang): string[] {
 
 /** Site-relative path of a post, e.g. `/fr/blog/configurer-codes-xtream-guide`. */
 export function postPath(post: BlogPost): string {
-  const segments = [
-    post.lang === "en" ? "" : post.lang,
-    post.basePath ?? "blog",
-    post.slug,
-  ].filter(Boolean);
-  return `/${segments.join("/")}`;
+  const base = post.basePath ?? "blog";
+  return localePath(post.lang, base ? `/${base}/${post.slug}` : `/${post.slug}`);
 }
 
 /** Every language version of an article, keyed by language. */
@@ -429,7 +419,7 @@ export function buildBlogAlternates(slug: string, lang: Lang) {
   for (const l of LANGS) {
     const translated = translations[l];
     if (translated) {
-      languages[HREFLANG[l]] = `https://edge-iptv.app${postPath(translated)}`;
+      languages[LOCALES[l].htmlLang] = `https://edge-iptv.app${postPath(translated)}`;
     }
   }
 
@@ -442,4 +432,23 @@ export function buildBlogAlternates(slug: string, lang: Lang) {
     canonical: `https://edge-iptv.app${postPath(post)}`,
     languages,
   };
+}
+
+/**
+ * Install guide for a language, falling back to English.
+ *
+ * The guide is not translated into every language yet; resolving it here means
+ * the home page and the iPad section can link to it without either of them
+ * hardcoding a URL that may not exist.
+ */
+export function installGuidePath(lang: Lang): string {
+  const guide =
+    blogPosts.find((p) => p.translationGroup === "install-guide" && p.lang === lang) ??
+    blogPosts.find((p) => p.translationGroup === "install-guide" && p.lang === "en");
+  return guide ? postPath(guide) : "/how-to-install-iptv-iphone-ipad";
+}
+
+/** Blog index for a language, falling back to English when it has no posts. */
+export function blogPath(lang: Lang): string {
+  return getPostsByLang(lang).length > 0 ? localePath(lang, "/blog") : "/blog";
 }

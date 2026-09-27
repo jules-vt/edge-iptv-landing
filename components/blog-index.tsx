@@ -6,6 +6,7 @@ import { BlogCard } from '@/components/blog-card';
 import { BlogHeader } from '@/components/blog-header';
 import { DownloadButton } from '@/components/download-button';
 import { type Lang, getPostsByLang, postPath } from '@/lib/blog-posts';
+import { LOCALES, homePath, localePath } from '@/lib/i18n';
 import { SITE, url } from '@/lib/seo-config';
 
 const COPY: Record<
@@ -98,13 +99,65 @@ const COPY: Record<
     terms: 'Termos',
     rights: 'Todos os direitos reservados.',
   },
+
+  de: {
+    eyebrow: 'EDGE IPTV Blog',
+    title: 'Anleitungen, Guides & Tipps',
+    intro:
+      'Alles über IPTV-Streaming auf iPhone und iPad. Einrichten, optimieren und das Meiste aus EDGE IPTV herausholen.',
+    featured: 'Hier anfangen',
+    all: 'Alle Guides',
+    devices: 'Geschrieben für iPhone und iPad',
+    ctaTitle: 'Bereit zum Streamen?',
+    ctaBody: 'Lade EDGE IPTV und mach dein iPhone oder iPad zur vollwertigen Streaming-Zentrale.',
+    ctaButton: 'Im App Store laden',
+    home: 'Startseite',
+    blog: 'Blog',
+    privacy: 'Datenschutz',
+    terms: 'Nutzungsbedingungen',
+    rights: 'Alle Rechte vorbehalten.',
+  },
+  ar: {
+    eyebrow: 'مدونة EDGE IPTV',
+    title: 'شروحات وأدلة ونصائح',
+    intro:
+      'كل ما تحتاج معرفته عن بث IPTV على الآيفون والآيباد: الإعداد والتحسين والاستفادة القصوى من EDGE IPTV.',
+    featured: 'ابدأ من هنا',
+    all: 'كل الأدلة',
+    devices: 'مكتوب للآيفون والآيباد',
+    ctaTitle: 'جاهز لبدء البث؟',
+    ctaBody: 'حمّل EDGE IPTV وحوّل آيفونك أو آيبادك إلى مركز بث متكامل.',
+    ctaButton: 'التحميل من App Store',
+    home: 'الرئيسية',
+    blog: 'المدونة',
+    privacy: 'الخصوصية',
+    terms: 'الشروط',
+    rights: 'جميع الحقوق محفوظة.',
+  },
+  it: {
+    eyebrow: 'Blog EDGE IPTV',
+    title: 'Tutorial, guide e consigli',
+    intro:
+      "Tutto quello che serve sapere sullo streaming IPTV su iPhone e iPad. Come configurare, ottimizzare e sfruttare al meglio EDGE IPTV.",
+    featured: 'Inizia da qui',
+    all: 'Tutte le guide',
+    devices: 'Scritto per iPhone e iPad',
+    ctaTitle: 'Pronto a iniziare?',
+    ctaBody: "Scarica EDGE IPTV e trasforma il tuo iPhone o iPad in un centro di streaming completo.",
+    ctaButton: 'Scarica su App Store',
+    home: 'Home',
+    blog: 'Blog',
+    privacy: 'Privacy',
+    terms: 'Termini',
+    rights: 'Tutti i diritti riservati.',
+  },
 };
 
-const HOME_PATH: Record<Lang, string> = { en: '/', fr: '/fr', es: '/es', pt: '/pt' };
+
 
 export function BlogIndex({ lang }: { lang: Lang }) {
   const copy = COPY[lang];
-  const home = HOME_PATH[lang];
+  const home = homePath(lang);
 
   // Newest first, so the lead slot keeps itself up to date.
   const posts = [...getPostsByLang(lang)].sort((a, b) => b.date.localeCompare(a.date));
@@ -115,7 +168,7 @@ export function BlogIndex({ lang }: { lang: Lang }) {
     '@type': 'Blog',
     name: `${SITE.name} Blog`,
     description: copy.intro,
-    url: url(lang === 'en' ? '/blog' : `/${lang}/blog`),
+    url: url(localePath(lang, '/blog')),
     publisher: {
       '@type': 'Organization',
       name: SITE.name,
@@ -133,7 +186,7 @@ export function BlogIndex({ lang }: { lang: Lang }) {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div lang={LOCALES[lang].htmlLang} dir={LOCALES[lang].dir} className="min-h-screen bg-background">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
@@ -220,19 +273,19 @@ export function BlogIndex({ lang }: { lang: Lang }) {
                 {copy.home}
               </Link>
               <Link
-                href={lang === 'en' ? '/blog' : `/${lang}/blog`}
+                href={localePath(lang, '/blog')}
                 className="transition-colors hover:text-foreground"
               >
                 {copy.blog}
               </Link>
               <Link
-                href={lang === 'en' ? '/privacy-policy' : `/${lang}/privacy-policy`}
+                href={localePath(lang, '/privacy-policy')}
                 className="transition-colors hover:text-foreground"
               >
                 {copy.privacy}
               </Link>
               <Link
-                href={lang === 'en' ? '/terms-of-use' : `/${lang}/terms-of-use`}
+                href={localePath(lang, '/terms-of-use')}
                 className="transition-colors hover:text-foreground"
               >
                 {copy.terms}

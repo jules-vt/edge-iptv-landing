@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import type { Lang } from '@/lib/i18n';
 
 interface FAQItem {
   question: string;
@@ -7,7 +8,7 @@ interface FAQItem {
 }
 
 interface FAQProps {
-  lang?: 'en' | 'fr' | 'es' | 'pt';
+  lang?: Lang;
 }
 
 const faqsEN: FAQItem[] = [
@@ -150,8 +151,118 @@ const faqsPT: FAQItem[] = [
   }
 ];
 
+const faqsDE: FAQItem[] = [
+  {
+    question: "Was ist IPTV und wie funktioniert es auf dem iPhone?",
+    answer: "IPTV überträgt Fernsehen über das Internet statt über Kabel oder Satellit. EDGE IPTV ist die Player-App: Sie verbindet sich über M3U oder Xtream-Zugangsdaten mit deinem IPTV-Anbieter, damit du Live-TV, Filme und Serien auf iPhone und iPad ansehen kannst."
+  },
+  {
+    question: "Ist EDGE IPTV kostenlos?",
+    answer: "Der Download ist kostenlos und enthält 7 Tage kostenlose Testphase. Danach braucht es ein Abo für 3,99 € im Monat oder 19,99 € im Jahr. EDGE IPTV ist nur der Player: den Zugang zu den Inhalten kaufst du separat bei einem IPTV-Anbieter."
+  },
+  {
+    question: "Brauche ich ein Abo für EDGE IPTV?",
+    answer: "Ja, nach den 7 Tagen Testphase ist ein Abo nötig, um weiter zu schauen. Dazu kommt dein eigenes IPTV-Abo mit M3U- oder Xtream-Zugangsdaten. Sobald du die Daten hast, ist die Einrichtung in unter 30 Sekunden erledigt."
+  },
+  {
+    question: "Unterstützt EDGE IPTV Chromecast?",
+    answer: "Ja. EDGE IPTV streamt Filme, Serien und Live-Sender mit einem Tipp an einen Chromecast, und per AirPlay an ein Apple TV."
+  },
+  {
+    question: "Kann ich offline schauen?",
+    answer: "Ja. Du kannst Filme und Folgen auf das Gerät laden und sie ohne Internetverbindung ansehen."
+  },
+  {
+    question: "Welche iOS-Version wird benötigt?",
+    answer: "EDGE IPTV benötigt iOS 17.0 oder neuer und läuft auf iPhone und iPad."
+  },
+  {
+    question: "Sind meine Daten geschützt?",
+    answer: "Ja. Es werden nur anonyme Nutzungsstatistiken erhoben, um die App zu verbessern. Deine Inhalte werden lokal auf dem Gerät verarbeitet; deine IPTV-Zugangsdaten und dein Verlauf bleiben bei dir."
+  },
+  {
+    question: "Welche Sprachen werden unterstützt?",
+    answer: "Die Oberfläche ist unter anderem auf Deutsch, Englisch, Französisch, Spanisch, Portugiesisch, Italienisch und Arabisch verfügbar und richtet sich automatisch nach deiner Gerätesprache."
+  }
+];
+
+const faqsAR: FAQItem[] = [
+  {
+    question: "ما هو IPTV وكيف يعمل على الآيفون؟",
+    answer: "يبث IPTV محتوى التلفزيون عبر الإنترنت بدل الكابل أو القمر الصناعي. و‏EDGE IPTV هو تطبيق المشغّل: يتصل بمزوّد خدمتك عبر M3U أو بيانات Xtream لتشاهد القنوات المباشرة والأفلام والمسلسلات على آيفونك وآيبادك."
+  },
+  {
+    question: "هل EDGE IPTV مجاني؟",
+    answer: "التحميل مجاني ويتضمن تجربة مجانية لسبعة أيام. بعدها يلزم اشتراك بـ3.99 دولار شهريًا أو 19.99 دولار سنويًا. التطبيق مشغّل فقط: أما المحتوى فتشتريه على حدة من مزوّد IPTV."
+  },
+  {
+    question: "هل أحتاج إلى اشتراك لاستخدام EDGE IPTV؟",
+    answer: "نعم، بعد انتهاء التجربة المجانية يلزم اشتراك لمواصلة المشاهدة. وتحتاج أيضًا إلى اشتراك IPTV خاص بك ببيانات M3U أو Xtream. ما إن تتوفر لديك البيانات حتى يكتمل الإعداد في أقل من 30 ثانية."
+  },
+  {
+    question: "هل يدعم EDGE IPTV جهاز Chromecast؟",
+    answer: "نعم. يرسل EDGE IPTV الأفلام والمسلسلات والقنوات المباشرة إلى Chromecast بلمسة واحدة، وإلى Apple TV عبر AirPlay."
+  },
+  {
+    question: "هل يمكنني المشاهدة دون إنترنت؟",
+    answer: "نعم. يمكنك تنزيل الأفلام والحلقات على جهازك ومشاهدتها دون أي اتصال."
+  },
+  {
+    question: "ما إصدار iOS المطلوب؟",
+    answer: "يتطلب EDGE IPTV نظام iOS 17.0 أو أحدث، ويعمل على الآيفون والآيباد."
+  },
+  {
+    question: "هل بياناتي وخصوصيتي محمية؟",
+    answer: "نعم. لا تُجمع سوى إحصاءات استخدام مجهولة لتحسين التطبيق. تتم معالجة المحتوى محليًا على جهازك، ولا يُطّلع على بيانات دخولك إلى IPTV ولا على سجل مشاهدتك."
+  },
+  {
+    question: "ما اللغات المدعومة؟",
+    answer: "الواجهة متوفرة بالعربية والإنجليزية والفرنسية والإسبانية والبرتغالية والألمانية والإيطالية، وتتكيّف تلقائيًا مع لغة جهازك."
+  }
+];
+
+const faqsIT: FAQItem[] = [
+  {
+    question: "Cos'è l'IPTV e come funziona su iPhone?",
+    answer: "L'IPTV trasmette contenuti televisivi via internet invece che via cavo o satellite. EDGE IPTV è l'app lettore: si collega al tuo provider IPTV tramite M3U o credenziali Xtream e ti permette di guardare TV in diretta, film e serie su iPhone e iPad."
+  },
+  {
+    question: "EDGE IPTV è gratuito?",
+    answer: "Il download è gratuito e include 7 giorni di prova gratuita. Dopodiché serve un abbonamento da 3,99 € al mese o 19,99 € all'anno. EDGE IPTV è solo il lettore: l'accesso ai contenuti si acquista separatamente da un provider IPTV."
+  },
+  {
+    question: "Serve un abbonamento per usare EDGE IPTV?",
+    answer: "Sì, dopo i 7 giorni di prova serve un abbonamento per continuare a guardare. Serve inoltre il tuo abbonamento IPTV con credenziali M3U o Xtream. Una volta ottenute, la configurazione richiede meno di 30 secondi."
+  },
+  {
+    question: "EDGE IPTV supporta Chromecast?",
+    answer: "Sì. EDGE IPTV trasmette film, serie e canali in diretta a un Chromecast con un tocco, e a un'Apple TV via AirPlay."
+  },
+  {
+    question: "Posso guardare offline?",
+    answer: "Sì. Puoi scaricare film ed episodi sul dispositivo e guardarli senza alcuna connessione."
+  },
+  {
+    question: "Quale versione di iOS è richiesta?",
+    answer: "EDGE IPTV richiede iOS 17.0 o successivo e funziona su iPhone e iPad."
+  },
+  {
+    question: "I miei dati e la mia privacy sono protetti?",
+    answer: "Sì. Vengono raccolte solo statistiche d'uso anonime per migliorare l'app. I contenuti sono elaborati localmente sul dispositivo: le credenziali IPTV e la cronologia restano tue."
+  },
+  {
+    question: "Quali lingue sono supportate?",
+    answer: "L'interfaccia è disponibile in italiano, inglese, francese, spagnolo, portoghese, tedesco e arabo, e si adatta automaticamente alla lingua del dispositivo."
+  }
+];
+
+const FAQS_BY_LANG: Record<Lang, FAQItem[]> = {
+  en: faqsEN, fr: faqsFR, es: faqsES, pt: faqsPT,
+  de: faqsDE, ar: faqsAR, it: faqsIT,
+};
+
 export function FAQ({ lang = 'en' }: FAQProps) {
-  const faqs = lang === 'en' ? faqsEN : lang === 'fr' ? faqsFR : lang === 'es' ? faqsES : faqsPT;
+  const faqs = FAQS_BY_LANG[lang];
   const title = lang === 'en' ? 'Frequently Asked Questions' : lang === 'fr' ? 'Questions Fréquentes' : lang === 'es' ? 'Preguntas Frecuentes' : 'Perguntas Frequentes';
   const subtitle = lang === 'en' 
     ? 'Everything you need to know about EDGE IPTV'

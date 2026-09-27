@@ -1,3 +1,5 @@
+import { type Lang, LANGS, LOCALES } from "@/lib/i18n";
+
 /**
  * Centralized SEO configuration for EDGE IPTV.
  *
@@ -27,19 +29,14 @@ export const url = (path: string) =>
  * localised page tells Google it is a duplicate of its English counterpart.
  */
 export function buildAlternates(
-  paths: {
-    en?: string;
-    fr?: string;
-    es?: string;
-    pt?: string;
-  },
-  current: "en" | "fr" | "es" | "pt" = "en",
+  paths: Partial<Record<Lang, string>>,
+  current: Lang = "en",
 ) {
   const languages: Record<string, string> = {};
-  if (paths.en) languages["en"] = url(paths.en);
-  if (paths.fr) languages["fr"] = url(paths.fr);
-  if (paths.es) languages["es"] = url(paths.es);
-  if (paths.pt) languages["pt"] = url(paths.pt);
+  for (const lang of LANGS) {
+    const path = paths[lang];
+    if (path) languages[LOCALES[lang].htmlLang] = url(path);
+  }
   languages["x-default"] = url(paths.en ?? "/");
 
   return {

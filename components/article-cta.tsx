@@ -31,6 +31,24 @@ const COPY: Record<Lang, { eyebrow: string; title: string; cta: string; meta: st
     cta: 'Baixar na App Store',
     meta: 'iPhone e iPad · 7 dias de teste grátis',
   },
+  de: {
+    eyebrow: 'Die App hinter dieser Anleitung',
+    title: 'Richte das in EDGE IPTV ein',
+    cta: 'Im App Store laden',
+    meta: 'iPhone & iPad · 7 Tage kostenlos testen',
+  },
+  ar: {
+    eyebrow: 'التطبيق وراء هذا الدليل',
+    title: 'اضبط ذلك في EDGE IPTV',
+    cta: 'التحميل من App Store',
+    meta: 'آيفون وآيباد · تجربة مجانية 7 أيام',
+  },
+  it: {
+    eyebrow: "L'app dietro questa guida",
+    title: 'Configuralo in EDGE IPTV',
+    cta: "Scarica su App Store",
+    meta: 'iPhone e iPad · 7 giorni di prova gratuita',
+  },
 };
 
 /**

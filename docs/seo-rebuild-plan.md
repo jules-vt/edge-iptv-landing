@@ -94,10 +94,22 @@ Bugs trouvés et corrigés au passage :
 À décider :
 - [ ] **Homepage** : à l'inspection, elle est en bon état visuel et convertit à 8,18 % de CTR. Une refonte complète présente plus de risque que de gain — mon avis est de ne toucher qu'au contenu (Phase 1) plutôt qu'au design. À trancher avec Jules.
 
-### Phase 3 — Extension linguistique (DE, AR, IT)
-- [ ] Remplacer la structure de dossiers dupliqués par langue par un système de contenu centralisé (éviter de recréer le problème de Phase 0 dans 3 langues de plus)
-- [ ] Attention particulière à l'arabe : RTL layout (`dir="rtl"`), police adaptée, mirroring des composants UI
-- [ ] Prioriser la traduction des pages qui convertissent déjà (homepage, guide d'installation) avant le reste du blog
+### Phase 3 — Extension linguistique (fait le 2026-09-27)
+
+Le site passe de 4 à **7 langues** : allemand, arabe et italien s'ajoutent à en/fr/es/pt.
+
+- [x] **Centralisation d'abord, ajout ensuite.** `lib/i18n.ts` devient la source unique : liste des langues, libellés, `hreflang`, locale Open Graph et direction d'écriture. Le sélecteur, le sitemap, le blog, les schemas et chaque dictionnaire y puisent. Ajouter une langue se résume à une entrée ici — TypeScript signale ensuite chaque dictionnaire encore incomplet, ce qui a servi de liste de tâches.
+- [x] **Une seule homepage.** Les 4 pages d'accueil étaient 4 fichiers de 400 à 530 lignes qui avaient déjà divergé : l'anglaise passait par `DownloadButton` (avec tracking GA4), les trois autres par un lien brut — **leurs conversions étaient invisibles dans les statistiques**. Il y a maintenant un composant `HomePage` et un dictionnaire `lib/home-copy.ts`, et les 7 pages sont des enveloppes de 25 lignes.
+- [x] **RTL arabe.** `<html lang>` était figé à « en » pour toutes les langues — un bug préexistant. Le conteneur de page porte désormais `lang` et `dir` corrects, rendus côté serveur, donc l'arabe s'affiche en miroir dès le premier octet sans attendre le JavaScript. La capture iPad arabe montre d'ailleurs l'app elle-même en RTL.
+- [x] **Captures iPad dans les 7 langues** (les sources existaient en 11 langues).
+- [x] **Sitemap dérivé des données** au lieu d'énumérer chaque URL à la main en blocs par langue — la même duplication qui avait produit les hreflang cassés de la Phase 0.
+- [x] **Aucun lien mort** : le guide d'installation et les pages légales ne sont pas traduits en de/ar/it, donc `installGuidePath()` et `legalPath()` retombent explicitement sur l'anglais, et `blogPath()` ne pointe vers un blog localisé que s'il contient des articles.
+- [x] **Affirmations invérifiables retirées des schemas** : « the leading IPTV player brand », « The #1 IPTV Player », « Provider of the best IPTV player ». Les ternaires à 4 langues qu'elles habitaient retombaient en plus silencieusement sur le portugais pour toute nouvelle langue.
+
+Reste à traduire pour ces 3 langues (le contenu existant reste en anglais, sans lien mort) :
+- [ ] Guide d'installation (la page la plus visitée après la homepage)
+- [ ] Articles de blog
+- [ ] Pages légales — textes juridiques, à traduire sérieusement ou pas du tout
 
 ### Phase 4 — Skill de suivi SEO continu
 Voir `~/.claude/skills/seo-monitor` (à créer). Protocole récurrent : réimport des exports Search Console, comparaison mois par mois, détection des pages en perte de CTR/position, validation des données structurées, priorisation des actions.

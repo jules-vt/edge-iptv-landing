@@ -1,21 +1,19 @@
 import { MetadataRoute } from "next";
 import { SITE } from "@/lib/seo-config";
+import { LANGS, LEGAL_LANGS, homePath, localePath } from "@/lib/i18n";
+import { blogPosts, getPostsByLang, postPath } from "@/lib/blog-posts";
 
 export const dynamic = "force-static";
 
 // ─── Dates ──────────────────────────────────────────────────────────────────
-// Use real modification dates instead of `new Date()`.
-// Sending `new Date()` on every build makes Google ignore the signal entirely.
+// Real modification dates, not `new Date()`: a timestamp that changes on every
+// build makes Google ignore the signal entirely.
 const DATES = {
   launch: new Date("2025-01-01"),
   v1: new Date("2026-01-12"),
-  lastSeoUpdate: new Date("2026-03-11"),
+  lastSeoUpdate: new Date("2026-09-27"),
 } as const;
 
-// ─── Locales ─────────────────────────────────────────────────────────────────
-const LOCALES = ["", "/fr", "/es", "/pt"] as const;
-
-// Shorthand: build a full URL from a path
 const u = (path: string) => `${SITE.url}${path}`;
 
 type Freq = MetadataRoute.Sitemap[number]["changeFrequency"];
@@ -24,99 +22,39 @@ function entry(
   path: string,
   priority: number,
   freq: Freq,
-  lastModified = DATES.lastSeoUpdate,
+  lastModified: Date = DATES.lastSeoUpdate,
 ): MetadataRoute.Sitemap[number] {
   return { url: u(path), lastModified, changeFrequency: freq, priority };
 }
 
+/**
+ * Derived from the language list and the post data rather than hand-listed.
+ *
+ * The previous version enumerated every article URL by hand in four blocks.
+ * That is the same duplication that, elsewhere in this codebase, produced
+ * hreflang pointing at pages which did not exist — and a sitemap listing a
+ * stale URL is worse than one that omits it.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  // ── 1. Home pages (all locales) ───────────────────────────────────────────
-  const homePages = LOCALES.map((locale) =>
-    entry(locale || "/", 1.0, "weekly", DATES.lastSeoUpdate),
+  const homePages = LANGS.map((lang) => entry(homePath(lang), 1.0, "weekly"));
+
+  // Blog index only where that language actually has articles.
+  const blogIndexes = LANGS.filter((lang) => getPostsByLang(lang).length > 0).map(
+    (lang) => entry(localePath(lang, "/blog"), 0.9, "weekly"),
   );
 
-  // ── 2. Installation guides (all locales) ─────────────────────────────────
-  const installSlugs: Record<string, string> = {
-    "": "/how-to-install-iptv-iphone-ipad",
-    "/fr": "/fr/comment-installer-iptv-iphone-ipad",
-    "/es": "/es/como-instalar-iptv-iphone-ipad",
-    "/pt": "/pt/como-instalar-iptv-iphone-ipad",
-  };
-  const installPages = LOCALES.map((locale) =>
-    entry(installSlugs[locale], 0.95, "monthly", DATES.lastSeoUpdate),
+  const articles = blogPosts.map((post) => {
+    // The install guide is the main entry point for new users.
+    const priority = post.translationGroup === "install-guide" ? 0.95 : 0.85;
+    const lastModified = post.date >= "2026-03-01" ? DATES.lastSeoUpdate : DATES.v1;
+    return entry(postPath(post), priority, "monthly", lastModified);
+  });
+
+  const legalPages = LEGAL_LANGS.flatMap((lang) =>
+    ["/privacy-policy", "/terms-of-use"].map((page) =>
+      entry(localePath(lang, page), 0.3, "yearly", DATES.launch),
+    ),
   );
 
-  // ── 3. Blog index pages ───────────────────────────────────────────────────
-  const blogIndexes = LOCALES.map((locale) =>
-    entry(`${locale}/blog`, 0.9, "weekly", DATES.lastSeoUpdate),
-  );
-
-type ArticleTuple = [path: string, priority: number, lastModified: Date];
-
-  // ── 4. English blog articles ──────────────────────────────────────────────
-  const enArticles: ArticleTuple[] = [
-    ['/blog/best-iptv-app-for-iphone',       0.95, DATES.lastSeoUpdate],
-    ['/blog/best-iptv-player-ios-2026',      0.90, DATES.lastSeoUpdate],
-    ['/blog/m3u-playlist-setup-guide',       0.90, DATES.lastSeoUpdate],
-    ['/blog/xtream-codes-setup-guide',       0.85, DATES.v1],
-    ['/blog/chromecast-iptv-streaming-guide', 0.85, DATES.v1],
-    ['/blog/iptv-buffering-fix-guide',       0.85, DATES.lastSeoUpdate],
-  ];
-
-  // ── 5. French blog articles ───────────────────────────────────────────────
-  const frArticles: ArticleTuple[] = [
-    ["/fr/blog/meilleur-lecteur-iptv-ios-2026",   0.95, DATES.lastSeoUpdate],
-    ["/fr/blog/configurer-playlist-m3u-guide",    0.90, DATES.lastSeoUpdate],
-    ["/fr/blog/configurer-codes-xtream-guide",    0.85, DATES.v1],
-    ["/fr/blog/diffuser-iptv-chromecast-guide",   0.85, DATES.v1],
-    ["/fr/blog/resoudre-buffering-iptv-guide",    0.85, DATES.lastSeoUpdate],
-  ];
-
-  // ── 6. Spanish blog articles ──────────────────────────────────────────────
-  const esArticles: ArticleTuple[] = [
-    ["/es/blog/mejor-reproductor-iptv-ios-2026",  0.95, DATES.v1],
-    ["/es/blog/configurar-codigos-xtream-guia",   0.85, DATES.v1],
-    ["/es/blog/configurar-lista-m3u-guia",        0.85, DATES.v1],
-    ["/es/blog/guia-streaming-iptv-chromecast",   0.85, DATES.v1],
-    ["/es/blog/solucionar-buffering-iptv-guia",   0.85, DATES.v1],
-  ];
-
-  // ── 7. Portuguese blog articles ───────────────────────────────────────────
-  const ptArticles: ArticleTuple[] = [
-    ["/pt/blog/melhor-reprodutor-iptv-ios-2026",  0.95, DATES.v1],
-    ["/pt/blog/configurar-codigos-xtream-pt",     0.85, DATES.v1],
-    ["/pt/blog/configurar-lista-m3u-pt",          0.85, DATES.v1],
-    ["/pt/blog/guia-streaming-iptv-chromecast-pt", 0.85, DATES.v1],
-    ["/pt/blog/resolver-buffering-iptv-guia",     0.85, DATES.v1],
-  ];
-
-  const articles = [
-    ...enArticles,
-    ...frArticles,
-    ...esArticles,
-    ...ptArticles,
-  ].map(([path, priority, date]) => entry(path, priority, "monthly", date));
-
-  // ── 8. Legal pages ─────────────────────────────────────────────────────────
-  const legalPaths = [
-    "/privacy-policy",
-    "/terms-of-use",
-    "/fr/privacy-policy",
-    "/fr/terms-of-use",
-    "/es/privacy-policy",
-    "/es/terms-of-use",
-    "/pt/privacy-policy",
-    "/pt/terms-of-use",
-  ];
-  const legalPages = legalPaths.map((path) =>
-    entry(path, 0.3, "yearly", DATES.launch),
-  );
-
-  return [
-    ...homePages,
-    ...installPages,
-    ...blogIndexes,
-    ...articles,
-    ...legalPages,
-  ];
+  return [...homePages, ...blogIndexes, ...articles, ...legalPages];
 }

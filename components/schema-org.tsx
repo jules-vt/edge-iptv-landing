@@ -1,8 +1,9 @@
 import React from "react";
 import { SITE } from "@/lib/seo-config";
+import { type Lang, LANGS, LOCALES } from "@/lib/i18n";
 
 interface SchemaOrgProps {
-  lang?: "en" | "fr" | "es" | "pt";
+  lang?: Lang;
 }
 
 /**
@@ -16,7 +17,62 @@ interface SchemaOrgProps {
  * real, user-submitted review system on the page. Self-assigned ratings are a
  * Google structured-data policy violation and risk a manual action.
  */
+
+/**
+ * Per-language schema strings.
+ *
+ * These used to be four-way ternaries that silently fell through to
+ * Portuguese for any new language, and they described the app as "the leading
+ * IPTV player brand" and "the #1 IPTV player" — claims nobody can check. What
+ * is left states what the app does.
+ */
+const SCHEMA_TEXT: Record<Lang, { description: string; brand: string; org: string; home: string }> = {
+  en: {
+    description: "IPTV player for iPhone and iPad with M3U and Xtream support, a live TV guide, Chromecast, AirPlay and offline downloads.",
+    brand: "EDGE IPTV makes an IPTV player for iOS, built around fast setup and native playback.",
+    org: "Maker of the EDGE IPTV player for iPhone and iPad.",
+    home: "Home",
+  },
+  fr: {
+    description: "Lecteur IPTV pour iPhone et iPad avec prise en charge M3U et Xtream, guide TV, Chromecast, AirPlay et téléchargements hors ligne.",
+    brand: "EDGE IPTV édite un lecteur IPTV pour iOS, conçu autour d'une configuration rapide et d'une lecture native.",
+    org: "Éditeur du lecteur EDGE IPTV pour iPhone et iPad.",
+    home: "Accueil",
+  },
+  es: {
+    description: "Reproductor IPTV para iPhone y iPad con soporte M3U y Xtream, guía de TV, Chromecast, AirPlay y descargas sin conexión.",
+    brand: "EDGE IPTV desarrolla un reproductor IPTV para iOS, centrado en una configuración rápida y una reproducción nativa.",
+    org: "Desarrollador del reproductor EDGE IPTV para iPhone y iPad.",
+    home: "Inicio",
+  },
+  pt: {
+    description: "Reprodutor IPTV para iPhone e iPad com suporte a M3U e Xtream, guia de TV, Chromecast, AirPlay e downloads offline.",
+    brand: "A EDGE IPTV desenvolve um reprodutor IPTV para iOS, focado em configuração rápida e reprodução nativa.",
+    org: "Criadora do reprodutor EDGE IPTV para iPhone e iPad.",
+    home: "Início",
+  },
+  de: {
+    description: "IPTV-Player für iPhone und iPad mit M3U- und Xtream-Unterstützung, Programmübersicht, Chromecast, AirPlay und Offline-Downloads.",
+    brand: "EDGE IPTV entwickelt einen IPTV-Player für iOS, ausgelegt auf schnelle Einrichtung und native Wiedergabe.",
+    org: "Entwickler des EDGE IPTV Players für iPhone und iPad.",
+    home: "Startseite",
+  },
+  ar: {
+    description: "مشغّل IPTV للآيفون والآيباد يدعم M3U و Xtream، مع دليل برامج و Chromecast و AirPlay والتنزيل للمشاهدة دون إنترنت.",
+    brand: "تطوّر EDGE IPTV مشغّل IPTV لنظام iOS، مبنيًا على إعداد سريع وتشغيل أصلي.",
+    org: "مطوّر مشغّل EDGE IPTV للآيفون والآيباد.",
+    home: "الرئيسية",
+  },
+  it: {
+    description: "Lettore IPTV per iPhone e iPad con supporto M3U e Xtream, guida TV, Chromecast, AirPlay e download offline.",
+    brand: "EDGE IPTV sviluppa un lettore IPTV per iOS, pensato per una configurazione rapida e una riproduzione nativa.",
+    org: "Sviluppatore del lettore EDGE IPTV per iPhone e iPad.",
+    home: "Home",
+  },
+};
+
 export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
+  const text = SCHEMA_TEXT[lang];
   const websiteSchema = {
     "@type": "SoftwareApplication",
     name: "EDGE IPTV",
@@ -39,23 +95,9 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       name: "EDGE IPTV",
       logo: "https://edge-iptv.app/images/icon.png",
       url: "https://edge-iptv.app",
-      description:
-        lang === "en"
-          ? "EDGE IPTV is the leading IPTV player brand for iOS devices, known for quality streaming and user-friendly design."
-          : lang === "fr"
-            ? "EDGE IPTV est la marque leader de lecteur IPTV pour appareils iOS, reconnue pour sa qualité de streaming et son design convivial."
-            : lang === "es"
-              ? "EDGE IPTV es la marca líder de reproductor IPTV para dispositivos iOS, conocida por su streaming de calidad y diseño amigable."
-              : "EDGE IPTV é a marca líder de player IPTV para dispositivos iOS, conhecida por streaming de qualidade e design amigável.",
+      description: text.brand,
     },
-    description:
-      lang === "en"
-        ? "EDGE IPTV - The #1 IPTV player for iPhone and iPad. Features Chromecast support, offline viewing, and fast Xtream codes setup."
-        : lang === "fr"
-          ? "EDGE IPTV - Le lecteur IPTV #1 pour iPhone et iPad. Avec support Chromecast, visionnage hors ligne et configuration rapide des codes Xtream."
-          : lang === "es"
-            ? "EDGE IPTV - El reproductor IPTV #1 para iPhone y iPad. Con soporte Chromecast, visualización offline y configuración rápida de códigos Xtream."
-            : "EDGE IPTV - O player IPTV #1 para iPhone e iPad. Com suporte Chromecast, visualização offline e configuração rápida de códigos Xtream.",
+    description: text.description,
     image: "https://edge-iptv.app/images/icon.png",
     url:
       lang === "en" ? "https://edge-iptv.app" : `https://edge-iptv.app/${lang}`,
@@ -69,14 +111,7 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
     softwareVersion: "1.1",
     datePublished: "2026-01-05",
     dateModified: "2026-09-26",
-    inLanguage:
-      lang === "en"
-        ? "en-US"
-        : lang === "fr"
-          ? "fr-FR"
-          : lang === "es"
-            ? "es-ES"
-            : "pt-BR",
+    inLanguage: LOCALES[lang].ogLocale.replace("_", "-"),
     featureList: [
       "Xtream Codes Support",
       "Chromecast Integration",
@@ -85,14 +120,6 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       "Favorites Management",
       "EPG Support",
     ],
-    keywords:
-      lang === "en"
-        ? "EDGE IPTV, edge iptv app, edge iptv player, IPTV, iPhone, iPad, Chromecast, streaming, Xtream codes, live TV"
-        : lang === "fr"
-          ? "EDGE IPTV, edge iptv app, IPTV, iPhone, iPad, Chromecast, streaming, codes Xtream, télévision en direct"
-          : lang === "es"
-            ? "EDGE IPTV, edge iptv app, IPTV, iPhone, iPad, Chromecast, streaming, códigos Xtream, TV en vivo"
-            : "EDGE IPTV, edge iptv app, IPTV, iPhone, iPad, Chromecast, streaming, códigos Xtream, TV ao vivo",
   };
 
   // Separate Brand Schema for better brand recognition
@@ -108,22 +135,7 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       height: "512",
     },
     url: "https://edge-iptv.app",
-    description:
-      lang === "en"
-        ? "EDGE IPTV is the premier brand for iOS IPTV streaming solutions, offering best-in-class features and performance."
-        : lang === "fr"
-          ? "EDGE IPTV est la marque premium pour les solutions de streaming IPTV iOS, offrant des fonctionnalités et performances de premier ordre."
-          : lang === "es"
-            ? "EDGE IPTV es la marca premium para soluciones de streaming IPTV iOS, ofreciendo características y rendimiento de primera clase."
-            : "EDGE IPTV é a marca premium para soluções de streaming IPTV iOS, oferecendo recursos e desempenho de primeira classe.",
-    slogan:
-      lang === "en"
-        ? "The #1 IPTV Player for iPhone & iPad"
-        : lang === "fr"
-          ? "Le lecteur IPTV #1 pour iPhone & iPad"
-          : lang === "es"
-            ? "El reproductor IPTV #1 para iPhone & iPad"
-            : "O player IPTV #1 para iPhone & iPad",
+    description: text.brand,
   };
 
   const organizationSchema = {
@@ -138,18 +150,11 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       height: "512",
     },
     sameAs: [],
-    description:
-      lang === "en"
-        ? "Provider of the best IPTV player for iOS devices"
-        : lang === "fr"
-          ? "Fournisseur du meilleur lecteur IPTV pour appareils iOS"
-          : lang === "es"
-            ? "Proveedor del mejor reproductor IPTV para dispositivos iOS"
-            : "Provedor do melhor player IPTV para dispositivos iOS",
+    description: text.org,
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      availableLanguage: ["English", "French", "Spanish", "Portuguese"],
+      availableLanguage: LANGS.map((l) => LOCALES[l].label),
     },
   };
 
@@ -160,14 +165,7 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name:
-          lang === "en"
-            ? "Home"
-            : lang === "fr"
-              ? "Accueil"
-              : lang === "es"
-                ? "Inicio"
-                : "Início",
+        name: text.home,
         item:
           lang === "en"
             ? "https://edge-iptv.app"
@@ -192,14 +190,7 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       },
       "query-input": "required name=search_term_string",
     },
-    inLanguage:
-      lang === "en"
-        ? "en-US"
-        : lang === "fr"
-          ? "fr-FR"
-          : lang === "es"
-            ? "es-ES"
-            : "pt-BR",
+    inLanguage: LOCALES[lang].ogLocale.replace("_", "-"),
   };
 
   return (

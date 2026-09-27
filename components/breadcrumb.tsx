@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
+import type { Lang } from '@/lib/i18n';
 
 interface BreadcrumbItem {
   label: string;
@@ -10,7 +11,7 @@ interface BreadcrumbItem {
 interface BreadcrumbProps {
   items: BreadcrumbItem[];
   currentPage: string;
-  lang?: 'en' | 'fr' | 'es' | 'pt';
+  lang?: Lang;
 }
 
 export function Breadcrumb({ items, currentPage, lang = 'en' }: BreadcrumbProps) {

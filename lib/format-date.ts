@@ -5,6 +5,9 @@ const LOCALES: Record<Lang, string> = {
   fr: "fr-FR",
   es: "es-ES",
   pt: "pt-BR",
+  de: "de-DE",
+  ar: "ar",
+  it: "it-IT",
 };
 
 /**

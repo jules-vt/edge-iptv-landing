@@ -3,15 +3,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { DownloadButton } from '@/components/download-button';
 import { LanguageSwitcher } from '@/components/language-switcher';
+import type { Lang } from '@/lib/i18n';
 
 interface BlogHeaderProps {
-  currentLang: 'en' | 'fr' | 'es' | 'pt';
+  currentLang: Lang;
 }
 
-const translations = {
+const translations: Record<Lang, { home: string; download: string }> = {
   en: {
     home: 'Home',
     download: 'Download',
@@ -27,6 +27,18 @@ const translations = {
   pt: {
     home: 'Início',
     download: 'Baixar',
+  },
+  de: {
+    home: 'Startseite',
+    download: 'Laden',
+  },
+  ar: {
+    home: 'الرئيسية',
+    download: 'تحميل',
+  },
+  it: {
+    home: 'Home',
+    download: 'Scarica',
   },
 };
 
@@ -51,12 +63,11 @@ export function BlogHeader({ currentLang }: BlogHeaderProps) {
             {t.home}
           </Link>
           <LanguageSwitcher currentLang={currentLang} />
-          <Button asChild className="hidden sm:inline-flex rounded-full font-semibold shadow-lg shadow-primary/20">
-            <Link href="https://j-analytics.cloud/q/Z0m1Qmdtf">
-              <Download className="mr-2 h-4 w-4" />
+          <div className="hidden sm:block">
+            <DownloadButton location="blog-header" size="md" className="!text-sm">
               {t.download}
-            </Link>
-          </Button>
+            </DownloadButton>
+          </div>
         </div>
       </div>
     </header>

@@ -1,10 +1,10 @@
 import React from "react";
 import { SchemaOrg } from "@/components/schema-org";
 
-export default function EsLayout({ children }: { children: React.ReactNode }) {
+export default function ArLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <SchemaOrg lang="es" />
+      <SchemaOrg lang="ar" />
       {children}
     </>
   );

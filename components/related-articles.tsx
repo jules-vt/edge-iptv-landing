@@ -12,6 +12,9 @@ const TITLES: Record<Lang, string> = {
   fr: 'À lire ensuite',
   es: 'Sigue leyendo',
   pt: 'Continue lendo',
+  de: 'Weiterlesen',
+  ar: 'تابع القراءة',
+  it: 'Continua a leggere',
 };
 
 /**

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Layers, PictureInPicture2, Cast, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import type { Lang } from '@/lib/blog-posts';
+import { type Lang, installGuidePath } from '@/lib/blog-posts';
 
 /**
  * Dedicated iPad section.
@@ -24,7 +24,6 @@ const COPY: Record<
     points: { title: string; body: string }[];
     devices: string;
     link: string;
-    href: string;
     alt: string;
     caption: string;
   }
@@ -51,7 +50,6 @@ const COPY: Record<
     devices:
       'Requires iPadOS 17 or later: iPad Pro (2nd generation), iPad Air (3rd generation), iPad (6th generation) and iPad mini (5th generation) or newer.',
     link: 'How to set up IPTV on your iPad',
-    href: '/how-to-install-iptv-iphone-ipad',
     alt: 'The EDGE IPTV guide on iPad, showing nine channels and four hours of programming at once',
     caption: 'The TV guide on an iPad: nine channels and four hours on screen, without scrolling.',
   },
@@ -77,7 +75,6 @@ const COPY: Record<
     devices:
       'Nécessite iPadOS 17 ou version ultérieure : iPad Pro (2ᵉ génération), iPad Air (3ᵉ génération), iPad (6ᵉ génération) et iPad mini (5ᵉ génération) ou plus récents.',
     link: "Comment configurer l'IPTV sur votre iPad",
-    href: '/fr/comment-installer-iptv-iphone-ipad',
     alt: 'Le guide EDGE IPTV sur iPad, avec neuf chaînes et quatre heures de programmes affichées en même temps',
     caption: 'Le guide TV sur iPad : neuf chaînes et quatre heures à l’écran, sans défilement.',
   },
@@ -103,7 +100,6 @@ const COPY: Record<
     devices:
       'Requiere iPadOS 17 o posterior: iPad Pro (2.ª generación), iPad Air (3.ª generación), iPad (6.ª generación) y iPad mini (5.ª generación) o más recientes.',
     link: 'Cómo configurar IPTV en tu iPad',
-    href: '/es/como-instalar-iptv-iphone-ipad',
     alt: 'La guía de EDGE IPTV en iPad, mostrando nueve canales y cuatro horas de programación a la vez',
     caption: 'La guía de TV en un iPad: nueve canales y cuatro horas en pantalla, sin desplazarse.',
   },
@@ -129,9 +125,84 @@ const COPY: Record<
     devices:
       'Requer iPadOS 17 ou posterior: iPad Pro (2ª geração), iPad Air (3ª geração), iPad (6ª geração) e iPad mini (5ª geração) ou mais recentes.',
     link: 'Como configurar IPTV no seu iPad',
-    href: '/pt/como-instalar-iptv-iphone-ipad',
     alt: 'O guia do EDGE IPTV no iPad, mostrando nove canais e quatro horas de programação ao mesmo tempo',
     caption: 'O guia de TV num iPad: nove canais e quatro horas na tela, sem rolar.',
+  },
+
+  de: {
+    badge: 'iPhone & iPad',
+    title: 'Für den iPad-Bildschirm gebaut, nicht nur darauf gestreckt',
+    intro:
+      'EDGE IPTV ist eine universelle App: ein Abo deckt iPhone und iPad ab. Auf dem großen Bildschirm ändert sich das Layout, statt einfach zu wachsen: Poster werden fast doppelt so groß gezeichnet, und eine Serie steht neben ihrer Episodenliste statt darunter.',
+    points: [
+      {
+        title: 'Ein Programm mit Luft zum Atmen',
+        body: 'Die EPG-Tabelle zeigt auf dem iPad deutlich mehr vom Programm auf einmal, du überblickst den Abend ohne Sender für Sender zu scrollen.',
+      },
+      {
+        title: 'Bild im Bild',
+        body: 'Lass einen Sender in der Ecke laufen, während du eine Nachricht beantwortest, auf iPad wie auf iPhone.',
+      },
+      {
+        title: 'Auf den Fernseher schicken',
+        body: 'Sende direkt aus dem Player an einen Chromecast oder per AirPlay an ein Apple TV, ohne die App zu verlassen.',
+      },
+    ],
+    devices:
+      'Erfordert iPadOS 17 oder neuer: iPad Pro (2. Generation), iPad Air (3. Generation), iPad (6. Generation) und iPad mini (5. Generation) oder neuer.',
+    link: 'IPTV auf dem iPad einrichten',
+    alt: 'Die EDGE IPTV Programmübersicht auf dem iPad mit neun Sendern und vier Stunden Programm gleichzeitig',
+    caption: 'Das TV-Programm auf einem iPad: neun Sender und vier Stunden auf einen Blick, ohne Scrollen.',
+  },
+  ar: {
+    badge: 'آيفون وآيباد',
+    title: 'مصمم لشاشة الآيباد، لا مجرد تمديد عليها',
+    intro:
+      'إيدج آي بي تي في تطبيق شامل: اشتراك واحد يغطي آيفونك وآيبادك. على الشاشة الكبيرة يتغير التخطيط بدل أن يتمدد: تُرسم الملصقات بضعف الحجم تقريبًا، ويظهر المسلسل بجانب قائمة حلقاته بدل أن يكون تحتها.',
+    points: [
+      {
+        title: 'دليل تلفزيوني بمساحة واسعة',
+        body: 'تعرض شبكة الدليل على الآيباد قدرًا أكبر بكثير من البرامج دفعة واحدة، فتتصفح السهرة دون تمرير قناة بقناة.',
+      },
+      {
+        title: 'صورة داخل صورة',
+        body: 'اترك قناة تعمل في زاوية الشاشة بينما ترد على رسالة، على الآيباد والآيفون معًا.',
+      },
+      {
+        title: 'أرسلها إلى التلفزيون',
+        body: 'أرسل إلى Chromecast أو عبر AirPlay إلى Apple TV مباشرة من المشغّل، دون مغادرة التطبيق.',
+      },
+    ],
+    devices:
+      'يتطلب iPadOS 17 أو أحدث: آيباد برو (الجيل الثاني)، آيباد إير (الجيل الثالث)، آيباد (الجيل السادس) وآيباد ميني (الجيل الخامس) أو أحدث.',
+    link: 'كيفية إعداد IPTV على الآيباد',
+    alt: 'دليل EDGE IPTV على الآيباد يعرض تسع قنوات وأربع ساعات من البرامج في وقت واحد',
+    caption: 'دليل التلفزيون على آيباد: تسع قنوات وأربع ساعات على الشاشة، دون تمرير.',
+  },
+  it: {
+    badge: 'iPhone e iPad',
+    title: "Pensato per lo schermo dell'iPad, non solo allargato su di esso",
+    intro:
+      "EDGE IPTV è un'app universale: un solo abbonamento copre iPhone e iPad. Sullo schermo grande il layout cambia invece di ingrandirsi: i poster sono disegnati quasi al doppio delle dimensioni e una serie compare accanto alla sua lista di episodi anziché sotto.",
+    points: [
+      {
+        title: 'Una guida TV che respira',
+        body: "La griglia EPG mostra molta più programmazione in una volta sull'iPad, così scorri la serata senza sfogliare canale per canale.",
+      },
+      {
+        title: 'Picture in Picture',
+        body: 'Lascia un canale in un angolo mentre rispondi a un messaggio, su iPad come su iPhone.',
+      },
+      {
+        title: 'Mandalo in TV',
+        body: "Trasmetti a un Chromecast o via AirPlay a un'Apple TV direttamente dal player, senza uscire dall'app.",
+      },
+    ],
+    devices:
+      'Richiede iPadOS 17 o successivo: iPad Pro (2ª generazione), iPad Air (3ª generazione), iPad (6ª generazione) e iPad mini (5ª generazione) o più recenti.',
+    link: "Come configurare IPTV sul tuo iPad",
+    alt: "La guida EDGE IPTV su iPad, con nove canali e quattro ore di programmazione insieme",
+    caption: "La guida TV su un iPad: nove canali e quattro ore a schermo, senza scorrere.",
   },
 };
 
@@ -172,7 +243,7 @@ export function IpadSection({ lang = 'en' }: { lang?: Lang }) {
           <p className="mt-8 text-sm text-muted-foreground">{copy.devices}</p>
 
           <Link
-            href={copy.href}
+            href={installGuidePath(lang)}
             className="mt-5 inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
           >
             {copy.link}

@@ -9,6 +9,7 @@ import { RelatedArticles } from '@/components/related-articles';
 import { DownloadButton } from '@/components/download-button';
 import { formatPostDate } from '@/lib/format-date';
 import type { Lang } from '@/lib/blog-posts';
+import { LOCALES } from '@/lib/i18n';
 
 interface ArticleLayoutProps {
   children: React.ReactNode;
@@ -49,6 +50,27 @@ const COPY: Record<Lang, { back: string; blog: string; ctaTitle: string; ctaBody
     ctaBody: 'Baixe o EDGE IPTV e configure sua playlist em cerca de dois minutos.',
     ctaButton: 'Baixar na App Store',
   },
+  de: {
+    back: 'Zurück zum Blog',
+    blog: '/de/blog',
+    ctaTitle: 'Bereit loszulegen?',
+    ctaBody: 'Lade EDGE IPTV und richte deine Playlist in rund zwei Minuten ein.',
+    ctaButton: 'Im App Store laden',
+  },
+  ar: {
+    back: 'العودة إلى المدونة',
+    blog: '/ar/blog',
+    ctaTitle: 'جاهز للبدء؟',
+    ctaBody: 'حمّل EDGE IPTV واضبط قائمتك في دقيقتين تقريبًا.',
+    ctaButton: 'التحميل من App Store',
+  },
+  it: {
+    back: 'Torna al Blog',
+    blog: '/it/blog',
+    ctaTitle: 'Pronto per iniziare?',
+    ctaBody: "Scarica EDGE IPTV e configura la tua playlist in circa due minuti.",
+    ctaButton: 'Scarica su App Store',
+  },
 };
 
 /**
@@ -84,6 +106,16 @@ function withInlineCta(children: React.ReactNode, lang: Lang): React.ReactNode {
   return [...items.slice(0, lastIndex), cta, body];
 }
 
+const RIGHTS: Record<Lang, string> = {
+  en: 'All rights reserved.',
+  fr: 'Tous droits réservés.',
+  es: 'Todos los derechos reservados.',
+  pt: 'Todos os direitos reservados.',
+  de: 'Alle Rechte vorbehalten.',
+  ar: 'جميع الحقوق محفوظة.',
+  it: 'Tutti i diritti riservati.',
+};
+
 export function ArticleLayout({
   children,
   title,
@@ -96,7 +128,7 @@ export function ArticleLayout({
   const copy = COPY[lang];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div lang={LOCALES[lang].htmlLang} dir={LOCALES[lang].dir} className="min-h-screen bg-background">
       <BlogHeader currentLang={lang} />
 
       <main className="pt-24 pb-16">
@@ -158,14 +190,7 @@ export function ArticleLayout({
       <footer className="mt-16 border-t border-border/50 bg-secondary/50 py-8 pb-24 xl:pb-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} EDGE IPTV.{' '}
-            {lang === 'en'
-              ? 'All rights reserved.'
-              : lang === 'fr'
-                ? 'Tous droits réservés.'
-                : lang === 'es'
-                  ? 'Todos los derechos reservados.'
-                  : 'Todos os direitos reservados.'}
+            © {new Date().getFullYear()} EDGE IPTV. {RIGHTS[lang]}
           </p>
         </div>
       </footer>

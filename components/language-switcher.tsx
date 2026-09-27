@@ -7,23 +7,15 @@ import { Globe, Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { type Lang, getTranslations, postPath } from "@/lib/blog-posts"
+import { getTranslations, postPath } from "@/lib/blog-posts"
+import { type Lang, LANGS, LOCALES, homePath } from "@/lib/i18n"
 
 interface LanguageSwitcherProps {
   currentLang: Lang
 }
 
-const languages = {
-  en: { label: 'English', flag: '🇺🇸' },
-  fr: { label: 'Français', flag: '🇫🇷' },
-  es: { label: 'Español', flag: '🇪🇸' },
-  pt: { label: 'Português', flag: '🇵🇹' },
-}
-
 /** Language home, used whenever an article has no version in the target language. */
-function languageHome(lang: Lang): string {
-  return lang === 'en' ? '/' : `/${lang}`
-}
+const languageHome = homePath
 
 /**
  * Resolve the equivalent path in another language.
@@ -98,10 +90,11 @@ export function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 5, scale: 0.95 }}
             transition={{ duration: 0.1 }}
-            className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-neutral-200 py-1 z-50 overflow-hidden"
+            className="absolute right-0 top-full mt-2 max-h-80 w-48 overflow-y-auto rounded-xl border border-neutral-200 bg-white py-1 shadow-lg z-50"
           >
-            {Object.entries(languages).map(([code, { label, flag }]) => {
-              const targetLang = code as Lang;
+            {LANGS.map((targetLang) => {
+              const { label, flag } = LOCALES[targetLang];
+              const code = targetLang;
               const targetPath = getPathForLanguage(pathname, currentLang, targetLang);
               
               return (
