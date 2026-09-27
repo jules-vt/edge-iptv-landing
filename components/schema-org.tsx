@@ -158,22 +158,6 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
     },
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: text.home,
-        item:
-          lang === "en"
-            ? "https://edge-iptv.app"
-            : `https://edge-iptv.app/${lang}`,
-      },
-    ],
-  };
-
   const localeRoot =
     lang === "en" ? "https://edge-iptv.app" : `https://edge-iptv.app/${lang}`;
 
@@ -206,10 +190,6 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"

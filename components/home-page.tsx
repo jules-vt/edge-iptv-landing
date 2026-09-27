@@ -17,7 +17,7 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { DownloadButton } from "@/components/download-button";
 import { IpadSection } from "@/components/ipad-section";
 import { HOME_COPY } from "@/lib/home-copy";
-import { type Lang, LOCALES, homePath, legalPath } from "@/lib/i18n";
+import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n";
 import { blogPath, getPostBySlug, installGuidePath, postPath } from "@/lib/blog-posts";
 
 const FAQ = dynamic(
@@ -313,7 +313,34 @@ export function HomePage({ lang }: { lang: Lang }) {
               </ul>
             </div>
           </div>
-          <p className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+
+          {/*
+            Server-rendered language links. The switcher in the header only
+            renders its list once opened, so no language link existed in the
+            static HTML at all — /de, /ar and /it had zero inbound links and
+            were reachable only through the sitemap.
+          */}
+          <nav aria-label="Languages" className="border-t border-border pt-8">
+            <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+              {LANGS.map((l) => (
+                <li key={l}>
+                  <Link
+                    href={homePath(l)}
+                    hrefLang={LOCALES[l].htmlLang}
+                    className={
+                      l === lang
+                        ? "font-medium text-foreground"
+                        : "text-muted-foreground transition-colors hover:text-primary"
+                    }
+                  >
+                    {LOCALES[l].label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <p className="mt-8 text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} EDGE IPTV. {t.footer.rights}
           </p>
         </div>

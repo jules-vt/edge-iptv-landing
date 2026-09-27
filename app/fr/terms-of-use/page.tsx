@@ -3,17 +3,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
+import { buildAlternates } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'Conditions d\'Utilisation - EDGE IPTV',
   description: 'Conditions d\'utilisation pour l\'application EDGE IPTV. Veuillez lire attentivement ces conditions avant d\'utiliser notre application.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/fr/terms-of-use',
-    languages: {
-      'en': 'https://edge-iptv.app/terms-of-use',
-      'fr': 'https://edge-iptv.app/fr/terms-of-use',
-    },
-  },
+  alternates: buildAlternates({
+    en: '/terms-of-use',
+    fr: '/fr/terms-of-use',
+    es: '/es/terms-of-use',
+    pt: '/pt/terms-of-use',
+  }, 'fr'),
 };
 
 export default function TermsOfUseFR() {

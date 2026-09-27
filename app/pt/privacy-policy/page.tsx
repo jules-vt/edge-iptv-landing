@@ -3,19 +3,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
+import { buildAlternates } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidade - EDGE IPTV',
   description: 'Política de privacidade do aplicativo EDGE IPTV. Descubra como tratamos seus dados e protegemos sua privacidade.',
-  alternates: {
-    canonical: 'https://edge-iptv.app/pt/privacy-policy',
-    languages: {
-      'en': 'https://edge-iptv.app/privacy-policy',
-      'fr': 'https://edge-iptv.app/fr/privacy-policy',
-      'es': 'https://edge-iptv.app/es/privacy-policy',
-      'pt': 'https://edge-iptv.app/pt/privacy-policy',
-    },
-  },
+  alternates: buildAlternates({
+    en: '/privacy-policy',
+    fr: '/fr/privacy-policy',
+    es: '/es/privacy-policy',
+    pt: '/pt/privacy-policy',
+  }, 'pt'),
 };
 
 export default function PrivacyPolicyPT() {
