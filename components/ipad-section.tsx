@@ -25,6 +25,8 @@ const COPY: Record<
     devices: string;
     link: string;
     href: string;
+    alt: string;
+    caption: string;
   }
 > = {
   en: {
@@ -50,6 +52,8 @@ const COPY: Record<
       'Requires iPadOS 17 or later: iPad Pro (2nd generation), iPad Air (3rd generation), iPad (6th generation) and iPad mini (5th generation) or newer.',
     link: 'How to set up IPTV on your iPad',
     href: '/how-to-install-iptv-iphone-ipad',
+    alt: 'The EDGE IPTV guide on iPad, showing nine channels and four hours of programming at once',
+    caption: 'The TV guide on an iPad: nine channels and four hours on screen, without scrolling.',
   },
   fr: {
     badge: 'iPhone & iPad',
@@ -74,6 +78,8 @@ const COPY: Record<
       'Nécessite iPadOS 17 ou version ultérieure : iPad Pro (2ᵉ génération), iPad Air (3ᵉ génération), iPad (6ᵉ génération) et iPad mini (5ᵉ génération) ou plus récents.',
     link: "Comment configurer l'IPTV sur votre iPad",
     href: '/fr/comment-installer-iptv-iphone-ipad',
+    alt: 'Le guide EDGE IPTV sur iPad, avec neuf chaînes et quatre heures de programmes affichées en même temps',
+    caption: 'Le guide TV sur iPad : neuf chaînes et quatre heures à l’écran, sans défilement.',
   },
   es: {
     badge: 'iPhone y iPad',
@@ -98,6 +104,8 @@ const COPY: Record<
       'Requiere iPadOS 17 o posterior: iPad Pro (2.ª generación), iPad Air (3.ª generación), iPad (6.ª generación) y iPad mini (5.ª generación) o más recientes.',
     link: 'Cómo configurar IPTV en tu iPad',
     href: '/es/como-instalar-iptv-iphone-ipad',
+    alt: 'La guía de EDGE IPTV en iPad, mostrando nueve canales y cuatro horas de programación a la vez',
+    caption: 'La guía de TV en un iPad: nueve canales y cuatro horas en pantalla, sin desplazarse.',
   },
   pt: {
     badge: 'iPhone e iPad',
@@ -122,6 +130,8 @@ const COPY: Record<
       'Requer iPadOS 17 ou posterior: iPad Pro (2ª geração), iPad Air (3ª geração), iPad (6ª geração) e iPad mini (5ª geração) ou mais recentes.',
     link: 'Como configurar IPTV no seu iPad',
     href: '/pt/como-instalar-iptv-iphone-ipad',
+    alt: 'O guia do EDGE IPTV no iPad, mostrando nove canais e quatro horas de programação ao mesmo tempo',
+    caption: 'O guia de TV num iPad: nove canais e quatro horas na tela, sem rolar.',
   },
 };
 
@@ -170,19 +180,22 @@ export function IpadSection({ lang = 'en' }: { lang?: Lang }) {
           </Link>
         </div>
 
-        <div className="relative mx-auto w-full max-w-lg">
+        <figure className="relative mx-auto w-full max-w-xl">
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-primary/15 to-purple-500/15 blur-2xl" />
           <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-card shadow-2xl">
             <Image
-              src="/images/epg-screen.webp"
-              alt="EDGE IPTV live TV guide showing channels and their current programmes"
-              width={900}
-              height={600}
+              src={`/images/ipad-epg-${lang}.webp`}
+              alt={copy.alt}
+              width={1400}
+              height={1058}
               className="h-auto w-full"
               loading="lazy"
             />
           </div>
-        </div>
+          <figcaption className="mt-3 text-center text-xs text-muted-foreground">
+            {copy.caption}
+          </figcaption>
+        </figure>
       </div>
     </section>
   );
