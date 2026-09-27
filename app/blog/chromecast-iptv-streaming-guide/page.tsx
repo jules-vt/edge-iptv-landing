@@ -114,14 +114,14 @@ export default function ChromecastIPTVGuide() {
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 my-6 border-2 border-purple-200">
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">📱 Step 1: Open EDGE IPTV</p>
+              <p className="font-bold text-purple-700 mb-2">Step 1: Open EDGE IPTV</p>
               <p className="text-gray-700">
                 Launch the EDGE IPTV app on your iPhone or iPad. Make sure you&apos;re connected to the same Wi-Fi network as your Chromecast device.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">🎬 Step 2: Start Playing Content</p>
+              <p className="font-bold text-purple-700 mb-2">Step 2: Start Playing Content</p>
               <p className="text-gray-700">
                 Browse your channels, movies, or shows and <strong>tap on what you want to watch</strong>. The content will start playing on your iPhone/iPad first. This is normal - you&apos;ll cast it to your TV in the next step.
               </p>
@@ -136,7 +136,7 @@ export default function ChromecastIPTVGuide() {
                 While the content is playing, look for the <strong>Chromecast icon in the top right corner of the video player</strong>. It looks like a TV screen with Wi-Fi waves in the corner.
               </p>
               <div className="bg-blue-50 p-3 rounded mt-2">
-                <p className="text-sm font-bold text-blue-800 mb-1">📍 Where to Find It:</p>
+                <p className="text-sm font-bold text-blue-800 mb-1">Where to Find It:</p>
                 <p className="text-sm text-blue-700 mb-0">
                   The Cast button appears in the player controls, in the top right area. If you don&apos;t see it immediately, make sure your Chromecast is powered on and connected to the same network.
                 </p>
@@ -144,12 +144,12 @@ export default function ChromecastIPTVGuide() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-yellow-300">
-              <p className="font-bold text-yellow-700 mb-2">⚠️ Step 4: Accept Permissions (First Time Only)</p>
+              <p className="font-bold text-yellow-700 mb-2">Step 4: Accept Permissions (First Time Only)</p>
               <p className="text-gray-700 mb-2">
                 <strong>If this is your first time casting</strong>, iOS will show a popup asking for permission to find and connect to devices on your local network.
               </p>
               <div className="bg-yellow-50 p-3 rounded mt-2">
-                <p className="text-sm font-bold text-yellow-800 mb-1">🔐 Important:</p>
+                <p className="text-sm font-bold text-yellow-800 mb-1">Important:</p>
                 <p className="text-sm text-yellow-700 mb-0">
                   <strong>You MUST tap &quot;Allow&quot; or &quot;OK&quot;</strong> on this permission popup. Without this permission, EDGE IPTV cannot discover your Chromecast devices on the network. If you accidentally denied it, you&apos;ll need to go to iPhone Settings → EDGE IPTV → Local Network and enable it.
                 </p>
@@ -157,7 +157,7 @@ export default function ChromecastIPTVGuide() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">📺 Step 5: Choose Your Chromecast Device</p>
+              <p className="font-bold text-purple-700 mb-2">Step 5: Choose Your Chromecast Device</p>
               <p className="text-gray-700 mb-2">
                 After tapping the Cast button (and accepting permissions if needed), a list of available Chromecast devices will appear. This includes:
               </p>
@@ -179,7 +179,7 @@ export default function ChromecastIPTVGuide() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2">🎉 Step 7: Control Playback</p>
+              <p className="font-bold text-green-700 mb-2">Step 7: Control Playback</p>
               <p className="text-gray-700">
                 Your iPhone/iPad now acts as a remote control. You can:
               </p>
@@ -232,7 +232,7 @@ export default function ChromecastIPTVGuide() {
             <li>4. Check the Wi-Fi network listed</li>
           </ol>
           <div className="bg-blue-100 p-3 rounded mt-3">
-            <p className="text-sm font-bold text-blue-900 mb-1">⚠️ Important:</p>
+            <p className="text-sm font-bold text-blue-900 mb-1">Important:</p>
             <p className="text-sm text-blue-800 mb-0">
               Both devices MUST be on the same network. If your router has separate 2.4GHz and 5GHz networks with different names, make sure both devices are on the same one.
             </p>
@@ -250,7 +250,7 @@ export default function ChromecastIPTVGuide() {
             <li><strong>5.</strong> Close Settings and restart EDGE IPTV</li>
           </ol>
           <div className="bg-orange-100 p-3 rounded mt-3">
-            <p className="text-sm font-bold text-orange-900 mb-1">💡 Pro Tip:</p>
+            <p className="text-sm font-bold text-orange-900 mb-1">Pro Tip:</p>
             <p className="text-sm text-orange-800 mb-0">
               If you don&apos;t see &quot;Local Network&quot; in the settings, it means the app hasn&apos;t requested permission yet. Try tapping the Cast button in EDGE IPTV again to trigger the permission request.
             </p>
@@ -278,7 +278,7 @@ export default function ChromecastIPTVGuide() {
             <li>• <strong>Chromecast has power</strong> - if using USB power from TV, make sure the TV&apos;s USB port provides power when on</li>
           </ul>
           <div className="bg-yellow-100 p-3 rounded mt-3">
-            <p className="text-sm font-bold text-yellow-900 mb-1">📌 Note:</p>
+            <p className="text-sm font-bold text-yellow-900 mb-1">Note:</p>
             <p className="text-sm text-yellow-800 mb-0">
               Some older TVs don&apos;t power USB ports when the TV is off. If you&apos;re using TV USB power, try using the included wall adapter instead.
             </p>
@@ -367,35 +367,35 @@ export default function ChromecastIPTVGuide() {
 
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">🚀 Tip 1: Use 5GHz Wi-Fi When Possible</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 1: Use 5GHz Wi-Fi When Possible</h4>
             <p className="mb-0">
               If your router supports dual-band (2.4GHz and 5GHz), connect both your iPhone and Chromecast to the 5GHz network for faster speeds and less interference. 5GHz provides much better streaming quality.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">📶 Tip 2: Position Chromecast Strategically</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 2: Position Chromecast Strategically</h4>
             <p className="mb-0">
               Don&apos;t hide your Chromecast behind the TV where Wi-Fi signal is weakest. Use an HDMI extender cable to position it in a spot with better signal reception. Even 6 inches can make a difference.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">🔄 Tip 3: Keep Firmware Updated</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 3: Keep Firmware Updated</h4>
             <p className="mb-0">
               Chromecast updates automatically, but you can manually check in Google Home app → Device Settings → Check for Updates. Updated firmware improves performance and fixes bugs.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">🔋 Tip 4: Use Wall Power, Not TV USB</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 4: Use Wall Power, Not TV USB</h4>
             <p className="mb-0">
               For most reliable performance, power your Chromecast using the included wall adapter rather than your TV&apos;s USB port. TV USB ports often provide insufficient or inconsistent power.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">📱 Tip 5: Don&apos;t Close EDGE IPTV</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 5: Don&apos;t Close EDGE IPTV</h4>
             <p className="mb-0">
               While Chromecast streams directly from the internet, EDGE IPTV still needs to run in the background for playback controls. You can lock your screen or switch apps, but don&apos;t force-quit EDGE IPTV while casting.
             </p>
@@ -416,8 +416,8 @@ export default function ChromecastIPTVGuide() {
             <tbody>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Device Independence</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✅ Yes</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-red-600">❌ No</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✓ Yes</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-red-600">✗ No</td>
               </tr>
               <tr className="bg-gray-50">
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Battery Impact</td>
@@ -441,15 +441,15 @@ export default function ChromecastIPTVGuide() {
               </tr>
               <tr className="bg-gray-50">
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Multi-user Control</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✅ Yes</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-red-600">❌ No</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✓ Yes</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-red-600">✗ No</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl p-8 my-8 border-2 border-blue-300">
-          <h4 className="font-bold text-xl mb-4">💡 Our Recommendation</h4>
+          <h4 className="font-bold text-xl mb-4">Our Recommendation</h4>
           <p className="text-gray-800 mb-0">
             <strong>Chromecast is the better choice for IPTV streaming</strong> for most users. It&apos;s more affordable, drains less battery, and allows you to use your phone freely while streaming. AirPlay requires constant phone connection and is more expensive (requires Apple TV). Choose AirPlay only if you already own Apple TV and prefer the Apple ecosystem.
           </p>
@@ -488,7 +488,7 @@ export default function ChromecastIPTVGuide() {
             Download EDGE IPTV and start streaming on your TV in under 2 minutes
           </p>
           <DownloadButton location="article-chromecast-final" size="xl">
-            Download EDGE IPTV Free
+            Start your 7-day free trial
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
             ✓ One-Tap Chromecast ✓ Works on All TVs ✓ No Extra Apps Needed ✓ Free Forever

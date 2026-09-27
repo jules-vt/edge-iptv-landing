@@ -9,7 +9,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Mejor Reproductor IPTV para iOS 2026 | Top 7 Apps Comparadas',
-  description: '⭐ Compara los 7 mejores reproductores IPTV para iPhone e iPad en 2026. Características, pros, contras y por qué EDGE IPTV es #1.',
+  description: '★ Compara los 7 mejores reproductores IPTV para iPhone e iPad en 2026. Características, pros, contras y por qué EDGE IPTV es #1.',
   alternates: buildBlogAlternates('mejor-reproductor-iptv-ios-2026', 'es'),
   openGraph: {
     title: 'Mejor Reproductor IPTV para iOS 2026 | Top 7 Apps Comparadas',
@@ -63,7 +63,7 @@ export default function MejorReproductorIPTVArticulo() {
           ¿Buscas el mejor reproductor IPTV para tu iPhone o iPad en 2026? Hemos probado las 7 mejores aplicaciones para ayudarte a elegir la solución de streaming perfecta. Ya sea que necesites soporte Chromecast, visualización offline o la configuración más rápida de códigos Xtream, esta guía completa te tiene cubierto.
         </p>
 
-        <h2 className="text-3xl font-bold mt-12 mb-6">Nuestra Mejor Elección: EDGE IPTV 🏆</h2>
+        <h2 className="text-3xl font-bold mt-12 mb-6">Nuestra Mejor Elección: EDGE IPTV </h2>
         
         <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-8 border-2 border-blue-200">
           <div className="flex items-start gap-6">
@@ -77,10 +77,7 @@ export default function MejorReproductorIPTVArticulo() {
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
                 <h3 className="text-2xl font-bold m-0">EDGE IPTV</h3>
-                <div className="flex items-center gap-1 bg-yellow-100 px-3 py-1 rounded-full">
-                  <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                  <span className="font-bold">5.0</span>
-                </div>
+                <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-700">Nuestra elección</span>
               </div>
               <p className="text-gray-600 mb-4">
                 El reproductor IPTV más completo para iOS con configuración ultrarrápida de códigos Xtream, integración total de Chromecast y capacidades de visualización offline.
@@ -104,7 +101,7 @@ export default function MejorReproductorIPTVArticulo() {
                 </div>
               </div>
               <DownloadButton location="article-best-player-top" size="md">
-                Descargar EDGE IPTV Gratis
+                Empezar la prueba gratis de 7 días
               </DownloadButton>
             </div>
           </div>
@@ -127,42 +124,42 @@ export default function MejorReproductorIPTVArticulo() {
             <tbody>
               <tr className="bg-blue-50">
                 <td className="border border-gray-300 px-4 py-3 font-bold">EDGE IPTV</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">⭐ 5.0</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">Gratis</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">✅</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">✅</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">Nuevo</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">3,99 €/mes</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✓</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✓</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">2 min</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3">GSE Smart IPTV</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">⭐ 4.5</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">★ 4.5</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">$4.99</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">✅</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✓</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">5 min</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3">IPTV Smarters Pro</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">⭐ 4.3</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">★ 4.3</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">Gratis</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">✅</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✓</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">4 min</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3">Ibo Player</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">⭐ 4.1</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">★ 4.1</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">Gratis</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">5 min</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3">VLC for Mobile</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">⭐ 4.7</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">★ 4.7</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">Gratis</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">10 min</td>
               </tr>
             </tbody>
@@ -206,7 +203,7 @@ export default function MejorReproductorIPTVArticulo() {
             Únete a miles de usuarios que eligieron EDGE IPTV para la mejor experiencia de streaming en iOS
           </p>
           <DownloadButton location="article-best-player-final" size="xl">
-            Descargar EDGE IPTV Gratis
+            Empezar la prueba gratis de 7 días
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
             ✓ 7 días de prueba gratis ✓ Sin anuncios ✓ Todas las funciones incluidas ✓ Configuración de 2 minutos

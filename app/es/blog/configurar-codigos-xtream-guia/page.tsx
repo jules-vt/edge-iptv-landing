@@ -8,7 +8,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guía de Configuración de Códigos Xtream 2026 | Tutorial de 2 Minutos',
-  description: '📺 Aprende cómo configurar códigos Xtream en EDGE IPTV en menos de 2 minutos. Guía paso a paso con capturas de pantalla, errores comunes y consejos de solución de problemas.',
+  description: 'Aprende cómo configurar códigos Xtream en EDGE IPTV en menos de 2 minutos. Guía paso a paso con capturas de pantalla, errores comunes y consejos de solución de problemas.',
   alternates: buildBlogAlternates('configurar-codigos-xtream-guia', 'es'),
   openGraph: {
     title: 'Configuración de Códigos Xtream: Guía Completa 2026',
@@ -95,7 +95,7 @@ export default function GuiaCodigosXtream() {
 
         <div className="text-center my-6">
           <DownloadButton location="article-xtream-step2" size="lg">
-            Descargar EDGE IPTV Gratis
+            Empezar la prueba gratis de 7 días
           </DownloadButton>
         </div>
 
@@ -106,14 +106,14 @@ export default function GuiaCodigosXtream() {
           
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">📱 Paso 1: Añade tu Lista de Reproducción</p>
+              <p className="font-bold text-blue-700 mb-2">Paso 1: Añade tu Lista de Reproducción</p>
               <p className="text-gray-700">
                 Abre EDGE IPTV y busca el <strong>botón &quot;+&quot; en la esquina inferior derecha</strong> de tu pantalla. Tócalo para comenzar a añadir tu primera lista de reproducción.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">🔧 Paso 2: Elige tu Tipo de Fuente</p>
+              <p className="font-bold text-blue-700 mb-2">Paso 2: Elige tu Tipo de Fuente</p>
               <p className="text-gray-700 mb-2">
                 Verás dos opciones:
               </p>
@@ -127,7 +127,7 @@ export default function GuiaCodigosXtream() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">✍️ Paso 3: Completa tus Credenciales</p>
+              <p className="font-bold text-blue-700 mb-2">Paso 3: Completa tus Credenciales</p>
               <p className="text-gray-700">
                 Ingresa la información de tu proveedor exactamente como te la proporcionaron.
               </p>
@@ -141,7 +141,7 @@ export default function GuiaCodigosXtream() {
             Descarga EDGE IPTV y configura tus códigos Xtream en menos de 2 minutos
           </p>
           <DownloadButton location="article-xtream-final" size="xl">
-            Descargar EDGE IPTV Gratis
+            Empezar la prueba gratis de 7 días
           </DownloadButton>
         </div>
 

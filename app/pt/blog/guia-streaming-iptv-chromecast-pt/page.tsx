@@ -8,7 +8,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guia de Streaming IPTV com Chromecast 2026 | Tutorial Completo',
-  description: '📺 Aprenda como transmitir IPTV para sua TV com Chromecast usando EDGE IPTV. Guia passo a passo fácil.',
+  description: 'Aprenda como transmitir IPTV para sua TV com Chromecast usando EDGE IPTV. Guia passo a passo fácil.',
   alternates: buildBlogAlternates('guia-streaming-iptv-chromecast-pt', 'pt'),
   openGraph: {
     title: 'Guia de Streaming IPTV com Chromecast 2026',
@@ -48,7 +48,7 @@ export default function GuiaChromecast() {
 
         <div className="text-center my-6">
           <DownloadButton location="article-chromecast" size="lg">
-            Baixar EDGE IPTV Grátis
+            Começar o teste grátis de 7 dias
           </DownloadButton>
         </div>
 
@@ -80,7 +80,7 @@ export default function GuiaChromecast() {
             Desfrute do EDGE IPTV na tela grande com Chromecast
           </p>
           <DownloadButton location="article-chromecast-final" size="xl">
-            Baixar EDGE IPTV Grátis
+            Começar o teste grátis de 7 dias
           </DownloadButton>
         </div>
 

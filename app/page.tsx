@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { DownloadButton } from "@/components/download-button";
+import { IpadSection } from "@/components/ipad-section";
 
 // Lazy load FAQ component (below fold)
 const FAQ = dynamic(
@@ -76,7 +77,7 @@ export default function Home() {
               <strong>EDGE IPTV</strong> transforms your iPhone & iPad into a
               powerful streaming hub for live TV, movies and series. A live TV
               guide, Picture in Picture, offline downloads, and one-tap
-              Chromecast & AirPlay casting — all in a stunning interface built
+              Chromecast & AirPlay casting, all in a stunning interface built
               for modern entertainment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
@@ -218,6 +219,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <IpadSection lang="en" />
+
 
       {/* What is EDGE IPTV Section */}
       <section className="py-24 bg-background">

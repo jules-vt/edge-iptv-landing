@@ -4,7 +4,7 @@ import { SchemaOrg } from "@/components/schema-org";
 export const metadata: Metadata = {
   title: "EDGE IPTV - Meilleur Lecteur IPTV iOS 2026 | iPhone & iPad",
   description:
-    "⭐ EDGE IPTV - Lecteur IPTV #1 pour iOS. ✓ Installation 2 min ✓ Chromecast ✓ Hors ligne ✓ Streaming 4K. Téléchargez EDGE IPTV gratuit pour iPhone & iPad!",
+    "★ EDGE IPTV - Lecteur IPTV #1 pour iOS. ✓ Installation 2 min ✓ Chromecast ✓ Hors ligne ✓ Streaming 4K. Téléchargez EDGE IPTV gratuit pour iPhone & iPad!",
   authors: [{ name: "EDGE IPTV" }],
   keywords: [
     "edge iptv",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: "https://edge-iptv.app/fr/",
     title: "EDGE IPTV - Meilleur Lecteur IPTV iOS 2026 | iPhone & iPad",
     description:
-      "⭐ EDGE IPTV - Lecteur #1 pour iOS. Installation 2 min, Chromecast, hors ligne, streaming 4K. Gratuit!",
+      "★ EDGE IPTV - Lecteur #1 pour iOS. Installation 2 min, Chromecast, hors ligne, streaming 4K. Gratuit!",
     images: ["https://edge-iptv.app/images/iphone-series-3d.png"],
     siteName: "EDGE IPTV",
     locale: "fr_FR",

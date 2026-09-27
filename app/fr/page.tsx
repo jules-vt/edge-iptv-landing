@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FAQ } from "@/components/faq";
+import { IpadSection } from "@/components/ipad-section";
 
 export default function HomeFR() {
   return (
@@ -77,7 +78,7 @@ export default function HomeFR() {
               puissant centre de streaming pour la TV en direct, les films et
               les séries. Guide TV en direct, Picture in Picture,
               téléchargement hors ligne et diffusion Chromecast & AirPlay en
-              un clic — dans une interface magnifique conçue pour le
+              un clic, dans une interface magnifique conçue pour le
               divertissement moderne.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
@@ -265,6 +266,9 @@ export default function HomeFR() {
           </div>
         </div>
       </section>
+
+      <IpadSection lang="fr" />
+
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">

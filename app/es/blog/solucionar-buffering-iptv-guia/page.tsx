@@ -8,7 +8,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Cómo Solucionar el Buffering de IPTV 2026 | Guía Completa',
-  description: '📺 Soluciona problemas de buffering y lag en IPTV. 10 soluciones probadas para streaming sin interrupciones.',
+  description: 'Soluciona problemas de buffering y lag en IPTV. 10 soluciones probadas para streaming sin interrupciones.',
   alternates: buildBlogAlternates('solucionar-buffering-iptv-guia', 'es'),
   openGraph: {
     title: 'Cómo Solucionar el Buffering de IPTV 2026',
@@ -133,7 +133,7 @@ export default function GuiaBuffering() {
             Descarga EDGE IPTV optimizado para reducir buffering y disfrutar de streaming fluido
           </p>
           <DownloadButton location="article-buffering-final" size="xl">
-            Descargar EDGE IPTV Gratis
+            Empezar la prueba gratis de 7 días
           </DownloadButton>
         </div>
 

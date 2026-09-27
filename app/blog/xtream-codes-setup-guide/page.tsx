@@ -128,7 +128,7 @@ export default function XtreamCodesGuide() {
 
         <div className="text-center my-6">
           <DownloadButton location="article-xtream-step2" size="lg">
-            Download EDGE IPTV Free
+            Start your 7-day free trial
           </DownloadButton>
         </div>
 
@@ -143,14 +143,14 @@ export default function XtreamCodesGuide() {
           
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">📱 Step 1: Add Your Playlist</p>
+              <p className="font-bold text-blue-700 mb-2">Step 1: Add Your Playlist</p>
               <p className="text-gray-700">
                 Open EDGE IPTV and look for the <strong>&quot;+&quot; button in the bottom-right corner</strong> of your screen. Tap it to start adding your first playlist.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">🔧 Step 2: Choose Your Source Type</p>
+              <p className="font-bold text-blue-700 mb-2">Step 2: Choose Your Source Type</p>
               <p className="text-gray-700 mb-2">
                 You&apos;ll see two options:
               </p>
@@ -164,7 +164,7 @@ export default function XtreamCodesGuide() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">✏️ Step 3: Fill in Your Information</p>
+              <p className="font-bold text-blue-700 mb-2">Step 3: Fill in Your Information</p>
               <p className="text-gray-700 mb-2">You&apos;ll see a simple form with these fields:</p>
               <ul className="ml-6 space-y-2 text-gray-700">
                 <li><strong>• Playlist Name:</strong> Choose any name you want (e.g., &quot;My IPTV&quot;, &quot;Main Playlist&quot;) - this is just for your reference</li>
@@ -175,14 +175,14 @@ export default function XtreamCodesGuide() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">➕ Step 4: Add the Playlist</p>
+              <p className="font-bold text-blue-700 mb-2">Step 4: Add the Playlist</p>
               <p className="text-gray-700">
                 Once all fields are filled, tap the <strong>&quot;Add&quot;</strong> or <strong>&quot;Save&quot;</strong> button. Your playlist will now appear in your playlists list.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">📋 Step 5: Access Your Playlists</p>
+              <p className="font-bold text-blue-700 mb-2">Step 5: Access Your Playlists</p>
               <p className="text-gray-700">
                 You&apos;ll see your newly added playlist in the main list. You can add multiple playlists if you have different IPTV subscriptions - just repeat the process with the + button.
               </p>
@@ -194,7 +194,7 @@ export default function XtreamCodesGuide() {
                 Tap on your playlist to load the content. The app will start retrieving your channels, movies, and series.
               </p>
               <div className="bg-yellow-50 p-3 rounded mt-2">
-                <p className="text-sm font-bold text-yellow-800 mb-1">⚠️ Important:</p>
+                <p className="text-sm font-bold text-yellow-800 mb-1">Important:</p>
                 <p className="text-sm text-yellow-700 mb-0">
                   <strong>Stay in the app during this process!</strong> Don&apos;t close EDGE IPTV or switch to another app while content is loading. This ensures smooth data retrieval and prevents connection issues.
                 </p>
@@ -205,14 +205,14 @@ export default function XtreamCodesGuide() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2">🎉 Step 7: Enjoy Your Content!</p>
+              <p className="font-bold text-green-700 mb-2">Step 7: Enjoy Your Content!</p>
               <p className="text-gray-700 mb-2">
                 Once loaded, you&apos;ll have access to three main sections:
               </p>
               <ul className="ml-6 space-y-1 text-gray-700">
-                <li><strong>📺 Live TV:</strong> Watch live channels in real-time</li>
-                <li><strong>🎬 Movies:</strong> Browse and watch thousands of movies on-demand</li>
-                <li><strong>📺 Series:</strong> Access complete TV series with all episodes</li>
+                <li><strong>Live TV:</strong> Watch live channels in real-time</li>
+                <li><strong>Movies:</strong> Browse and watch thousands of movies on-demand</li>
+                <li><strong>Series:</strong> Access complete TV series with all episodes</li>
               </ul>
               <p className="text-gray-700 mt-2">
                 Navigate between these sections using the bottom menu. Happy streaming!
@@ -297,35 +297,35 @@ export default function XtreamCodesGuide() {
 
         <div className="space-y-6">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">💡 Tip 1: Use the Right App</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 1: Use the Right App</h4>
             <p className="mb-0">
               Not all IPTV players handle Xtream codes equally. <strong>EDGE IPTV</strong> is optimized specifically for Xtream codes with faster loading times and better error handling than competitors.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">💡 Tip 2: Save Your Credentials Securely</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 2: Save Your Credentials Securely</h4>
             <p className="mb-0">
               Use a password manager or note app to store your Xtream codes safely. You&apos;ll need them if you reinstall the app or set up on another device.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">💡 Tip 3: Test Multiple Servers</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 3: Test Multiple Servers</h4>
             <p className="mb-0">
               Some IPTV providers offer multiple server URLs. If one is slow, try an alternative server for better performance.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">💡 Tip 4: Update Your App Regularly</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 4: Update Your App Regularly</h4>
             <p className="mb-0">
               Keep your IPTV player updated to ensure compatibility with the latest Xtream codes API features and security patches.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">💡 Tip 5: Check Connection Limits</h4>
+            <h4 className="text-lg font-bold mb-2">Tip 5: Check Connection Limits</h4>
             <p className="mb-0">
               Most IPTV providers limit concurrent connections (usually 1-3 devices). Don&apos;t share your credentials or you may experience disconnections.
             </p>
@@ -346,8 +346,8 @@ export default function XtreamCodesGuide() {
             <tbody>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Setup Complexity</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">⭐⭐⭐⭐⭐ Easy</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">⭐⭐ Complex</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">★★★★★ Easy</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">★★ Complex</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Credentials</td>
@@ -356,22 +356,22 @@ export default function XtreamCodesGuide() {
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">EPG Support</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">✅ Automatic</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌ Manual config</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✓ Automatic</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗ Manual config</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">VOD (Movies/Series)</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">✅ Yes</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌ Limited</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✓ Yes</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗ Limited</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Content Updates</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">✅ Automatic</td>
-                <td className="border border-gray-300 px-4 py-3 text-center">❌ Manual re-add</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✓ Automatic</td>
+                <td className="border border-gray-300 px-4 py-3 text-center">✗ Manual re-add</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Recommended?</td>
-                <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">✅ Yes</td>
+                <td className="border border-gray-300 px-4 py-3 text-center bg-green-50 font-bold">✓ Yes</td>
                 <td className="border border-gray-300 px-4 py-3 text-center">Only for advanced users</td>
               </tr>
             </tbody>
@@ -386,7 +386,7 @@ export default function XtreamCodesGuide() {
 
         <div className="space-y-4">
           <div className="border-2 border-blue-200 rounded-xl p-6 bg-blue-50">
-            <h4 className="text-xl font-bold mb-2">1. EDGE IPTV - Best Overall ⭐ 5.0</h4>
+            <h4 className="text-xl font-bold mb-2">1. EDGE IPTV - Best Overall</h4>
             <p className="mb-2">
               The fastest Xtream codes setup on the market (under 2 minutes). Free with all features unlocked, including Chromecast and offline viewing.
             </p>
@@ -396,12 +396,12 @@ export default function XtreamCodesGuide() {
           </div>
 
           <div className="border border-gray-200 rounded-xl p-6">
-            <h4 className="text-xl font-bold mb-2">2. GSE Smart IPTV ⭐ 4.5</h4>
+            <h4 className="text-xl font-bold mb-2">2. GSE Smart IPTV ★ 4.5</h4>
             <p className="mb-0">Paid app ($4.99) with advanced features for power users. Slower setup but very customizable.</p>
           </div>
 
           <div className="border border-gray-200 rounded-xl p-6">
-            <h4 className="text-xl font-bold mb-2">3. IPTV Smarters Pro ⭐ 4.3</h4>
+            <h4 className="text-xl font-bold mb-2">3. IPTV Smarters Pro ★ 4.3</h4>
             <p className="mb-0">Free option with decent Xtream support but no Chromecast. Good budget choice.</p>
           </div>
         </div>
@@ -439,7 +439,7 @@ export default function XtreamCodesGuide() {
             Download EDGE IPTV for the fastest and easiest Xtream codes configuration experience
           </p>
           <DownloadButton location="article-xtream-final" size="xl">
-            Download EDGE IPTV Free
+            Start your 7-day free trial
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
             ✓ 2-minute setup ✓ No ads ✓ Chromecast support ✓ 7-day free trial

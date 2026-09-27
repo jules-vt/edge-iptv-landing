@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ...defaultOG,
     title: 'Best IPTV App for iPhone 2026 | Top 5 Free Apps Tested',
     description:
-      'We tested the top 5 free IPTV apps for iPhone in 2026. Fastest setup, Chromecast support, offline viewing — find the best one for you.',
+      'We tested the top 5 free IPTV apps for iPhone in 2026. Fastest setup, Chromecast support, offline viewing. Find the best one for you.',
     type: 'article',
     publishedTime: '2026-03-11',
     modifiedTime: '2026-03-11',
@@ -68,7 +68,7 @@ const faqSchema = {
       name: 'What is the best IPTV app for iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'EDGE IPTV is the best IPTV app for iPhone in 2026. It offers the fastest Xtream codes setup (under 2 minutes), full Chromecast support, offline downloads, and a clean iOS-native interface. It is free to download on the App Store.',
+        text: 'EDGE IPTV sets up Xtream codes in under two minutes and supports Chromecast, offline downloads and a full EPG guide on both iPhone and iPad. It is free to download, with a 7-day free trial, then $3.99 per month or $19.99 per year.',
       },
     },
     {
@@ -92,7 +92,7 @@ const faqSchema = {
       name: 'Is there a free IPTV app for iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. EDGE IPTV is completely free to download and use on iPhone. You only need a subscription from an IPTV content provider — the app itself has no cost.',
+        text: 'EDGE IPTV is free to download and comes with a 7-day free trial. After the trial, playback requires a subscription at $3.99 per month or $19.99 per year, with no ads at any point. You also need your own IPTV subscription from a content provider, which is separate from the app.',
       },
     },
     {
@@ -122,8 +122,10 @@ interface AppComparison {
 const apps: AppComparison[] = [
   {
     name: 'EDGE IPTV',
-    rating: '5.0',
-    price: 'Free',
+    // No self-assigned score: the app is recent and has no meaningful public
+    // average yet. Inventing one is what the fake review schema did.
+    rating: 'New',
+    price: '7-day trial, then $3.99/mo',
     chromecast: true,
     offline: true,
     setupTime: '< 2 min',
@@ -228,7 +230,7 @@ export default function BestIPTVAppForIphone() {
 
       {/* ── Intro ── */}
       <p className="lead text-xl text-muted-foreground mb-8">
-        Yes, you <strong>can watch IPTV on your iPhone</strong> — and you don&apos;t need a
+        Yes, you <strong>can watch IPTV on your iPhone</strong>, and you don&apos;t need a
         jailbreak or a sideloaded app. All five apps in this guide are available directly on
         the App Store. We tested each one for setup speed, stream quality, Chromecast
         support, and overall iOS integration to find the best IPTV app for iPhone in 2026.
@@ -242,11 +244,11 @@ export default function BestIPTVAppForIphone() {
         <p className="text-foreground font-medium">
           <strong>EDGE IPTV</strong> is the best IPTV app for iPhone in 2026. It&apos;s the only
           app in this list with full Chromecast support, offline downloads, and a setup time
-          under 2 minutes — all for free.
+          under 2 minutes. It costs $3.99 a month after a 7-day free trial.
         </p>
         <div className="mt-4">
           <DownloadButton location="article-iphone-tldr" size="md">
-            Download EDGE IPTV Free
+            Start your 7-day free trial
           </DownloadButton>
         </div>
       </div>
@@ -263,7 +265,7 @@ export default function BestIPTVAppForIphone() {
         <Criterion
           icon={<Smartphone className="w-5 h-5" />}
           title="Native iOS interface"
-          description="Feels at home on iPhone — smooth animations, proper tap targets, Dark Mode support."
+          description="Feels at home on iPhone: smooth animations, proper tap targets, Dark Mode support."
         />
         <Criterion
           icon={<Wifi className="w-5 h-5" />}
@@ -319,7 +321,9 @@ export default function BestIPTVAppForIphone() {
                     </span>
                   )}
                 </td>
-                <td className="px-4 py-3 text-center">⭐ {app.rating}</td>
+                <td className="px-4 py-3 text-center">
+                  {app.rating === 'New' ? app.rating : `★ ${app.rating}`}
+                </td>
                 <td className="px-4 py-3 text-center">{app.price}</td>
                 <td className="px-4 py-3 text-center">
                   {app.chromecast ? <CheckIcon /> : <CrossIcon />}
@@ -345,7 +349,7 @@ export default function BestIPTVAppForIphone() {
         <div className="flex flex-col sm:flex-row gap-6 items-start">
           <Image
             src="/images/icon.png"
-            alt="EDGE IPTV app icon — best IPTV app for iPhone"
+            alt="EDGE IPTV app icon, best IPTV app for iPhone"
             width={96}
             height={96}
             className="rounded-2xl shadow-lg flex-shrink-0"
@@ -372,7 +376,7 @@ export default function BestIPTVAppForIphone() {
                 'One-tap Chromecast casting to your TV',
                 'Download movies & series for offline viewing',
                 'Clean, native iOS interface with Dark Mode',
-                'Live TV, VOD, series — all in one app',
+                'Live TV, VOD and series in one app',
                 'Works on iPhone XS and later (iOS 17+)',
               ].map((feature) => (
                 <div key={feature} className="flex items-start gap-2 text-sm">
@@ -382,7 +386,7 @@ export default function BestIPTVAppForIphone() {
               ))}
             </div>
             <DownloadButton location="article-iphone-main-cta" size="md">
-              Download EDGE IPTV Free on App Store
+              Start your 7-day free trial on App Store
             </DownloadButton>
           </div>
         </div>
@@ -391,7 +395,7 @@ export default function BestIPTVAppForIphone() {
       <h3 className="text-2xl font-bold mt-10 mb-4">Why EDGE IPTV Stands Out for iPhone</h3>
 
       <p className="text-muted-foreground">
-        Most IPTV players for iOS are ports from Android — they work, but they feel foreign
+        Most IPTV players for iOS are ports from Android. They work, but they feel foreign
         on iPhone. EDGE IPTV was designed exclusively for iOS, which shows in every
         interaction: swipe gestures feel natural, the keyboard appears where expected, and
         the app respects iOS conventions like dynamic type and system Dark Mode.
@@ -414,7 +418,7 @@ export default function BestIPTVAppForIphone() {
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#2 — GSE Smart IPTV</h3>
-            <p className="text-sm text-muted-foreground mt-1">Rating: ⭐ 4.1 &nbsp;·&nbsp; Free with in-app purchases</p>
+            <p className="text-sm text-muted-foreground mt-1">Rating: ★ 4.1 &nbsp;·&nbsp; Free with in-app purchases</p>
           </div>
         </div>
         <p className="text-sm text-muted-foreground mb-4">
@@ -443,7 +447,7 @@ export default function BestIPTVAppForIphone() {
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#3 — Flex IPTV</h3>
-            <p className="text-sm text-muted-foreground mt-1">Rating: ⭐ 3.8 &nbsp;·&nbsp; Free with in-app purchases</p>
+            <p className="text-sm text-muted-foreground mt-1">Rating: ★ 3.8 &nbsp;·&nbsp; Free with in-app purchases</p>
           </div>
         </div>
         <p className="text-sm text-muted-foreground mb-4">
@@ -472,12 +476,12 @@ export default function BestIPTVAppForIphone() {
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#4 — IPTV Smarters Pro</h3>
-            <p className="text-sm text-muted-foreground mt-1">Rating: ⭐ 3.5 &nbsp;·&nbsp; Free with in-app purchases</p>
+            <p className="text-sm text-muted-foreground mt-1">Rating: ★ 3.5 &nbsp;·&nbsp; Free with in-app purchases</p>
           </div>
         </div>
         <p className="text-sm text-muted-foreground mb-4">
           A well-known name in the IPTV world. The iOS version lags behind its Android
-          counterpart — setup is clunkier and the interface doesn&apos;t feel native to
+          counterpart: setup is clunkier and the interface doesn&apos;t feel native to
           iPhone. Supports Xtream codes but requires multiple steps to configure.
         </p>
         <div className="flex flex-wrap gap-4 text-sm">
@@ -498,7 +502,7 @@ export default function BestIPTVAppForIphone() {
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#5 — Opus IPTV Player</h3>
-            <p className="text-sm text-muted-foreground mt-1">Rating: ⭐ 3.7 &nbsp;·&nbsp; Free</p>
+            <p className="text-sm text-muted-foreground mt-1">Rating: ★ 3.7 &nbsp;·&nbsp; Free</p>
           </div>
         </div>
         <p className="text-sm text-muted-foreground mb-4">
@@ -571,7 +575,7 @@ export default function BestIPTVAppForIphone() {
 
       <div className="flex justify-center mb-10">
         <DownloadButton location="article-iphone-steps-cta" size="lg">
-          Download EDGE IPTV Free
+          Start your 7-day free trial
         </DownloadButton>
       </div>
 

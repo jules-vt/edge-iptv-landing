@@ -8,7 +8,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guía de Configuración de Lista M3U 2026 | Tutorial Completo',
-  description: '📺 Aprende cómo configurar listas de reproducción M3U en EDGE IPTV. Guía paso a paso con consejos y solución de problemas.',
+  description: 'Aprende cómo configurar listas de reproducción M3U en EDGE IPTV. Guía paso a paso con consejos y solución de problemas.',
   alternates: buildBlogAlternates('configurar-lista-m3u-guia', 'es'),
   openGraph: {
     title: 'Guía de Configuración de Lista M3U 2026',
@@ -52,7 +52,7 @@ export default function GuiaM3U() {
 
         <div className="text-center my-6">
           <DownloadButton location="article-m3u" size="lg">
-            Descargar EDGE IPTV Gratis
+            Empezar la prueba gratis de 7 días
           </DownloadButton>
         </div>
 
@@ -67,7 +67,7 @@ export default function GuiaM3U() {
             Configura tu lista M3U en minutos con EDGE IPTV
           </p>
           <DownloadButton location="article-m3u-final" size="xl">
-            Descargar EDGE IPTV Gratis
+            Empezar la prueba gratis de 7 días
           </DownloadButton>
         </div>
 

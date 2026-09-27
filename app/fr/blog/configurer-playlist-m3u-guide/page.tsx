@@ -8,7 +8,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guide Configuration Playlist M3U 2026 | Tutoriel Configuration Complète',
-  description: '📺 Maîtrisez la configuration des playlists M3U dans EDGE IPTV. Apprenez M3U vs M3U8, configuration EPG, dépannage et quand utiliser M3U.',
+  description: 'Maîtrisez la configuration des playlists M3U dans EDGE IPTV. Apprenez M3U vs M3U8, configuration EPG, dépannage et quand utiliser M3U.',
   alternates: buildBlogAlternates('configurer-playlist-m3u-guide', 'fr'),
   openGraph: {
     title: 'Configuration Playlist M3U : Tutoriel Complet 2026',
@@ -117,8 +117,8 @@ export default function GuidePlaylistM3U() {
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3 font-semibold">Support EDGE IPTV</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✅ Oui</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✅ Oui</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✓ Oui</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✓ Oui</td>
               </tr>
             </tbody>
           </table>
@@ -145,21 +145,21 @@ export default function GuidePlaylistM3U() {
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 my-6 border-2 border-purple-200">
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">📱 Étape 1 : Ouvrir EDGE IPTV</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 1 : Ouvrir EDGE IPTV</p>
               <p className="text-gray-700">
                 Lancez l&apos;application EDGE IPTV sur votre iPhone ou iPad. Vous verrez l&apos;écran principal avec vos playlists existantes (ou un écran vide si c&apos;est votre première fois).
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">➕ Étape 2 : Taper sur le Bouton Ajouter</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 2 : Taper sur le Bouton Ajouter</p>
               <p className="text-gray-700">
                 Cherchez le <strong>bouton &quot;+&quot; en bas à droite</strong> de votre écran. C&apos;est votre porte d&apos;entrée pour ajouter de nouvelles playlists. Tapez dessus pour commencer.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">📋 Étape 3 : Sélectionner Playlist M3U</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 3 : Sélectionner Playlist M3U</p>
               <p className="text-gray-700 mb-2">
                 Vous verrez deux options pour ajouter du contenu :
               </p>
@@ -173,20 +173,20 @@ export default function GuidePlaylistM3U() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">✏️ Étape 4 : Entrer les Informations de la Playlist</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 4 : Entrer les Informations de la Playlist</p>
               <p className="text-gray-700 mb-2">Vous verrez un formulaire simple avec seulement deux champs :</p>
               <ul className="ml-6 space-y-2 text-gray-700">
                 <li><strong>• Nom de la Playlist :</strong> Choisissez n&apos;importe quel nom (ex: &quot;Ma TV en Direct&quot;, &quot;Chaînes Sport&quot;). C&apos;est juste une étiquette pour votre référence.</li>
                 <li><strong>• URL M3U :</strong> Collez l&apos;URL M3U/M3U8 complète de votre fournisseur. Assurez-vous de copier l&apos;URL entière sans la modifier.</li>
               </ul>
               <div className="bg-blue-50 p-3 rounded mt-3">
-                <p className="text-sm font-bold text-blue-800 mb-1">💡 Conseil Pro :</p>
+                <p className="text-sm font-bold text-blue-800 mb-1">Conseil Pro :</p>
                 <p className="text-sm text-blue-700 mb-0">Si votre URL est très longue, utilisez la fonction partager/copier de l&apos;email ou du site de votre fournisseur pour vous assurer d&apos;obtenir l&apos;URL complète.</p>
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">💾 Étape 5 : Enregistrer la Playlist</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 5 : Enregistrer la Playlist</p>
               <p className="text-gray-700">
                 Une fois les deux champs remplis, tapez sur le bouton <strong>&quot;Ajouter&quot;</strong> ou <strong>&quot;Enregistrer&quot;</strong>. Votre playlist M3U apparaîtra maintenant dans votre liste de playlists.
               </p>
@@ -198,7 +198,7 @@ export default function GuidePlaylistM3U() {
                 Tapez sur votre playlist nouvellement ajoutée pour charger les chaînes. EDGE IPTV va télécharger et analyser le fichier M3U.
               </p>
               <div className="bg-yellow-50 p-3 rounded mt-2">
-                <p className="text-sm font-bold text-yellow-800 mb-1">⚠️ Important :</p>
+                <p className="text-sm font-bold text-yellow-800 mb-1">Important :</p>
                 <p className="text-sm text-yellow-700 mb-0">
                   <strong>Restez dans l&apos;application</strong> pendant le chargement des chaînes. Ne basculez pas vers une autre application ou ne fermez pas EDGE IPTV pendant ce processus. Le chargement prend généralement 5-15 secondes.
                 </p>
@@ -206,7 +206,7 @@ export default function GuidePlaylistM3U() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2">🎉 Étape 7 : Commencer à Regarder !</p>
+              <p className="font-bold text-green-700 mb-2">Étape 7 : Commencer à Regarder !</p>
               <p className="text-gray-700">
                 Une fois chargé, vous verrez toutes vos chaînes TV en direct. Parcourez par catégorie, recherchez des chaînes spécifiques ou ajoutez des favoris pour un accès rapide. Bon streaming !
               </p>
@@ -243,7 +243,7 @@ export default function GuidePlaylistM3U() {
         </div>
 
         <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 my-4">
-          <p className="font-bold text-yellow-800 mb-2">📌 Note à Propos de l&apos;EPG</p>
+          <p className="font-bold text-yellow-800 mb-2">Note à Propos de l&apos;EPG</p>
           <p className="text-yellow-700 mb-0">
             Tous les fournisseurs IPTV n&apos;offrent pas l&apos;EPG pour les playlists M3U. Si l&apos;EPG est important pour vous, envisagez d&apos;utiliser les codes Xtream à la place, qui incluent toujours les données du guide des programmes.
           </p>
@@ -331,7 +331,7 @@ export default function GuidePlaylistM3U() {
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
           <div className="bg-green-50 rounded-xl p-6 border-2 border-green-300">
-            <h3 className="text-xl font-bold mb-4 text-green-700">✅ Utilisez M3U Quand :</h3>
+            <h3 className="text-xl font-bold mb-4 text-green-700">✓ Utilisez M3U Quand :</h3>
             <ul className="space-y-2">
               <li>• Votre fournisseur offre uniquement des playlists M3U</li>
               <li>• Vous n&apos;avez besoin que des chaînes TV en direct</li>
@@ -342,7 +342,7 @@ export default function GuidePlaylistM3U() {
           </div>
 
           <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-300">
-            <h3 className="text-xl font-bold mb-4 text-blue-700">⭐ Utilisez les Codes Xtream Quand :</h3>
+            <h3 className="text-xl font-bold mb-4 text-blue-700">★ Utilisez les Codes Xtream Quand :</h3>
             <ul className="space-y-2">
               <li>• Vous voulez des films et séries (VOD)</li>
               <li>• L&apos;EPG est important pour vous</li>
@@ -354,7 +354,7 @@ export default function GuidePlaylistM3U() {
         </div>
 
         <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl p-8 my-8 border-2 border-blue-300">
-          <h4 className="font-bold text-xl mb-4">💡 Notre Recommandation</h4>
+          <h4 className="font-bold text-xl mb-4">Notre Recommandation</h4>
           <p className="text-gray-800 mb-0">
             Si votre fournisseur IPTV offre à la fois M3U et codes Xtream, <strong>choisissez les codes Xtream</strong> pour la meilleure expérience. Xtream offre une meilleure organisation, un EPG automatique, du contenu VOD et des mises à jour automatiques. Cependant, M3U est parfaitement bien si vous regardez uniquement les chaînes TV en direct et que votre fournisseur n&apos;offre pas les codes Xtream.
           </p>
@@ -364,35 +364,35 @@ export default function GuidePlaylistM3U() {
 
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">📝 Conseil 1 : Enregistrez Votre URL M3U</h4>
+            <h4 className="text-lg font-bold mb-2">Conseil 1 : Enregistrez Votre URL M3U</h4>
             <p className="mb-0">
               Stockez votre URL M3U dans un gestionnaire de mots de passe ou une application de notes. Vous en aurez besoin si vous réinstallez l&apos;application ou voulez l&apos;utiliser sur un autre appareil.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">🔄 Conseil 2 : Actualisez Régulièrement</h4>
+            <h4 className="text-lg font-bold mb-2">Conseil 2 : Actualisez Régulièrement</h4>
             <p className="mb-0">
               Si les chaînes arrêtent de fonctionner, essayez d&apos;actualiser votre playlist (appui long → actualiser). Les fournisseurs mettent parfois à jour les URLs de stream sans préavis.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">📱 Conseil 3 : Testez d&apos;Abord sur Wi-Fi</h4>
+            <h4 className="text-lg font-bold mb-2">Conseil 3 : Testez d&apos;Abord sur Wi-Fi</h4>
             <p className="mb-0">
               Configurez et testez toujours les nouvelles playlists M3U sur Wi-Fi avant d&apos;utiliser les données mobiles. Le chargement initial peut consommer des données.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">🎯 Conseil 4 : Utilisez des Noms Descriptifs</h4>
+            <h4 className="text-lg font-bold mb-2">Conseil 4 : Utilisez des Noms Descriptifs</h4>
             <p className="mb-0">
               Si vous avez plusieurs playlists, nommez-les clairement (ex: &quot;Sport HD&quot;, &quot;Chaînes Info&quot;) pour identifier facilement laquelle est laquelle.
             </p>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h4 className="text-lg font-bold mb-2">⚠️ Conseil 5 : Sauvegardez les URLs Importantes</h4>
+            <h4 className="text-lg font-bold mb-2">Conseil 5 : Sauvegardez les URLs Importantes</h4>
             <p className="mb-0">
               Prenez des captures d&apos;écran ou enregistrez les emails du fournisseur contenant les URLs M3U. Si votre compte est verrouillé, vous aurez une référence.
             </p>
@@ -432,7 +432,7 @@ export default function GuidePlaylistM3U() {
             Téléchargez EDGE IPTV et configurez vos playlists M3U en moins de 2 minutes
           </p>
           <DownloadButton location="article-m3u-final-fr" size="xl">
-            Télécharger EDGE IPTV Gratuit
+            Démarrer l&apos;essai gratuit de 7 jours
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
             ✓ Support M3U & M3U8 ✓ Playlists multiples ✓ Configuration EPG ✓ 7 jours d'essai gratuit

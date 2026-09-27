@@ -8,7 +8,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Guide Configuration Codes Xtream 2026 | Tutoriel Configuration 2 Minutes',
-  description: '📺 Apprenez à configurer les codes Xtream dans EDGE IPTV en moins de 2 minutes. Guide étape par étape, erreurs courantes et conseils de dépannage.',
+  description: 'Apprenez à configurer les codes Xtream dans EDGE IPTV en moins de 2 minutes. Guide étape par étape, erreurs courantes et conseils de dépannage.',
   alternates: buildBlogAlternates('configurer-codes-xtream-guide', 'fr'),
   openGraph: {
     title: 'Configuration Codes Xtream : Guide Complet pour Débutants 2026',
@@ -109,7 +109,7 @@ export default function GuideCodesXtream() {
 
         <div className="text-center my-6">
           <DownloadButton location="article-xtream-step2-fr" size="lg">
-            Télécharger EDGE IPTV Gratuit
+            Démarrer l&apos;essai gratuit de 7 jours
           </DownloadButton>
         </div>
 
@@ -124,14 +124,14 @@ export default function GuideCodesXtream() {
           
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">📱 Étape 1 : Ajouter Votre Playlist</p>
+              <p className="font-bold text-blue-700 mb-2">Étape 1 : Ajouter Votre Playlist</p>
               <p className="text-gray-700">
                 Ouvrez EDGE IPTV et cherchez le <strong>bouton &quot;+&quot; en bas à droite</strong> de votre écran. Tapez dessus pour commencer à ajouter votre première playlist.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">🔧 Étape 2 : Choisir Votre Type de Source</p>
+              <p className="font-bold text-blue-700 mb-2">Étape 2 : Choisir Votre Type de Source</p>
               <p className="text-gray-700 mb-2">
                 Vous verrez deux options :
               </p>
@@ -145,7 +145,7 @@ export default function GuideCodesXtream() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">✏️ Étape 3 : Remplir Vos Informations</p>
+              <p className="font-bold text-blue-700 mb-2">Étape 3 : Remplir Vos Informations</p>
               <p className="text-gray-700 mb-2">Vous verrez un formulaire simple avec ces champs :</p>
               <ul className="ml-6 space-y-2 text-gray-700">
                 <li><strong>• Nom de la Playlist :</strong> Choisissez n&apos;importe quel nom (ex: &quot;Mon IPTV&quot;, &quot;Playlist Principale&quot;) - c&apos;est juste pour votre référence</li>
@@ -156,14 +156,14 @@ export default function GuideCodesXtream() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">➕ Étape 4 : Ajouter la Playlist</p>
+              <p className="font-bold text-blue-700 mb-2">Étape 4 : Ajouter la Playlist</p>
               <p className="text-gray-700">
                 Une fois tous les champs remplis, tapez sur le bouton <strong>&quot;Ajouter&quot;</strong> ou <strong>&quot;Enregistrer&quot;</strong>. Votre playlist apparaîtra maintenant dans votre liste de playlists.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-blue-700 mb-2">📋 Étape 5 : Accéder à Vos Playlists</p>
+              <p className="font-bold text-blue-700 mb-2">Étape 5 : Accéder à Vos Playlists</p>
               <p className="text-gray-700">
                 Vous verrez votre playlist nouvellement ajoutée dans la liste principale. Vous pouvez ajouter plusieurs playlists si vous avez différents abonnements IPTV - répétez simplement le processus avec le bouton +.
               </p>
@@ -175,7 +175,7 @@ export default function GuideCodesXtream() {
                 Tapez sur votre playlist pour charger le contenu. L&apos;application commencera à récupérer vos chaînes, films et séries.
               </p>
               <div className="bg-yellow-50 p-3 rounded mt-2">
-                <p className="text-sm font-bold text-yellow-800 mb-1">⚠️ Important :</p>
+                <p className="text-sm font-bold text-yellow-800 mb-1">Important :</p>
                 <p className="text-sm text-yellow-700 mb-0">
                   <strong>Restez dans l&apos;application pendant ce processus !</strong> Ne fermez pas EDGE IPTV ou ne basculez pas vers une autre application pendant le chargement du contenu. Cela garantit une récupération de données fluide et prévient les problèmes de connexion.
                 </p>
@@ -186,14 +186,14 @@ export default function GuideCodesXtream() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2">🎉 Étape 7 : Profitez de Votre Contenu !</p>
+              <p className="font-bold text-green-700 mb-2">Étape 7 : Profitez de Votre Contenu !</p>
               <p className="text-gray-700 mb-2">
                 Une fois chargé, vous aurez accès à trois sections principales :
               </p>
               <ul className="ml-6 space-y-1 text-gray-700">
-                <li><strong>📺 TV en Direct :</strong> Regardez les chaînes en direct en temps réel</li>
-                <li><strong>🎬 Films :</strong> Parcourez et regardez des milliers de films à la demande</li>
-                <li><strong>📺 Séries :</strong> Accédez aux séries TV complètes avec tous les épisodes</li>
+                <li><strong>TV en Direct :</strong> Regardez les chaînes en direct en temps réel</li>
+                <li><strong>Films :</strong> Parcourez et regardez des milliers de films à la demande</li>
+                <li><strong>Séries :</strong> Accédez aux séries TV complètes avec tous les épisodes</li>
               </ul>
               <p className="text-gray-700 mt-2">
                 Naviguez entre ces sections en utilisant le menu du bas. Bon streaming !
@@ -235,26 +235,26 @@ export default function GuideCodesXtream() {
           
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">📱 Étape 1 : Obtenir Votre URL M3U</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 1 : Obtenir Votre URL M3U</p>
               <p className="text-gray-700">
                 Votre fournisseur IPTV vous donnera une URL M3U. Elle ressemble généralement à :<br/>
                 <code className="bg-gray-100 px-2 py-1 rounded text-sm">http://fournisseur.com/get.php?username=user&amp;password=pass&amp;type=m3u_plus</code>
               </p>
               <div className="bg-yellow-50 p-3 rounded mt-2">
-                <p className="text-sm font-bold text-yellow-800 mb-1">📋 Important :</p>
+                <p className="text-sm font-bold text-yellow-800 mb-1">Important :</p>
                 <p className="text-sm text-yellow-700 mb-0">Copiez l&apos;URL entière exactement comme fournie - ne la modifiez pas ou ne la raccourcissez pas.</p>
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">➕ Étape 2 : Ajouter la Playlist M3U</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 2 : Ajouter la Playlist M3U</p>
               <p className="text-gray-700">
                 Ouvrez EDGE IPTV et tapez sur le bouton <strong>&quot;+&quot;</strong> en bas à droite. Cette fois, sélectionnez <strong>&quot;Playlist M3U&quot;</strong> au lieu de l&apos;API Codes Xtream.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">✏️ Étape 3 : Remplir les Informations M3U</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 3 : Remplir les Informations M3U</p>
               <p className="text-gray-700 mb-2">Vous verrez un formulaire plus simple avec seulement deux champs :</p>
               <ul className="ml-6 space-y-2 text-gray-700">
                 <li><strong>• Nom de la Playlist :</strong> Choisissez n&apos;importe quel nom (ex: &quot;Mon IPTV M3U&quot;) - juste pour votre référence</li>
@@ -263,14 +263,14 @@ export default function GuideCodesXtream() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">💾 Étape 4 : Enregistrer et Charger</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 4 : Enregistrer et Charger</p>
               <p className="text-gray-700">
                 Tapez sur <strong>&quot;Ajouter&quot;</strong> pour sauvegarder la playlist. Ensuite, tapez dessus pour charger vos chaînes. Le chargement M3U est généralement plus rapide que les codes Xtream car c&apos;est un format plus simple.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2">✅ Étape 5 : Commencer à Regarder</p>
+              <p className="font-bold text-green-700 mb-2">✓ Étape 5 : Commencer à Regarder</p>
               <p className="text-gray-700">
                 Une fois chargé, vous verrez vos chaînes TV en direct. Notez que les playlists M3U n&apos;incluent généralement pas de sections films et séries - elles sont principalement pour les chaînes en direct.
               </p>
@@ -301,7 +301,7 @@ export default function GuideCodesXtream() {
         </div>
 
         <div className="bg-gradient-to-r from-blue-100 to-green-100 rounded-xl p-6 my-6 border-2 border-green-300">
-          <h4 className="font-bold text-xl mb-3">💡 Recommandation</h4>
+          <h4 className="font-bold text-xl mb-3">Recommandation</h4>
           <p className="text-gray-800 mb-0">
             Si votre fournisseur offre à la fois M3U et codes Xtream, <strong>choisissez toujours les codes Xtream</strong>. Ils fournissent une meilleure organisation, des mises à jour automatiques, un support EPG et l&apos;accès aux films/séries. M3U ne devrait être utilisé que si les codes Xtream ne sont pas disponibles.
           </p>
@@ -395,26 +395,26 @@ export default function GuideCodesXtream() {
           
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">📱 Étape 1 : Obtenir Votre URL M3U</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 1 : Obtenir Votre URL M3U</p>
               <p className="text-gray-700">
                 Votre fournisseur IPTV vous donnera une URL M3U. Elle ressemble généralement à :<br/>
                 <code className="bg-gray-100 px-2 py-1 rounded text-sm">http://fournisseur.com/get.php?username=user&amp;password=pass&amp;type=m3u_plus</code>
               </p>
               <div className="bg-yellow-50 p-3 rounded mt-2">
-                <p className="text-sm font-bold text-yellow-800 mb-1">📋 Important :</p>
+                <p className="text-sm font-bold text-yellow-800 mb-1">Important :</p>
                 <p className="text-sm text-yellow-700 mb-0">Copiez l&apos;URL entière exactement comme fournie - ne la modifiez pas ou ne la raccourcissez pas.</p>
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">➕ Étape 2 : Ajouter la Playlist M3U</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 2 : Ajouter la Playlist M3U</p>
               <p className="text-gray-700">
                 Ouvrez EDGE IPTV et tapez sur le bouton <strong>&quot;+&quot;</strong> en bas à droite. Cette fois, sélectionnez <strong>&quot;Playlist M3U&quot;</strong> au lieu de l&apos;API Codes Xtream.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">✏️ Étape 3 : Remplir les Informations M3U</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 3 : Remplir les Informations M3U</p>
               <p className="text-gray-700 mb-2">Vous verrez un formulaire plus simple avec seulement deux champs :</p>
               <ul className="ml-6 space-y-2 text-gray-700">
                 <li><strong>• Nom de la Playlist :</strong> Choisissez n&apos;importe quel nom (ex: &quot;Mon IPTV M3U&quot;) - juste pour votre référence</li>
@@ -423,14 +423,14 @@ export default function GuideCodesXtream() {
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <p className="font-bold text-purple-700 mb-2">💾 Étape 4 : Enregistrer et Charger</p>
+              <p className="font-bold text-purple-700 mb-2">Étape 4 : Enregistrer et Charger</p>
               <p className="text-gray-700">
                 Tapez sur <strong>&quot;Ajouter&quot;</strong> pour sauvegarder la playlist. Ensuite, tapez dessus pour charger vos chaînes. Le chargement M3U est généralement plus rapide que les codes Xtream car c&apos;est un format plus simple.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2">✅ Étape 5 : Commencer à Regarder</p>
+              <p className="font-bold text-green-700 mb-2">✓ Étape 5 : Commencer à Regarder</p>
               <p className="text-gray-700">
                 Une fois chargé, vous verrez vos chaînes TV en direct. Notez que les playlists M3U n&apos;incluent généralement pas de sections films et séries - elles sont principalement pour les chaînes en direct.
               </p>
@@ -461,7 +461,7 @@ export default function GuideCodesXtream() {
         </div>
 
         <div className="bg-gradient-to-r from-blue-100 to-green-100 rounded-xl p-6 my-6 border-2 border-green-300">
-          <h4 className="font-bold text-xl mb-3">💡 Recommandation</h4>
+          <h4 className="font-bold text-xl mb-3">Recommandation</h4>
           <p className="text-gray-800 mb-0">
             Si votre fournisseur offre à la fois M3U et codes Xtream, <strong>choisissez toujours les codes Xtream</strong>. Ils fournissent une meilleure organisation, des mises à jour automatiques, un support EPG et l&apos;accès aux films/séries. M3U ne devrait être utilisé que si les codes Xtream ne sont pas disponibles.
           </p>
@@ -471,35 +471,35 @@ export default function GuideCodesXtream() {
 
         <div className="space-y-6">
           <div className="bg-blue-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2">💡 Conseil 1 : Testez Immédiatement</h4>
+            <h4 className="font-bold text-lg mb-2">Conseil 1 : Testez Immédiatement</h4>
             <p className="mb-0">
               Après avoir reçu vos codes Xtream, configurez-les dans les 24 heures. Cela vous permet de détecter rapidement tout problème pendant que le support est frais.
             </p>
           </div>
 
           <div className="bg-purple-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2">🔐 Conseil 2 : Enregistrez Vos Identifiants en Sécurité</h4>
+            <h4 className="font-bold text-lg mb-2">Conseil 2 : Enregistrez Vos Identifiants en Sécurité</h4>
             <p className="mb-0">
               Utilisez un gestionnaire de mots de passe ou une application de notes pour stocker vos codes Xtream en sécurité. Vous en aurez besoin si vous réinstallez l&apos;application ou configurez sur un autre appareil.
             </p>
           </div>
 
           <div className="bg-green-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2">📶 Conseil 3 : Utilisez une Connexion Stable</h4>
+            <h4 className="font-bold text-lg mb-2">Conseil 3 : Utilisez une Connexion Stable</h4>
             <p className="mb-0">
               Configurez toujours sur Wi-Fi pour le chargement initial de la playlist. Le téléchargement de milliers de chaînes peut consommer des données sur mobile.
             </p>
           </div>
 
           <div className="bg-yellow-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2">📋 Conseil 4 : Nommez Vos Playlists Clairement</h4>
+            <h4 className="font-bold text-lg mb-2">Conseil 4 : Nommez Vos Playlists Clairement</h4>
             <p className="mb-0">
               Si vous avez plusieurs abonnements, utilisez des noms descriptifs comme &quot;Sport IPTV&quot;, &quot;Films FR&quot;, etc. pour les identifier facilement.
             </p>
           </div>
 
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2">⚠️ Conseil 5 : Respectez les Limites de Connexion</h4>
+            <h4 className="font-bold text-lg mb-2">Conseil 5 : Respectez les Limites de Connexion</h4>
             <p className="mb-0">
               La plupart des fournisseurs IPTV limitent les connexions simultanées (généralement 1-3 appareils). Ne partagez pas vos identifiants ou vous pourriez subir des déconnexions.
             </p>
@@ -520,8 +520,8 @@ export default function GuideCodesXtream() {
             <tbody>
               <tr>
                 <td className="border border-gray-300 px-4 py-3">Facilité de Configuration</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">⭐⭐⭐⭐⭐ Très Facile</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-orange-600">⭐⭐⭐ Modéré</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">★★★★★ Très Facile</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-orange-600">★★★ Modéré</td>
               </tr>
               <tr className="bg-gray-50">
                 <td className="border border-gray-300 px-4 py-3">Mises à Jour du Contenu</td>
@@ -530,13 +530,13 @@ export default function GuideCodesXtream() {
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3">EPG (Guide des Programmes)</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✅ Inclus</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-orange-600">⚠️ Séparé</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✓ Inclus</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-orange-600">Séparé</td>
               </tr>
               <tr className="bg-gray-50">
                 <td className="border border-gray-300 px-4 py-3">VOD (Films/Séries)</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✅ Organisé</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-orange-600">⚠️ Limité</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600">✓ Organisé</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-orange-600">Limité</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-3">Sécurité</td>
@@ -545,8 +545,8 @@ export default function GuideCodesXtream() {
               </tr>
               <tr className="bg-gray-50">
                 <td className="border border-gray-300 px-4 py-3">Recommandé en 2026</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-green-600 font-bold">✅ OUI</td>
-                <td className="border border-gray-300 px-4 py-3 text-center text-red-600">❌ Dépassé</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-green-600 font-bold">✓ OUI</td>
+                <td className="border border-gray-300 px-4 py-3 text-center text-red-600">✗ Dépassé</td>
               </tr>
             </tbody>
           </table>
@@ -589,7 +589,7 @@ export default function GuideCodesXtream() {
             Téléchargez EDGE IPTV et configurez vos codes Xtream en moins de 2 minutes
           </p>
           <DownloadButton location="article-xtream-final-fr" size="xl">
-            Télécharger EDGE IPTV Gratuit
+            Démarrer l&apos;essai gratuit de 7 jours
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
             ✓ Configuration en 2 minutes ✓ Interface en français ✓ Support Chromecast ✓ 7 jours d'essai gratuit

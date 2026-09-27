@@ -353,15 +353,15 @@ export default function IPTVBufferingFixGuide() {
         </p>
 
         <div className="bg-blue-50 rounded-xl p-6 my-6">
-          <h3 className="text-xl font-bold mb-4">🔍 Diagnostic Checklist</h3>
+          <h3 className="text-xl font-bold mb-4">Diagnostic Checklist</h3>
           <ol className="space-y-4">
             <li className="flex gap-3">
               <span className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm flex-shrink-0">1</span>
               <div>
                 <strong>Speed Test</strong>
                 <p className="text-gray-700">Go to <a href="https://fast.com" target="_blank" rel="noopener" className="text-blue-600 underline">fast.com</a>. Write down your download speed.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ If speed matches requirements for your desired quality → Go to test 2</p>
-                <p className="text-sm text-gray-600">❌ If speed is too low → Contact ISP or downgrade video quality</p>
+                <p className="text-sm text-gray-600 mt-1">✓ If speed matches requirements for your desired quality → Go to test 2</p>
+                <p className="text-sm text-gray-600">✗ If speed is too low → Contact ISP or downgrade video quality</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -369,8 +369,8 @@ export default function IPTVBufferingFixGuide() {
               <div>
                 <strong>Wi-Fi Signal Test</strong>
                 <p className="text-gray-700">Move within 10 feet of your router. Test streaming.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ If buffering stops → Wi-Fi is the issue (buy extender or use Ethernet)</p>
-                <p className="text-sm text-gray-600">❌ If still buffering → Go to test 3</p>
+                <p className="text-sm text-gray-600 mt-1">✓ If buffering stops → Wi-Fi is the issue (buy extender or use Ethernet)</p>
+                <p className="text-sm text-gray-600">✗ If still buffering → Go to test 3</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -378,8 +378,8 @@ export default function IPTVBufferingFixGuide() {
               <div>
                 <strong>Peak Hours Test</strong>
                 <p className="text-gray-700">Test streaming at 3 AM and 8 PM. Compare.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ If much better at 3 AM → ISP throttling or server overload</p>
-                <p className="text-sm text-gray-600">❌ If same at both times → Go to test 4</p>
+                <p className="text-sm text-gray-600 mt-1">✓ If much better at 3 AM → ISP throttling or server overload</p>
+                <p className="text-sm text-gray-600">✗ If same at both times → Go to test 4</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -387,8 +387,8 @@ export default function IPTVBufferingFixGuide() {
               <div>
                 <strong>Single Device Test</strong>
                 <p className="text-gray-700">Disconnect ALL devices from Wi-Fi except your iPhone/iPad. Test streaming.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ If buffering stops → Network congestion issue (enable QoS on router)</p>
-                <p className="text-sm text-gray-600">❌ If still buffering → Go to test 5</p>
+                <p className="text-sm text-gray-600 mt-1">✓ If buffering stops → Network congestion issue (enable QoS on router)</p>
+                <p className="text-sm text-gray-600">✗ If still buffering → Go to test 5</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -396,8 +396,8 @@ export default function IPTVBufferingFixGuide() {
               <div>
                 <strong>Different Channel Test</strong>
                 <p className="text-gray-700">Try 5 different channels from your playlist. Test each for 2 minutes.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ If only 1-2 channels buffer → Specific channel issue (contact provider)</p>
-                <p className="text-sm text-gray-600">❌ If all channels buffer → IPTV provider server issue</p>
+                <p className="text-sm text-gray-600 mt-1">✓ If only 1-2 channels buffer → Specific channel issue (contact provider)</p>
+                <p className="text-sm text-gray-600">✗ If all channels buffer → IPTV provider server issue</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -405,8 +405,8 @@ export default function IPTVBufferingFixGuide() {
               <div>
                 <strong>DNS Change Test</strong>
                 <p className="text-gray-700">Change DNS to 8.8.8.8 in your router settings. Restart. Test streaming.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ If buffering reduces → DNS was the issue</p>
-                <p className="text-sm text-gray-600">❌ If no change → Likely IPTV provider server issue</p>
+                <p className="text-sm text-gray-600 mt-1">✓ If buffering reduces → DNS was the issue</p>
+                <p className="text-sm text-gray-600">✗ If no change → Likely IPTV provider server issue</p>
               </div>
             </li>
           </ol>
@@ -476,7 +476,7 @@ export default function IPTVBufferingFixGuide() {
         </p>
 
         <div className="bg-green-50 rounded-xl p-6 my-6 border-2 border-green-300">
-          <h3 className="text-xl font-bold mb-4">⚡ Immediate Fixes (Try First)</h3>
+          <h3 className="text-xl font-bold mb-4">Immediate Fixes (Try First)</h3>
           <ol className="space-y-3">
             <li><strong>1.</strong> Move closer to Wi-Fi router or connect Ethernet cable</li>
             <li><strong>2.</strong> Close all background apps and pause downloads</li>
@@ -487,7 +487,7 @@ export default function IPTVBufferingFixGuide() {
         </div>
 
         <div className="bg-blue-50 rounded-xl p-6 my-6 border-2 border-blue-300">
-          <h3 className="text-xl font-bold mb-4">🔧 Advanced Fixes (If Above Doesn&apos;t Work)</h3>
+          <h3 className="text-xl font-bold mb-4">Advanced Fixes (If Above Doesn&apos;t Work)</h3>
           <ol className="space-y-3">
             <li><strong>1.</strong> Change DNS settings to Google DNS (8.8.8.8) or Cloudflare (1.1.1.1)</li>
             <li><strong>2.</strong> Enable QoS on your router to prioritize streaming traffic</li>
@@ -660,7 +660,7 @@ export default function IPTVBufferingFixGuide() {
         </div>
 
         <div className="mt-12 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border-2 border-green-200">
-          <h3 className="text-2xl font-bold mb-3">📚 Related Guides</h3>
+          <h3 className="text-2xl font-bold mb-3">Related Guides</h3>
           <ul className="space-y-2">
             <li>
               <Link href="/blog/xtream-codes-setup-guide" className="text-blue-600 hover:underline font-medium">

@@ -8,7 +8,7 @@ import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Comment Résoudre les Problèmes de Buffering IPTV : Guide 2026',
-  description: '🔧 Éliminez le buffering IPTV définitivement. Découvrez les 10+ causes, tests diagnostiques, optimisations réseau et fonctionnalités EDGE IPTV qui réduisent le buffering.',
+  description: 'Éliminez le buffering IPTV définitivement. Découvrez les 10+ causes, tests diagnostiques, optimisations réseau et fonctionnalités EDGE IPTV qui réduisent le buffering.',
   keywords: 'iptv buffering, buffering iptv, iptv qui freeze, iptv qui lag, résoudre buffering iptv, iptv saccadé, problème iptv buffering 2026',
   alternates: buildBlogAlternates('resoudre-buffering-iptv-guide', 'fr'),
   openGraph: {
@@ -339,15 +339,15 @@ export default function ResoudreBufferingIPTVGuide() {
         </p>
 
         <div className="bg-blue-50 rounded-xl p-6 my-6">
-          <h3 className="text-xl font-bold mb-4">🔍 Checklist Diagnostique</h3>
+          <h3 className="text-xl font-bold mb-4">Checklist Diagnostique</h3>
           <ol className="space-y-4">
             <li className="flex gap-3">
               <span className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm flex-shrink-0">1</span>
               <div>
                 <strong>Test Vitesse</strong>
                 <p className="text-gray-700">Allez sur <a href="https://fast.com" target="_blank" rel="noopener" className="text-blue-600 underline">fast.com</a>. Notez votre vitesse de téléchargement.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ Si vitesse correspond aux exigences pour qualité désirée → Allez au test 2</p>
-                <p className="text-sm text-gray-600">❌ Si vitesse trop basse → Contactez FAI ou réduisez qualité vidéo</p>
+                <p className="text-sm text-gray-600 mt-1">✓ Si vitesse correspond aux exigences pour qualité désirée → Allez au test 2</p>
+                <p className="text-sm text-gray-600">✗ Si vitesse trop basse → Contactez FAI ou réduisez qualité vidéo</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -355,8 +355,8 @@ export default function ResoudreBufferingIPTVGuide() {
               <div>
                 <strong>Test Signal Wi-Fi</strong>
                 <p className="text-gray-700">Déplacez-vous à 3 mètres de votre routeur. Testez le streaming.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ Si buffering s&apos;arrête → Wi-Fi est le problème (achetez répéteur ou utilisez Ethernet)</p>
-                <p className="text-sm text-gray-600">❌ Si toujours buffering → Allez au test 3</p>
+                <p className="text-sm text-gray-600 mt-1">✓ Si buffering s&apos;arrête → Wi-Fi est le problème (achetez répéteur ou utilisez Ethernet)</p>
+                <p className="text-sm text-gray-600">✗ Si toujours buffering → Allez au test 3</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -364,8 +364,8 @@ export default function ResoudreBufferingIPTVGuide() {
               <div>
                 <strong>Test Heures Pointe</strong>
                 <p className="text-gray-700">Testez streaming à 3h du matin et 20h. Comparez.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ Si bien meilleur à 3h → Limitation FAI ou surcharge serveur</p>
-                <p className="text-sm text-gray-600">❌ Si pareil aux deux moments → Allez au test 4</p>
+                <p className="text-sm text-gray-600 mt-1">✓ Si bien meilleur à 3h → Limitation FAI ou surcharge serveur</p>
+                <p className="text-sm text-gray-600">✗ Si pareil aux deux moments → Allez au test 4</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -373,8 +373,8 @@ export default function ResoudreBufferingIPTVGuide() {
               <div>
                 <strong>Test Appareil Unique</strong>
                 <p className="text-gray-700">Déconnectez TOUS les appareils du Wi-Fi sauf votre iPhone/iPad. Testez streaming.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ Si buffering s&apos;arrête → Problème congestion réseau (activez QoS sur routeur)</p>
-                <p className="text-sm text-gray-600">❌ Si toujours buffering → Allez au test 5</p>
+                <p className="text-sm text-gray-600 mt-1">✓ Si buffering s&apos;arrête → Problème congestion réseau (activez QoS sur routeur)</p>
+                <p className="text-sm text-gray-600">✗ Si toujours buffering → Allez au test 5</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -382,8 +382,8 @@ export default function ResoudreBufferingIPTVGuide() {
               <div>
                 <strong>Test Différentes Chaînes</strong>
                 <p className="text-gray-700">Essayez 5 chaînes différentes de votre playlist. Testez chacune 2 minutes.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ Si seulement 1-2 chaînes buffer → Problème chaîne spécifique (contactez fournisseur)</p>
-                <p className="text-sm text-gray-600">❌ Si toutes les chaînes buffer → Problème serveur fournisseur IPTV</p>
+                <p className="text-sm text-gray-600 mt-1">✓ Si seulement 1-2 chaînes buffer → Problème chaîne spécifique (contactez fournisseur)</p>
+                <p className="text-sm text-gray-600">✗ Si toutes les chaînes buffer → Problème serveur fournisseur IPTV</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -391,8 +391,8 @@ export default function ResoudreBufferingIPTVGuide() {
               <div>
                 <strong>Test Changement DNS</strong>
                 <p className="text-gray-700">Changez DNS vers 8.8.8.8 dans paramètres routeur. Redémarrez. Testez streaming.</p>
-                <p className="text-sm text-gray-600 mt-1">✅ Si buffering réduit → DNS était le problème</p>
-                <p className="text-sm text-gray-600">❌ Si pas de changement → Probablement problème serveur fournisseur IPTV</p>
+                <p className="text-sm text-gray-600 mt-1">✓ Si buffering réduit → DNS était le problème</p>
+                <p className="text-sm text-gray-600">✗ Si pas de changement → Probablement problème serveur fournisseur IPTV</p>
               </div>
             </li>
           </ol>
@@ -462,7 +462,7 @@ export default function ResoudreBufferingIPTVGuide() {
         </p>
 
         <div className="bg-green-50 rounded-xl p-6 my-6 border-2 border-green-300">
-          <h3 className="text-xl font-bold mb-4">⚡ Corrections Immédiates (Essayez d&apos;abord)</h3>
+          <h3 className="text-xl font-bold mb-4">Corrections Immédiates (Essayez d&apos;abord)</h3>
           <ol className="space-y-3">
             <li><strong>1.</strong> Rapprochez-vous du routeur Wi-Fi ou connectez câble Ethernet</li>
             <li><strong>2.</strong> Fermez toutes les apps en arrière-plan et mettez en pause les téléchargements</li>
@@ -473,7 +473,7 @@ export default function ResoudreBufferingIPTVGuide() {
         </div>
 
         <div className="bg-blue-50 rounded-xl p-6 my-6 border-2 border-blue-300">
-          <h3 className="text-xl font-bold mb-4">🔧 Corrections Avancées (Si ce qui précède ne fonctionne pas)</h3>
+          <h3 className="text-xl font-bold mb-4">Corrections Avancées (Si ce qui précède ne fonctionne pas)</h3>
           <ol className="space-y-3">
             <li><strong>1.</strong> Changez paramètres DNS vers Google DNS (8.8.8.8) ou Cloudflare (1.1.1.1)</li>
             <li><strong>2.</strong> Activez QoS sur votre routeur pour prioriser le trafic streaming</li>
@@ -646,7 +646,7 @@ export default function ResoudreBufferingIPTVGuide() {
         </div>
 
         <div className="mt-12 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border-2 border-green-200">
-          <h3 className="text-2xl font-bold mb-3">📚 Guides Connexes</h3>
+          <h3 className="text-2xl font-bold mb-3">Guides Connexes</h3>
           <ul className="space-y-2">
             <li>
               <Link href="/fr/blog/configurer-codes-xtream-guide" className="text-blue-600 hover:underline font-medium">

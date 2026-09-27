@@ -52,16 +52,21 @@ Trouvé et corrigé en cours de route (même nature — des données fausses ser
 
 Vérifié et **exact**, aucune correction nécessaire : l'essai gratuit de 7 jours, le sitemap (41 URLs, aucune poubelle), les hreflang des guides d'installation, et les features annoncées (téléchargements hors ligne, EPG, Chromecast existent bien dans l'app).
 
-### Phase 1 — Contenu et ton
+### Phase 1 — Contenu et ton (fait le 2026-09-27)
 
-> **Signalé pendant la Phase 2, à traiter en priorité ici** : plusieurs réponses du schema FAQ affirment que l'app est « completely free to download and use » et que « the app itself has no cost », et le tableau comparatif de `best-iptv-app-for-iphone` affiche le prix « Free ». C'est faux depuis le passage au paywall (téléchargement gratuit, essai 7 jours, puis abonnement). Même nature de risque que les faux avis corrigés en Phase 0, puisque c'est dans des données structurées.
->
-> Autre relevé : les articles comptent jusqu'à 21 emojis décoratifs (✅📱💡🎯…) — c'est la signature « texte IA » la plus visible du site, avec les tirets cadratins.
+**Le modèle tarifaire réel a d'abord dû être établi**, parce que la documentation interne était fausse. Vérification dans le code (2026-09-27) : il n'y a **pas** de paywall dur, `RootTabView` n'est pas gaté. Installation, onboarding, ajout de playlists M3U/Xtream et navigation dans le catalogue sont libres ; en revanche **toute lecture** est réservée aux abonnés après 7 jours d'essai — direct, films, séries et téléchargements. Donc « l'app est gratuite » est faux sur le fond : on ne peut rien regarder sans payer. Tarif : 3,99 $/mois ou 19,99 $/an, sans publicité.
 
-- [ ] Ré-écrire tous les textes qui "sonnent IA" (tirets cadratins, formulations génériques, superlatifs vagues) — remplacer par du concret : vrais chiffres, vraies captures d'écran, comparatifs sourcés
-- [ ] Ajouter une vraie mise en avant iPad : section dédiée sur la homepage, mention systématique dans les CTA, envisager un article dédié ("EDGE IPTV sur iPad : multitâche, grand écran, EPG")
-- [ ] Renforcer le CTA App Store sur chaque page (actuellement inégal selon les pages)
-- [ ] Auditer et retirer toute affirmation non vérifiable ("#1", "leader") qui n'apporte rien au SEO et affaiblit la crédibilité
+- [x] **Affirmations tarifaires fausses supprimées.** Le site prétendait que l'app était « completely free to download and use », que « the app itself has no cost », et comparait même EDGE IPTV à des concurrents « qui facturent 3-5 € » alors qu'il en coûte 3,99. Réécrit en EN et FR, y compris dans le schema FAQ. Fait notable : `components/faq.tsx` disait déjà la vérité (essai 7 jours puis abonnement) — ce sont les articles qui la contredisaient.
+- [x] **Notes « 5.0 » auto-attribuées supprimées** dans les 4 langues (badge, tableau comparatif, titres de section). Même problème que le faux `aggregateRating` de la Phase 0 : une note inventée pour une app qui n'a pas d'historique d'avis. Remplacées par « Nouveau » / « Notre choix ».
+- [x] **497 symboles décoratifs traités.** Les emojis (✅❌⭐💡📺📱🎯…) étaient la signature « texte IA » la plus visible : jusqu'à 55 dans un seul article. Les pictogrammes de tableau deviennent des signes typographiques (✓ ✗ ★), les emojis décoratifs disparaissent. Les flèches → et coches ✓ restent : ce sont de la ponctuation, pas de la décoration.
+- [x] **Tous les tirets cadratins retirés de la prose** (celui que Jules avait repéré en premier), en gardant ceux qui séparent un titre d'un libellé, où ils sont typographiquement normaux.
+- [x] **Libellés de CTA rendus honnêtes** : « Download EDGE IPTV Free » (34 occurrences, 4 langues) devient « Démarrer l'essai gratuit de 7 jours » et ses traductions.
+- [x] **Section iPad ajoutée aux 4 homepages** (`components/ipad-section.tsx`). La tablette est le meilleur segment du site — 14,93 % de CTR contre 8,18 % sur mobile et 1,21 % sur desktop — sur seulement 268 impressions, faute de contenu qui lui parle. Chaque affirmation est vérifiée dans le code : l'adaptation à l'écran large est réelle (`horizontalSizeClass == .regular` passe les affiches de 120×180 à 220×330), et Picture in Picture, AirPlay et Chromecast existent bien. Les modèles compatibles sont listés précisément.
+- [x] **~2400 lignes de code mort supprimées.** Les 4 routes `blog/[slug]/page.tsx` n'étaient jamais rendues : chaque article a un dossier concret, qui a la priorité sur la route dynamique. Vérifié empiriquement — les 43 pages produisent un texte identique sans elles. Elles contenaient 156 emojis et des affirmations périmées, et constituaient un piège pour toute modification future.
+
+Reste ouvert :
+- [ ] Les notes des concurrents dans les tableaux comparatifs sont incohérentes d'un article à l'autre (GSE Smart IPTV noté 4.1 ici, 4.5 là) et invérifiables en l'état. À reprendre avec de vraies données App Store, ou à retirer.
+- [ ] Article iPad dédié (« EDGE IPTV sur iPad »), pour viser les requêtes repérées dans Search Console : « iptv setup for ipad », « install iptv on ipad », « best iptv apps for ipad 2026 ».
 
 ### Phase 2 — Refonte design (blog fait le 2026-09-27, homepage à décider)
 

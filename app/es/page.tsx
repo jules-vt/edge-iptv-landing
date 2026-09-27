@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FAQ } from "@/components/faq";
+import { IpadSection } from "@/components/ipad-section";
 
 export default function HomeES() {
   return (
@@ -76,7 +77,7 @@ export default function HomeES() {
               <strong>EDGE IPTV</strong> transforma tu iPhone y iPad en un
               potente centro de streaming para TV en vivo, películas y series.
               Guía de TV en vivo, Picture in Picture, descargas sin conexión y
-              transmisión Chromecast y AirPlay con un toque — todo en una
+              transmisión Chromecast y AirPlay con un toque, todo en una
               interfaz hermosa diseñada para el entretenimiento moderno.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
@@ -261,6 +262,9 @@ export default function HomeES() {
           </div>
         </div>
       </section>
+
+      <IpadSection lang="es" />
+
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">

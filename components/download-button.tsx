@@ -22,7 +22,7 @@ export function DownloadButton({
   size = 'lg',
   location,
   className = '',
-  children = 'Download EDGE IPTV Free'
+  children = 'Start your 7-day free trial'
 }: DownloadButtonProps) {
   const handleClick = () => {
     // Track with GA4
