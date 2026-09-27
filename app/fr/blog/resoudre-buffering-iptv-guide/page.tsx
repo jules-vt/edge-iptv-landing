@@ -114,7 +114,7 @@ export default function ResoudreBufferingIPTVGuide() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Rien ne gâche plus votre expérience IPTV que le buffering constant. Que vous regardiez du sport en direct, des films ou vos séries préférées, les interruptions détruisent l&apos;immersion. Ce guide complet vous aidera à identifier la cause exacte de vos problèmes de buffering et à les résoudre définitivement.
         </p>

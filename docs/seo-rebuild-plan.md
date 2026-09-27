@@ -53,15 +53,40 @@ Trouvé et corrigé en cours de route (même nature — des données fausses ser
 Vérifié et **exact**, aucune correction nécessaire : l'essai gratuit de 7 jours, le sitemap (41 URLs, aucune poubelle), les hreflang des guides d'installation, et les features annoncées (téléchargements hors ligne, EPG, Chromecast existent bien dans l'app).
 
 ### Phase 1 — Contenu et ton
+
+> **Signalé pendant la Phase 2, à traiter en priorité ici** : plusieurs réponses du schema FAQ affirment que l'app est « completely free to download and use » et que « the app itself has no cost », et le tableau comparatif de `best-iptv-app-for-iphone` affiche le prix « Free ». C'est faux depuis le passage au paywall (téléchargement gratuit, essai 7 jours, puis abonnement). Même nature de risque que les faux avis corrigés en Phase 0, puisque c'est dans des données structurées.
+>
+> Autre relevé : les articles comptent jusqu'à 21 emojis décoratifs (✅📱💡🎯…) — c'est la signature « texte IA » la plus visible du site, avec les tirets cadratins.
+
 - [ ] Ré-écrire tous les textes qui "sonnent IA" (tirets cadratins, formulations génériques, superlatifs vagues) — remplacer par du concret : vrais chiffres, vraies captures d'écran, comparatifs sourcés
 - [ ] Ajouter une vraie mise en avant iPad : section dédiée sur la homepage, mention systématique dans les CTA, envisager un article dédié ("EDGE IPTV sur iPad : multitâche, grand écran, EPG")
 - [ ] Renforcer le CTA App Store sur chaque page (actuellement inégal selon les pages)
 - [ ] Auditer et retirer toute affirmation non vérifiable ("#1", "leader") qui n'apporte rien au SEO et affaiblit la crédibilité
 
-### Phase 2 — Refonte design (homepage + blog)
-- [ ] Nouvelle direction visuelle homepage, cohérente avec l'identité app (voir icône/captures déjà produites avec les skills `appicon`/`appstore-screenshots`)
-- [ ] Refonte de `article-layout.tsx`, `blog-card.tsx`, `blog-header.tsx` — le blog est actuellement signalé "moche et mal construit"
-- [ ] Refonte de la page listing `/blog` (0 clic malgré indexation) : catégories, mise en avant des articles qui convertissent, pas juste une liste chronologique
+### Phase 2 — Refonte design (blog fait le 2026-09-27, homepage à décider)
+
+Mesure avant/après sur `/blog/m3u-playlist-setup-guide` :
+
+| | Avant | Après |
+|---|---|---|
+| Premier lien App Store | 5812 px (70 % de la page) | 12 px (0 %) |
+| Nombre de CTA | 3 | 6 |
+| Sommaire | aucun | 11 sections |
+| Liens internes en fin d'article | 0 | 3 |
+
+- [x] **Template d'article reconstruit.** CTA compact injecté juste après le paragraphe d'introduction, sommaire auto en colonne latérale (≥1280 px), carte CTA collante, barre CTA collante sur mobile (450 des 628 clics annuels), et section « À lire ensuite » qui donne enfin des liens internes au blog.
+- [x] **Listing blog reconstruit.** Article mis en avant en tête (le plus récent, donc auto-entretenu), grille en dessous, bloc CTA avec l'icône de l'app. Les 4 pages de listing (en/fr/es/pt) passent maintenant par un seul composant `BlogIndex` — elles étaient dupliquées à la main, c'est exactement ce qui avait causé la désynchronisation corrigée en Phase 0.
+- [x] **Couvertures d'articles distinctes.** Les 7 articles partageaient 3 images identiques, sans rapport avec leur sujet : rien n'incitait à cliquer. Chaque sujet a désormais son dégradé, son pictogramme et une capture pertinente, le tout indexé sur `translationGroup` pour que les 4 langues partagent le visuel.
+- [x] **Typographie de corps d'article.** `@tailwindcss/typography` n'a jamais été installé alors que les classes `prose` étaient utilisées dans 38 fichiers : toute la typographie était du code mort. Remplacé par `.article-body` (longueur de ligne lisible, tableaux scrollables sur mobile), et les classes mortes ont été retirées pour que personne ne s'y fie à nouveau.
+
+Bugs trouvés et corrigés au passage :
+- [x] `buildAlternates()` forçait le canonical sur la version **anglaise** quelle que soit la page. Utilisée telle quelle sur les listings fr/es/pt, elle leur aurait fait déclarer à Google qu'ils sont des doublons de l'anglais. La fonction prend maintenant la langue courante.
+- [x] Les dates des cartes du blog rejouaient le bug de fuseau de la Phase 0 (décalage d'un jour) **et** affichaient les dates espagnoles et portugaises au format français. Un seul `formatPostDate()` sert désormais partout.
+- [x] Les listings en/fr ne déclaraient que 2 hreflang sur 4.
+- [x] « Free forever » / « Gratuit pour toujours » retiré de 10 fichiers : faux, l'app a un paywall avec essai de 7 jours.
+
+À décider :
+- [ ] **Homepage** : à l'inspection, elle est en bon état visuel et convertit à 8,18 % de CTR. Une refonte complète présente plus de risque que de gain — mon avis est de ne toucher qu'au contenu (Phase 1) plutôt qu'au design. À trancher avec Jules.
 
 ### Phase 3 — Extension linguistique (DE, AR, IT)
 - [ ] Remplacer la structure de dossiers dupliqués par langue par un système de contenu centralisé (éviter de recréer le problème de Phase 0 dans 3 langues de plus)

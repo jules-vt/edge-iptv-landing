@@ -137,7 +137,7 @@ export default function HomeES() {
             <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-center mb-8">
               ¿Qué es EDGE IPTV?
             </h2>
-            <div className="prose prose-lg dark:prose-invert mx-auto space-y-6 text-muted-foreground leading-relaxed">
+            <div className="mx-auto space-y-6 text-muted-foreground leading-relaxed">
               <p>
                 <strong>EDGE IPTV</strong> es el reproductor IPTV más avanzado
                 diseñado exclusivamente para dispositivos iOS, incluidos iPhone

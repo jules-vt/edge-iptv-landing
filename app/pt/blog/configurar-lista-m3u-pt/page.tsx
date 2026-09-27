@@ -28,7 +28,7 @@ export default function GuiaM3U() {
       readTime="6 min de leitura"
       lang="pt"
     >
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           As listas de reprodução M3U são um formato popular para IPTV. Este guia mostrará como configurar sua lista M3U no EDGE IPTV de forma rápida e simples.
         </p>

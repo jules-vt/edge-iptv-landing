@@ -28,7 +28,7 @@ export default function GuiaChromecast() {
       readTime="5 min de leitura"
       lang="pt"
     >
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Quer assistir seu IPTV na tela grande? Este guia mostrará como transmitir canais, filmes e séries do seu iPhone/iPad para sua TV usando Chromecast com EDGE IPTV.
         </p>

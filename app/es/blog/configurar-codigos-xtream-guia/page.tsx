@@ -56,7 +56,7 @@ export default function GuiaCodigosXtream() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Los códigos Xtream son el estándar de la industria para streaming IPTV en 2026. Esta guía completa te llevará a través del proceso exacto de configuración en EDGE IPTV, paso a paso. Ya seas un principiante completo o estés experimentando problemas de conexión, aprenderás cómo configurar tus códigos Xtream en menos de 2 minutos.
         </p>

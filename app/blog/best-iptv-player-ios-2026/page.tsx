@@ -76,7 +76,7 @@ export default function BestIPTVPlayerArticle() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Looking for the best IPTV player for your iPhone or iPad in 2026? We&apos;ve tested the top 7 apps to help you choose the perfect streaming solution. Whether you need Chromecast support, offline viewing, or the fastest Xtream codes setup, this comprehensive guide has you covered.
         </p>
@@ -564,7 +564,7 @@ export default function BestIPTVPlayerArticle() {
             Download EDGE IPTV Free
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
-            ✓ Free forever ✓ No ads ✓ All features unlocked ✓ 2-minute setup
+            ✓ 7-day free trial ✓ No ads ✓ All features included ✓ 2-minute setup
           </p>
         </div>
 

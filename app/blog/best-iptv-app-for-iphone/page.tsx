@@ -235,7 +235,7 @@ export default function BestIPTVAppForIphone() {
       </p>
 
       {/* ── TL;DR ── */}
-      <div className="not-prose bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-2xl p-6 mb-10">
+      <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-2xl p-6 mb-10">
         <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-3">
           Quick answer
         </p>
@@ -259,7 +259,7 @@ export default function BestIPTVAppForIphone() {
         Not all IPTV players are built for iOS. Here&apos;s what separates a great iPhone
         IPTV app from the mediocre ones:
       </p>
-      <div className="not-prose grid sm:grid-cols-2 gap-4 mb-10">
+      <div className="grid sm:grid-cols-2 gap-4 mb-10">
         <Criterion
           icon={<Smartphone className="w-5 h-5" />}
           title="Native iOS interface"
@@ -287,7 +287,7 @@ export default function BestIPTVAppForIphone() {
         Top 5 IPTV Apps for iPhone: Side-by-Side Comparison
       </h2>
 
-      <div className="not-prose overflow-x-auto mb-10 rounded-xl border border-border shadow-sm">
+      <div className="overflow-x-auto mb-10 rounded-xl border border-border shadow-sm">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-secondary/60 text-foreground">
@@ -341,7 +341,7 @@ export default function BestIPTVAppForIphone() {
         #1 Best IPTV App for iPhone: EDGE IPTV
       </h2>
 
-      <div className="not-prose bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl border-2 border-blue-200 dark:border-blue-800 p-8 mb-8">
+      <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl border-2 border-blue-200 dark:border-blue-800 p-8 mb-8">
         <div className="flex flex-col sm:flex-row gap-6 items-start">
           <Image
             src="/images/icon.png"
@@ -410,7 +410,7 @@ export default function BestIPTVAppForIphone() {
       </h2>
 
       {/* GSE */}
-      <div className="not-prose border border-border/60 rounded-2xl p-6 mb-6 hover:shadow-md transition-shadow">
+      <div className="border border-border/60 rounded-2xl p-6 mb-6 hover:shadow-md transition-shadow">
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#2 — GSE Smart IPTV</h3>
@@ -439,7 +439,7 @@ export default function BestIPTVAppForIphone() {
       </div>
 
       {/* Flex IPTV */}
-      <div className="not-prose border border-border/60 rounded-2xl p-6 mb-6 hover:shadow-md transition-shadow">
+      <div className="border border-border/60 rounded-2xl p-6 mb-6 hover:shadow-md transition-shadow">
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#3 — Flex IPTV</h3>
@@ -468,7 +468,7 @@ export default function BestIPTVAppForIphone() {
       </div>
 
       {/* IPTV Smarters */}
-      <div className="not-prose border border-border/60 rounded-2xl p-6 mb-6 hover:shadow-md transition-shadow">
+      <div className="border border-border/60 rounded-2xl p-6 mb-6 hover:shadow-md transition-shadow">
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#4 — IPTV Smarters Pro</h3>
@@ -494,7 +494,7 @@ export default function BestIPTVAppForIphone() {
       </div>
 
       {/* Opus */}
-      <div className="not-prose border border-border/60 rounded-2xl p-6 mb-10 hover:shadow-md transition-shadow">
+      <div className="border border-border/60 rounded-2xl p-6 mb-10 hover:shadow-md transition-shadow">
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">#5 — Opus IPTV Player</h3>
@@ -530,7 +530,7 @@ export default function BestIPTVAppForIphone() {
         Here&apos;s how to go from nothing to streaming in under 2 minutes using EDGE IPTV:
       </p>
 
-      <div className="not-prose space-y-4 mb-10">
+      <div className="space-y-4 mb-10">
         {[
           {
             step: '1',
@@ -569,7 +569,7 @@ export default function BestIPTVAppForIphone() {
         ))}
       </div>
 
-      <div className="not-prose flex justify-center mb-10">
+      <div className="flex justify-center mb-10">
         <DownloadButton location="article-iphone-steps-cta" size="lg">
           Download EDGE IPTV Free
         </DownloadButton>
@@ -591,7 +591,7 @@ export default function BestIPTVAppForIphone() {
         Tips for the Best IPTV Experience on iPhone
       </h2>
 
-      <div className="not-prose grid sm:grid-cols-2 gap-4 mb-10">
+      <div className="grid sm:grid-cols-2 gap-4 mb-10">
         {[
           {
             title: 'Use Wi-Fi for HD streaming',
@@ -639,7 +639,7 @@ export default function BestIPTVAppForIphone() {
 
       {/* ── Internal links ── */}
       <h2 className="text-3xl font-bold mt-12 mb-6">Related Guides</h2>
-      <div className="not-prose grid sm:grid-cols-2 gap-4 mb-10">
+      <div className="grid sm:grid-cols-2 gap-4 mb-10">
         {[
           {
             href: '/how-to-install-iptv-iphone-ipad',
@@ -691,7 +691,7 @@ export default function BestIPTVAppForIphone() {
         Frequently Asked Questions
       </h2>
 
-      <div className="not-prose space-y-4 mb-10">
+      <div className="space-y-4 mb-10">
         {faqSchema.mainEntity.map(({ name, acceptedAnswer }) => (
           <details
             key={name}

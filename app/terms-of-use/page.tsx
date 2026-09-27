@@ -46,7 +46,7 @@ export default function TermsOfUse() {
               <p className="text-gray-500">Last updated: May 14, 2025</p>
             </div>
 
-            <div className="prose prose-blue max-w-none">
+            <div className="max-w-none">
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Please read these terms of use carefully before using the Edge IPTV application.
               </p>

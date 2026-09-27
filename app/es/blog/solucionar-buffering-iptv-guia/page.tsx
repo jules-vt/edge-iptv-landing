@@ -28,7 +28,7 @@ export default function GuiaBuffering() {
       readTime="6 min de lectura"
       lang="es"
     >
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           ¿Experimentas buffering constante al ver IPTV? Esta guía te ofrece 10 soluciones probadas para eliminar el lag y disfrutar de streaming sin interrupciones en EDGE IPTV.
         </p>

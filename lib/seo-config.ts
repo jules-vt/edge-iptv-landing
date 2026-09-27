@@ -21,13 +21,20 @@ export const url = (path: string) =>
 /**
  * Alternate language links for a given set of localized paths.
  * Pass `undefined` for locales that don't have a translation.
+ *
+ * `current` must name the language of the page being rendered. The canonical
+ * has to point at that page and not at the English one, otherwise every
+ * localised page tells Google it is a duplicate of its English counterpart.
  */
-export function buildAlternates(paths: {
-  en?: string;
-  fr?: string;
-  es?: string;
-  pt?: string;
-}) {
+export function buildAlternates(
+  paths: {
+    en?: string;
+    fr?: string;
+    es?: string;
+    pt?: string;
+  },
+  current: "en" | "fr" | "es" | "pt" = "en",
+) {
   const languages: Record<string, string> = {};
   if (paths.en) languages["en"] = url(paths.en);
   if (paths.fr) languages["fr"] = url(paths.fr);
@@ -36,7 +43,7 @@ export function buildAlternates(paths: {
   languages["x-default"] = url(paths.en ?? "/");
 
   return {
-    canonical: url(paths.en ?? "/"),
+    canonical: url(paths[current] ?? paths.en ?? "/"),
     languages,
   };
 }

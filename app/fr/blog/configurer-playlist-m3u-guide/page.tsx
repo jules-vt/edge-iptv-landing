@@ -56,7 +56,7 @@ export default function GuidePlaylistM3U() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Les playlists M3U restent une méthode populaire pour le streaming IPTV en 2026. Ce guide complet vous enseignera tout sur la configuration M3U dans EDGE IPTV : ce que sont les playlists M3U, comment les configurer, la différence entre M3U et M3U8, et quand les utiliser plutôt que les codes Xtream.
         </p>
@@ -435,7 +435,7 @@ export default function GuidePlaylistM3U() {
             Télécharger EDGE IPTV Gratuit
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
-            ✓ Support M3U & M3U8 ✓ Playlists multiples ✓ Configuration EPG ✓ Gratuit pour toujours
+            ✓ Support M3U & M3U8 ✓ Playlists multiples ✓ Configuration EPG ✓ 7 jours d'essai gratuit
           </p>
         </div>
 

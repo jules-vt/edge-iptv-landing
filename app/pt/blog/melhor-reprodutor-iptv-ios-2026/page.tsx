@@ -58,7 +58,7 @@ export default function MelhorReprodutorIPTVArtigo() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Procurando o melhor reprodutor IPTV para seu iPhone ou iPad em 2026? Testamos os 7 melhores apps para ajudá-lo a escolher a solução de streaming perfeita. Seja você precisando de suporte Chromecast, visualização offline ou a configuração mais rápida de códigos Xtream, este guia completo tem tudo o que você precisa.
         </p>
@@ -193,7 +193,7 @@ export default function MelhorReprodutorIPTVArtigo() {
             Baixar EDGE IPTV Grátis
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
-            ✓ Grátis para sempre ✓ Sem anúncios ✓ Todos os recursos desbloqueados ✓ Configuração de 2 minutos
+            ✓ 7 dias de teste grátis ✓ Sem anúncios ✓ Todos os recursos incluídos ✓ Configuração de 2 minutos
           </p>
         </div>
 

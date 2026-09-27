@@ -58,7 +58,7 @@ export default function MeilleurLecteurIPTV() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Vous cherchez le meilleur lecteur IPTV pour votre iPhone ou iPad en 2026 ? Nous avons testé les 7 meilleures applications pour vous aider à choisir la solution de streaming parfaite. Que vous ayez besoin du support Chromecast, du visionnage hors ligne ou de la configuration Xtream codes la plus rapide, ce guide complet vous couvre.
         </p>
@@ -546,7 +546,7 @@ export default function MeilleurLecteurIPTV() {
             Télécharger EDGE IPTV Gratuit
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
-            ✓ Gratuit pour toujours ✓ Sans publicités ✓ Toutes les fonctionnalités débloquées ✓ Configuration en 2 minutes
+            ✓ 7 jours d'essai gratuit ✓ Sans publicités ✓ Toutes les fonctionnalités incluses ✓ Configuration en 2 minutes
           </p>
         </div>
 

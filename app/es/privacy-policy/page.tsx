@@ -47,7 +47,7 @@ export default function PrivacyPolicyES() {
               <p className="text-gray-500">Última actualización: 14 de mayo de 2025</p>
             </div>
 
-            <div className="prose prose-blue max-w-none">
+            <div className="max-w-none">
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Esta Política de Privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información cuando utiliza la aplicación Edge IPTV.
               </p>

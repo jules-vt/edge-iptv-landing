@@ -106,3 +106,64 @@
     @apply bg-background text-foreground;
   }
 }
+
+/**
+ * Article body.
+ *
+ * The pages style their own headings and callouts with utility classes, so
+ * this only fills the gaps those leave: reading measure, default paragraph
+ * rhythm, links, inline code, and tables that must not force the page to
+ * scroll sideways on a phone.
+ *
+ * The `prose` classes these replaced never did anything —
+ * @tailwindcss/typography was referenced in 38 files but never installed.
+ */
+.article-body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+/*
+ * Keep body text at a comfortable measure; let wide blocks span the column.
+ * Two levels deep because every article wraps its body in one container div —
+ * callouts and tables sit deeper than that and keep the full width.
+ */
+.article-body > :is(p, ul, ol, h2, h3),
+.article-body > div > :is(p, ul, ol, h2, h3) {
+  max-width: 68ch;
+}
+
+.article-body p {
+  margin-bottom: 1.25rem;
+}
+
+.article-body a:not([class]) {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-body code {
+  font-size: 0.9em;
+  word-break: break-word;
+}
+
+.article-body :not(pre) > code:not([class]) {
+  background: hsl(var(--muted));
+  border-radius: 0.25rem;
+  padding: 0.15em 0.4em;
+}
+
+/* Wide tables scroll inside their own box rather than breaking the layout. */
+.article-body .overflow-x-auto,
+.article-body table {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .article-body table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

@@ -56,7 +56,7 @@ export default function GuideCodesXtream() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Les codes Xtream sont le standard de l&apos;industrie pour le streaming IPTV en 2026. Ce guide complet vous accompagnera à travers le processus de configuration exact dans EDGE IPTV, étape par étape. Que vous soyez débutant complet ou que vous rencontriez des problèmes de connexion, vous apprendrez à configurer vos codes Xtream en moins de 2 minutes.
         </p>
@@ -592,7 +592,7 @@ export default function GuideCodesXtream() {
             Télécharger EDGE IPTV Gratuit
           </DownloadButton>
           <p className="text-sm text-gray-500 mt-4">
-            ✓ Configuration en 2 minutes ✓ Interface en français ✓ Support Chromecast ✓ Gratuit pour toujours
+            ✓ Configuration en 2 minutes ✓ Interface en français ✓ Support Chromecast ✓ 7 jours d'essai gratuit
           </p>
         </div>
 

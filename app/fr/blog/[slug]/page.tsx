@@ -92,7 +92,7 @@ export default async function BlogPostPageFR({ params }: PageProps) {
         return <CommentInstallerContent />;
       default:
         return (
-          <div className="prose prose-lg max-w-none">
+          <div className="max-w-none">
             <p>Contenu de l'article à venir...</p>
           </div>
         );

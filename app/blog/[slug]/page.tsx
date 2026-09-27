@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         return <HowToInstallContent />;
       default:
         return (
-          <div className="prose prose-lg max-w-none">
+          <div className="max-w-none">
             <p>Article content coming soon...</p>
           </div>
         );

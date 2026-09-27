@@ -76,7 +76,7 @@ export default function ChromecastIPTVGuide() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Want to watch your IPTV content on the big screen? EDGE IPTV makes it incredibly easy to cast your favorite channels, movies, and shows directly to your Chromecast-enabled TV or device. This complete guide will walk you through the entire process, from first-time setup to troubleshooting common issues.
         </p>

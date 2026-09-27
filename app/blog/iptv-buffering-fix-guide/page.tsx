@@ -128,7 +128,7 @@ export default function IPTVBufferingFixGuide() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <p className="lead text-xl text-gray-600 mb-8">
           Nothing ruins your IPTV viewing experience more than constant buffering. Whether you&apos;re watching live sports, movies, or your favorite TV series, interruptions destroy immersion. This comprehensive guide will help you identify the exact cause of your buffering issues and fix them permanently.
         </p>

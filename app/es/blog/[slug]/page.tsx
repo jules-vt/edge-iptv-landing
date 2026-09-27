@@ -101,7 +101,7 @@ export default async function BlogPostPageES({ params }: PageProps) {
         return <XtreamCodesGuide />;
       default:
         return (
-          <div className="prose prose-lg max-w-none">
+          <div className="max-w-none">
             <p className="text-muted-foreground text-center py-8">
               Contenido del artículo próximamente...
             </p>
@@ -136,7 +136,7 @@ export default async function BlogPostPageES({ params }: PageProps) {
 // Article 1: Best IPTV Player for iOS 2026
 function BestIPTVPlayerArticle() {
   return (
-    <div className="prose prose-lg max-w-none">
+    <div className="max-w-none">
       <p className="lead text-xl text-gray-600 mb-8">
         ¿Buscas el mejor reproductor IPTV para tu iPhone o iPad en 2026? Hemos probado las 7 mejores aplicaciones para ayudarte a elegir la solución de streaming perfecta. Ya sea que necesites soporte Chromecast, visualización sin conexión o la configuración más rápida de códigos Xtream, esta guía completa te tiene cubierto.
       </p>
@@ -275,7 +275,7 @@ function BestIPTVPlayerArticle() {
           Descargar EDGE IPTV Gratis
         </DownloadButton>
         <p className="text-sm text-gray-500 mt-4">
-          ✓ Gratis para siempre ✓ Sin anuncios ✓ Todas las funciones ✓ Configuración en 2 minutos
+          ✓ 7 días de prueba gratis ✓ Sin anuncios ✓ Todas las funciones ✓ Configuración en 2 minutos
         </p>
       </div>
 
@@ -295,7 +295,7 @@ function BestIPTVPlayerArticle() {
 // Article 2: Chromecast Guide (truncated for brevity - similar structure)
 function ChromecastIPTVGuide() {
   return (
-    <div className="prose prose-lg max-w-none">
+    <div className="max-w-none">
       <p className="lead text-xl text-gray-600 mb-8">
         ¿Quieres ver tu contenido IPTV en la pantalla grande? EDGE IPTV hace que sea increíblemente fácil transmitir tus canales, películas y programas favoritos directamente a tu TV o dispositivo compatible con Chromecast. Esta guía completa te guiará por todo el proceso, desde la configuración inicial hasta la solución de problemas comunes.
       </p>
@@ -394,7 +394,7 @@ function ChromecastIPTVGuide() {
 
 function M3UPlaylistGuide() {
   return (
-    <div className="prose prose-lg max-w-none">
+    <div className="max-w-none">
       <p className="lead text-xl text-gray-600 mb-8">
         Las playlists M3U siguen siendo un método popular para streaming IPTV en 2026. Esta guía completa te enseñará todo sobre la configuración M3U en EDGE IPTV: qué son las playlists M3U, cómo configurarlas, la diferencia entre M3U y M3U8, y cuándo usarlas en lugar de códigos Xtream.
       </p>
@@ -773,7 +773,7 @@ function M3UPlaylistGuide() {
           Descargar EDGE IPTV Gratis
         </DownloadButton>
         <p className="text-sm text-gray-500 mt-4">
-          ✓ Soporte M3U y M3U8 ✓ Múltiples playlists ✓ Configuración EPG ✓ Gratis para siempre
+          ✓ Soporte M3U y M3U8 ✓ Múltiples playlists ✓ Configuración EPG ✓ 7 días de prueba gratis
         </p>
       </div>
 
@@ -792,7 +792,7 @@ function M3UPlaylistGuide() {
 
 function XtreamCodesGuide() {
   return (
-    <div className="prose prose-lg max-w-none">
+    <div className="max-w-none">
       <p className="lead text-xl text-gray-600 mb-8">
         Los códigos Xtream son el estándar de la industria para streaming IPTV en 2026. Esta guía completa te guiará por el proceso exacto de configuración en EDGE IPTV, paso a paso. Ya seas un principiante completo o estés experimentando problemas de conexión, aprenderás cómo configurar tus códigos Xtream en menos de 2 minutos.
       </p>
@@ -1159,7 +1159,7 @@ function XtreamCodesGuide() {
           Descargar EDGE IPTV Gratis
         </DownloadButton>
         <p className="text-sm text-gray-500 mt-4">
-          ✓ Configuración en 2 minutos ✓ Sin anuncios ✓ Soporte Chromecast ✓ Gratis para siempre
+          ✓ Configuración en 2 minutos ✓ Sin anuncios ✓ Soporte Chromecast ✓ 7 días de prueba gratis
         </p>
       </div>
 
@@ -1178,7 +1178,7 @@ function XtreamCodesGuide() {
 
 function IPTVBufferingFixGuide() {
   return (
-    <div className="prose prose-lg max-w-none">
+    <div className="max-w-none">
       <p className="lead text-xl text-gray-600 mb-8">
         Nada arruina tu experiencia de visualización IPTV más que el buffering constante. Ya sea que estés viendo deportes en vivo, películas o tus series favoritas, las interrupciones destruyen la inmersión. Esta guía completa te ayudará a identificar la causa exacta de tus problemas de buffering y solucionarlos permanentemente.
       </p>
