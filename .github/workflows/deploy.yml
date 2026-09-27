@@ -48,6 +48,16 @@ jobs:
             -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
             ./out/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_PATH }}
 
+      # rsync --delete removes files but leaves the directories that held them.
+      # nginx then matches those empty directories through `try_files $uri/`
+      # and answers a 301 towards a 404 instead of a plain 404 — which is what
+      # every retired URL was doing after the routes were cleaned up.
+      - name: Prune empty directories left behind
+        run: |
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+            "find '${{ secrets.VPS_PATH }}' -mindepth 1 -type d -empty -delete"
+
       - name: Cleanup SSH key
         if: always()
         run: rm -f ~/.ssh/id_rsa
