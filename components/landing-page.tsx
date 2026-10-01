@@ -9,7 +9,8 @@ import { DownloadButton } from '@/components/download-button';
 import { blogPath, installGuidePath } from '@/lib/blog-posts';
 import { type Lang, LANGS, LOCALES, homePath } from '@/lib/i18n';
 import { defaultOG, defaultTwitter, SITE } from '@/lib/seo-config';
-import { type LandingId, LANDING_IDS, landingAlternates, landingPath } from '@/lib/landing/registry';
+import { type LandingId, type PageId, PAGE_IDS, landingAlternates, landingPath } from '@/lib/landing/registry';
+import { CHECKER_COPY } from '@/lib/m3u-checker-copy';
 import { type LandingCopy, LANDING_UI } from '@/lib/landing/types';
 import { M3U_COPY } from '@/lib/landing/m3u';
 import { XTREAM_COPY } from '@/lib/landing/xtream';
@@ -23,6 +24,11 @@ const COPY: Record<LandingId, Record<Lang, LandingCopy>> = {
 
 export function landingCopy(id: LandingId, lang: Lang): LandingCopy {
   return COPY[id][lang];
+}
+
+/** Link label for any product page or tool. */
+export function pageNavLabel(id: PageId, lang: Lang): string {
+  return id === 'm3uChecker' ? CHECKER_COPY[lang].navLabel : COPY[id][lang].navLabel;
 }
 
 function heroImage(id: LandingId, lang: Lang) {
@@ -62,7 +68,7 @@ export function LandingPage({ id, lang }: { id: LandingId; lang: Lang }) {
   const image = heroImage(id, lang);
   const isTablet = id === 'ipad';
   const location = `landing-${id}${lang === 'en' ? '' : `-${lang}`}`;
-  const others = LANDING_IDS.filter((other) => other !== id);
+  const others = PAGE_IDS.filter((other) => other !== id);
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -207,7 +213,7 @@ export function LandingPage({ id, lang }: { id: LandingId; lang: Lang }) {
               {others.map((other) => (
                 <li key={other}>
                   <Link href={landingPath(other, lang)} className="text-primary hover:underline">
-                    {COPY[other][lang].navLabel}
+                    {pageNavLabel(other, lang)}
                   </Link>
                 </li>
               ))}

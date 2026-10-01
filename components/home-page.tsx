@@ -19,7 +19,7 @@ import { IpadSection } from "@/components/ipad-section";
 import { HOME_COPY } from "@/lib/home-copy";
 import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n";
 import { SchemaOrg } from "@/components/schema-org";
-import { landingCopy } from "@/components/landing-page";
+import { landingCopy, pageNavLabel } from "@/components/landing-page";
 import { LANDING_IDS, landingPath } from "@/lib/landing/registry";
 import { blogPath, getPostBySlug, installGuidePath, postPath } from "@/lib/blog-posts";
 
@@ -304,6 +304,14 @@ export function HomePage({ lang }: { lang: Lang }) {
                     className="text-muted-foreground transition-colors hover:text-primary"
                   >
                     {t.footer.blog}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={landingPath("m3uChecker", lang)}
+                    className="text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {pageNavLabel("m3uChecker", lang)}
                   </Link>
                 </li>
               </ul>

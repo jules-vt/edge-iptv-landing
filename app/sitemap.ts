@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { SITE } from "@/lib/seo-config";
 import { LANGS, LEGAL_LANGS, homePath, localePath } from "@/lib/i18n";
 import { blogPosts, getPostsByLang, postPath } from "@/lib/blog-posts";
-import { LANDING_IDS, landingPath } from "@/lib/landing/registry";
+import { PAGE_IDS, landingPath } from "@/lib/landing/registry";
 
 export const dynamic = "force-static";
 
@@ -57,8 +57,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   );
 
-  // Product pages, one per search intent, in every language.
-  const landings = LANDING_IDS.flatMap((id) =>
+  // Product pages and free tools, in every language.
+  const landings = PAGE_IDS.flatMap((id) =>
     LANGS.map((lang) => entry(landingPath(id, lang), 0.9, "monthly")),
   );
 

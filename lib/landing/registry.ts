@@ -15,7 +15,12 @@ export type LandingId = "m3u" | "xtream" | "ipad";
 
 export const LANDING_IDS: LandingId[] = ["m3u", "xtream", "ipad"];
 
-export const LANDING_SLUGS: Record<LandingId, Record<Lang, string>> = {
+/** Landing pages plus the free tools, which share the same slug machinery. */
+export type PageId = LandingId | "m3uChecker";
+
+export const PAGE_IDS: PageId[] = [...LANDING_IDS, "m3uChecker"];
+
+export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
   m3u: {
     en: "m3u-player-iphone",
     fr: "lecteur-m3u-iphone",
@@ -43,19 +48,28 @@ export const LANDING_SLUGS: Record<LandingId, Record<Lang, string>> = {
     ar: "iptv-player-ipad",
     it: "lettore-iptv-ipad",
   },
+  m3uChecker: {
+    en: "m3u-checker",
+    fr: "verificateur-m3u",
+    es: "comprobador-m3u",
+    pt: "verificador-m3u",
+    de: "m3u-checker",
+    ar: "m3u-checker",
+    it: "verifica-m3u",
+  },
 };
 
-export function landingPath(id: LandingId, lang: Lang): string {
+export function landingPath(id: PageId, lang: Lang): string {
   return localePath(lang, `/${LANDING_SLUGS[id][lang]}`);
 }
 
 /** Which landing page a root-level slug belongs to, if any. */
-export function findLanding(slug: string, lang: Lang): LandingId | undefined {
-  return LANDING_IDS.find((id) => LANDING_SLUGS[id][lang] === slug);
+export function findLanding(slug: string, lang: Lang): PageId | undefined {
+  return PAGE_IDS.find((id) => LANDING_SLUGS[id][lang] === slug);
 }
 
 /** hreflang cluster of a landing page: every language has it. */
-export function landingAlternates(id: LandingId, lang: Lang) {
+export function landingAlternates(id: PageId, lang: Lang) {
   const base = "https://edge-iptv.app";
   const languages: Record<string, string> = {};
   for (const l of LANGS) languages[l] = `${base}${landingPath(id, l)}`;
