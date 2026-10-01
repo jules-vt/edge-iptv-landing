@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/*
+ * dark: follows the .dark class, like the colour tokens below. Tailwind 4
+ * defaults it to prefers-color-scheme, so on a phone in dark mode the few
+ * dark: boxes turned dark on a page that stays light.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));

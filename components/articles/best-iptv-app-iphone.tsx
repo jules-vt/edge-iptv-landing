@@ -16,6 +16,7 @@ import {
   postPath,
 } from '@/lib/blog-posts';
 import { BEST_IPHONE_COPY } from '@/lib/articles/best-iptv-app-iphone';
+import { plain, rich } from '@/components/rich-text';
 import { type Lang, LOCALES, homePath } from '@/lib/i18n';
 
 // Primary target: "best iptv app for iphone" and its equivalent in each
@@ -45,18 +46,6 @@ const APPS: AppRow[] = [
 ];
 
 const CRITERIA_ICONS = [Smartphone, Wifi, Tv, Download];
-
-/** `**word**` → <strong>word</strong>. */
-function rich(text: string): React.ReactNode {
-  return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
-    i % 2 === 1 ? <strong key={i}>{part}</strong> : part,
-  );
-}
-
-/** FAQ text without the markup, for JSON-LD. */
-function plain(text: string): string {
-  return text.replace(/\*\*(.+?)\*\*/g, '$1');
-}
 
 export function bestIphoneMetadata(lang: Lang): Metadata {
   const copy = BEST_IPHONE_COPY[lang];

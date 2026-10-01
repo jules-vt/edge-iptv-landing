@@ -177,6 +177,48 @@ export const blogPosts: BlogPost[] = [
     basePath: "",
   },
   {
+    slug: "iptv-auf-iphone-ipad-installieren",
+    title: "IPTV auf iPhone & iPad installieren: Anleitung 2026",
+    description:
+      "Schritt für Schritt: IPTV in unter 2 Minuten auf iPhone oder iPad einrichten, mit Xtream Codes oder M3U-Link.",
+    date: "2026-10-01",
+    author: "EDGE IPTV Team",
+    readTime: "5 Min.",
+    image: "/images/iphone-series-3d.png",
+    lang: "de",
+    category: "tutorial",
+    translationGroup: "install-guide",
+    basePath: "",
+  },
+  {
+    slug: "how-to-install-iptv-iphone-ipad",
+    title: "طريقة تثبيت IPTV على الآيفون والآيباد: دليل 2026",
+    description:
+      "دليل خطوة بخطوة لتثبيت IPTV على الآيفون أو الآيباد في أقل من دقيقتين، ببيانات Xtream أو رابط M3U.",
+    date: "2026-10-01",
+    author: "فريق EDGE IPTV",
+    readTime: "5 دقائق",
+    image: "/images/iphone-series-3d.png",
+    lang: "ar",
+    category: "tutorial",
+    translationGroup: "install-guide",
+    basePath: "",
+  },
+  {
+    slug: "come-installare-iptv-iphone-ipad",
+    title: "Come installare l'IPTV su iPhone e iPad: guida 2026",
+    description:
+      "Guida passo passo per installare l'IPTV su iPhone o iPad in meno di 2 minuti, con codici Xtream o link M3U.",
+    date: "2026-10-01",
+    author: "Team EDGE IPTV",
+    readTime: "5 min",
+    image: "/images/iphone-series-3d.png",
+    lang: "it",
+    category: "tutorial",
+    translationGroup: "install-guide",
+    basePath: "",
+  },
+  {
     slug: "best-iptv-player-ios-2026",
     title: "Best IPTV Player for iOS in 2026: Complete Comparison",
     description:
