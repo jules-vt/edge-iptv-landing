@@ -5,8 +5,6 @@ export interface LandingCopy {
   metaTitle: string;
   /** ≤ 160 characters. */
   metaDescription: string;
-  /** Short label used when other pages link here. */
-  navLabel: string;
   eyebrow: string;
   title: string;
   intro: string;

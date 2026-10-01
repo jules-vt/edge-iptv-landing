@@ -12,7 +12,6 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "M3U Player for iPhone & iPad: Open M3U & M3U8 Playlists",
     metaDescription:
       "Play any M3U or M3U8 IPTV playlist on iPhone and iPad. EDGE IPTV sorts live TV, movies and series, loads the TV guide and casts to Chromecast and AirPlay.",
-    navLabel: "M3U player for iPhone",
     eyebrow: "M3U & M3U8 playlists",
     title: "The M3U player for iPhone and iPad",
     intro:
@@ -103,7 +102,6 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Lecteur M3U pour iPhone et iPad : ouvrir une playlist M3U",
     metaDescription:
       "Lisez toute playlist IPTV M3U ou M3U8 sur iPhone et iPad. EDGE IPTV trie TV, films et séries, charge le guide TV et diffuse sur Chromecast et AirPlay.",
-    navLabel: "Lecteur M3U pour iPhone",
     eyebrow: "Playlists M3U et M3U8",
     title: "Le lecteur M3U pour iPhone et iPad",
     intro:
@@ -195,7 +193,6 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Reproductor M3U para iPhone y iPad: abre listas M3U",
     metaDescription:
       "Reproduce cualquier lista IPTV M3U o M3U8 en iPhone y iPad. EDGE IPTV ordena TV, películas y series, carga la guía de TV y envía a Chromecast y AirPlay.",
-    navLabel: "Reproductor M3U para iPhone",
     eyebrow: "Listas M3U y M3U8",
     title: "El reproductor M3U para iPhone y iPad",
     intro:
@@ -287,7 +284,6 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Player M3U para iPhone e iPad: abra listas M3U e M3U8",
     metaDescription:
       "Reproduza qualquer lista IPTV M3U ou M3U8 no iPhone e iPad. O EDGE IPTV organiza TV, filmes e séries, carrega o guia de TV e transmite ao Chromecast e AirPlay.",
-    navLabel: "Player M3U para iPhone",
     eyebrow: "Listas M3U e M3U8",
     title: "O player M3U para iPhone e iPad",
     intro:
@@ -379,7 +375,6 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "M3U-Player für iPhone & iPad: M3U-Playlists öffnen",
     metaDescription:
       "Spiele jede M3U- oder M3U8-IPTV-Playlist auf iPhone und iPad ab. EDGE IPTV sortiert Live-TV, Filme und Serien, lädt den Programmführer, streamt per Chromecast.",
-    navLabel: "M3U-Player fürs iPhone",
     eyebrow: "M3U- & M3U8-Playlists",
     title: "Der M3U-Player für iPhone und iPad",
     intro:
@@ -471,7 +466,6 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "مشغل M3U للآيفون والآيباد: افتح قوائم M3U وM3U8",
     metaDescription:
       "شغّل أي قائمة IPTV بصيغة M3U أو M3U8 على الآيفون والآيباد. يرتّب EDGE IPTV البث المباشر والأفلام والمسلسلات ويحمّل دليل البرامج ويبث إلى Chromecast وAirPlay.",
-    navLabel: "مشغل M3U للآيفون",
     eyebrow: "قوائم M3U وM3U8",
     title: "مشغل M3U للآيفون والآيباد",
     intro:
@@ -560,7 +554,6 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Lettore M3U per iPhone e iPad: apri playlist M3U e M3U8",
     metaDescription:
       "Riproduci qualsiasi playlist IPTV M3U o M3U8 su iPhone e iPad. EDGE IPTV ordina TV, film e serie, carica la guida TV e trasmette su Chromecast e AirPlay.",
-    navLabel: "Lettore M3U per iPhone",
     eyebrow: "Playlist M3U e M3U8",
     title: "Il lettore M3U per iPhone e iPad",
     intro:

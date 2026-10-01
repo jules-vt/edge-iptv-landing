@@ -10,7 +10,6 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "IPTV Player for iPad: Live TV, Movies & TV Guide",
     metaDescription:
       "EDGE IPTV is an IPTV player designed for the iPad screen: a TV guide showing nine channels at once, Split View, Picture in Picture, Chromecast and AirPlay.",
-    navLabel: "IPTV player for iPad",
     eyebrow: "iPad & iPadOS 17+",
     title: "An IPTV player designed for the iPad",
     intro:
@@ -100,7 +99,6 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Lecteur IPTV pour iPad : TV en direct, films et guide TV",
     metaDescription:
       "EDGE IPTV est un lecteur IPTV pensé pour l'écran de l'iPad : guide TV avec neuf chaînes à la fois, Split View, Picture in Picture, Chromecast et AirPlay.",
-    navLabel: "Lecteur IPTV pour iPad",
     eyebrow: "iPad et iPadOS 17+",
     title: "Un lecteur IPTV pensé pour l'iPad",
     intro:
@@ -192,7 +190,6 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Reproductor IPTV para iPad: TV en vivo, películas y guía",
     metaDescription:
       "EDGE IPTV es un reproductor IPTV pensado para la pantalla del iPad: guía de TV con nueve canales a la vez, Split View, Picture in Picture, Chromecast y AirPlay.",
-    navLabel: "Reproductor IPTV para iPad",
     eyebrow: "iPad y iPadOS 17+",
     title: "Un reproductor IPTV pensado para el iPad",
     intro:
@@ -281,7 +278,6 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Player IPTV para iPad: TV ao vivo, filmes e guia de TV",
     metaDescription:
       "O EDGE IPTV é um player IPTV pensado para a tela do iPad: guia de TV com nove canais de uma vez, Split View, Picture in Picture, Chromecast e AirPlay.",
-    navLabel: "Player IPTV para iPad",
     eyebrow: "iPad e iPadOS 17+",
     title: "Um player IPTV pensado para o iPad",
     intro:
@@ -370,7 +366,6 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "IPTV-Player für iPad: Live-TV, Filme & Programmführer",
     metaDescription:
       "EDGE IPTV ist ein IPTV-Player für den iPad-Bildschirm: Programmführer mit neun Sendern auf einmal, Split View, Bild-in-Bild, Chromecast und AirPlay.",
-    navLabel: "IPTV-Player fürs iPad",
     eyebrow: "iPad & iPadOS 17+",
     title: "Ein IPTV-Player, gemacht fürs iPad",
     intro:
@@ -459,7 +454,6 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "مشغل IPTV للآيباد: بث مباشر وأفلام ودليل برامج",
     metaDescription:
       "EDGE IPTV مشغّل IPTV مصمّم لشاشة الآيباد: دليل برامج يعرض تسع قنوات معًا، وSplit View، وصورة داخل صورة، وChromecast وAirPlay.",
-    navLabel: "مشغل IPTV للآيباد",
     eyebrow: "آيباد وiPadOS 17 أو أحدث",
     title: "مشغّل IPTV مصمّم للآيباد",
     intro:
@@ -545,7 +539,6 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Lettore IPTV per iPad: TV in diretta, film e guida TV",
     metaDescription:
       "EDGE IPTV è un lettore IPTV pensato per lo schermo dell'iPad: guida TV con nove canali insieme, Split View, Picture in Picture, Chromecast e AirPlay.",
-    navLabel: "Lettore IPTV per iPad",
     eyebrow: "iPad e iPadOS 17+",
     title: "Un lettore IPTV pensato per l'iPad",
     intro:

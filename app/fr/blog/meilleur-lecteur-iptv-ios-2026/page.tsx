@@ -537,7 +537,7 @@ export default function MeilleurLecteurIPTV() {
         <div className="text-center my-12 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-10 border-2 border-blue-200">
           <h3 className="text-2xl font-bold mb-4">Prêt à Commencer le Streaming ?</h3>
           <p className="text-lg text-gray-600 mb-6">
-            Rejoignez des milliers d&apos;utilisateurs qui ont choisi EDGE IPTV pour l&apos;expérience de streaming iOS ultime
+            Essayez EDGE IPTV gratuitement pendant 7 jours sur votre iPhone ou iPad
           </p>
           <DownloadButton location="article-best-player-final-fr" size="xl">
             Démarrer l&apos;essai gratuit de 7 jours

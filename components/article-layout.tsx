@@ -6,6 +6,7 @@ import { Breadcrumb } from '@/components/breadcrumb';
 import { ArticleToc } from '@/components/article-toc';
 import { ArticleCtaCard, ArticleCtaInline, ArticleCtaSticky } from '@/components/article-cta';
 import { RelatedArticles } from '@/components/related-articles';
+import { ArticleProductLinks } from '@/components/article-product-links';
 import { DownloadButton } from '@/components/download-button';
 import { formatPostDate } from '@/lib/format-date';
 import type { Lang } from '@/lib/blog-posts';
@@ -173,6 +174,7 @@ export function ArticleLayout({
               </div>
             </div>
 
+            <ArticleProductLinks lang={lang} />
             <RelatedArticles lang={lang} />
           </article>
 

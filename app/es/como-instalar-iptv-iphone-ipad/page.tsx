@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Download, ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { ArticleProductLinks } from '@/components/article-product-links';
 import { LanguageSwitcher } from '@/components/language-switcher';
 
 export const metadata: Metadata = {
@@ -166,7 +167,9 @@ export default function HowToInstallES() {
           <div className="flex items-center gap-4">
             <LanguageSwitcher currentLang="es" />
             <Link 
-              href="https://j-analytics.cloud/q/Z0m1Qmdtf" 
+              href="https://j-analytics.cloud/q/Z0m1Qmdtf"
+                data-umami-event="download_click"
+                data-umami-event-location="guide-es-1" 
               className="hidden sm:inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all"
             >
               <Download size={16} />
@@ -231,7 +234,9 @@ export default function HowToInstallES() {
               </div>
               
               <Link 
-                href="https://j-analytics.cloud/q/Z0m1Qmdtf" 
+                href="https://j-analytics.cloud/q/Z0m1Qmdtf"
+                data-umami-event="download_click"
+                data-umami-event-location="guide-es-2" 
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all transform hover:-translate-y-1"
               >
                 <Download size={20} />
@@ -307,6 +312,8 @@ export default function HowToInstallES() {
               </div>
             </div>
           </div>
+
+          <ArticleProductLinks lang="es" />
 
           <div className="mt-16 pt-8 border-t border-gray-200 text-center">
             <Link 

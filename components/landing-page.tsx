@@ -10,7 +10,7 @@ import { blogPath, installGuidePath } from '@/lib/blog-posts';
 import { type Lang, LANGS, LOCALES, homePath } from '@/lib/i18n';
 import { defaultOG, defaultTwitter, SITE } from '@/lib/seo-config';
 import { type LandingId, type PageId, PAGE_IDS, landingAlternates, landingPath } from '@/lib/landing/registry';
-import { CHECKER_COPY } from '@/lib/m3u-checker-copy';
+import { NAV_LABELS } from '@/lib/landing/nav-labels';
 import { type LandingCopy, LANDING_UI } from '@/lib/landing/types';
 import { M3U_COPY } from '@/lib/landing/m3u';
 import { XTREAM_COPY } from '@/lib/landing/xtream';
@@ -22,13 +22,9 @@ const COPY: Record<LandingId, Record<Lang, LandingCopy>> = {
   ipad: IPAD_COPY,
 };
 
-export function landingCopy(id: LandingId, lang: Lang): LandingCopy {
-  return COPY[id][lang];
-}
-
 /** Link label for any product page or tool. */
 export function pageNavLabel(id: PageId, lang: Lang): string {
-  return id === 'm3uChecker' ? CHECKER_COPY[lang].navLabel : COPY[id][lang].navLabel;
+  return NAV_LABELS[id][lang];
 }
 
 function heroImage(id: LandingId, lang: Lang) {
@@ -93,7 +89,7 @@ export function LandingPage({ id, lang }: { id: LandingId; lang: Lang }) {
         <div className="container mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: ui.home, href: homePath(lang) }]}
-            currentPage={copy.navLabel}
+            currentPage={NAV_LABELS[id][lang]}
             lang={lang}
           />
           <div

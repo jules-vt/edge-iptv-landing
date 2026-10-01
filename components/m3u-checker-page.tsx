@@ -72,7 +72,7 @@ export function M3UCheckerPage({ lang }: { lang: Lang }) {
       <BlogHeader currentLang={lang} />
 
       <main className="container mx-auto max-w-5xl px-4 pb-16 pt-28">
-        <Breadcrumb items={[{ label: ui.home, href: homePath(lang) }]} currentPage={copy.navLabel} lang={lang} />
+        <Breadcrumb items={[{ label: ui.home, href: homePath(lang) }]} currentPage={pageNavLabel('m3uChecker', lang)} lang={lang} />
 
         <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
           {copy.eyebrow}

@@ -55,7 +55,6 @@ export interface CheckerUi {
 export interface CheckerCopy {
   metaTitle: string;
   metaDescription: string;
-  navLabel: string;
   eyebrow: string;
   title: string;
   intro: string;
@@ -72,7 +71,6 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
     metaTitle: "M3U Checker: Test & Analyze an IPTV Playlist Online",
     metaDescription:
       "Free M3U and M3U8 playlist checker. Count channels, movies and series, find the TV guide, duplicates and broken entries. Runs in your browser, nothing uploaded.",
-    navLabel: "M3U playlist checker",
     eyebrow: "Free tool · no sign-up",
     title: "M3U playlist checker",
     intro:
@@ -178,7 +176,6 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
     metaTitle: "Vérificateur M3U : tester et analyser une playlist IPTV",
     metaDescription:
       "Vérificateur gratuit de playlists M3U et M3U8 : chaînes, films, séries, guide TV, doublons et entrées cassées. Tout reste dans le navigateur, rien n'est envoyé.",
-    navLabel: "Vérificateur de playlist M3U",
     eyebrow: "Outil gratuit · sans inscription",
     title: "Vérificateur de playlist M3U",
     intro:
@@ -284,7 +281,6 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
     metaTitle: "Comprobador M3U: prueba y analiza una lista IPTV online",
     metaDescription:
       "Comprobador gratis de listas M3U y M3U8: canales, películas, series, guía de TV, duplicados y entradas rotas. Funciona en tu navegador, no se sube nada.",
-    navLabel: "Comprobador de listas M3U",
     eyebrow: "Herramienta gratis · sin registro",
     title: "Comprobador de listas M3U",
     intro:
@@ -390,7 +386,6 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
     metaTitle: "Verificador M3U: teste e analise uma lista IPTV online",
     metaDescription:
       "Verificador grátis de listas M3U e M3U8: canais, filmes, séries, guia de TV, duplicados e entradas quebradas. Roda no navegador, nada é enviado.",
-    navLabel: "Verificador de listas M3U",
     eyebrow: "Ferramenta grátis · sem cadastro",
     title: "Verificador de listas M3U",
     intro:
@@ -496,7 +491,6 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
     metaTitle: "M3U-Checker: IPTV-Playlist online testen & analysieren",
     metaDescription:
       "Kostenloser Checker für M3U- und M3U8-Playlists: Sender, Filme, Serien, TV-Guide, Duplikate und defekte Einträge. Läuft im Browser, nichts wird hochgeladen.",
-    navLabel: "M3U-Playlist-Checker",
     eyebrow: "Kostenloses Tool · ohne Anmeldung",
     title: "M3U-Playlist-Checker",
     intro:
@@ -602,7 +596,6 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
     metaTitle: "فاحص M3U: اختبر وحلّل قائمة IPTV عبر الإنترنت",
     metaDescription:
       "فاحص مجاني لقوائم M3U وM3U8: القنوات والأفلام والمسلسلات ودليل البرامج والتكرارات والعناصر المعطوبة. يعمل في متصفحك ولا يُرفع أي شيء.",
-    navLabel: "فاحص قوائم M3U",
     eyebrow: "أداة مجانية · دون تسجيل",
     title: "فاحص قوائم M3U",
     intro:
@@ -708,7 +701,6 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
     metaTitle: "Verifica M3U: testa e analizza una playlist IPTV online",
     metaDescription:
       "Verifica gratuita di playlist M3U e M3U8: canali, film, serie, guida TV, duplicati e voci rotte. Funziona nel browser, non viene caricato nulla.",
-    navLabel: "Verifica playlist M3U",
     eyebrow: "Strumento gratuito · senza registrazione",
     title: "Verifica playlist M3U",
     intro:

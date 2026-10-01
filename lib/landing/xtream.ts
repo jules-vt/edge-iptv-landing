@@ -11,7 +11,6 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Xtream Codes Player for iPhone & iPad | EDGE IPTV",
     metaDescription:
       "Log in with your Xtream Codes (server, username, password) and watch live TV, movies and series on iPhone and iPad, with TV guide, Chromecast and AirPlay.",
-    navLabel: "Xtream Codes player for iPhone",
     eyebrow: "Xtream Codes API",
     title: "The Xtream Codes player for iPhone and iPad",
     intro:
@@ -103,7 +102,6 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Lecteur Xtream Codes pour iPhone et iPad | EDGE IPTV",
     metaDescription:
       "Connectez vos codes Xtream (serveur, identifiant, mot de passe) et regardez TV, films et séries sur iPhone et iPad, avec guide TV, Chromecast et AirPlay.",
-    navLabel: "Lecteur Xtream Codes pour iPhone",
     eyebrow: "API Xtream Codes",
     title: "Le lecteur Xtream Codes pour iPhone et iPad",
     intro:
@@ -195,7 +193,6 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Reproductor Xtream Codes para iPhone y iPad | EDGE IPTV",
     metaDescription:
       "Conecta tus códigos Xtream (servidor, usuario, contraseña) y mira TV, películas y series en iPhone y iPad, con guía de TV, Chromecast y AirPlay.",
-    navLabel: "Reproductor Xtream Codes para iPhone",
     eyebrow: "API Xtream Codes",
     title: "El reproductor Xtream Codes para iPhone y iPad",
     intro:
@@ -287,7 +284,6 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Player Xtream Codes para iPhone e iPad | EDGE IPTV",
     metaDescription:
       "Conecte seus códigos Xtream (servidor, usuário, senha) e assista TV, filmes e séries no iPhone e iPad, com guia de TV, Chromecast e AirPlay.",
-    navLabel: "Player Xtream Codes para iPhone",
     eyebrow: "API Xtream Codes",
     title: "O player Xtream Codes para iPhone e iPad",
     intro:
@@ -379,7 +375,6 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Xtream-Codes-Player für iPhone & iPad | EDGE IPTV",
     metaDescription:
       "Melde dich mit deinen Xtream Codes (Server, Benutzername, Passwort) an und schau Live-TV, Filme und Serien auf iPhone und iPad, mit TV-Guide und Chromecast.",
-    navLabel: "Xtream-Codes-Player fürs iPhone",
     eyebrow: "Xtream-Codes-API",
     title: "Der Xtream-Codes-Player für iPhone und iPad",
     intro:
@@ -471,7 +466,6 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "مشغل Xtream Codes للآيفون والآيباد | EDGE IPTV",
     metaDescription:
       "سجّل الدخول ببيانات Xtream (الخادم واسم المستخدم وكلمة المرور) وشاهد البث المباشر والأفلام والمسلسلات على الآيفون والآيباد مع دليل البرامج وChromecast وAirPlay.",
-    navLabel: "مشغل Xtream Codes للآيفون",
     eyebrow: "واجهة Xtream Codes",
     title: "مشغل Xtream Codes للآيفون والآيباد",
     intro:
@@ -558,7 +552,6 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
     metaTitle: "Lettore Xtream Codes per iPhone e iPad | EDGE IPTV",
     metaDescription:
       "Accedi con i tuoi codici Xtream (server, nome utente, password) e guarda TV, film e serie su iPhone e iPad, con guida TV, Chromecast e AirPlay.",
-    navLabel: "Lettore Xtream Codes per iPhone",
     eyebrow: "API Xtream Codes",
     title: "Il lettore Xtream Codes per iPhone e iPad",
     intro:

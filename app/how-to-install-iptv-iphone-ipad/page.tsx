@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 import { Breadcrumb } from '@/components/breadcrumb';
+import { ArticleProductLinks } from '@/components/article-product-links';
 import { DownloadButton } from '@/components/download-button';
 import { buildAlternates, defaultOG, defaultTwitter } from '@/lib/seo-config';
 import { LanguageSwitcher } from '@/components/language-switcher';
@@ -330,11 +331,13 @@ export default function HowToInstall() {
             </div>
           </div>
 
+          <ArticleProductLinks lang="en" />
+
           {/* Final CTA */}
           <div className="mt-16 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-10 text-center border border-blue-200">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Start Streaming Today!</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands of users who chose EDGE IPTV for the best streaming experience on iPhone and iPad. Setup takes less than 2 minutes.
+              Download EDGE IPTV, add your M3U or Xtream Codes playlist and start watching on iPhone and iPad. Setup takes less than 2 minutes.
             </p>
             <DownloadButton location="guide-final" size="xl" />
             <p className="mt-4 text-sm text-gray-500">✓ 7-day free trial ✓ Works with all IPTV providers ✓ Chromecast & AirPlay support</p>

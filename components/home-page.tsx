@@ -19,7 +19,7 @@ import { IpadSection } from "@/components/ipad-section";
 import { HOME_COPY } from "@/lib/home-copy";
 import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n";
 import { SchemaOrg } from "@/components/schema-org";
-import { landingCopy, pageNavLabel } from "@/components/landing-page";
+import { pageNavLabel } from "@/components/landing-page";
 import { LANDING_IDS, landingPath } from "@/lib/landing/registry";
 import { blogPath, getPostBySlug, installGuidePath, postPath } from "@/lib/blog-posts";
 
@@ -289,7 +289,7 @@ export function HomePage({ lang }: { lang: Lang }) {
                       href={landingPath(id, lang)}
                       className="text-muted-foreground transition-colors hover:text-primary"
                     >
-                      {landingCopy(id, lang).navLabel}
+                      {pageNavLabel(id, lang)}
                     </Link>
                   </li>
                 ))}

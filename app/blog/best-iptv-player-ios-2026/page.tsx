@@ -557,7 +557,7 @@ export default function BestIPTVPlayerArticle() {
         <div className="text-center my-12 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-10 border-2 border-blue-200">
           <h3 className="text-2xl font-bold mb-4">Ready to Start Streaming?</h3>
           <p className="text-lg text-gray-600 mb-6">
-            Join thousands of users who chose EDGE IPTV for the ultimate iOS streaming experience
+            Try EDGE IPTV free for 7 days on your iPhone or iPad
           </p>
           <DownloadButton location="article-best-player-final" size="xl">
             Start your 7-day free trial
