@@ -25,9 +25,6 @@ jobs:
       - name: Build Next.js
         run: yarn build
 
-      - name: Copy .htaccess to out folder
-        run: cp .htaccess out/.htaccess
-
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh

@@ -11,7 +11,7 @@ import { LanguageSwitcher } from '@/components/language-switcher';
 export const metadata: Metadata = {
   // Title optimized for: "how to install iptv on iphone", "how to download iptv on iphone",
   // "how to setup iptv on iphone", "how to get iptv on ipad"
-  title: 'How to Install IPTV on iPhone & iPad 2026 | Free 2-Minute Guide',
+  title: 'How to Install IPTV on iPhone & iPad (2026 Guide)',
   description:
     'Step-by-step guide to install IPTV on iPhone or iPad in under 2 minutes. Works with any IPTV provider via Xtream codes or M3U URL. Download EDGE IPTV free.',
   alternates: buildAlternates({

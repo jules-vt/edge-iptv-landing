@@ -303,7 +303,7 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     slug: "meilleure-app-iptv-iphone",
     metaTitle: "Meilleure app IPTV pour iPhone 2026 : 5 apps testées",
     metaDescription:
-      "Quelle est la meilleure app IPTV pour iPhone ? Nous avons testé les 5 plus populaires en 2026 : rapidité d'installation, Chromecast, hors ligne, confort sur iOS.",
+      "Quelle est la meilleure app IPTV pour iPhone ? Nous avons testé les 5 plus populaires en 2026 : installation, Chromecast, hors ligne et confort sur iOS.",
     socialDescription:
       "5 apps IPTV pour iPhone testées en 2026 : installation, Chromecast, visionnage hors ligne.",
     title: "Meilleure app IPTV pour iPhone 2026 : 5 apps testées",

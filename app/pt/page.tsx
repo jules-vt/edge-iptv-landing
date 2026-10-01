@@ -4,8 +4,8 @@ import { HomePage } from "@/components/home-page";
 import { buildAlternates, defaultOG, defaultTwitter, SITE } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-  title: 'EDGE IPTV — Reprodutor IPTV para iPhone e iPad (M3U e Xtream)',
-  description: 'O EDGE IPTV transforma seu iPhone e iPad num centro de streaming para TV ao vivo, filmes e séries. M3U e Xtream, guia de TV, Chromecast, AirPlay e downloads offline.',
+  title: 'EDGE IPTV — Reprodutor IPTV para iPhone e iPad (M3U/Xtream)',
+  description: 'O EDGE IPTV transforma seu iPhone e iPad numa central de TV ao vivo, filmes e séries: M3U e Xtream, guia de TV, Chromecast, AirPlay e downloads.',
   alternates: buildAlternates({
     en: '/',
     fr: '/fr',
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: `${SITE.url}/pt`,
-    title: 'EDGE IPTV — Reprodutor IPTV para iPhone e iPad (M3U e Xtream)',
-    description: 'O EDGE IPTV transforma seu iPhone e iPad num centro de streaming para TV ao vivo, filmes e séries. M3U e Xtream, guia de TV, Chromecast, AirPlay e downloads offline.',
+    title: 'EDGE IPTV — Reprodutor IPTV para iPhone e iPad (M3U/Xtream)',
+    description: 'O EDGE IPTV transforma seu iPhone e iPad numa central de TV ao vivo, filmes e séries: M3U e Xtream, guia de TV, Chromecast, AirPlay e downloads.',
   },
-  twitter: { ...defaultTwitter, title: 'EDGE IPTV — Reprodutor IPTV para iPhone e iPad (M3U e Xtream)', description: 'O EDGE IPTV transforma seu iPhone e iPad num centro de streaming para TV ao vivo, filmes e séries. M3U e Xtream, guia de TV, Chromecast, AirPlay e downloads offline.' },
+  twitter: { ...defaultTwitter, title: 'EDGE IPTV — Reprodutor IPTV para iPhone e iPad (M3U/Xtream)', description: 'O EDGE IPTV transforma seu iPhone e iPad numa central de TV ao vivo, filmes e séries: M3U e Xtream, guia de TV, Chromecast, AirPlay e downloads.' },
 };
 
 export default function HomePT() {

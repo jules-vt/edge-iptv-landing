@@ -51,7 +51,7 @@ export function BlogHeader({ currentLang }: BlogHeaderProps) {
       <div className="container mx-auto px-4 h-16 flex justify-between items-center">
         <Link href={homeLink} className="flex items-center gap-3">
           <div className="relative w-10 h-10 overflow-hidden rounded-xl shadow-sm">
-            <Image src="/images/icon.png" alt="EDGE IPTV Logo" fill className="object-cover" />
+            <Image src="/images/icon.png" alt="EDGE IPTV Logo" width={40} height={40} className="h-10 w-10 object-cover" />
           </div>
           <span className="text-xl font-bold tracking-tight">EDGE IPTV</span>
         </Link>

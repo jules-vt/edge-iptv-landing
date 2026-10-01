@@ -38,7 +38,7 @@ Ces points sont indépendants du choix de design — à corriger dans tous les c
 ### Phase 0 — Corrections critiques ✅ terminée le 2026-09-26
 - [x] Supprimer `aggregateRating` et `reviewSchema` fabriqués de `schema-org.tsx`
 - [x] Supprimer les 4 `VideoObject` fantômes (aucune vraie vidéo n'existe ; à rebrancher proprement le jour où une démo sera tournée)
-- [x] Forcer HTTPS et rediriger `www` → apex dans `.htaccess` (la règle HTTPS teste aussi `X-Forwarded-Proto`, sinon elle boucle derrière un reverse proxy)
+- [x] Forcer HTTPS et rediriger `www` → apex — d'abord écrit dans `.htaccess`, **qui n'a jamais été lu** : le serveur est nginx. Refait dans le vhost nginx le 2026-09-27 et vérifié en production ; le `.htaccess` a été supprimé du repo le 2026-10-01
 - [x] Unifier la table de traduction en une seule source de vérité : `translationGroup` sur chaque `BlogPost`, plus `buildBlogAlternates()` utilisé par les 25 pages
 - [x] Vérifier le lien CTA : OK, 1 redirection, 533 ms, arrive bien sur la fiche App Store
 
@@ -108,7 +108,7 @@ Le site passe de 4 à **7 langues** : allemand, arabe et italien s'ajoutent à e
 
 Reste à traduire pour ces 3 langues (le contenu existant reste en anglais, sans lien mort) :
 - [ ] Guide d'installation (la page la plus visitée après la homepage)
-- [ ] Articles de blog
+- [~] Articles de blog — `best-iptv-app-for-iphone` traduit le 2026-10-01 (ouvre `/de/blog`, `/ar/blog`, `/it/blog`) ; les 5 autres restent à faire
 - [ ] Pages légales — textes juridiques, à traduire sérieusement ou pas du tout
 
 ### Phase 4 — Skill de suivi SEO continu
@@ -118,3 +118,4 @@ Voir `~/.claude/skills/seo-monitor` (à créer). Protocole récurrent : réimpor
 
 - 2026-09-26 : plan initial créé, décisions langues/ampleur actées avec Jules. Première snapshot Search Console enregistrée dans `docs/seo/snapshots/2026-09-26.md` (baseline avant corrections Phase 0). Skill `seo-monitor` créé pour le suivi récurrent.
 - 2026-09-26 : Phase 0 terminée. À surveiller sur la prochaine snapshot : (1) disparition de l'erreur « Données structurées Vidéos » dans Search Console, (2) désindexation progressive des ~70 URLs soft-404 et des doublons `.html`/`www`, (3) effet des hreflang réparés sur les positions es/pt. **Penser à redéployer** — les corrections ne sont pas encore en ligne au moment de cette note.
+- 2026-10-01 : l'article `best-iptv-app-for-iphone` (requête la plus commerciale) existe dans les 7 langues, texte dans `lib/articles/best-iptv-app-iphone.ts`. Il affirmait encore une note de 5.0, « Free » et « no in-app purchases » : corrigé. En chemin : le Smart App Banner pointait vers l'app v1 ; chaque page traduite portait deux `SoftwareApplication` (layout racine + layout de langue), désormais rendus sur les seules homepages ; le `BreadcrumbList` émettait « / » comme URL. Titles ≤ 60 et descriptions ≤ 160 sur les 51 pages, `.htaccess` supprimé. À surveiller : indexation des 6 nouvelles URL et des 3 index de blog, et l'effet des titles raccourcis sur le CTR.

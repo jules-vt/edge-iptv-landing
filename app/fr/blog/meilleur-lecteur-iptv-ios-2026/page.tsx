@@ -8,7 +8,7 @@ import { DownloadButton } from '@/components/download-button';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Meilleur Lecteur IPTV pour iOS 2026 | Comparatif des 7 Meilleures Apps',
+  title: 'Meilleur lecteur IPTV iOS 2026 : comparatif de 7 apps',
   description: '★ Comparez les 7 meilleurs lecteurs IPTV pour iPhone & iPad en 2026. Fonctionnalités, avantages, inconvénients et pourquoi EDGE IPTV est #1.',
   alternates: buildBlogAlternates('meilleur-lecteur-iptv-ios-2026', 'fr'),
   openGraph: {

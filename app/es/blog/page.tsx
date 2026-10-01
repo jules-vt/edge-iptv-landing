@@ -5,7 +5,7 @@ import { defaultOG, SITE } from '@/lib/seo-config';
 import { blogIndexAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Blog EDGE IPTV - Tutoriales, Guías y Consejos para Streaming iOS',
+  title: 'Blog EDGE IPTV: tutoriales y guías IPTV para iPhone',
   description: 'Aprende todo sobre streaming IPTV en iPhone y iPad. Tutoriales paso a paso, guías de configuración, solución de problemas y últimas funciones.',
   alternates: blogIndexAlternates('es'),
   openGraph: {

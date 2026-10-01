@@ -9,7 +9,7 @@ import { defaultOG, defaultTwitter } from '@/lib/seo-config';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'How to Cast IPTV to Chromecast 2026 | Complete Streaming Guide',
+  title: 'How to Cast IPTV to Chromecast from iPhone (2026 Guide)',
   description:
     'Learn how to cast IPTV from EDGE IPTV to your Chromecast device. Step-by-step setup, troubleshooting, and tips for the best streaming experience.',
   alternates: buildBlogAlternates('chromecast-iptv-streaming-guide', 'en'),

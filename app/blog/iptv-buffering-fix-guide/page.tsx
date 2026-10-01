@@ -9,7 +9,7 @@ import { defaultOG, defaultTwitter } from '@/lib/seo-config';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'How to Fix IPTV Buffering Issues: Complete 2026 Guide | EDGE IPTV',
+  title: 'How to Fix IPTV Buffering Issues: Complete 2026 Guide',
   description:
     'Solve IPTV buffering problems permanently. Learn the 10+ causes, diagnostic tests, network optimizations, and how EDGE IPTV features help reduce buffering.',
   keywords:

@@ -7,7 +7,7 @@ import { DownloadButton } from '@/components/download-button';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Guide Configuration Playlist M3U 2026 | Tutoriel Configuration Complète',
+  title: 'Configurer une playlist M3U : guide complet 2026',
   description: 'Maîtrisez la configuration des playlists M3U dans EDGE IPTV. Apprenez M3U vs M3U8, configuration EPG, dépannage et quand utiliser M3U.',
   alternates: buildBlogAlternates('configurer-playlist-m3u-guide', 'fr'),
   openGraph: {

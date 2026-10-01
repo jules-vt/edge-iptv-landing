@@ -7,7 +7,7 @@ import { DownloadButton } from '@/components/download-button';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Guia de Streaming IPTV com Chromecast 2026 | Tutorial Completo',
+  title: 'Como transmitir IPTV para Chromecast: guia completo 2026',
   description: 'Aprenda como transmitir IPTV para sua TV com Chromecast usando EDGE IPTV. Guia passo a passo fácil.',
   alternates: buildBlogAlternates('guia-streaming-iptv-chromecast-pt', 'pt'),
   openGraph: {

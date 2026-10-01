@@ -9,7 +9,7 @@ import { defaultOG, defaultTwitter } from '@/lib/seo-config';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Xtream Codes Setup Guide 2026 | 2-Minute Configuration Tutorial',
+  title: 'Xtream Codes Setup Guide 2026: Configure in 2 Minutes',
   description:
     'Learn how to configure Xtream codes in EDGE IPTV in under 2 minutes. Step-by-step setup with screenshots, common errors, and troubleshooting tips.',
   alternates: buildBlogAlternates('xtream-codes-setup-guide', 'en'),

@@ -60,9 +60,6 @@ Configure these secrets in your GitHub repository (Settings → Secrets and vari
 # Build the project
 yarn build
 
-# Copy .htaccess to out folder
-cp .htaccess out/.htaccess
-
 # Deploy to VPS
 cd out
 rsync -avz --delete --progress \
@@ -93,14 +90,15 @@ rsync -avz --delete --progress \
 
 ### Nginx Configuration
 
-The VPS uses Nginx with the following configuration for handling routes:
+The site is served by **nginx**, not Apache: there is no `.htaccess` and any
+added to the repo would be ignored. Redirects live in the vhost on the VPS,
+`/etc/nginx/sites-available/edge-iptv.app`:
 
-- Redirects `/fr/` to `/fr.html`
-- Serves `.html` files without extension
-- Custom error pages (403 → 404)
-- Disable directory listing
+- `www.edge-iptv.app` → `edge-iptv.app` (301)
+- `/page.html` → `/page` (301), and `/page` serves `page.html`
+- Custom error pages (403 → 404), no directory listing
 
-See `.htaccess` for Apache configuration (reference only).
+After changing it, check production with `curl -sI`, not the repo.
 
 ## 📝 License
 

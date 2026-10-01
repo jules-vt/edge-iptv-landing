@@ -7,8 +7,8 @@ import { DownloadButton } from '@/components/download-button';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Guia de Configuração de Códigos Xtream 2026 | Tutorial de 2 Minutos',
-  description: 'Aprenda como configurar códigos Xtream no EDGE IPTV em menos de 2 minutos. Guia passo a passo com capturas de tela, erros comuns e dicas de solução de problemas.',
+  title: 'Configurar códigos Xtream 2026: guia em 2 minutos',
+  description: 'Configure códigos Xtream no EDGE IPTV em menos de 2 minutos. Guia passo a passo com capturas de tela, erros comuns e soluções.',
   alternates: buildBlogAlternates('configurar-codigos-xtream-pt', 'pt'),
   openGraph: {
     title: 'Configuração de Códigos Xtream: Guia Completo 2026',

@@ -7,8 +7,8 @@ import { Breadcrumb } from '@/components/breadcrumb';
 import { LanguageSwitcher } from '@/components/language-switcher';
 
 export const metadata: Metadata = {
-  title: 'Comment Installer IPTV sur iPhone et iPad - Guide Étape par Étape 2026',
-  description: 'Guide complet étape par étape pour installer et configurer EDGE IPTV sur iPhone et iPad. Apprenez à configurer les codes Xtream et commencez à streamer en 30 secondes.',
+  title: 'Installer l\'IPTV sur iPhone et iPad : guide 2026',
+  description: 'Guide pas à pas pour installer et configurer EDGE IPTV sur iPhone et iPad : codes Xtream ou playlist M3U, en quelques minutes.',
   alternates: {
     canonical: 'https://edge-iptv.app/fr/comment-installer-iptv-iphone-ipad',
     languages: {

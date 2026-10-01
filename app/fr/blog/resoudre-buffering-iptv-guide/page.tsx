@@ -7,8 +7,8 @@ import { DownloadButton } from '@/components/download-button';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Comment Résoudre les Problèmes de Buffering IPTV : Guide 2026',
-  description: 'Éliminez le buffering IPTV définitivement. Découvrez les 10+ causes, tests diagnostiques, optimisations réseau et fonctionnalités EDGE IPTV qui réduisent le buffering.',
+  title: 'Résoudre le buffering IPTV : guide complet 2026',
+  description: 'Éliminez le buffering IPTV : les 10+ causes, les tests de diagnostic, les réglages réseau et les fonctions d\'EDGE IPTV qui le réduisent.',
   keywords: 'iptv buffering, buffering iptv, iptv qui freeze, iptv qui lag, résoudre buffering iptv, iptv saccadé, problème iptv buffering 2026',
   alternates: buildBlogAlternates('resoudre-buffering-iptv-guide', 'fr'),
   openGraph: {
