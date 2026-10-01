@@ -1,4 +1,5 @@
 import { type Lang, LANGS, LOCALES, localePath } from "@/lib/i18n";
+import { buildAlternates } from "@/lib/seo-config";
 
 export type { Lang };
 export { LANGS };
@@ -32,12 +33,90 @@ export const blogPosts: BlogPost[] = [
     slug: "best-iptv-app-for-iphone",
     title: "Best IPTV App for iPhone 2026: Top 5 Free Apps Tested",
     description:
-      "We tested the 5 most popular free IPTV apps on iPhone to find the fastest, most reliable, and easiest to set up in 2026.",
+      "We tested the 5 most popular IPTV apps on iPhone to find the fastest, most reliable and easiest to set up in 2026.",
     date: "2026-03-11",
     author: "EDGE IPTV Team",
     readTime: "7 min read",
     image: "/images/iphone-series-3d.png",
     lang: "en",
+    category: "guide",
+    translationGroup: "best-iptv-app-iphone",
+  },
+  {
+    slug: "meilleure-app-iptv-iphone",
+    title: "Meilleure app IPTV pour iPhone 2026 : 5 apps testées",
+    description:
+      "Nous avons testé les 5 apps IPTV les plus populaires sur iPhone pour trouver la plus rapide, la plus fiable et la plus simple à configurer.",
+    date: "2026-10-01",
+    author: "Équipe EDGE IPTV",
+    readTime: "7 min",
+    image: "/images/iphone-series-3d.png",
+    lang: "fr",
+    category: "guide",
+    translationGroup: "best-iptv-app-iphone",
+  },
+  {
+    slug: "mejor-app-iptv-iphone",
+    title: "Mejor app IPTV para iPhone 2026: 5 apps probadas",
+    description:
+      "Probamos las 5 apps IPTV más populares en iPhone para encontrar la más rápida, la más fiable y la más fácil de configurar.",
+    date: "2026-10-01",
+    author: "Equipo EDGE IPTV",
+    readTime: "7 min",
+    image: "/images/iphone-series-3d.png",
+    lang: "es",
+    category: "guide",
+    translationGroup: "best-iptv-app-iphone",
+  },
+  {
+    slug: "melhor-app-iptv-iphone",
+    title: "Melhor app IPTV para iPhone 2026: 5 apps testados",
+    description:
+      "Testamos os 5 apps IPTV mais populares no iPhone para encontrar o mais rápido, o mais confiável e o mais fácil de configurar.",
+    date: "2026-10-01",
+    author: "Equipe EDGE IPTV",
+    readTime: "7 min",
+    image: "/images/iphone-series-3d.png",
+    lang: "pt",
+    category: "guide",
+    translationGroup: "best-iptv-app-iphone",
+  },
+  {
+    slug: "beste-iptv-app-iphone",
+    title: "Beste IPTV-App für iPhone 2026: 5 Apps im Test",
+    description:
+      "Wir haben die 5 beliebtesten IPTV-Apps auf dem iPhone getestet, um die schnellste, zuverlässigste und am einfachsten einzurichtende zu finden.",
+    date: "2026-10-01",
+    author: "EDGE IPTV Team",
+    readTime: "7 Min.",
+    image: "/images/iphone-series-3d.png",
+    lang: "de",
+    category: "guide",
+    translationGroup: "best-iptv-app-iphone",
+  },
+  {
+    slug: "best-iptv-app-for-iphone",
+    title: "أفضل تطبيق IPTV للآيفون 2026: اختبرنا 5 تطبيقات",
+    description:
+      "اختبرنا أشهر 5 تطبيقات IPTV على الآيفون لنجد الأسرع والأكثر ثباتًا والأسهل في الإعداد.",
+    date: "2026-10-01",
+    author: "فريق EDGE IPTV",
+    readTime: "7 دقائق",
+    image: "/images/iphone-series-3d.png",
+    lang: "ar",
+    category: "guide",
+    translationGroup: "best-iptv-app-iphone",
+  },
+  {
+    slug: "migliore-app-iptv-iphone",
+    title: "Migliore app IPTV per iPhone 2026: 5 app provate",
+    description:
+      "Abbiamo provato le 5 app IPTV più popolari su iPhone per trovare la più veloce, la più affidabile e la più semplice da configurare.",
+    date: "2026-10-01",
+    author: "Team EDGE IPTV",
+    readTime: "7 min",
+    image: "/images/iphone-series-3d.png",
+    lang: "it",
     category: "guide",
     translationGroup: "best-iptv-app-iphone",
   },
@@ -451,4 +530,18 @@ export function installGuidePath(lang: Lang): string {
 /** Blog index for a language, falling back to English when it has no posts. */
 export function blogPath(lang: Lang): string {
   return getPostsByLang(lang).length > 0 ? localePath(lang, "/blog") : "/blog";
+}
+
+/**
+ * hreflang for the blog indexes: every language that has at least one post.
+ * Derived rather than hand-written so a new language's index joins the
+ * cluster on every other index at the same time — reciprocity is what makes
+ * Google honour hreflang at all.
+ */
+export function blogIndexAlternates(lang: Lang) {
+  const paths: Partial<Record<Lang, string>> = {};
+  for (const l of LANGS) {
+    if (getPostsByLang(l).length > 0) paths[l] = localePath(l, "/blog");
+  }
+  return buildAlternates(paths, lang);
 }

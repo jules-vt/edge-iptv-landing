@@ -18,6 +18,7 @@ import { DownloadButton } from "@/components/download-button";
 import { IpadSection } from "@/components/ipad-section";
 import { HOME_COPY } from "@/lib/home-copy";
 import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n";
+import { SchemaOrg } from "@/components/schema-org";
 import { blogPath, getPostBySlug, installGuidePath, postPath } from "@/lib/blog-posts";
 
 const FAQ = dynamic(
@@ -58,6 +59,10 @@ export function HomePage({ lang }: { lang: Lang }) {
       dir={LOCALES[lang].dir}
       className="min-h-screen bg-background font-sans selection:bg-primary/20"
     >
+      {/* App, brand and site schemas describe the product, so they live on the
+          home page only. Rendered from the layouts, every localised page
+          carried two contradictory copies: the English one and its own. */}
+      <SchemaOrg lang={lang} />
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <Link href={home} className="flex items-center gap-3">

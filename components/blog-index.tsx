@@ -6,7 +6,7 @@ import { BlogCard } from '@/components/blog-card';
 import { BlogHeader } from '@/components/blog-header';
 import { DownloadButton } from '@/components/download-button';
 import { type Lang, getPostsByLang, postPath } from '@/lib/blog-posts';
-import { LOCALES, homePath, localePath } from '@/lib/i18n';
+import { LOCALES, homePath, legalPath, localePath } from '@/lib/i18n';
 import { SITE, url } from '@/lib/seo-config';
 
 const COPY: Record<
@@ -279,13 +279,13 @@ export function BlogIndex({ lang }: { lang: Lang }) {
                 {copy.blog}
               </Link>
               <Link
-                href={localePath(lang, '/privacy-policy')}
+                href={legalPath(lang, 'privacy-policy')}
                 className="transition-colors hover:text-foreground"
               >
                 {copy.privacy}
               </Link>
               <Link
-                href={localePath(lang, '/terms-of-use')}
+                href={legalPath(lang, 'terms-of-use')}
                 className="transition-colors hover:text-foreground"
               >
                 {copy.terms}

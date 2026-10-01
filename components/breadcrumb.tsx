@@ -14,9 +14,13 @@ interface BreadcrumbProps {
   lang?: Lang;
 }
 
-export function Breadcrumb({ items, currentPage, lang = 'en' }: BreadcrumbProps) {
-  const homeLabel = lang === 'en' ? 'Home' : lang === 'fr' ? 'Accueil' : lang === 'es' ? 'Inicio' : 'Início';
-  
+export function Breadcrumb({ items, currentPage }: BreadcrumbProps) {
+  // Google wants absolute URLs in BreadcrumbList. The first item used to emit
+  // a bare "/", and its name came from a four-language ternary that labelled
+  // German, Arabic and Italian pages in Portuguese.
+  const absolute = (href: string) =>
+    href.startsWith('http') ? href : `https://edge-iptv.app${href === '/' ? '' : href}`;
+
   // Generate Schema.org BreadcrumbList
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -25,14 +29,14 @@ export function Breadcrumb({ items, currentPage, lang = 'en' }: BreadcrumbProps)
       {
         "@type": "ListItem",
         "position": 1,
-        "name": homeLabel,
-        "item": items[0]?.href || "https://edge-iptv.app"
+        "name": items[0]?.label ?? "Home",
+        "item": absolute(items[0]?.href ?? "/")
       },
       ...items.slice(1).map((item, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": item.label,
-        "item": `https://edge-iptv.app${item.href}`
+        "item": absolute(item.href)
       })),
       {
         "@type": "ListItem",

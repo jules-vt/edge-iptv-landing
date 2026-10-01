@@ -9,6 +9,9 @@ const TITLES: Record<string, string> = {
   fr: 'Sur cette page',
   es: 'En esta página',
   pt: 'Nesta página',
+  de: 'Auf dieser Seite',
+  ar: 'في هذه الصفحة',
+  it: 'In questa pagina',
 };
 
 interface Heading {

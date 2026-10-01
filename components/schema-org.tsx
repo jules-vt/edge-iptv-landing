@@ -108,10 +108,10 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       "https://edge-iptv.app/images/series-view.png",
       "https://edge-iptv.app/images/movie-details.png",
     ],
-    softwareVersion: "1.1",
+    softwareVersion: "1.2",
     datePublished: "2026-01-05",
-    dateModified: "2026-09-26",
-    inLanguage: LOCALES[lang].ogLocale.replace("_", "-"),
+    dateModified: "2026-10-01",
+    inLanguage: LOCALES[lang].htmlLang,
     featureList: [
       "Xtream Codes Support",
       "Chromecast Integration",
@@ -166,15 +166,9 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
     "@type": "WebSite",
     name: "EDGE IPTV",
     url: localeRoot,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${localeRoot}/blog?search={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
-    inLanguage: LOCALES[lang].ogLocale.replace("_", "-"),
+    // No SearchAction: the blog has no search, so the template pointed at a
+    // query string nothing reads.
+    inLanguage: LOCALES[lang].htmlLang,
   };
 
   return (

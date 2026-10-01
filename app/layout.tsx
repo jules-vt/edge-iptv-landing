@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import { SchemaOrg } from "@/components/schema-org";
 import { WebVitals } from "./web-vitals";
 import { SITE, buildAlternates, defaultOG, defaultTwitter } from "@/lib/seo-config";
 
@@ -52,7 +51,7 @@ export const metadata: Metadata = {
       "The #1 IPTV player for iOS. Watch live TV and movies with Chromecast, offline mode and 4K. Free download.",
   },
   other: {
-    "apple-itunes-app": "app-id=6745966143",
+    "apple-itunes-app": `app-id=${SITE.appStoreUrl.match(/id(\d+)/)?.[1]}`,
   },
 };
 
@@ -64,7 +63,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <SchemaOrg lang="en" />
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://j-analytics.cloud" />
         <link rel="dns-prefetch" href="https://j-analytics.cloud" />

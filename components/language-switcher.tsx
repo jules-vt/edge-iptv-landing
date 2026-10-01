@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 import { getTranslations, postPath } from "@/lib/blog-posts"
-import { type Lang, LANGS, LOCALES, homePath } from "@/lib/i18n"
+import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n"
 
 interface LanguageSwitcherProps {
   currentLang: Lang
@@ -50,7 +50,12 @@ function getPathForLanguage(currentPath: string, currentLang: Lang, targetLang: 
     if (translations[currentLang]) return languageHome(targetLang)
   }
 
-  // Everything else (privacy-policy, terms-of-use, /blog index) keeps its slug.
+  // Legal pages are only translated into some languages.
+  if (route === '/privacy-policy' || route === '/terms-of-use') {
+    return legalPath(targetLang, route.slice(1) as 'privacy-policy' | 'terms-of-use')
+  }
+
+  // Everything else (/blog index) keeps its slug.
   return targetLang === 'en' ? route : `/${targetLang}${route}`
 }
 

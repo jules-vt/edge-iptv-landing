@@ -1,17 +1,13 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { BlogIndex } from '@/components/blog-index';
-import { buildAlternates, defaultOG, SITE } from '@/lib/seo-config';
+import { defaultOG, SITE } from '@/lib/seo-config';
+import { blogIndexAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Blog EDGE IPTV - Tutoriais, Guias e Dicas para Streaming iOS',
   description: 'Aprenda tudo sobre streaming IPTV no iPhone e iPad. Tutoriais passo a passo, guias de configuração, solução de problemas e recursos mais recentes.',
-  alternates: buildAlternates({
-    en: '/blog',
-    fr: '/fr/blog',
-    es: '/es/blog',
-    pt: '/pt/blog',
-  }, 'pt'),
+  alternates: blogIndexAlternates('pt'),
   openGraph: {
     ...defaultOG,
     type: 'website',

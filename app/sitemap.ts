@@ -11,7 +11,7 @@ export const dynamic = "force-static";
 const DATES = {
   launch: new Date("2025-01-01"),
   v1: new Date("2026-01-12"),
-  lastSeoUpdate: new Date("2026-09-27"),
+  lastSeoUpdate: new Date("2026-10-01"),
 } as const;
 
 const u = (path: string) => `${SITE.url}${path}`;
