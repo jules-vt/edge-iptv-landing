@@ -19,6 +19,8 @@ import { IpadSection } from "@/components/ipad-section";
 import { HOME_COPY } from "@/lib/home-copy";
 import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n";
 import { SchemaOrg } from "@/components/schema-org";
+import { landingCopy } from "@/components/landing-page";
+import { LANDING_IDS, landingPath } from "@/lib/landing/registry";
 import { blogPath, getPostBySlug, installGuidePath, postPath } from "@/lib/blog-posts";
 
 const FAQ = dynamic(
@@ -281,6 +283,16 @@ export function HomePage({ lang }: { lang: Lang }) {
                     {t.footer.install}
                   </Link>
                 </li>
+                {LANDING_IDS.map((id) => (
+                  <li key={id}>
+                    <Link
+                      href={landingPath(id, lang)}
+                      className="text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {landingCopy(id, lang).navLabel}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>

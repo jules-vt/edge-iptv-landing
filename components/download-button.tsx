@@ -62,6 +62,10 @@ export function DownloadButton({
     <Link
       href="https://j-analytics.cloud/q/Z0m1Qmdtf"
       onClick={handleClick}
+      // Umami is the analytics actually loaded on the site; gtag never is, so
+      // without these attributes no click was attributed to a page or button.
+      data-umami-event="download_click"
+      data-umami-event-location={location}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
       <Download size={iconSizes[size]} />

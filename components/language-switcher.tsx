@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 import { getTranslations, postPath } from "@/lib/blog-posts"
+import { findLanding, landingPath } from "@/lib/landing/registry"
 import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n"
 
 interface LanguageSwitcherProps {
@@ -41,6 +42,9 @@ function getPathForLanguage(currentPath: string, currentLang: Lang, targetLang: 
     : route.slice(1)
 
   if (slug && !slug.includes('/')) {
+    const landing = findLanding(slug, currentLang)
+    if (landing) return landingPath(landing, targetLang)
+
     const translations = getTranslations(slug, currentLang)
     const target = translations[targetLang]
     if (target) return postPath(target)

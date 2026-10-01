@@ -149,7 +149,9 @@ export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {
       width: "512",
       height: "512",
     },
-    sameAs: [],
+    // The App Store listing is the one profile that verifiably belongs to the
+    // app and links back here (its seller URL is edge-iptv.app).
+    sameAs: [SITE.appStoreUrl],
     description: text.org,
     contactPoint: {
       "@type": "ContactPoint",
