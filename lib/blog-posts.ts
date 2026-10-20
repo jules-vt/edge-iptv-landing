@@ -121,6 +121,19 @@ export const blogPosts: BlogPost[] = [
     translationGroup: "best-iptv-app-iphone",
   },
   {
+    slug: "beste-iptv-app-iphone",
+    title: "Beste IPTV-app voor iPhone 2026: top 5 getest",
+    description:
+      "We testten de 5 populairste IPTV-apps op iPhone om de snelste, betrouwbaarste en makkelijkst in te stellen app te vinden.",
+    date: "2026-10-20",
+    author: "Team EDGE IPTV",
+    readTime: "7 min",
+    image: "/images/iphone-series-3d.png",
+    lang: "nl",
+    category: "guide",
+    translationGroup: "best-iptv-app-iphone",
+  },
+  {
     slug: "how-to-install-iptv-iphone-ipad",
     title: "How to Install IPTV on iPhone & iPad",
     description:
@@ -214,6 +227,20 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min",
     image: "/images/iphone-series-3d.png",
     lang: "it",
+    category: "tutorial",
+    translationGroup: "install-guide",
+    basePath: "",
+  },
+  {
+    slug: "iptv-installeren-iphone-ipad",
+    title: "IPTV installeren op iPhone en iPad: handleiding 2026",
+    description:
+      "Stap-voor-staphandleiding om IPTV in minder dan 2 minuten op iPhone of iPad te installeren, met Xtream Codes of een M3U-link.",
+    date: "2026-10-20",
+    author: "Team EDGE IPTV",
+    readTime: "5 min",
+    image: "/images/iphone-series-3d.png",
+    lang: "nl",
     category: "tutorial",
     translationGroup: "install-guide",
     basePath: "",

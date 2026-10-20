@@ -40,6 +40,10 @@ const translations: Record<Lang, { home: string; download: string }> = {
     home: 'Home',
     download: 'Scarica',
   },
+  nl: {
+    home: 'Home',
+    download: 'Downloaden',
+  },
 };
 
 export function BlogHeader({ currentLang }: BlogHeaderProps) {

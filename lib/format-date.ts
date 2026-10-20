@@ -8,6 +8,7 @@ const LOCALES: Record<Lang, string> = {
   de: "de-DE",
   ar: "ar",
   it: "it-IT",
+  nl: "nl-NL",
 };
 
 /**

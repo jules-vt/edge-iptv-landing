@@ -9,9 +9,9 @@
  * Adding a language means adding it here, then filling the copy dictionaries;
  * TypeScript reports every dictionary that is still missing it.
  */
-export type Lang = "en" | "fr" | "es" | "pt" | "de" | "ar" | "it";
+export type Lang = "en" | "fr" | "es" | "pt" | "de" | "ar" | "it" | "nl";
 
-export const LANGS: Lang[] = ["en", "fr", "es", "pt", "de", "ar", "it"];
+export const LANGS: Lang[] = ["en", "fr", "es", "pt", "de", "ar", "it", "nl"];
 
 export interface LocaleInfo {
   /** Endonym, shown in the language switcher. */
@@ -32,6 +32,7 @@ export const LOCALES: Record<Lang, LocaleInfo> = {
   de: { label: "Deutsch", flag: "🇩🇪", htmlLang: "de", ogLocale: "de_DE", dir: "ltr" },
   ar: { label: "العربية", flag: "🇸🇦", htmlLang: "ar", ogLocale: "ar_AR", dir: "rtl" },
   it: { label: "Italiano", flag: "🇮🇹", htmlLang: "it", ogLocale: "it_IT", dir: "ltr" },
+  nl: { label: "Nederlands", flag: "🇳🇱", htmlLang: "nl", ogLocale: "nl_NL", dir: "ltr" },
 };
 
 /** Root path of a language: "/" for English, "/de" for the rest. */

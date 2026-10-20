@@ -1,4 +1,4 @@
-import { type Lang, LANGS, LOCALES } from "@/lib/i18n";
+import { type Lang, LANGS, LOCALES, homePath } from "@/lib/i18n";
 
 /**
  * Centralized SEO configuration for EDGE IPTV.
@@ -43,6 +43,17 @@ export function buildAlternates(
     canonical: url(paths[current] ?? paths.en ?? "/"),
     languages,
   };
+}
+
+/**
+ * hreflang cluster of the home pages, derived from LANGS. Each home page used
+ * to list the other languages by hand, so a new language was missing from
+ * every cluster until someone edited all of them.
+ */
+export function homeAlternates(current: Lang) {
+  const paths: Partial<Record<Lang, string>> = {};
+  for (const lang of LANGS) paths[lang] = homePath(lang);
+  return buildAlternates(paths, current);
 }
 
 /**

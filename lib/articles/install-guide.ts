@@ -61,6 +61,7 @@ const APP_LANGUAGES = {
   de: "Englisch, Französisch, Spanisch, Portugiesisch, Deutsch, Italienisch, Arabisch, Niederländisch, Polnisch, Russisch und Türkisch",
   ar: "الإنجليزية والفرنسية والإسبانية والبرتغالية والألمانية والإيطالية والعربية والهولندية والبولندية والروسية والتركية",
   it: "inglese, francese, spagnolo, portoghese, tedesco, italiano, arabo, olandese, polacco, russo e turco",
+  nl: "Engels, Frans, Spaans, Portugees, Duits, Italiaans, Arabisch, Nederlands, Pools, Russisch en Turks",
 };
 
 export const INSTALL_GUIDE_COPY: Record<Lang, InstallGuideCopy> = {
@@ -543,5 +544,72 @@ export const INSTALL_GUIDE_COPY: Record<Lang, InstallGuideCopy> = {
     privacy: "Privacy",
     terms: "Termini di utilizzo",
     rights: "Tutti i diritti riservati.",
+  },
+  nl: {
+    metaTitle: "IPTV installeren op iPhone & iPad (handleiding 2026)",
+    metaDescription:
+      "Stap-voor-staphandleiding om IPTV in minder dan 2 minuten op iPhone of iPad te installeren. Werkt met elke IPTV-aanbieder via Xtream Codes of een M3U-link.",
+    title: "IPTV installeren op iPhone in 2 minuten",
+    intro:
+      "Stel IPTV in op je iPhone of iPad in 4 eenvoudige stappen, met de Xtream Codes of M3U-link van je aanbieder. Geen technische kennis nodig.",
+    breadcrumb: "IPTV installeren op iPhone en iPad",
+    home: "Home",
+    download: "Downloaden",
+    needTitle: "Wat je nodig hebt",
+    need: [
+      "Een iPhone of iPad met iOS 17.0 of nieuwer",
+      "Een IPTV-abonnement met Xtream Codes of een M3U-link",
+      "Een stabiele internetverbinding",
+      "De app EDGE IPTV",
+    ],
+    step1Title: "Download een IPTV-speler voor iOS",
+    step1Body:
+      "Een IPTV-abonnement geeft je toegang tot zenders; om ze te kijken heb je nog een speler nodig. EDGE IPTV is gemaakt voor iPhone en iPad en gratis te downloaden, met 7 dagen gratis proberen.",
+    whyTitle: "Waarom EDGE IPTV?",
+    why: [
+      "M3U of Xtream Codes ingesteld in minder dan 2 minuten",
+      "Tv-gids (EPG) en beeld-in-beeld",
+      "Chromecast en AirPlay om op de tv te kijken",
+      "Downloads om zonder internet te kijken",
+      `Beschikbaar in het ${APP_LANGUAGES.nl}`,
+    ],
+    step1Button: "Download EDGE IPTV in de App Store",
+    step2Title: "Open de app en kies je taal",
+    step2Body:
+      "Bij de eerste start kies je je taal, veeg je door een korte rondleiding langs de functies en kies je of je anonieme gebruiksstatistieken wilt delen. Beide kun je later wijzigen in Instellingen.",
+    languageAlt: "Taalkeuze van EDGE IPTV bij de eerste start",
+    midTitle: "Klaar om te beginnen?",
+    midBody: "Download EDGE IPTV nu en begin binnen 2 minuten met kijken.",
+    midButton: "Nu downloaden – 7 dagen gratis",
+    step3Title: "Voeg je Xtream Codes toe",
+    step3Body: "Daarna vraagt de app om je eerste playlist. Xtream Codes is de snelste optie en geeft het beste resultaat:",
+    step3List: [
+      'Kies bovenaan **Xtream Codes**.',
+      "Vul de gegevens van je IPTV-aanbieder in:",
+      'Tik op **Doorgaan**. De app controleert de login en laadt je zenders, films en series.',
+    ],
+    fields: [
+      { label: "Server-URL", hint: "in de vorm http://host:poort, bijv. http://line.example.com:8080" },
+      { label: "Gebruikersnaam", hint: "je gebruikersnaam" },
+      { label: "Wachtwoord", hint: "je wachtwoord" },
+    ],
+    step3Note:
+      "Vul de gegevens precies in zoals je ze kreeg: let op hoofdletters en kleine letters, en kopieer geen spatie aan het eind van een veld mee.",
+    m3uNote:
+      'Heb je alleen een M3U-link? Kies bovenaan **M3U** en plak hem. Eindigt hij op get.php?username=…, dan herkent de app een Xtream-login en schakelt hij daar zelf naar over. Later meer playlists toevoegen doe je met "Playlist toevoegen" in de Playlist Hub.',
+    step4Title: "Veel kijkplezier!",
+    step4Body:
+      "Dat was het. EDGE IPTV laadt je zenders, films en series. Blader door de categorieën, zoek, voeg favorieten toe en begin meteen met kijken.",
+    seriesAlt: "Seriesweergave in EDGE IPTV",
+    movieAlt: "Filmdetails in EDGE IPTV",
+    finalTitle: "Begin vandaag met kijken",
+    finalBody:
+      "Download EDGE IPTV, voeg je M3U- of Xtream Codes-playlist toe en kijk op iPhone en iPad. Instellen duurt minder dan 2 minuten.",
+    finalButton: "Probeer 7 dagen gratis",
+    fineprint: "✓ 7 dagen gratis ✓ M3U en Xtream Codes ✓ Chromecast en AirPlay",
+    back: "Terug naar home",
+    privacy: "Privacybeleid",
+    terms: "Gebruiksvoorwaarden",
+    rights: "Alle rechten voorbehouden.",
   },
 };

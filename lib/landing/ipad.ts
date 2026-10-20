@@ -622,4 +622,91 @@ export const IPAD_COPY: Record<Lang, LandingCopy> = {
       },
     ],
   },
+  nl: {
+    metaTitle: "IPTV-speler voor iPad: live-tv, films en tv-gids",
+    metaDescription:
+      "EDGE IPTV is een IPTV-speler ontworpen voor het iPad-scherm: een tv-gids met negen zenders tegelijk, Split View, beeld-in-beeld, Chromecast en AirPlay.",
+    eyebrow: "iPad & iPadOS 17+",
+    title: "Een IPTV-speler ontworpen voor de iPad",
+    intro:
+      "De meeste IPTV-apps op iPad zijn iPhone-apps die zijn opgeblazen tot een groter scherm. EDGE IPTV past zijn indeling aan: een tv-gids die je in één oogopslag leest, posters bijna twee keer zo groot en een serie naast de afleveringenlijst.",
+    imageAlt: "De tv-gids van EDGE IPTV op iPad, negen zenders en vier uur programma tegelijk",
+    needTitle: "Wat je nodig hebt",
+    need: [
+      "Een iPad met iPadOS 17 of nieuwer: iPad Pro (2e generatie), iPad Air (3e generatie), iPad (6e generatie), iPad mini (5e generatie) of nieuwer",
+      "Een M3U-link of Xtream Codes-login van je IPTV-aanbieder (EDGE IPTV is de speler, de app verkoopt geen zenders)",
+    ],
+    stepsTitle: "IPTV instellen op je iPad in minder dan 2 minuten",
+    steps: [
+      {
+        title: "Installeer EDGE IPTV",
+        description:
+          "Gratis in de App Store, met 7 dagen gratis proberen. Eén abonnement geldt voor je iPad en je iPhone.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’",
+        description: "Kies Xtream Codes of M3U-playlist en vul in wat je aanbieder je gaf.",
+      },
+      {
+        title: "Begin met kijken",
+        description: "Zenders, films en series laden vanzelf, met de tv-gids.",
+      },
+    ],
+    featuresTitle: "Wat het grote scherm verandert",
+    features: [
+      {
+        title: "Een tv-gids die je echt kunt lezen",
+        description:
+          "Negen zenders en vier uur programma tegelijk in beeld, zodat je de avond overziet zonder zender voor zender te scrollen.",
+      },
+      {
+        title: "Posters en afleveringen naast elkaar",
+        description:
+          "Filmposters worden bijna twee keer zo groot getoond, en een serie staat naast de lijst met seizoenen en afleveringen in plaats van erboven.",
+      },
+      {
+        title: "Split View en Slide Over",
+        description: "Gebruik EDGE IPTV naast een andere app, staand of liggend.",
+      },
+      {
+        title: "Beeld-in-beeld",
+        description: "Houd een wedstrijd in een hoek terwijl je een e-mail beantwoordt of iets opzoekt.",
+      },
+      {
+        title: "Chromecast en AirPlay",
+        description: "Stuur de stream naar de tv als het iPad-scherm niet genoeg is.",
+      },
+      {
+        title: "Downloads voor onderweg",
+        description: "Sla films en afleveringen op via wifi en kijk ze offline op reis.",
+      },
+    ],
+    explainTitle: "Eén app, één abonnement, iPhone en iPad",
+    explain: [
+      "EDGE IPTV is een universele app. Neem het abonnement één keer en het ontgrendelt de app op elke iPhone en iPad die met hetzelfde Apple-account is ingelogd.",
+      "Je playlists, M3U of Xtream Codes, stel je op elk toestel in met de gegevens van je aanbieder. Er wordt niets op een server van ons opgeslagen: je gegevens blijven op het toestel.",
+    ],
+    faq: [
+      {
+        q: "Wat is de beste IPTV-app voor iPad?",
+        a: "Kies een app die het iPad-scherm benut in plaats van een iPhone-indeling op te rekken. EDGE IPTV toont een tv-gids met negen zenders, grotere posters, Split View en beeld-in-beeld, en ondersteunt M3U en Xtream Codes.",
+      },
+      {
+        q: "Welke iPads worden ondersteund?",
+        a: "Elke iPad met iPadOS 17 of nieuwer: iPad Pro (2e generatie), iPad Air (3e generatie), iPad (6e generatie) en iPad mini (5e generatie) of nieuwer.",
+      },
+      {
+        q: "Heb ik een tweede abonnement nodig voor mijn iPad?",
+        a: "Nee. Het abonnement is gekoppeld aan je Apple-account en werkt op je iPhone en iPad.",
+      },
+      {
+        q: "Kan ik IPTV op mijn iPad kijken en naar de tv casten?",
+        a: "Ja. EDGE IPTV cast naar Chromecast en Google TV, en via AirPlay naar Apple TV.",
+      },
+      {
+        q: "Is EDGE IPTV gratis op iPad?",
+        a: "De app is gratis te downloaden, met 7 dagen gratis proberen. Daarna is een abonnement nodig om te kijken: € 3,99 per maand of € 19,99 per jaar, zonder advertenties.",
+      },
+    ],
+  },
 };

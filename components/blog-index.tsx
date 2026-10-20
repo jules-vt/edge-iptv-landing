@@ -151,6 +151,23 @@ const COPY: Record<
     terms: 'Termini',
     rights: 'Tutti i diritti riservati.',
   },
+  nl: {
+    eyebrow: 'EDGE IPTV-blog',
+    title: 'Handleidingen en tips',
+    intro:
+      'Alles wat je moet weten over IPTV op iPhone en iPad: instellen, problemen oplossen en het meeste uit EDGE IPTV halen.',
+    featured: 'Begin hier',
+    all: 'Alle handleidingen',
+    devices: 'Geschreven voor iPhone en iPad',
+    ctaTitle: 'Klaar om te kijken?',
+    ctaBody: 'Download EDGE IPTV en maak van je iPhone of iPad een complete tv-app.',
+    ctaButton: 'Download in de App Store',
+    home: 'Home',
+    blog: 'Blog',
+    privacy: 'Privacy',
+    terms: 'Voorwaarden',
+    rights: 'Alle rechten voorbehouden.',
+  },
 };
 
 

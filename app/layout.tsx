@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { WebVitals } from "./web-vitals";
-import { SITE, buildAlternates, defaultOG, defaultTwitter } from "@/lib/seo-config";
+import { SITE, defaultOG, defaultTwitter, homeAlternates } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
   // Title optimized for: "best iptv app for iphone", "iptv player ios", "edge iptv"
@@ -30,12 +30,7 @@ export const metadata: Metadata = {
     apple: "/images/icon.png",
   },
   manifest: "/manifest.json",
-  alternates: buildAlternates({
-    en: "/",
-    fr: "/fr/",
-    es: "/es/",
-    pt: "/pt/",
-  }),
+  alternates: homeAlternates("en"),
   openGraph: {
     ...defaultOG,
     type: "website",

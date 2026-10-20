@@ -742,4 +742,107 @@ export const TIVIMATE_COPY: Record<Lang, LandingCopy> = {
       },
     ],
   },
+  nl: {
+    metaTitle: "TiviMate op iPhone? Het iOS-alternatief voor je playlist",
+    metaDescription:
+      "TiviMate bestaat niet voor iPhone of iPad. EDGE IPTV opent dezelfde Xtream Codes- of M3U-playlist op iOS, met een tv-gids in tabelvorm, Chromecast en AirPlay.",
+    eyebrow: "TiviMate-alternatief voor iOS",
+    title: "TiviMate op iPhone: houd je playlist, wissel van app",
+    intro:
+      "TiviMate is alleen gemaakt voor Android TV, Fire TV en Android. Op iPhone en iPad opent EDGE IPTV dezelfde playlist van je aanbieder, met dezelfde inloggegevens, en geeft je een tv-gids in tabelvorm, favorieten en casten naar je tv.",
+    imageAlt: "Tv-gids in tabelvorm van EDGE IPTV op iPhone",
+    needTitle: "Wat je nodig hebt",
+    need: [
+      "Een iPhone of iPad met iOS 17 of nieuwer",
+      "De gegevens die je in TiviMate invulde: een Xtream Codes-login (server, gebruikersnaam, wachtwoord) of een M3U-link",
+    ],
+    stepsTitle: "Je TiviMate-playlist naar iPhone verhuizen",
+    steps: [
+      {
+        title: "Zoek de gegevens van je playlist op",
+        description:
+          "Ze staan in de welkomstmail van je IPTV-aanbieder: een Xtream Codes-login of een M3U-link. Het zijn dezelfde gegevens die je in TiviMate invulde.",
+      },
+      {
+        title: "Installeer EDGE IPTV en tik op ‘Playlist toevoegen’",
+        description:
+          "Kies ‘Xtream Codes’ of ‘M3U-playlist’, afhankelijk van wat je hebt, en vul dezelfde gegevens in.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’",
+        description:
+          "Je categorieën, de tv-gids, films en series verschijnen binnen een paar seconden. Bij je aanbieder hoeft niets te veranderen.",
+      },
+    ],
+    featuresTitle: "Wat je herkent van TiviMate",
+    features: [
+      {
+        title: "Een tv-gids in tabelvorm",
+        description:
+          "Zenders aan de zijkant, programma's op een tijdlijn, geladen uit de gids van je aanbieder.",
+      },
+      {
+        title: "Meerdere playlists in één app",
+        description: "Voeg meer dan één aanbieder toe en wissel ertussen.",
+      },
+      {
+        title: "Favorieten en zoeken",
+        description: "Zet je vaste zenders vast en vind elke zender, film of serie in een seconde.",
+      },
+      {
+        title: "Audiosporen en ondertitels",
+        description: "Kies taal en ondertitels als de stream er meer dan één aanbiedt.",
+      },
+      {
+        title: "Chromecast, AirPlay en beeld-in-beeld",
+        description:
+          "Stuur een zender vanaf je telefoon naar de tv, of kijk verder in een klein venster boven andere apps.",
+      },
+      {
+        title: "Downloads om offline te kijken",
+        description:
+          "Download films en afleveringen van series en kijk ze zonder verbinding, in het vliegtuig of de trein.",
+      },
+    ],
+    comparison: {
+      title: "TiviMate en EDGE IPTV naast elkaar",
+      headers: ["", "TiviMate", "EDGE IPTV"],
+      rows: [
+        ["Apparaten", "Android TV, Fire TV, Android", "iPhone, iPad"],
+        ["In de App Store", "Nee", "Ja"],
+        ["Xtream Codes- en M3U-playlists", "Ja", "Ja"],
+        ["Tv-gids in tabelvorm", "Ja", "Ja"],
+        ["Opnemen en terugkijken", "Ja", "Nee"],
+      ],
+      note:
+        "Informatie over TiviMate per oktober 2026. EDGE IPTV neemt niet op en biedt geen terugkijken: heb je dat nodig, houd TiviMate dan op je Android TV-box en gebruik EDGE IPTV op je iPhone en iPad.",
+    },
+    explainTitle: "Bestaat er een officiële TiviMate-app voor iPhone?",
+    explain: [
+      "Nee. TiviMate is gebouwd voor Android TV-boxen, Fire TV-sticks en Android-toestellen, en de ontwikkelaar heeft geen iOS-versie uitgebracht. Zoek je in de App Store op ‘TiviMate’, dan zie je toch apps met een vergelijkbare naam: dat zijn andere IPTV-spelers, niet TiviMate. Controleer de naam van de ontwikkelaar op de App Store-pagina voordat je er een installeert.",
+      "Wat je meeneemt, is je playlist. TiviMate is net als EDGE IPTV alleen een speler: de zenders komen van je IPTV-aanbieder, via een Xtream Codes-login of een M3U-link. Vul dezelfde gegevens in bij EDGE IPTV en je hebt dezelfde zenders op je iPhone en iPad.",
+    ],
+    faq: [
+      {
+        q: "Kan ik TiviMate op iPhone installeren?",
+        a: "Nee. TiviMate heeft geen iOS-versie. Om je IPTV-playlist op iPhone of iPad te kijken, gebruik je een iOS-speler zoals EDGE IPTV met dezelfde inloggegevens.",
+      },
+      {
+        q: "Kan ik dezelfde playlist in TiviMate en EDGE IPTV gebruiken?",
+        a: "Ja, vul dezelfde Xtream Codes-login of M3U-link in. Kijk hoeveel verbindingen je aanbieder toestaat: tegelijk op twee toestellen kijken kan er twee vereisen.",
+      },
+      {
+        q: "Werkt mijn TiviMate Premium in EDGE IPTV?",
+        a: "Nee. TiviMate Premium is een licentie voor de TiviMate-app. EDGE IPTV is gratis te downloaden met 7 dagen gratis proberen, daarna € 3,99 per maand of € 19,99 per jaar, zonder advertenties.",
+      },
+      {
+        q: "Neemt EDGE IPTV programma's op zoals TiviMate?",
+        a: "Nee, EDGE IPTV neemt niet op en biedt geen terugkijken. Je kunt wel films en afleveringen van series downloaden om offline te kijken.",
+      },
+      {
+        q: "Kan ik op mijn tv kijken?",
+        a: "Ja. EDGE IPTV draait op iPhone en iPad en stuurt het beeld naar je tv met AirPlay (Apple TV of tv's met AirPlay) of Chromecast.",
+      },
+    ],
+  },
 };

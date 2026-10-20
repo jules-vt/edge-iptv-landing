@@ -123,4 +123,15 @@ export const LANDING_UI: Record<Lang, LandingUi> = {
     blog: "Tutte le guide",
     rights: "Tutti i diritti riservati.",
   },
+  nl: {
+    cta: "Probeer 7 dagen gratis",
+    fineprint: "Gratis downloaden · 7 dagen gratis proberen · daarna € 3,99 per maand of € 19,99 per jaar · geen advertenties",
+    home: "Home",
+    faqTitle: "Veelgestelde vragen",
+    more: "Meer over EDGE IPTV",
+    guides: "Handleidingen",
+    installGuide: "IPTV installeren op iPhone en iPad",
+    blog: "Alle handleidingen",
+    rights: "Alle rechten voorbehouden.",
+  },
 };

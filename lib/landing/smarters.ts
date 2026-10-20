@@ -748,4 +748,106 @@ export const SMARTERS_COPY: Record<Lang, LandingCopy> = {
       },
     ],
   },
+  nl: {
+    metaTitle: "Alternatief voor IPTV Smarters op iPhone & iPad, zonder ads",
+    metaDescription:
+      "Een alternatief voor IPTV Smarters op iPhone? EDGE IPTV opent dezelfde playlist zonder advertenties en zonder advertentietracking, met tv-gids en Chromecast.",
+    eyebrow: "Alternatief voor IPTV Smarters",
+    title: "Een alternatief voor IPTV Smarters, gemaakt voor iPhone en iPad",
+    intro:
+      "Houd de playlist die je in Smarters gebruikt en kijk hem in een app zonder advertenties en zonder advertentietracking. EDGE IPTV kost meer dan Smarters, en deze pagina zegt eerlijk wat je ervoor krijgt.",
+    imageAlt: "Startscherm van EDGE IPTV op iPhone, zonder advertenties",
+    needTitle: "Wat je nodig hebt",
+    need: [
+      "Een iPhone of iPad met iOS 17 of nieuwer",
+      "De gegevens die je in Smarters invulde: een Xtream Codes-login (server, gebruikersnaam, wachtwoord) of een M3U-link",
+    ],
+    stepsTitle: "Overstappen van Smarters naar EDGE IPTV",
+    steps: [
+      {
+        title: "Zoek de gegevens van je playlist op",
+        description:
+          "Ze staan in de welkomstmail van je IPTV-aanbieder: een Xtream Codes-login of een M3U-link. Het is wat je in Smarters invulde.",
+      },
+      {
+        title: "Installeer EDGE IPTV en tik op ‘Playlist toevoegen’",
+        description: "Kies ‘Xtream Codes’ of ‘M3U-playlist’ en vul dezelfde gegevens in.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’",
+        description:
+          "Je zenders, de tv-gids, films en series laden binnen een paar seconden. Je kunt Smarters laten staan terwijl je het uitprobeert.",
+      },
+    ],
+    featuresTitle: "Wat EDGE IPTV je biedt",
+    features: [
+      {
+        title: "Geen advertenties, geen advertentietracking",
+        description:
+          "Geen banners of video's tussen zenders. In de App Store geeft EDGE IPTV geen gegevens op die worden gebruikt om je te volgen.",
+      },
+      {
+        title: "Gemaakt voor iPhone en iPad",
+        description:
+          "Native iOS-bediening, en een indeling die zich aanpast aan het grote iPad-scherm in plaats van een uitgerekte telefoon-app.",
+      },
+      {
+        title: "Een tv-gids in tabelvorm",
+        description: "Zenders aan de zijkant, programma's op een tijdlijn, uit de gids van je aanbieder.",
+      },
+      {
+        title: "Chromecast, AirPlay en beeld-in-beeld",
+        description: "Stuur een zender naar de tv, of kijk verder in een klein venster boven andere apps.",
+      },
+      {
+        title: "Downloads om offline te kijken",
+        description: "Download films en afleveringen van series en kijk ze zonder verbinding.",
+      },
+      {
+        title: "Meerdere playlists, zoeken en favorieten",
+        description:
+          "Voeg meer dan één aanbieder toe, zet je zenders vast en vind elke film of serie in een seconde.",
+      },
+    ],
+    comparison: {
+      title: "IPTV Smarters en EDGE IPTV naast elkaar",
+      headers: ["", "IPTV Smarters (Player Lite / Pro)", "EDGE IPTV"],
+      rows: [
+        ["Prijs", "Gratis, Premium $ 1,99 (Lite) of $ 4,99 (Pro)", "7 dagen gratis, daarna € 3,99 per maand of € 19,99 per jaar"],
+        ["Advertenties", "Ja, in Smarters Player Lite", "Nee"],
+        ["Gegevens gebruikt om je te volgen (App Store-label)", "Ja, gebruiksgegevens", "Geen"],
+        ["Apple TV-app", "Ja", "Nee (AirPlay vanaf iPhone of iPad)"],
+        ["Minimaal systeem", "iOS 15.6", "iOS 17"],
+      ],
+      note:
+        "Overgenomen van de Amerikaanse App Store-pagina's op 20 oktober 2026 (prijzen van Smarters in dollars). Smarters is goedkoper en werkt op Apple TV en oudere iPhones: is dat voor jou het belangrijkst, dan past het beter.",
+    },
+    explainTitle: "Welke IPTV Smarters is welke?",
+    explain: [
+      "Meerdere apps in de App Store dragen de naam Smarters, van verschillende ontwikkelaars: Smarters Player Lite wordt uitgegeven door WHMCS SMARTERS, Smarters Pro door Tech Smarters Private Limited, en ook andere apps gebruiken de naam. Controleer de ontwikkelaar op de App Store-pagina om te weten welke je hebt.",
+      "Welke het ook is, het is een speler, net als EDGE IPTV: je zenders komen van je IPTV-aanbieder, via een Xtream Codes-login of een M3U-link. Daarom duurt overstappen twee minuten: dezelfde gegevens werken in elke speler.",
+    ],
+    faq: [
+      {
+        q: "Is IPTV Smarters gratis op iPhone?",
+        a: "Smarters Player Lite is gratis met advertenties, met een Premium-versie van $ 1,99. Smarters Pro is gratis met een Premium-versie van $ 4,99. Prijzen uit de Amerikaanse App Store in oktober 2026.",
+      },
+      {
+        q: "Is EDGE IPTV goedkoper dan Smarters?",
+        a: "Nee. EDGE IPTV is gratis te downloaden met 7 dagen gratis proberen, daarna € 3,99 per maand of € 19,99 per jaar. Daarvoor krijg je geen advertenties en geen gegevens die worden gebruikt om je te volgen.",
+      },
+      {
+        q: "Kan ik mijn Smarters-login in EDGE IPTV gebruiken?",
+        a: "Ja. Vul dezelfde Xtream Codes-login of M3U-link in. Kijk je in beide apps tegelijk, controleer dan hoeveel verbindingen je aanbieder toestaat.",
+      },
+      {
+        q: "Werkt EDGE IPTV op Apple TV?",
+        a: "Er is geen Apple TV-app. Je kunt het beeld vanaf je iPhone of iPad met AirPlay naar een Apple TV sturen, of naar een Chromecast.",
+      },
+      {
+        q: "Levert EDGE IPTV zenders?",
+        a: "Nee. Net als Smarters is EDGE IPTV een speler: je brengt de playlist van je eigen IPTV-aanbieder mee.",
+      },
+    ],
+  },
 };

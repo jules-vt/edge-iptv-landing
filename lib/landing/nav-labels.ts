@@ -15,6 +15,7 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     de: "M3U-Player fürs iPhone",
     ar: "مشغل M3U للآيفون",
     it: "Lettore M3U per iPhone",
+    nl: "M3U-speler voor iPhone",
   },
   xtream: {
     en: "Xtream Codes player for iPhone",
@@ -24,6 +25,7 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     de: "Xtream-Codes-Player fürs iPhone",
     ar: "مشغل Xtream Codes للآيفون",
     it: "Lettore Xtream Codes per iPhone",
+    nl: "Xtream Codes-speler voor iPhone",
   },
   ipad: {
     en: "IPTV player for iPad",
@@ -33,6 +35,7 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     de: "IPTV-Player fürs iPad",
     ar: "مشغل IPTV للآيباد",
     it: "Lettore IPTV per iPad",
+    nl: "IPTV-speler voor iPad",
   },
   tivimate: {
     en: "TiviMate for iPhone",
@@ -42,6 +45,7 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     de: "TiviMate fürs iPhone",
     ar: "TiviMate على الآيفون",
     it: "TiviMate su iPhone",
+    nl: "TiviMate op iPhone",
   },
   smarters: {
     en: "IPTV Smarters alternative",
@@ -51,6 +55,7 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     de: "IPTV-Smarters-Alternative",
     ar: "بديل IPTV Smarters",
     it: "Alternativa a IPTV Smarters",
+    nl: "Alternatief voor IPTV Smarters",
   },
   m3uChecker: {
     en: "M3U playlist checker",
@@ -60,5 +65,6 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     de: "M3U-Playlist-Checker",
     ar: "فاحص قوائم M3U",
     it: "Verifica playlist M3U",
+    nl: "M3U-playlistchecker",
   },
 };

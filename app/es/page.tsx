@@ -1,20 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
 import { HomePage } from "@/components/home-page";
-import { buildAlternates, defaultOG, defaultTwitter, SITE } from "@/lib/seo-config";
+import { defaultOG, defaultTwitter, homeAlternates, SITE } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
   title: 'EDGE IPTV — Reproductor IPTV para iPhone y iPad (M3U/Xtream)',
   description: 'EDGE IPTV convierte tu iPhone y iPad en un centro para TV en vivo, películas y series: M3U y Xtream, guía de TV, Chromecast, AirPlay y descargas.',
-  alternates: buildAlternates({
-    en: '/',
-    fr: '/fr',
-    es: '/es',
-    pt: '/pt',
-    de: '/de',
-    ar: '/ar',
-    it: '/it'
-  }, "es"),
+  alternates: homeAlternates("es"),
   openGraph: {
     ...defaultOG,
     type: "website",

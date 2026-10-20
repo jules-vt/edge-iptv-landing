@@ -15,6 +15,7 @@ const TITLES: Record<Lang, string> = {
   de: 'Weiterlesen',
   ar: 'تابع القراءة',
   it: 'Continua a leggere',
+  nl: 'Lees verder',
 };
 
 /**

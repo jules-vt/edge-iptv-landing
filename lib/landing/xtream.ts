@@ -638,4 +638,94 @@ export const XTREAM_COPY: Record<Lang, LandingCopy> = {
       },
     ],
   },
+  nl: {
+    metaTitle: "Xtream Codes-speler voor iPhone & iPad | EDGE IPTV",
+    metaDescription:
+      "Log in met je Xtream Codes (server, gebruikersnaam, wachtwoord) en kijk live-tv, films en series op iPhone en iPad, met tv-gids, Chromecast en AirPlay.",
+    eyebrow: "Xtream Codes-API",
+    title: "De Xtream Codes-speler voor iPhone en iPad",
+    intro:
+      "Heeft je IPTV-aanbieder je een serveradres, een gebruikersnaam en een wachtwoord gestuurd? Dat is een Xtream Codes-login. Vul die in bij EDGE IPTV en je krijgt live-tv, films en series met posters, een volledige tv-gids en casten naar je tv.",
+    imageAlt: "Filmdetails in EDGE IPTV op iPhone, geladen via Xtream Codes",
+    needTitle: "Wat je nodig hebt",
+    need: [
+      "Een iPhone of iPad met iOS 17 of nieuwer",
+      "Je Xtream Codes-login van je IPTV-aanbieder: server-URL, gebruikersnaam en wachtwoord (EDGE IPTV is de speler, de app verkoopt geen zenders)",
+    ],
+    stepsTitle: "Xtream Codes instellen in minder dan 2 minuten",
+    steps: [
+      {
+        title: "Installeer EDGE IPTV",
+        description: "Gratis in de App Store, met 7 dagen gratis proberen.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’ en dan op ‘Xtream Codes’",
+        description:
+          "Vul de server-URL in als http://host:poort, daarna je gebruikersnaam en wachtwoord.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’",
+        description:
+          "Live-zenders, films en series laden met hun echte categorieën. Tik op iets om te kijken.",
+      },
+    ],
+    featuresTitle: "Waarom Xtream Codes het best werkt in EDGE IPTV",
+    features: [
+      {
+        title: "De echte categorieën van je aanbieder",
+        description:
+          "Xtream levert live-tv, films en series apart aan, elk met eigen categorieën. EDGE IPTV houdt die structuur aan in plaats van alles op één lijst te zetten.",
+      },
+      {
+        title: "Tv-gids voor elke zender",
+        description: "Wat er nu op is en wat er daarna komt, per zender opgehaald van je server.",
+      },
+      {
+        title: "Details van films en series",
+        description:
+          "Posters, seizoenen en afleveringen, verder kijken waar je stopte en met één tik naar de volgende aflevering.",
+      },
+      {
+        title: "Meerdere aanbieders in één app",
+        description:
+          "Voeg zoveel Xtream- of M3U-playlists toe als je wilt en wissel ertussen vanuit de Playlist Hub.",
+      },
+      {
+        title: "Chromecast, AirPlay en beeld-in-beeld",
+        description:
+          "Stuur een wedstrijd of film naar de tv, of laat hem doorspelen in een klein venster boven andere apps.",
+      },
+      {
+        title: "Downloads om offline te kijken",
+        description: "Sla films en afleveringen op via wifi en kijk ze in het vliegtuig of de trein.",
+      },
+    ],
+    explainTitle: "Xtream Codes of M3U: wat kies je?",
+    explain: [
+      "De meeste aanbieders geven je allebei. De M3U-link is een platte lijst streams; de Xtream Codes-login praat direct met de server van de aanbieder, en daardoor krijg je echte categorieën, een tv-gids per zender en details van films en series. Heb je de keuze, gebruik dan Xtream Codes.",
+      "Heb je alleen een M3U-link die eindigt op get.php?username=…&password=…? Dan is het een vermomde Xtream-login. Plak hem als M3U-playlist en EDGE IPTV haalt er zelf de server en gegevens uit en schakelt over op Xtream.",
+    ],
+    faq: [
+      {
+        q: "Wat zijn Xtream Codes?",
+        a: "Xtream Codes is het loginformaat dat de meeste IPTV-aanbieders gebruiken: een server-URL, een gebruikersnaam en een wachtwoord. Een speler-app zoals EDGE IPTV gebruikt die om je zenders, films en series op te halen.",
+      },
+      {
+        q: "Waar vind ik mijn Xtream Codes?",
+        a: "In de e-mail of het bericht dat je IPTV-aanbieder stuurde toen je je aanmeldde. Zoek naar een server- of portal-URL met een poortnummer, een gebruikersnaam en een wachtwoord.",
+      },
+      {
+        q: "Waarom zegt de app ‘Onjuiste gebruikersnaam of wachtwoord’?",
+        a: "De server weigerde de login. Controleer of er geen spatie aan het eind van een veld is meegekopieerd, of hoofd- en kleine letters in de gebruikersnaam kloppen en of je abonnement bij je aanbieder nog actief is.",
+      },
+      {
+        q: "Kan ik mijn Xtream-login op meerdere toestellen gebruiken?",
+        a: "Dat hangt af van je aanbieder: veel abonnementen staan maar één verbinding tegelijk toe, dus een tweede toestel of een AirPlay-stream kan geweigerd worden terwijl er al iets speelt.",
+      },
+      {
+        q: "Is EDGE IPTV gratis?",
+        a: "De app is gratis te downloaden, met 7 dagen gratis proberen. Daarna is een abonnement nodig om te kijken: € 3,99 per maand of € 19,99 per jaar, zonder advertenties.",
+      },
+    ],
+  },
 };

@@ -640,4 +640,93 @@ export const M3U_COPY: Record<Lang, LandingCopy> = {
       },
     ],
   },
+  nl: {
+    metaTitle: "M3U-speler voor iPhone & iPad: open M3U- en M3U8-playlists",
+    metaDescription:
+      "Speel elke M3U- of M3U8-IPTV-playlist af op iPhone en iPad. EDGE IPTV sorteert live-tv, films en series, laadt de tv-gids en cast naar Chromecast en AirPlay.",
+    eyebrow: "M3U- en M3U8-playlists",
+    title: "De M3U-speler voor iPhone en iPad",
+    intro:
+      "Plak de M3U-link van je IPTV-aanbieder en EDGE IPTV maakt van een kale lijst streams een echte tv-app: zenders per categorie, films en series apart, een tv-gids en afspelen dat gewoon werkt.",
+    imageAlt: "Tv-gids van EDGE IPTV op iPhone, geladen uit een M3U-playlist",
+    needTitle: "Wat je nodig hebt",
+    need: [
+      "Een iPhone of iPad met iOS 17 of nieuwer",
+      "De M3U- of M3U8-link van je IPTV-aanbieder (EDGE IPTV is de speler, de app verkoopt geen zenders)",
+    ],
+    stepsTitle: "Open een M3U-playlist in minder dan 2 minuten",
+    steps: [
+      {
+        title: "Installeer EDGE IPTV",
+        description: "Gratis in de App Store, met 7 dagen gratis proberen.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’ en dan op ‘M3U-playlist’",
+        description: "Plak de URL van de playlist (.m3u of .m3u8) en geef hem een naam.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’",
+        description:
+          "De app downloadt de lijst, sorteert hem en laadt de tv-gids. Je zenders verschijnen meteen.",
+      },
+    ],
+    featuresTitle: "Wat EDGE IPTV met je M3U doet",
+    features: [
+      {
+        title: "Live-tv, films en series voor je gesorteerd",
+        description:
+          "Een M3U zegt niet wat elke regel is. De app leidt het af uit het pad van de stream, het afleveringsnummer (S01E02) en het bestandstype, zodat films en series niet tussen de live-zenders belanden.",
+      },
+      {
+        title: "Tv-gids uit de kop van de playlist",
+        description:
+          "Als je M3U een XMLTV-gids noemt (url-tvg of x-tvg-url), wordt die automatisch geladen en per zender gekoppeld via tvg-id, of anders via de naam.",
+      },
+      {
+        title: "Categorieën en logo's blijven behouden",
+        description: "group-title wordt je categorieën en tvg-logo de logo's van je zenders.",
+      },
+      {
+        title: "Xtream herkend achter de M3U",
+        description:
+          "Veel M3U-links zijn eigenlijk een Xtream-paneel (get.php?username=…). De app herkent dat en schakelt over op de volledige Xtream-API: betere categorieën, gids en filmdetails.",
+      },
+      {
+        title: "Chromecast, AirPlay en beeld-in-beeld",
+        description: "Stuur een zender naar de tv, of kijk verder in een klein venster boven andere apps.",
+      },
+      {
+        title: "Zoeken, favorieten en verder kijken",
+        description:
+          "Vind een zender in een seconde, zet je vaste zenders vast en kijk een film verder waar je was gebleven.",
+      },
+    ],
+    explainTitle: "M3U, M3U8: wat staat er in het bestand?",
+    explain: [
+      "Een M3U-playlist is een tekstbestand. Elke regel #EXTINF (naam, logo, groep, gids-ID) wordt gevolgd door het adres van de stream. M3U8 is hetzelfde formaat in UTF-8, waardoor accenten en niet-Latijnse zendernamen intact blijven. EDGE IPTV leest beide.",
+      "De meeste IPTV-aanbieders geven je de playlist als link in plaats van als bestand, vaak eindigend op get.php met je gebruikersnaam en wachtwoord erin. Die link is alles wat EDGE IPTV nodig heeft: de lijst wordt elke dag opnieuw opgehaald, dus nieuwe zenders verschijnen vanzelf.",
+    ],
+    faq: [
+      {
+        q: "Hoe open ik een M3U-bestand op iPhone?",
+        a: "Installeer een IPTV-speler zoals EDGE IPTV, tik op ‘Playlist toevoegen’, kies ‘M3U-playlist’ en plak de link van je aanbieder. De zenders laden in een paar seconden.",
+      },
+      {
+        q: "Ondersteunt EDGE IPTV M3U8?",
+        a: "Ja. M3U- en M3U8-playlists worden allebei ondersteund, net als de .m3u8-HLS-streams erin.",
+      },
+      {
+        q: "Krijg ik een tv-gids bij een M3U-playlist?",
+        a: "Ja, als je playlist op de eerste regel een XMLTV-gids noemt (url-tvg of x-tvg-url). EDGE IPTV laadt die en koppelt hem automatisch aan je zenders.",
+      },
+      {
+        q: "Levert EDGE IPTV zenders?",
+        a: "Nee. EDGE IPTV is een speler: je brengt de playlist van je eigen IPTV-aanbieder mee.",
+      },
+      {
+        q: "Is de M3U-speler gratis?",
+        a: "De app is gratis te downloaden, met 7 dagen gratis proberen. Daarna is een abonnement nodig om te kijken: € 3,99 per maand of € 19,99 per jaar, zonder advertenties.",
+      },
+    ],
+  },
 };

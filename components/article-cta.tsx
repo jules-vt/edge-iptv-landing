@@ -49,6 +49,12 @@ const COPY: Record<Lang, { eyebrow: string; title: string; cta: string; meta: st
     cta: "Scarica su App Store",
     meta: 'iPhone e iPad · 7 giorni di prova gratuita',
   },
+  nl: {
+    eyebrow: 'De app achter deze handleiding',
+    title: 'Stel dit in met EDGE IPTV',
+    cta: 'Download in de App Store',
+    meta: 'iPhone & iPad · 7 dagen gratis proberen',
+  },
 };
 
 /**

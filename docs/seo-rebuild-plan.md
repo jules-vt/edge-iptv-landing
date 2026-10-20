@@ -137,7 +137,7 @@ Pages comparatives honnêtes, sans note inventée, sur le modèle « Vous cherch
 - [ ] « EPG / TV guide on iPhone » (« tv gids » NL popularité 61, « tv guide » UK).
 
 **5.3 Néerlandais (NL, 8e langue)**
-- [ ] Ajouter `nl` dans `lib/i18n.ts` : homepage, 3 pages produit (`/nl/m3u-speler-iphone`, `/nl/xtream-codes-speler-iphone`, `/nl/iptv-speler-ipad`), guide d'installation, `beste-iptv-app-iphone`. Mots-clés : « iptv speler » (l'app est 46e sur l'App Store NL, difficulté 9), « tv gids ». L'app est déjà traduite en néerlandais (vérifié le 2026-10-20), et les captures App Store NL existent.
+- [x] Néerlandais ajouté le 2026-10-20 : homepage, 5 pages produit (M3U, Xtream, iPad, TiviMate, Smarters), vérificateur M3U, guide d'installation (`/nl/iptv-installeren-iphone-ipad`), `beste-iptv-app-iphone`, index du blog. 10 URL, sitemap à 104. Libellés de l'app vérifiés dans `Localizable.xcstrings` (« Playlist toevoegen », « Doorgaan », etc.), capture iPad NL générée depuis `screenshots/captures/nl/ipad/epg.png`. Pages légales : repli sur l'anglais. Corrigé au passage : (1) le titre de la FAQ de la homepage retombait sur le portugais en de/ar/it (« Perguntas Frequentes » en ligne sur `/de`) ; (2) les hreflang des homepages étaient écrits à la main dans 8 fichiers, maintenant dérivés de `LANGS` via `homeAlternates()` ; (3) « Seven languages » → 11 (l'app est traduite en 11 langues).
 
 **5.4 Allemand et français : finir les traductions**
 - [ ] DE : traduire les guides xtream/m3u (les seuls articles qui convertissent en EN) ; mots-clés « IPTV Player iPhone », « M3U Playlist einrichten », « Xtream Codes eingeben ».

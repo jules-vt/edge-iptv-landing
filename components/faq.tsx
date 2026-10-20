@@ -256,21 +256,62 @@ const faqsIT: FAQItem[] = [
   }
 ];
 
+const faqsNL: FAQItem[] = [
+  {
+    question: "Wat is IPTV en hoe werkt het op iPhone?",
+    answer: "IPTV (Internet Protocol Television) streamt tv via internet in plaats van via kabel of satelliet. EDGE IPTV is een speler-app die verbinding maakt met je IPTV-aanbieder via Xtream Codes of een M3U-link, zodat je live-tv, films en series kijkt op je iPhone of iPad."
+  },
+  {
+    question: "Is EDGE IPTV gratis te downloaden?",
+    answer: "EDGE IPTV is gratis te downloaden en je kunt het 7 dagen gratis proberen. Daarna is een abonnement nodig om de app te blijven gebruiken. EDGE IPTV is alleen een speler: voor de content heb je daarnaast een actief abonnement nodig bij een IPTV-aanbieder (M3U of Xtream Codes)."
+  },
+  {
+    question: "Heb ik een abonnement nodig voor EDGE IPTV?",
+    answer: "Ja, na de gratis proefperiode van 7 dagen is een abonnement nodig: € 3,99 per maand of € 19,99 per jaar. Je hebt ook een IPTV-abonnement met M3U of Xtream Codes nodig bij een aanbieder naar keuze. Met je gegevens bij de hand stel je de app in minder dan een minuut in."
+  },
+  {
+    question: "Ondersteunt EDGE IPTV Chromecast?",
+    answer: "Ja. Met de ingebouwde Chromecast-ondersteuning cast je films, series en live-tv met één tik naar je tv. AirPlay naar een Apple TV werkt ook."
+  },
+  {
+    question: "Kan ik offline kijken?",
+    answer: "Ja. Met EDGE IPTV download je films en afleveringen van series naar je toestel en kijk je ze later zonder internetverbinding."
+  },
+  {
+    question: "Welke iOS-versie is nodig?",
+    answer: "EDGE IPTV vereist iOS 17.0 of nieuwer en werkt op iPhone en iPad."
+  },
+  {
+    question: "Zijn mijn gegevens en privacy beschermd?",
+    answer: "Ja. Er worden alleen anonieme, algemene statistieken verzameld om de app te verbeteren. Je content wordt lokaal op je toestel verwerkt. We hebben nooit toegang tot je IPTV-gegevens of je kijkgeschiedenis."
+  },
+  {
+    question: "Welke talen worden ondersteund?",
+    answer: "De interface van EDGE IPTV is vertaald in 11 talen, waaronder Nederlands, Engels, Duits en Frans. De app past zich automatisch aan de taal van je toestel aan."
+  }
+];
+
 const FAQS_BY_LANG: Record<Lang, FAQItem[]> = {
   en: faqsEN, fr: faqsFR, es: faqsES, pt: faqsPT,
-  de: faqsDE, ar: faqsAR, it: faqsIT,
+  de: faqsDE, ar: faqsAR, it: faqsIT, nl: faqsNL,
+};
+
+// A per-language table: the ternary chain it replaces fell through to
+// Portuguese for every language after the first four.
+const HEADINGS: Record<Lang, { title: string; subtitle: string }> = {
+  en: { title: 'Frequently Asked Questions', subtitle: 'Everything you need to know about EDGE IPTV' },
+  fr: { title: 'Questions Fréquentes', subtitle: 'Tout ce que vous devez savoir sur EDGE IPTV' },
+  es: { title: 'Preguntas Frecuentes', subtitle: 'Todo lo que necesitas saber sobre EDGE IPTV' },
+  pt: { title: 'Perguntas Frequentes', subtitle: 'Tudo o que você precisa saber sobre EDGE IPTV' },
+  de: { title: 'Häufige Fragen', subtitle: 'Alles, was du über EDGE IPTV wissen musst' },
+  ar: { title: 'الأسئلة الشائعة', subtitle: 'كل ما تحتاج معرفته عن EDGE IPTV' },
+  it: { title: 'Domande frequenti', subtitle: 'Tutto quello che devi sapere su EDGE IPTV' },
+  nl: { title: 'Veelgestelde vragen', subtitle: 'Alles wat je moet weten over EDGE IPTV' },
 };
 
 export function FAQ({ lang = 'en' }: FAQProps) {
   const faqs = FAQS_BY_LANG[lang];
-  const title = lang === 'en' ? 'Frequently Asked Questions' : lang === 'fr' ? 'Questions Fréquentes' : lang === 'es' ? 'Preguntas Frecuentes' : 'Perguntas Frequentes';
-  const subtitle = lang === 'en' 
-    ? 'Everything you need to know about EDGE IPTV'
-    : lang === 'fr'
-      ? 'Tout ce que vous devez savoir sur EDGE IPTV'
-      : lang === 'es'
-        ? 'Todo lo que necesitas saber sobre EDGE IPTV'
-        : 'Tudo o que você precisa saber sobre EDGE IPTV';
+  const { title, subtitle } = HEADINGS[lang];
 
   // Schema.org FAQPage
   const faqSchema = {

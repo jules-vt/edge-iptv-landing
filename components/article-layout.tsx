@@ -72,6 +72,13 @@ const COPY: Record<Lang, { back: string; blog: string; ctaTitle: string; ctaBody
     ctaBody: "Scarica EDGE IPTV e configura la tua playlist in circa due minuti.",
     ctaButton: 'Scarica su App Store',
   },
+  nl: {
+    back: 'Terug naar de blog',
+    blog: '/nl/blog',
+    ctaTitle: 'Klaar om te beginnen?',
+    ctaBody: 'Download EDGE IPTV en stel je playlist in ongeveer twee minuten in.',
+    ctaButton: 'Download in de App Store',
+  },
 };
 
 /**
@@ -115,6 +122,7 @@ const RIGHTS: Record<Lang, string> = {
   de: 'Alle Rechte vorbehalten.',
   ar: 'جميع الحقوق محفوظة.',
   it: 'Tutti i diritti riservati.',
+  nl: 'Alle rechten voorbehouden.',
 };
 
 export function ArticleLayout({

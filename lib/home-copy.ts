@@ -102,7 +102,7 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
           body: "Save films and episodes to the device and watch them with no connection at all.",
         },
         {
-          title: "Seven languages",
+          title: "Eleven languages",
           body: "The whole interface is translated, so the app reads as if it were written for you.",
         },
       ],
@@ -183,7 +183,7 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
           body: "Enregistrez films et épisodes sur l'appareil et regardez-les sans aucune connexion.",
         },
         {
-          title: "Sept langues",
+          title: "Onze langues",
           body: "Toute l'interface est traduite : l'app se lit comme si elle avait été écrite pour vous.",
         },
       ],
@@ -264,7 +264,7 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
           body: "Guarda películas y episodios en el dispositivo y míralos sin ninguna conexión.",
         },
         {
-          title: "Siete idiomas",
+          title: "Once idiomas",
           body: "Toda la interfaz está traducida: la app se lee como si estuviera hecha para ti.",
         },
       ],
@@ -345,7 +345,7 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
           body: "Salve filmes e episódios no aparelho e assista sem conexão nenhuma.",
         },
         {
-          title: "Sete idiomas",
+          title: "Onze idiomas",
           body: "Toda a interface é traduzida: o app se lê como se tivesse sido escrito para você.",
         },
       ],
@@ -426,7 +426,7 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
           body: "Sichere Filme und Folgen auf dem Gerät und sieh sie ganz ohne Verbindung.",
         },
         {
-          title: "Sieben Sprachen",
+          title: "Elf Sprachen",
           body: "Die gesamte Oberfläche ist übersetzt, die App liest sich, als wäre sie für dich geschrieben.",
         },
       ],
@@ -507,7 +507,7 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
           body: "احفظ الأفلام والحلقات على جهازك وشاهدها بلا أي اتصال.",
         },
         {
-          title: "سبع لغات",
+          title: "إحدى عشرة لغة",
           body: "الواجهة مترجمة بالكامل، فيبدو التطبيق وكأنه كُتب من أجلك.",
         },
       ],
@@ -587,7 +587,7 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
           body: "Salva film ed episodi sul dispositivo e guardali senza alcuna connessione.",
         },
         {
-          title: "Sette lingue",
+          title: "Undici lingue",
           body: "L'intera interfaccia è tradotta: l'app si legge come se fosse stata scritta per te.",
         },
       ],
@@ -626,6 +626,86 @@ export const HOME_COPY: Record<Lang, HomeCopy> = {
       terms: "Termini di utilizzo",
       rights: "Tutti i diritti riservati.",
       tagline: "Il lettore IPTV per iPhone e iPad.",
+    },
+  },
+  nl: {
+    nav: { blog: "Blog", download: "Downloaden" },
+    hero: {
+      titleTop: "De IPTV-speler",
+      titleAccent: "voor M3U & Xtream",
+      body: "EDGE IPTV maakt van je iPhone en iPad een streaminghub voor live-tv, films en series. Met een tv-gids, beeld-in-beeld, offline downloads en casten naar Chromecast en AirPlay met één tik.",
+      ctaPrimary: "Download in de App Store",
+      ctaSecondary: "Meer weten",
+      badges: ["Geen advertenties", "7 dagen gratis", "iPhone & iPad"],
+      screenshotAlt:
+        "Startscherm van EDGE IPTV op iPhone, met de catalogus van live-tv, films en series",
+    },
+    features: {
+      title: "Waarom EDGE IPTV?",
+      intro: "Gebouwd voor snelheid en voor de manier waarop iOS werkt. ",
+      linkText: "Bekijk de vergelijking",
+      introAfter: " met andere IPTV-spelers op iPhone en iPad.",
+      items: [
+        {
+          title: "Klaar voor M3U & Xtream",
+          body: "Plak een M3U-link of je Xtream-gegevens en de catalogus wordt geladen. Geen zenders handmatig instellen.",
+        },
+        {
+          title: "Tv-gids",
+          body: "Een EPG-tabel laat zien wat er nu op is en wat er daarna komt, zodat je de avond in één oogopslag plant.",
+        },
+        {
+          title: "Chromecast & AirPlay",
+          body: "Stuur een zender, film of aflevering met één tik naar de tv, zonder de app te verlaten.",
+        },
+        {
+          title: "Beeld-in-beeld",
+          body: "Kijk verder in een zwevend venster terwijl je door de catalogus bladert of een andere app gebruikt.",
+        },
+        {
+          title: "Offline downloads",
+          body: "Sla films en afleveringen op je toestel op en kijk ze zonder verbinding.",
+        },
+        {
+          title: "Elf talen",
+          body: "De hele interface is vertaald, ook in het Nederlands, zodat de app aanvoelt alsof hij voor jou is geschreven.",
+        },
+      ],
+    },
+    screenshots: {
+      badge: "Interface",
+      title: "Ontworpen voor eenvoud",
+      intro: "Een interface die je content vooropzet en verder niet in de weg zit.",
+      cards: ["Geordende content", "Tv-gids", "Offline downloads"],
+    },
+    about: {
+      title: "Wat is EDGE IPTV?",
+      paragraphs: [
+        "EDGE IPTV is een IPTV-speler voor iPhone en iPad. De app verkoopt of host geen content: je brengt je eigen abonnement van een IPTV-aanbieder mee, als M3U-playlist of Xtream-gegevens, en de app maakt er een catalogus van waar je echt doorheen kunt bladeren.",
+        "Het instellen is waar de meeste spelers de mist in gaan. Hier is het één scherm: plak je link of je gegevens, en zenders, films en series verschijnen in categorieën, met afbeeldingen en een programmagids als je aanbieder die levert.",
+        "Het afspelen draait op een hybride engine die terugvalt op VLC voor formaten die de speler van Apple weigert, waardoor ook lastige streams afspelen. Chromecast, AirPlay, beeld-in-beeld en offline downloads zitten erbij in plaats van apart verkocht te worden.",
+        "De app is gratis te downloaden, met 7 dagen gratis proberen. Daarna heb je om te kijken een abonnement nodig van € 3,99 per maand of € 19,99 per jaar. Er zijn nergens advertenties.",
+      ],
+    },
+    cta: {
+      title: "Klaar om te kijken?",
+      body: "Stel je playlist in ongeveer twee minuten in. ",
+      linkText: "Volg de stap-voor-staphandleiding",
+      bodyAfter: " als je het liever eerst leest.",
+      button: "Probeer 7 dagen gratis",
+      fineprint:
+        "Gratis te downloaden. Vereist iOS 17.0 of nieuwer, op iPhone en iPad.",
+    },
+    footer: {
+      product: "Product",
+      resources: "Bronnen",
+      legal: "Juridisch",
+      install: "Installatiehandleiding",
+      blog: "Blog",
+      privacy: "Privacybeleid",
+      terms: "Gebruiksvoorwaarden",
+      rights: "Alle rechten voorbehouden.",
+      tagline: "De IPTV-speler voor iPhone en iPad.",
     },
   },
 };

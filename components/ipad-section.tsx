@@ -204,6 +204,31 @@ const COPY: Record<
     alt: "La guida EDGE IPTV su iPad, con nove canali e quattro ore di programmazione insieme",
     caption: "La guida TV su un iPad: nove canali e quattro ore a schermo, senza scorrere.",
   },
+  nl: {
+    badge: 'iPhone & iPad',
+    title: 'Gemaakt voor het iPad-scherm, niet alleen uitgerekt',
+    intro:
+      'EDGE IPTV is een universele app: één abonnement geldt voor je iPhone en je iPad. Op het grotere scherm verandert de indeling in plaats van alleen mee te schalen: posters worden bijna twee keer zo groot getoond, en een serie staat naast de afleveringenlijst in plaats van erboven.',
+    points: [
+      {
+        title: 'Een tv-gids met ruimte',
+        body: 'Op een iPad toont de EPG-tabel veel meer van het programma tegelijk, zodat je de avond overziet zonder zender voor zender te scrollen.',
+      },
+      {
+        title: 'Beeld-in-beeld',
+        body: 'Laat een zender in een hoek doorspelen terwijl je een mail beantwoordt of iets opzoekt, op iPad en iPhone.',
+      },
+      {
+        title: 'Naar de tv sturen',
+        body: 'Cast naar een Chromecast of stuur met AirPlay naar een Apple TV, rechtstreeks vanuit de speler.',
+      },
+    ],
+    devices:
+      'Vereist iPadOS 17 of nieuwer: iPad Pro (2e generatie), iPad Air (3e generatie), iPad (6e generatie) en iPad mini (5e generatie) of nieuwer.',
+    link: 'IPTV instellen op je iPad',
+    alt: 'De EDGE IPTV-gids op iPad, met negen zenders en vier uur programma tegelijk in beeld',
+    caption: 'De tv-gids op een iPad: negen zenders en vier uur programma in beeld, zonder te scrollen.',
+  },
 };
 
 const ICONS = [Layers, PictureInPicture2, Cast];

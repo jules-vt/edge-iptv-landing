@@ -1574,4 +1574,209 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
   },
+  nl: {
+    slug: "beste-iptv-app-iphone",
+    metaTitle: "Beste IPTV-app voor iPhone 2026: top 5 getest",
+    metaDescription:
+      "Op zoek naar de beste IPTV-app voor iPhone? We testten de top 5 van 2026: welke is het snelst ingesteld, ondersteunt Chromecast en werkt het best op iOS?",
+    socialDescription:
+      "We testten de top 5 IPTV-apps voor iPhone in 2026: snelheid van instellen, Chromecast, offline kijken.",
+    title: "Beste IPTV-app voor iPhone 2026: top 5 getest",
+    lead: "We testten de 5 populairste IPTV-apps op iPhone om de snelste, betrouwbaarste en makkelijkst in te stellen app te vinden.",
+    readTime: "7 min lezen",
+    author: "Team EDGE IPTV",
+    keywords: [
+      "beste iptv app iphone",
+      "iptv app iphone",
+      "iptv speler iphone",
+      "iptv op iphone",
+      "iptv speler ios",
+    ],
+    home: "Home",
+    blog: "Blog",
+    breadcrumb: "Beste IPTV-app voor iPhone 2026",
+
+    intro:
+      "Ja, je **kunt IPTV kijken op je iPhone**, en je hebt geen jailbreak of buiten de App Store geïnstalleerde app nodig. Alle vijf de apps in deze gids staan in de App Store. We testten ze op snelheid van instellen, streamkwaliteit, Chromecast-ondersteuning en integratie met iOS om de beste IPTV-app voor iPhone in 2026 te vinden.",
+    quickLabel: "Kort antwoord",
+    quickAnswer:
+      "**EDGE IPTV** is de beste IPTV-app voor iPhone in 2026. Het is de enige app in deze test met Chromecast, offline downloads en instellen in minder dan 2 minuten. Gratis te downloaden, daarna € 3,99 per maand na 7 dagen gratis proberen.",
+    trialCta: "Probeer 7 dagen gratis",
+    trialCtaStore: "Probeer 7 dagen gratis in de App Store",
+
+    criteriaTitle: "Wat maakt een goede IPTV-app voor iPhone?",
+    criteriaIntro:
+      "Niet elke IPTV-speler is gemaakt voor iOS. Dit onderscheidt een goede IPTV-app voor iPhone van een middelmatige:",
+    criteria: [
+      {
+        title: "Native iOS-interface",
+        description:
+          "Voelt thuis op iPhone: vloeiende animaties, goed tikbare knoppen, ondersteuning voor de donkere modus.",
+      },
+      {
+        title: "Snel en stabiel streamen",
+        description: "Slimme buffering die zich aanpast aan je verbinding, zonder steeds te haperen.",
+      },
+      {
+        title: "Chromecast / AirPlay",
+        description: "Cast naar je tv zonder extra hardware te kopen. Een functie die veel apps overslaan.",
+      },
+      {
+        title: "Offline downloads",
+        description: "Download films en series om onderweg te kijken, ook zonder internet.",
+      },
+    ],
+
+    tableTitle: "Top 5 IPTV-apps voor iPhone: vergelijking",
+    table: {
+      app: "App",
+      rating: "Beoordeling",
+      price: "Prijs",
+      chromecast: "Chromecast",
+      offline: "Offline",
+      setup: "Instellen",
+    },
+    newLabel: "Nieuw",
+    topPick: "Onze keuze",
+    prices: { edge: "7 dagen gratis, daarna € 3,99/mnd", iap: "Gratis (in-app)", free: "Gratis" },
+
+    edgeTitle: "Beste IPTV-app voor iPhone: EDGE IPTV",
+    iconAlt: "App-icoon van EDGE IPTV, de beste IPTV-app voor iPhone",
+    trialBadge: "7 dagen gratis",
+    edgeSummary:
+      "EDGE IPTV is vanaf de basis gebouwd voor iPhone en iPad, en is de enige speler in deze test die Chromecast, offline downloads en een volledig native iOS-interface in één app combineert.",
+    edgeFeatures: [
+      "Instellen met Xtream Codes of M3U in minder dan 2 minuten",
+      "Chromecast en AirPlay naar je tv",
+      "Films en series downloaden om offline te kijken",
+      "Beeld-in-beeld terwijl je andere apps gebruikt",
+      "Live-tv, films en series met een tv-gids",
+      "iPhone en iPad met iOS 17 of nieuwer",
+    ],
+    whyTitle: "Waarom EDGE IPTV opvalt op iPhone",
+    why: [
+      "De meeste IPTV-spelers voor iOS zijn overgezet van Android. Ze werken, maar voelen vreemd aan op iPhone. EDGE IPTV is alleen voor iOS ontworpen, en dat merk je bij elke handeling: gebaren voelen natuurlijk, het toetsenbord verschijnt waar je het verwacht en de app volgt systeemconventies zoals Dynamic Type en de donkere modus.",
+      "**Chromecast-ondersteuning** maakt hier het verschil: geen van de andere vier apps in deze test kan casten naar een Chromecast of Google TV. Samen met **offline downloads** dekt de app zowel thuis als onderweg, de twee situaties waar iPhone-gebruikers het meest om geven.",
+    ],
+
+    othersTitle: "Andere IPTV-apps voor iPhone om te kennen",
+    others: [
+      {
+        id: "gse",
+        name: "#2 — GSE Smart IPTV",
+        meta: "Beoordeling: ★ 4.1 · Gratis met in-app-aankopen",
+        text: "GSE bestaat al jaren en heeft een trouwe gebruikersgroep. De app ondersteunt M3U en Xtream Codes en heeft een ingebouwde EPG. Geavanceerde functies zoals multiscreen zitten achter een in-app-aankoop, en Chromecast wordt niet ondersteund.",
+        pros: ["M3U + Xtream", "Ingebouwde EPG"],
+        cons: ["Geen Chromecast", "Belangrijke functies betaald"],
+      },
+      {
+        id: "flex",
+        name: "#3 — Flex IPTV",
+        meta: "Beoordeling: ★ 3.8 · Gratis met in-app-aankopen",
+        text: "Flex IPTV heeft een overzichtelijke interface en ondersteunt M3U-playlists. De gratis versie is beperkt tot 4 opgeslagen playlists, en de interface oogt gedateerd naast modern iOS-design. AirPlay werkt, Chromecast niet.",
+        pros: ["Overzichtelijke interface", "AirPlay"],
+        cons: ["Beperkt aantal gratis playlists", "Geen Chromecast"],
+      },
+      {
+        id: "smarters",
+        name: "#4 — IPTV Smarters Pro",
+        meta: "Beoordeling: ★ 3.5 · Gratis met in-app-aankopen",
+        text: "Een bekende naam in de IPTV-wereld. De iOS-versie loopt achter op de Android-versie: instellen is omslachtiger en de interface voelt niet native op iPhone. Xtream Codes worden ondersteund, maar het instellen kost meerdere stappen.",
+        pros: ["Xtream Codes"],
+        cons: ["Niet geoptimaliseerd voor iOS", "Geen Chromecast of offline"],
+      },
+      {
+        id: "opus",
+        name: "#5 — Opus IPTV Player",
+        meta: "Beoordeling: ★ 3.7 · Gratis",
+        text: "Opus ondersteunt M3U-playlists en ziet er redelijk modern uit. De app is gratis zonder duidelijke betaalmuur, maar mist Chromecast en een offline modus, en de ondersteuning voor Xtream Codes is minder betrouwbaar dan bij de concurrentie.",
+        pros: ["Volledig gratis", "M3U"],
+        cons: ["Geen Chromecast of offline", "Onbetrouwbare Xtream Codes"],
+      },
+    ],
+
+    stepsTitle: "Zo download je een IPTV-app op iPhone (in 2 minuten ingesteld)",
+    stepsIntro: "Zo ga je met EDGE IPTV in minder dan 2 minuten van niets naar kijken:",
+    steps: [
+      {
+        title: "Download EDGE IPTV in de App Store",
+        description:
+          "Tik op de knop hieronder of zoek ‘EDGE IPTV’ in de App Store. De download is gratis, met 7 dagen gratis proberen.",
+      },
+      {
+        title: "Tik op ‘Playlist toevoegen’",
+        description: "Kies Xtream Codes, of M3U-playlist als je aanbieder je een link gaf.",
+      },
+      {
+        title: "Vul de gegevens van je IPTV-aanbieder in",
+        description:
+          "Plak de server-URL, gebruikersnaam en wachtwoord van je IPTV-dienst en tik op ‘Playlist toevoegen’.",
+      },
+      {
+        title: "Begin met kijken",
+        description: "Je zenders, films en series laden automatisch. Tik op iets om af te spelen.",
+      },
+    ],
+    guideBefore: "Liever een uitgebreidere uitleg? Lees onze ",
+    guideLabel: "complete handleiding voor IPTV op iPhone en iPad",
+    guideAfter: ".",
+
+    tipsTitle: "Tips voor de beste IPTV-ervaring op iPhone",
+    tips: [
+      {
+        title: "Gebruik wifi voor HD",
+        description: "Kijk 1080p- of 4K-streams via wifi. Een 5 GHz-netwerk is ideaal tegen buffering.",
+      },
+      {
+        title: "Download voor je op reis gaat",
+        description:
+          "Sla films en afleveringen via wifi op voor vertrek en kijk ze zonder mobiele data.",
+      },
+      {
+        title: "Cast naar je tv",
+        description:
+          "Tik op het cast-icoon in de speler om de stream naar een Chromecast, Google TV of Apple TV te sturen.",
+      },
+      {
+        title: "Kijk verder in beeld-in-beeld",
+        description:
+          "Veeg naar het beginscherm tijdens het afspelen en de video speelt door in een klein venster boven je andere apps.",
+      },
+      {
+        title: "Zet ‘Ververs op achtergrond’ aan",
+        description:
+          "Instellingen → EDGE IPTV → Ververs op achtergrond laat je catalogus tussen sessies bijwerken, wanneer iOS dat toestaat.",
+      },
+      {
+        title: "Los buffering op met een VPN",
+        description:
+          "Als je internetprovider streamingverkeer afknijpt, kan een VPN de snelheid terugbrengen.",
+      },
+    ],
+
+    relatedTitle: "Gerelateerde handleidingen",
+    faqTitle: "Veelgestelde vragen",
+    faq: [
+      {
+        q: "Wat is de beste IPTV-app voor iPhone?",
+        a: "EDGE IPTV stelt Xtream Codes in minder dan twee minuten in en ondersteunt Chromecast, offline downloads en een volledige EPG-gids op iPhone en iPad. Gratis te downloaden, met 7 dagen gratis proberen, daarna € 3,99 per maand of € 19,99 per jaar.",
+      },
+      {
+        q: "Kan ik IPTV kijken op mijn iPhone?",
+        a: "Ja. Je hebt een IPTV-speler-app zoals EDGE IPTV nodig en een IPTV-abonnement bij een aanbieder. Met je Xtream Codes bij de hand duurt het instellen minder dan 2 minuten.",
+      },
+      {
+        q: "Hoe download ik een IPTV-app op mijn iPhone?",
+        a: "Open de App Store op je iPhone, zoek ‘EDGE IPTV’ en tik op de downloadknop. Open daarna de app, tik op ‘Playlist toevoegen’, vul de Xtream Codes van je aanbieder in (URL, gebruikersnaam, wachtwoord) en je kunt kijken.",
+      },
+      {
+        q: "Is er een gratis IPTV-app voor iPhone?",
+        a: "EDGE IPTV is gratis te downloaden, met 7 dagen gratis proberen. Daarna is voor afspelen een abonnement nodig van € 3,99 per maand of € 19,99 per jaar, zonder advertenties. Je hebt daarnaast een eigen IPTV-abonnement bij een aanbieder nodig, los van de app.",
+      },
+      {
+        q: "Werkt IPTV op elke iPhone?",
+        a: "EDGE IPTV vereist iOS 17.0 of nieuwer en werkt dus op iPhone XS en nieuwer. Op iPad ondersteunt de app iPad Pro (2e generatie), iPad Air (3e generatie), iPad (6e generatie) en iPad mini (5e generatie) of nieuwer.",
+      },
+    ],
+  },
 };

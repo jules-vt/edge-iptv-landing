@@ -29,6 +29,7 @@ export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
     de: "m3u-player-iphone",
     ar: "m3u-player-iphone",
     it: "lettore-m3u-iphone",
+    nl: "m3u-speler-iphone",
   },
   xtream: {
     en: "xtream-codes-player-iphone",
@@ -38,6 +39,7 @@ export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
     de: "xtream-codes-player-iphone",
     ar: "xtream-codes-player-iphone",
     it: "lettore-xtream-codes-iphone",
+    nl: "xtream-codes-speler-iphone",
   },
   ipad: {
     en: "iptv-player-ipad",
@@ -47,6 +49,7 @@ export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
     de: "iptv-player-ipad",
     ar: "iptv-player-ipad",
     it: "lettore-iptv-ipad",
+    nl: "iptv-speler-ipad",
   },
   tivimate: {
     en: "tivimate-for-iphone",
@@ -56,6 +59,7 @@ export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
     de: "tivimate-iphone",
     ar: "tivimate-iphone",
     it: "tivimate-iphone",
+    nl: "tivimate-iphone",
   },
   smarters: {
     en: "iptv-smarters-alternative",
@@ -65,6 +69,7 @@ export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
     de: "iptv-smarters-alternative",
     ar: "iptv-smarters-alternative",
     it: "alternativa-iptv-smarters",
+    nl: "iptv-smarters-alternatief",
   },
   m3uChecker: {
     en: "m3u-checker",
@@ -74,6 +79,7 @@ export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
     de: "m3u-checker",
     ar: "m3u-checker",
     it: "verifica-m3u",
+    nl: "m3u-checker",
   },
 };
 

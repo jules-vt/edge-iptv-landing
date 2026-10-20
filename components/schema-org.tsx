@@ -69,6 +69,12 @@ const SCHEMA_TEXT: Record<Lang, { description: string; brand: string; org: strin
     org: "Sviluppatore del lettore EDGE IPTV per iPhone e iPad.",
     home: "Home",
   },
+  nl: {
+    description: "IPTV-speler voor iPhone en iPad met ondersteuning voor M3U en Xtream, een tv-gids, Chromecast, AirPlay en offline downloads.",
+    brand: "EDGE IPTV maakt een IPTV-speler voor iOS, gebouwd rond snel instellen en native afspelen.",
+    org: "Maker van de EDGE IPTV-speler voor iPhone en iPad.",
+    home: "Home",
+  },
 };
 
 export function SchemaOrg({ lang = "en" }: SchemaOrgProps) {

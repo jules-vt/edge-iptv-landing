@@ -801,4 +801,108 @@ export const CHECKER_COPY: Record<Lang, CheckerCopy> = {
       },
     ],
   },
+  nl: {
+    metaTitle: "M3U-checker: test en analyseer een IPTV-playlist online",
+    metaDescription:
+      "Gratis checker voor M3U- en M3U8-playlists. Tel zenders, films en series, vind de tv-gids en kapotte regels. Draait in je browser, er wordt niets geüpload.",
+    eyebrow: "Gratis tool · zonder account",
+    title: "M3U-playlistchecker",
+    intro:
+      "Plak een M3U- of M3U8-playlist, of open het bestand, en zie wat erin staat: zenders, films en series, categorieën, de tv-gids en de regels die problemen gaan geven.",
+    ui: {
+      tabPaste: "Plakken",
+      tabFile: "Bestand",
+      tabUrl: "URL",
+      pastePlaceholder: "#EXTM3U\n#EXTINF:-1 tvg-id=\"...\" group-title=\"...\",Naam van de zender\nhttp://...",
+      fileLabel: "Kies een .m3u- of .m3u8-bestand",
+      fileHint: "of sleep het hierheen",
+      urlPlaceholder: "http://aanbieder.example/get.php?username=…&password=…&type=m3u_plus",
+      urlNote:
+        "Je browser haalt de link rechtstreeks bij je aanbieder op; hij gaat nooit via onze server. Veel aanbieders blokkeren zo'n verzoek. Gebeurt dat, open de link dan in een nieuw tabblad om het bestand te downloaden en gebruik daarna het tabblad Bestand.",
+      analyze: "Playlist controleren",
+      loading: "Playlist wordt gelezen…",
+      privacy: "Alles gebeurt in je browser. De playlist en de inloggegevens erin verlaten je toestel nooit.",
+      errorEmpty: "Plak eerst een playlist, kies een bestand of vul een link in.",
+      errorFetch:
+        "De aanbieder liet de browser deze link niet lezen (geblokkeerd verzoek of gewone http). Open hem in een nieuw tabblad om het bestand te downloaden en gebruik daarna het tabblad Bestand.",
+      errorNotM3U: "Geen playlistregels gevonden. Een M3U begint met #EXTM3U en bevat #EXTINF-regels, elk gevolgd door het adres van een stream.",
+      summaryTitle: "Overzicht",
+      entries: "Regels",
+      live: "Live-zenders",
+      movies: "Films",
+      episodes: "Afleveringen",
+      groups: "Categorieën",
+      checksTitle: "Controles",
+      ok: "OK",
+      headerOk: "Begint met #EXTM3U",
+      headerMissing: "Geen #EXTM3U-kop: sommige spelers weigeren het bestand",
+      guideFound: "Tv-gids opgegeven: {n}",
+      guideMissing: "Geen tv-gids (url-tvg / x-tvg-url) opgegeven in de kop",
+      orphan: "#EXTINF-regels zonder streamadres: {n}",
+      duplicates: "Dubbele streamadressen: {n}",
+      missingTvgId: "Live-zenders zonder tvg-id (de gids wordt op naam gekoppeld): {n}",
+      missingLogo: "Regels zonder logo: {n}",
+      missingGroup: "Regels zonder categorie: {n}",
+      insecure: "Streams via gewone http: {n}",
+      invalid: "Adressen die geen http(s), rtmp, rtsp of udp zijn: {n}",
+      xtreamTitle: "Deze link is een Xtream Codes-login",
+      xtreamBody:
+        "Server {server}, gebruikersnaam {user}. Vul je ze in als Xtream Codes in plaats van M3U, dan krijg je echte categorieën, een tv-gids per zender en filmdetails. EDGE IPTV schakelt daar zelf naar over.",
+      groupsTitle: "Categorieën",
+      entriesTitle: "Regels",
+      search: "Zoek een naam of categorie",
+      showing: "{n} getoond",
+      colName: "Naam",
+      colGroup: "Categorie",
+      colType: "Type",
+      ctaTitle: "Kijk deze playlist op iPhone en iPad",
+      ctaBody:
+        "EDGE IPTV opent M3U- en Xtream-playlists, sorteert live-tv, films en series op dezelfde manier en voegt de tv-gids, Chromecast en AirPlay toe.",
+      ctaButton: "Probeer 7 dagen gratis",
+    },
+    howTitle: "Zo controleer je een M3U-playlist",
+    how: [
+      "Plak de inhoud van de playlist, kies het .m3u- of .m3u8-bestand, of vul de link van je aanbieder in.",
+      "Klik op Playlist controleren. Het bestand wordt in je browser gelezen, ook grote playlists met tienduizenden regels.",
+      "Lees het overzicht en de controles, en doorzoek de regels om een zender of categorie te vinden.",
+    ],
+    checksTitle: "Wat de checker bekijkt",
+    checks: [
+      {
+        title: "Live, films en series",
+        description:
+          "Elke regel wordt ingedeeld op basis van het pad van de stream (/live/, /movie/, /series/), een afleveringsnummer zoals S01E02 en de bestandsextensie.",
+      },
+      {
+        title: "Tv-gids",
+        description: "Of de kop een XMLTV-gids opgeeft (url-tvg of x-tvg-url), en welke live-zenders een tvg-id hebben om eraan te koppelen.",
+      },
+      {
+        title: "Kapotte en dubbele regels",
+        description: "#EXTINF-regels zonder adres erna, dezelfde stream twee keer vermeld, en adressen met een onbekend schema.",
+      },
+      {
+        title: "Verborgen Xtream-logins",
+        description: "Een link met get.php?username=…&password=… is een Xtream Codes-account. De checker toont de server en gebruikersnaam (nooit het wachtwoord).",
+      },
+    ],
+    faq: [
+      {
+        q: "Wordt mijn playlist ergens geüpload?",
+        a: "Nee. De checker draait in je browser. Met de URL-optie neemt je browser rechtstreeks contact op met je aanbieder; onze server ziet de link of de playlist nooit.",
+      },
+      {
+        q: "Waarom kan de checker mijn playlistlink niet openen?",
+        a: "Veel IPTV-aanbieders staan niet toe dat webpagina's hun links lezen, en browsers blokkeren gewone http-verzoeken vanaf een beveiligde pagina. Open de link in een nieuw tabblad om het bestand te downloaden en gebruik het tabblad Bestand.",
+      },
+      {
+        q: "Test de checker of de streams afspelen?",
+        a: "Nee. Hij analyseert de playlist zelf. Of een stream afspeelt, hangt af van je aanbieder en je abonnement, en dat test je het best in een speler.",
+      },
+      {
+        q: "Wat is het verschil tussen M3U en M3U8?",
+        a: "Hetzelfde formaat; M3U8 is gecodeerd in UTF-8, waardoor accenten en niet-Latijnse zendernamen intact blijven. De checker leest beide.",
+      },
+    ],
+  },
 };
