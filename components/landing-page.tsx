@@ -16,12 +16,14 @@ import { M3U_COPY } from '@/lib/landing/m3u';
 import { XTREAM_COPY } from '@/lib/landing/xtream';
 import { IPAD_COPY } from '@/lib/landing/ipad';
 import { TIVIMATE_COPY } from '@/lib/landing/tivimate';
+import { SMARTERS_COPY } from '@/lib/landing/smarters';
 
 const COPY: Record<LandingId, Record<Lang, LandingCopy>> = {
   m3u: M3U_COPY,
   xtream: XTREAM_COPY,
   ipad: IPAD_COPY,
   tivimate: TIVIMATE_COPY,
+  smarters: SMARTERS_COPY,
 };
 
 /** Link label for any product page or tool. */
@@ -32,6 +34,7 @@ export function pageNavLabel(id: PageId, lang: Lang): string {
 function heroImage(id: LandingId, lang: Lang) {
   if (id === 'ipad') return { src: `/images/ipad-epg-${lang}.webp`, width: 1400, height: 1058 };
   if (id === 'xtream') return { src: '/images/movie-details.webp', width: 1206, height: 2622 };
+  if (id === 'smarters') return { src: '/images/home-screen.webp', width: 1206, height: 2622 };
   return { src: '/images/epg-screen.webp', width: 1206, height: 2622 };
 }
 

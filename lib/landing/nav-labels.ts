@@ -43,6 +43,15 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     ar: "TiviMate على الآيفون",
     it: "TiviMate su iPhone",
   },
+  smarters: {
+    en: "IPTV Smarters alternative",
+    fr: "Alternative à IPTV Smarters",
+    es: "Alternativa a IPTV Smarters",
+    pt: "Alternativa ao IPTV Smarters",
+    de: "IPTV-Smarters-Alternative",
+    ar: "بديل IPTV Smarters",
+    it: "Alternativa a IPTV Smarters",
+  },
   m3uChecker: {
     en: "M3U playlist checker",
     fr: "Vérificateur de playlist M3U",
