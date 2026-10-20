@@ -678,8 +678,8 @@ export default function IPTVBufferingFixGuide() {
               </Link>
             </li>
             <li>
-              <Link href="/blog/best-iptv-player-ios-2026" className="text-blue-600 hover:underline font-medium">
-                → Best IPTV Players for iOS Comparison
+              <Link href="/blog/best-iptv-app-for-iphone" className="text-blue-600 hover:underline font-medium">
+                → Best IPTV App for iPhone
               </Link>
             </li>
           </ul>

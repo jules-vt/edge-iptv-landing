@@ -21,7 +21,7 @@ import { type Lang, LANGS, LOCALES, homePath, legalPath } from "@/lib/i18n";
 import { SchemaOrg } from "@/components/schema-org";
 import { pageNavLabel } from "@/components/landing-page";
 import { LANDING_IDS, landingPath } from "@/lib/landing/registry";
-import { blogPath, getPostBySlug, installGuidePath, postPath } from "@/lib/blog-posts";
+import { blogPath, blogPosts, installGuidePath, postPath } from "@/lib/blog-posts";
 
 const FAQ = dynamic(
   () => import("@/components/faq").then((mod) => ({ default: mod.FAQ })),
@@ -43,17 +43,23 @@ const SCREENSHOTS = [
   "/images/downloads-screen.webp",
 ];
 
-/** Localised path of an article, falling back to English when untranslated. */
-function articleHref(slug: string, lang: Lang): string {
-  const post = getPostBySlug(slug, lang);
-  return post ? postPath(post) : `/blog/${slug}`;
+/**
+ * Localised path of an article, falling back to English when untranslated.
+ * Looked up by translation group: a slug lookup only ever matches the English
+ * slug, so every other homepage silently linked to the English article.
+ */
+function articleHref(group: string, lang: Lang): string {
+  const post =
+    blogPosts.find((p) => p.translationGroup === group && p.lang === lang) ??
+    blogPosts.find((p) => p.translationGroup === group && p.lang === "en");
+  return post ? postPath(post) : blogPath(lang);
 }
 
 export function HomePage({ lang }: { lang: Lang }) {
   const t = HOME_COPY[lang];
   const home = homePath(lang);
   const install = installGuidePath(lang);
-  const comparison = articleHref("best-iptv-player-ios-2026", lang);
+  const comparison = articleHref("best-iptv-app-iphone", lang);
 
   return (
     <div

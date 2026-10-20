@@ -1,0 +1,94 @@
+# Copy of /etc/nginx/sites-available/edge-iptv.app on the VPS.
+# The server does not read this file: edit it here, then copy it over and
+# reload nginx (see docs/server/README.md).
+
+# ─── Retired URLs → their replacement ────────────────────────────────────────
+# A removed page must answer 301 to the page that replaces it, not 404: that is
+# what carries its ranking over. Trailing slash optional.
+map $uri $retired_target {
+    default "";
+    # 2026-10-20: merged into "best IPTV app for iPhone" (the two articles
+    # competed for the same queries and the older one was sinking).
+    ~^/blog/best-iptv-player-ios-2026/?$           /blog/best-iptv-app-for-iphone;
+    ~^/fr/blog/meilleur-lecteur-iptv-ios-2026/?$   /fr/blog/meilleure-app-iptv-iphone;
+    ~^/es/blog/mejor-reproductor-iptv-ios-2026/?$  /es/blog/mejor-app-iptv-iphone;
+    ~^/pt/blog/melhor-reprodutor-iptv-ios-2026/?$  /pt/blog/melhor-app-iptv-iphone;
+    # The install guide lived under /blog until January 2026. Stale files kept
+    # these directories alive on the server, so they answered 403.
+    ~^/blog/how-to-install-iptv-iphone-ipad/?$          /how-to-install-iptv-iphone-ipad;
+    ~^/fr/blog/how-to-install-iptv-iphone-ipad/?$       /fr/comment-installer-iptv-iphone-ipad;
+    ~^/blog/comment-installer-iptv-iphone-ipad/?$       /fr/comment-installer-iptv-iphone-ipad;
+    ~^/fr/blog/comment-installer-iptv-iphone-ipad/?$    /fr/comment-installer-iptv-iphone-ipad;
+}
+
+server {
+    server_name edge-iptv.app www.edge-iptv.app;
+
+    root /var/www/edge-iptv.app;
+    index index.html;
+
+    # Custom error pages
+    error_page 404 /404.html;
+    error_page 403 /404.html;
+
+    # ─── Canonical host ──────────────────────────────────────────────────────
+    # Google indexed www.edge-iptv.app and edge-iptv.app as two separate sites,
+    # splitting the ranking signals between them.
+    if ($host = www.edge-iptv.app) {
+        return 301 https://edge-iptv.app$request_uri;
+    }
+
+    # ─── Canonical URLs: /page.html → /page ──────────────────────────────────
+    # try_files below already serves /page out of page.html, but the .html form
+    # stayed reachable and got indexed alongside it. Matching on $request_uri
+    # (the URL as requested) rather than $uri leaves the internal try_files
+    # resolution untouched.
+    if ($request_uri ~ ^/index\.html(\?|$)) {
+        return 301 /;
+    }
+    if ($request_uri ~ ^/(.+)\.html(\?|$)) {
+        return 301 /$1;
+    }
+
+    if ($retired_target) {
+        return 301 $retired_target;
+    }
+
+    # NOTE: the previous config redirected /fr and /fr/ to /fr.html. That fought
+    # the page's own canonical, which points at /fr, so the French home page
+    # told Google one thing and the server did the opposite. try_files resolves
+    # /fr from fr.html on its own, so no special case is needed.
+
+    # Main location block
+    location / {
+        # Try files with .html extension
+        try_files $uri $uri.html $uri/ =404;
+    }
+
+    # Hide sensitive files
+    location ~ /\. {
+        deny all;
+    }
+
+    # Disable directory listing
+    autoindex off;
+
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/edge-iptv.app/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/edge-iptv.app/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    listen 80;
+    server_name edge-iptv.app www.edge-iptv.app;
+
+    if ($host = www.edge-iptv.app) {
+        return 301 https://edge-iptv.app$request_uri;
+    }
+    if ($host = edge-iptv.app) {
+        return 301 https://$host$request_uri;
+    }
+    return 404;
+}

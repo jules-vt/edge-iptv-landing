@@ -664,8 +664,8 @@ export default function ResoudreBufferingIPTVGuide() {
               </Link>
             </li>
             <li>
-              <Link href="/fr/blog/meilleur-lecteur-iptv-ios-2026" className="text-blue-600 hover:underline font-medium">
-                → Comparatif Meilleurs Lecteurs IPTV pour iOS
+              <Link href="/fr/blog/meilleure-app-iptv-iphone" className="text-blue-600 hover:underline font-medium">
+                → Meilleure app IPTV pour iPhone
               </Link>
             </li>
           </ul>

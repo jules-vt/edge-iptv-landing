@@ -31,11 +31,6 @@ const COVERS: Record<string, BlogCover> = {
     gradient: "from-emerald-500 to-teal-700",
     screenshot: "/images/language-selection.webp",
   },
-  "best-player-ios": {
-    icon: "Trophy",
-    gradient: "from-amber-500 to-orange-700",
-    screenshot: "/images/series-screen.webp",
-  },
   "xtream-setup": {
     icon: "KeyRound",
     gradient: "from-violet-500 to-purple-800",

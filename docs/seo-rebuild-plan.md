@@ -114,6 +114,39 @@ Reste à traduire pour ces 3 langues (le contenu existant reste en anglais, sans
 ### Phase 4 — Skill de suivi SEO continu
 Voir `~/.claude/skills/seo-monitor` (à créer). Protocole récurrent : réimport des exports Search Console, comparaison mois par mois, détection des pages en perte de CTR/position, validation des données structurées, priorisation des actions.
 
+### Phase 5 — Développement par marché (proposée le 2026-10-20)
+
+Marchés cibles : Pays-Bas, Allemagne, Royaume-Uni, France, Canada, États-Unis. Constat d'Astro (popularité App Store, un bon indicateur de la demande) : sur ces marchés, les recherches génériques « m3u player » / « xtream codes » sont **faibles** (popularité 5-16), alors que les **marques concurrentes** concentrent la demande : « iptv smarters pro » 59-62, « smarters player lite » 63-65, « tivimate » 47-61, « ibo player » 49-61, « iptvx » 39-42. Les utilisateurs cherchent une app qu'ils connaissent déjà, pas un « lecteur m3u ».
+
+**5.0 Débloquer l'existant (avant tout nouveau contenu)**
+- [ ] Demander l'indexation dans Search Console (Inspection d'URL) des 4 pages produit EN + `/de`, `/fr`, puis renvoyer le sitemap.
+- [ ] Corriger `deploy.yml` (`--delete-excluded` + `--include='robots.txt'`), 301 nginx `/blog/how-to-install-iptv-iphone-ipad` → `/how-to-install-iptv-iphone-ipad`.
+- [ ] 301 `best-iptv-player-ios-2026` (+ fr/es/pt) → `best-iptv-app-for-iphone` (cannibalisation signalée le 09/10).
+- [ ] Réparer la géolocalisation Umami, sinon impossible de mesurer les conversions par pays.
+
+**5.1 Pages « alternative / pour iPhone » (EN d'abord : UK, US, CA ; puis DE, NL, FR)**
+Pages comparatives honnêtes, sans note inventée, sur le modèle « Vous cherchez X sur iPhone ? » :
+- [ ] `/tivimate-for-iphone` — TiviMate n'existe que sur Android : intention très qualifiée (« tivimate iphone », « tivimate ios »), concurrence web faible.
+- [ ] `/iptv-smarters-alternative` — la plus grosse demande ; angle : interface, sans pub, iPad/PiP/Chromecast.
+- [ ] `/ibo-player-alternative`, `/gse-smart-iptv-alternative`, `/aptv-alternative` (« configurar aptv » apparaît déjà dans les requêtes).
+- Règle : chaque affirmation sur un concurrent doit être vérifiable sur sa fiche App Store le jour de la publication ; pas de note chiffrée.
+
+**5.2 Contenus informationnels (requêtes déjà en page 1 mais à 0 clic)**
+- [ ] « What is an M3U playlist / playlist URL / M3U vs EPG » : en position 7-10, 0 clic → page glossaire dédiée avec une réponse courte en tête (format extrait), et un lien vers le vérificateur.
+- [ ] « Xtream server URL / port / format » : guide « Where to find your Xtream Codes server URL » (requêtes en position 1-11).
+- [ ] « EPG / TV guide on iPhone » (« tv gids » NL popularité 61, « tv guide » UK).
+
+**5.3 Néerlandais (NL, 8e langue)**
+- [ ] Ajouter `nl` dans `lib/i18n.ts` : homepage, 3 pages produit (`/nl/m3u-speler-iphone`, `/nl/xtream-codes-speler-iphone`, `/nl/iptv-speler-ipad`), guide d'installation, `beste-iptv-app-iphone`. Mots-clés : « iptv speler » (l'app est 46e sur l'App Store NL, difficulté 9), « tv gids ». L'app est déjà traduite en néerlandais (vérifié le 2026-10-20), et les captures App Store NL existent.
+
+**5.4 Allemand et français : finir les traductions**
+- [ ] DE : traduire les guides xtream/m3u (les seuls articles qui convertissent en EN) ; mots-clés « IPTV Player iPhone », « M3U Playlist einrichten », « Xtream Codes eingeben ».
+- [ ] FR : la France est en position 23 → le FR rank mal malgré les traductions. Retravailler `/fr/blog/configurer-playlist-m3u-guide` (7 % de CTR mais position 24) et créer `/fr/blog/configurer-xtream-codes-iphone`.
+
+**5.5 Liens entrants (le levier hors code, toujours à zéro)**
+- [ ] Fiches AlternativeTo (en face de TiviMate, Smarters, GSE), Product Hunt, Reddit (r/IPTV n'accepte pas les promos de services, mais les apps lecteurs sont tolérées en réponse), une démo YouTube (qui permettrait aussi un vrai `VideoObject`).
+- [ ] Le vérificateur M3U est l'actif le plus « citable » : à proposer sur les forums/guides qui expliquent les playlists M3U.
+
 ## Notes de suivi
 
 - 2026-09-26 : plan initial créé, décisions langues/ampleur actées avec Jules. Première snapshot Search Console enregistrée dans `docs/seo/snapshots/2026-09-26.md` (baseline avant corrections Phase 0). Skill `seo-monitor` créé pour le suivi récurrent.
@@ -121,3 +154,5 @@ Voir `~/.claude/skills/seo-monitor` (à créer). Protocole récurrent : réimpor
 - 2026-10-01 : l'article `best-iptv-app-for-iphone` (requête la plus commerciale) existe dans les 7 langues, texte dans `lib/articles/best-iptv-app-iphone.ts`. Il affirmait encore une note de 5.0, « Free » et « no in-app purchases » : corrigé. En chemin : le Smart App Banner pointait vers l'app v1 ; chaque page traduite portait deux `SoftwareApplication` (layout racine + layout de langue), désormais rendus sur les seules homepages ; le `BreadcrumbList` émettait « / » comme URL. Titles ≤ 60 et descriptions ≤ 160 sur les 51 pages, `.htaccess` supprimé. À surveiller : indexation des 6 nouvelles URL et des 3 index de blog, et l'effet des titles raccourcis sur le CTR.
 - 2026-10-01 (suite) : stratégie de mots-clés actée avec Jules — ne pas viser « iptv » / « m3u » / « xtream » seuls (intention = acheter un abonnement, concurrence hors de portée), mais leurs variantes « + iPhone / iPad ». Fait : 3 pages produit en 7 langues (`/m3u-player-iphone`, `/xtream-codes-player-iphone`, `/iptv-player-ipad`, slugs traduits dans `lib/landing/registry.ts`), un vérificateur M3U gratuit (`/m3u-checker`, tout dans le navigateur) pour attirer des liens sur « m3u », maillage depuis les articles et le guide, `sameAs` vers la fiche App Store, attributs Umami sur tous les boutons de téléchargement (gtag n'était chargé nulle part). Guide d'installation réécrit sur le vrai parcours de l'app. Le levier restant est hors code : liens entrants (AlternativeTo, Product Hunt, YouTube, Reddit), voir la conversation du 2026-10-01. À surveiller : indexation des 28 nouvelles URL, positions sur « m3u player iphone » / « lecteur m3u iphone », clics `download_click` par `location` dans Umami.
 - 2026-10-09 : snapshot `docs/seo/snapshots/2026-10-09.md` (3 mois, **non comparable** aux 12 mois de la baseline, sauf le graphique jour par jour). Après la panne, les impressions étaient bloquées à ~8/jour ; depuis le 26/09, elles sont à ~128/jour, avec 4,8 clics/jour (×1,9 vs avant panne) et une position de 16 → 10,5. Correctifs techniques vérifiés en ligne (pas d'avis ni de VideoObject, 301 www/http/.html). Actions : (1) `best-iptv-player-ios-2026` s'est effondré (~270 → ~20 impr./mois), à fusionner/rediriger vers `best-iptv-app-for-iphone` pour éviter la cannibalisation ; (2) chromecast (292 impr.) et buffering (195 impr.) toujours à 0 clic en page 2 ; (3) la marque « edge iptv » stagne en position 7 et « iptv edge » en 16 → liens entrants ; (4) bureau en position 17,5 vs 8,7 sur mobile, et les États-Unis à 1,3 % de CTR ; (5) `Extrait d'avis` encore présent sur la période, doit disparaître à la prochaine snapshot. Pages du 01/10 pas encore visibles (trop récentes).
+- 2026-10-20 : snapshot `docs/seo/snapshots/2026-10-20.md`. Progression continue : 155 impr./jour contre 128, 5,2 clics/jour contre 4,8, position 10,5 → 9,9 ; meilleur jour depuis la panne le 17/10 (17 clics). Les traductions ES/IT de `best-iptv-app-for-iphone` se classent en position 8. **Problème : les 28 URL du 01/10 (pages produit + vérificateur) n'ont aucune impression**, alors que la technique est saine (200, index, canonical, sitemap, liées depuis la homepage) → demande d'indexation manuelle. **Bug de déploiement** : `--exclude='*.txt'` sans `--delete-excluded` laisse 115 fichiers de janvier sur le serveur (anciennes URL en 403, `robots.txt` figé depuis janvier). Umami ne renseigne plus le pays des sessions. Plan de développement par marché (NL/DE/UK/FR/CA/US) ajouté en Phase 5.
+

@@ -20,7 +20,6 @@ const LINKS: Record<string, PageId[]> = {
   'xtream-setup': ['xtream', 'm3uChecker'],
   'install-guide': ['xtream', 'm3u', 'ipad'],
   'best-iptv-app-iphone': ['m3u', 'xtream', 'ipad'],
-  'best-player-ios': ['ipad', 'm3u', 'xtream'],
   chromecast: ['m3u', 'xtream'],
   'buffering-fix': ['m3uChecker', 'xtream'],
 };

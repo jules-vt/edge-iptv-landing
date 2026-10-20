@@ -219,58 +219,6 @@ export const blogPosts: BlogPost[] = [
     basePath: "",
   },
   {
-    slug: "best-iptv-player-ios-2026",
-    title: "Best IPTV Player for iOS in 2026: Complete Comparison",
-    description:
-      "Compare the top 7 IPTV players for iPhone and iPad. Features, pros, cons, and why EDGE IPTV is the #1 choice in 2026.",
-    date: "2026-01-12",
-    author: "EDGE IPTV Team",
-    readTime: "8 min read",
-    image: "/images/iphone-series-3d.png",
-    lang: "en",
-    category: "guide",
-    translationGroup: "best-player-ios",
-  },
-  {
-    slug: "meilleur-lecteur-iptv-ios-2026",
-    title: "Meilleur Lecteur IPTV pour iOS en 2026 : Comparatif Complet",
-    description:
-      "Comparaison des 7 meilleurs lecteurs IPTV pour iPhone et iPad. Fonctionnalités, avantages, inconvénients et pourquoi EDGE IPTV est le choix #1 en 2026.",
-    date: "2026-01-12",
-    author: "Équipe EDGE IPTV",
-    readTime: "8 min",
-    image: "/images/iphone-series-3d.png",
-    lang: "fr",
-    category: "guide",
-    translationGroup: "best-player-ios",
-  },
-  {
-    slug: "mejor-reproductor-iptv-ios-2026",
-    title: "Mejor Reproductor IPTV para iOS 2026: Comparativa Completa",
-    description:
-      "Compara los 7 mejores reproductores IPTV para iPhone y iPad. Características, ventajas, desventajas y por qué EDGE IPTV es la opción #1 en 2026.",
-    date: "2026-01-12",
-    author: "Equipo EDGE IPTV",
-    readTime: "8 min",
-    image: "/images/iphone-series-3d.png",
-    lang: "es",
-    category: "guide",
-    translationGroup: "best-player-ios",
-  },
-  {
-    slug: "melhor-reprodutor-iptv-ios-2026",
-    title: "Melhor Reprodutor IPTV para iOS 2026: Comparação Completa",
-    description:
-      "Compare os 7 melhores reprodutores IPTV para iPhone e iPad. Recursos, prós, contras e por que EDGE IPTV é a escolha #1 em 2026.",
-    date: "2026-01-12",
-    author: "Equipe EDGE IPTV",
-    readTime: "8 min",
-    image: "/images/iphone-series-3d.png",
-    lang: "pt",
-    category: "guide",
-    translationGroup: "best-player-ios",
-  },
-  {
     slug: "xtream-codes-setup-guide",
     title: "Xtream Codes Setup: Complete Guide for Beginners 2026",
     description:
