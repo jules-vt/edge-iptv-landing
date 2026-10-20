@@ -122,7 +122,7 @@ Marchés cibles : Pays-Bas, Allemagne, Royaume-Uni, France, Canada, États-Unis.
 - [ ] Demander l'indexation dans Search Console (Inspection d'URL) des 4 pages produit EN + `/de`, `/fr`, puis renvoyer le sitemap.
 - [x] Corriger `deploy.yml` (`--delete-excluded` + `--include='robots.txt'`), 301 nginx des 4 anciennes URL du guide d'installation. Fait et vérifié en production le 2026-10-20 : 0 fichier de janvier restant, robots.txt à jour.
 - [x] 301 `best-iptv-player-ios-2026` (+ fr/es/pt) → `best-iptv-app-for-iphone`. Fait le 2026-10-20 (commit `5fef8a6`, vhost dans `docs/server/`). Au passage : le lien « comparaison » des homepages non anglaises pointait vers l'article anglais.
-- [ ] Réparer la géolocalisation Umami, sinon impossible de mesurer les conversions par pays. Cause trouvée le 2026-10-20 : le vhost `j-analytics.cloud` ne transmet ni `X-Real-IP` ni `X-Forwarded-For` à Umami, qui voit toutes les visites venir du serveur. N'a jamais fonctionné depuis l'installation.
+- [x] Réparer la géolocalisation Umami. Corrigé et vérifié le 2026-10-20 (vhost dans `docs/server/j-analytics.cloud.nginx`) : première session après rechargement enregistrée CA / Montréal. Les données d'avant n'ont pas de pays et ne peuvent pas être rattrapées. Cause trouvée le 2026-10-20 : le vhost `j-analytics.cloud` ne transmet ni `X-Real-IP` ni `X-Forwarded-For` à Umami, qui voit toutes les visites venir du serveur. N'a jamais fonctionné depuis l'installation.
 
 **5.1 Pages « alternative / pour iPhone » (EN d'abord : UK, US, CA ; puis DE, NL, FR)**
 Pages comparatives honnêtes, sans note inventée, sur le modèle « Vous cherchez X sur iPhone ? » :
