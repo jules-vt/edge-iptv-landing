@@ -15,11 +15,13 @@ import { type LandingCopy, LANDING_UI } from '@/lib/landing/types';
 import { M3U_COPY } from '@/lib/landing/m3u';
 import { XTREAM_COPY } from '@/lib/landing/xtream';
 import { IPAD_COPY } from '@/lib/landing/ipad';
+import { TIVIMATE_COPY } from '@/lib/landing/tivimate';
 
 const COPY: Record<LandingId, Record<Lang, LandingCopy>> = {
   m3u: M3U_COPY,
   xtream: XTREAM_COPY,
   ipad: IPAD_COPY,
+  tivimate: TIVIMATE_COPY,
 };
 
 /** Link label for any product page or tool. */
@@ -167,6 +169,42 @@ export function LandingPage({ id, lang }: { id: LandingId; lang: Lang }) {
             </div>
           ))}
         </div>
+
+        {/* ── Comparison ── */}
+        {copy.comparison && (
+          <>
+            <h2 className="mt-16 text-3xl font-bold">{copy.comparison.title}</h2>
+            <div className="mt-8 overflow-x-auto rounded-xl border border-border/60">
+              <table className="w-full text-start text-sm">
+                <thead className="bg-secondary/40">
+                  <tr>
+                    {copy.comparison.headers.map((header, i) => (
+                      <th
+                        key={i}
+                        scope="col"
+                        className={`px-3 py-3 text-start font-semibold sm:px-4 ${i === 2 ? 'text-primary' : ''}`}
+                      >
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {copy.comparison.rows.map(([label, other, edge]) => (
+                    <tr key={label} className="border-t border-border/40">
+                      <th scope="row" className="px-3 py-3 text-start font-medium sm:px-4">
+                        {label}
+                      </th>
+                      <td className="px-3 py-3 text-muted-foreground sm:px-4">{other}</td>
+                      <td className="px-3 py-3 sm:px-4">{edge}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-sm text-muted-foreground">{copy.comparison.note}</p>
+          </>
+        )}
 
         {/* ── Explainer ── */}
         <h2 className="mt-16 text-3xl font-bold">{copy.explainTitle}</h2>

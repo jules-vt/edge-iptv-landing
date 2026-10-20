@@ -34,6 +34,15 @@ export const NAV_LABELS: Record<PageId, Record<Lang, string>> = {
     ar: "مشغل IPTV للآيباد",
     it: "Lettore IPTV per iPad",
   },
+  tivimate: {
+    en: "TiviMate for iPhone",
+    fr: "TiviMate sur iPhone",
+    es: "TiviMate en iPhone",
+    pt: "TiviMate no iPhone",
+    de: "TiviMate fürs iPhone",
+    ar: "TiviMate على الآيفون",
+    it: "TiviMate su iPhone",
+  },
   m3uChecker: {
     en: "M3U playlist checker",
     fr: "Vérificateur de playlist M3U",

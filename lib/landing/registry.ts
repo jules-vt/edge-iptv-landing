@@ -11,9 +11,9 @@ import { type Lang, LANGS, localePath } from "@/lib/i18n";
  * Slugs are per language and live only here; the sitemap, hreflang and the
  * language switcher all read them from this table.
  */
-export type LandingId = "m3u" | "xtream" | "ipad";
+export type LandingId = "m3u" | "xtream" | "ipad" | "tivimate";
 
-export const LANDING_IDS: LandingId[] = ["m3u", "xtream", "ipad"];
+export const LANDING_IDS: LandingId[] = ["m3u", "xtream", "ipad", "tivimate"];
 
 /** Landing pages plus the free tools, which share the same slug machinery. */
 export type PageId = LandingId | "m3uChecker";
@@ -47,6 +47,15 @@ export const LANDING_SLUGS: Record<PageId, Record<Lang, string>> = {
     de: "iptv-player-ipad",
     ar: "iptv-player-ipad",
     it: "lettore-iptv-ipad",
+  },
+  tivimate: {
+    en: "tivimate-for-iphone",
+    fr: "tivimate-iphone",
+    es: "tivimate-iphone",
+    pt: "tivimate-iphone",
+    de: "tivimate-iphone",
+    ar: "tivimate-iphone",
+    it: "tivimate-iphone",
   },
   m3uChecker: {
     en: "m3u-checker",

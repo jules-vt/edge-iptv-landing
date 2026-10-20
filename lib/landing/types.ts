@@ -17,6 +17,18 @@ export interface LandingCopy {
   features: { title: string; description: string }[];
   explainTitle: string;
   explain: string[];
+  /**
+   * Side-by-side table for the "alternative to X" pages. Every cell about the
+   * other app must be checkable on its store listing: no ratings, no prices
+   * (they change), and the rows where EDGE IPTV loses stay in.
+   */
+  comparison?: {
+    title: string;
+    /** First column header (usually empty), then the other app, then EDGE IPTV. */
+    headers: [string, string, string];
+    rows: [string, string, string][];
+    note: string;
+  };
   faq: { q: string; a: string }[];
 }
 

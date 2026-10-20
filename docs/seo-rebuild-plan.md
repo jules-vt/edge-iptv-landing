@@ -126,7 +126,7 @@ Marchés cibles : Pays-Bas, Allemagne, Royaume-Uni, France, Canada, États-Unis.
 
 **5.1 Pages « alternative / pour iPhone » (EN d'abord : UK, US, CA ; puis DE, NL, FR)**
 Pages comparatives honnêtes, sans note inventée, sur le modèle « Vous cherchez X sur iPhone ? » :
-- [ ] `/tivimate-for-iphone` — TiviMate n'existe que sur Android : intention très qualifiée (« tivimate iphone », « tivimate ios »), concurrence web faible.
+- [x] `/tivimate-for-iphone` — TiviMate n'existe que sur Android : intention très qualifiée (« tivimate iphone », « tivimate ios »), concurrence web faible. Fait le 2026-10-20 en 7 langues, avec un tableau comparatif (champ `comparison` de `LandingCopy`, réutilisable pour les pages suivantes). Les manques d'EDGE (enregistrement, replay) y sont écrits ; les lignes non vérifiables côté TiviMate (téléchargements, ce que débloque Premium) ont été retirées. Plusieurs apps de l'App Store copient le nom « TiviMate » : la page conseille de vérifier le développeur, sans en nommer aucune.
 - [ ] `/iptv-smarters-alternative` — la plus grosse demande ; angle : interface, sans pub, iPad/PiP/Chromecast.
 - [ ] `/ibo-player-alternative`, `/gse-smart-iptv-alternative`, `/aptv-alternative` (« configurar aptv » apparaît déjà dans les requêtes).
 - Règle : chaque affirmation sur un concurrent doit être vérifiable sur sa fiche App Store le jour de la publication ; pas de note chiffrée.
