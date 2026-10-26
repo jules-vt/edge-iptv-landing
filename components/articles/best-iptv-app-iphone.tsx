@@ -15,7 +15,7 @@ import {
   installGuidePath,
   postPath,
 } from '@/lib/blog-posts';
-import { BEST_IPHONE_COPY } from '@/lib/articles/best-iptv-app-iphone';
+import { type AppId, BEST_IPHONE_COPY } from '@/lib/articles/best-iptv-app-iphone';
 import { plain, rich } from '@/components/rich-text';
 import { type Lang, LOCALES, homePath } from '@/lib/i18n';
 
@@ -23,26 +23,29 @@ import { type Lang, LOCALES, homePath } from '@/lib/i18n';
 // language. Copy lives in lib/articles/best-iptv-app-iphone.ts.
 
 const PUBLISHED = '2026-03-11';
-const MODIFIED = '2026-10-01';
+const MODIFIED = '2026-10-26';
+
+// true: the app's own App Store page lists it. false: only ever said of
+// EDGE IPTV, which we know. null: the listing doesn't say, so neither do we.
+type Feature = boolean | null;
 
 interface AppRow {
+  id: AppId;
   name: string;
-  rating: string | null;
-  price: 'edge' | 'iap' | 'free';
-  chromecast: boolean;
-  offline: boolean;
-  setupTime: string;
+  chromecast: Feature;
+  offline: Feature;
+  appleTv: Feature;
   highlight?: boolean;
 }
 
+// No ratings and no setup times: neither can be checked on the listings.
+// Sources and date in lib/articles/best-iptv-app-iphone.ts.
 const APPS: AppRow[] = [
-  // No self-assigned score: the app is recent and has no meaningful public
-  // average yet. Inventing one is what the fake review schema did.
-  { name: 'EDGE IPTV', rating: null, price: 'edge', chromecast: true, offline: true, setupTime: '< 2 min', highlight: true },
-  { name: 'GSE Smart IPTV', rating: '4.1', price: 'iap', chromecast: false, offline: false, setupTime: '~10 min' },
-  { name: 'Flex IPTV', rating: '3.8', price: 'iap', chromecast: false, offline: false, setupTime: '~8 min' },
-  { name: 'IPTV Smarters', rating: '3.5', price: 'iap', chromecast: false, offline: false, setupTime: '~5 min' },
-  { name: 'Opus IPTV Player', rating: '3.7', price: 'free', chromecast: false, offline: false, setupTime: '~10 min' },
+  { id: 'edge', name: 'EDGE IPTV', chromecast: true, offline: true, appleTv: false, highlight: true },
+  { id: 'gse', name: 'GSE SMART IPTV PRO', chromecast: true, offline: null, appleTv: null },
+  { id: 'flex', name: 'Flex IPTV', chromecast: null, offline: null, appleTv: true },
+  { id: 'smarters', name: 'Smarters Pro', chromecast: null, offline: null, appleTv: true },
+  { id: 'opus', name: 'IPTV Player - Opus', chromecast: null, offline: null, appleTv: true },
 ];
 
 const CRITERIA_ICONS = [Smartphone, Wifi, Tv, Download];
@@ -77,6 +80,11 @@ function CheckIcon() {
 
 function CrossIcon() {
   return <X className="w-4 h-4 text-red-400 mx-auto" />;
+}
+
+function FeatureCell({ value }: { value: Feature }) {
+  if (value === null) return <span className="text-muted-foreground">–</span>;
+  return value ? <CheckIcon /> : <CrossIcon />;
 }
 
 export function BestIptvAppIphone({ lang }: { lang: Lang }) {
@@ -187,17 +195,16 @@ export function BestIptvAppIphone({ lang }: { lang: Lang }) {
             <thead>
               <tr className="bg-secondary/60 text-foreground">
                 <th className="px-4 py-3 text-start font-semibold">{copy.table.app}</th>
-                <th className="px-4 py-3 text-center font-semibold">{copy.table.rating}</th>
                 <th className="px-4 py-3 text-center font-semibold">{copy.table.price}</th>
                 <th className="px-4 py-3 text-center font-semibold">{copy.table.chromecast}</th>
                 <th className="px-4 py-3 text-center font-semibold">{copy.table.offline}</th>
-                <th className="px-4 py-3 text-center font-semibold">{copy.table.setup}</th>
+                <th className="px-4 py-3 text-center font-semibold">{copy.table.appleTv}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
               {APPS.map((app) => (
                 <tr
-                  key={app.name}
+                  key={app.id}
                   className={
                     app.highlight
                       ? 'bg-blue-50 dark:bg-blue-950/20 font-medium'
@@ -212,26 +219,24 @@ export function BestIptvAppIphone({ lang }: { lang: Lang }) {
                       </span>
                     )}
                   </td>
+                  <td className="px-4 py-3 text-center">{copy.prices[app.id]}</td>
                   <td className="px-4 py-3 text-center">
-                    {app.rating ? `★ ${app.rating}` : copy.newLabel}
-                  </td>
-                  <td className="px-4 py-3 text-center">{copy.prices[app.price]}</td>
-                  <td className="px-4 py-3 text-center">
-                    {app.chromecast ? <CheckIcon /> : <CrossIcon />}
+                    <FeatureCell value={app.chromecast} />
                   </td>
                   <td className="px-4 py-3 text-center">
-                    {app.offline ? <CheckIcon /> : <CrossIcon />}
+                    <FeatureCell value={app.offline} />
                   </td>
-                  <td className="px-4 py-3 text-center text-muted-foreground" dir="ltr">
-                    {app.setupTime}
+                  <td className="px-4 py-3 text-center">
+                    <FeatureCell value={app.appleTv} />
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+        <p className="text-sm text-muted-foreground -mt-6 mb-10">{copy.tableNote}</p>
 
-        {/* ── #1 EDGE IPTV ── */}
+        {/* ── Our pick ── */}
         <h2 className="text-3xl font-bold mt-12 mb-6">{copy.edgeTitle}</h2>
         <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl border-2 border-blue-200 dark:border-blue-800 p-8 mb-8">
           <div className="flex flex-col sm:flex-row gap-6 items-start">
@@ -272,7 +277,7 @@ export function BestIptvAppIphone({ lang }: { lang: Lang }) {
           </p>
         ))}
 
-        {/* ── #2–5 ── */}
+        {/* ── The other four ── */}
         <h2 className="text-3xl font-bold mt-14 mb-8">{copy.othersTitle}</h2>
         {copy.others.map((app, i) => (
           <div

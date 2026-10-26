@@ -31,9 +31,9 @@ export const blogPosts: BlogPost[] = [
   // ── Main English articles ────────────────────────────────────────────────
   {
     slug: "best-iptv-app-for-iphone",
-    title: "Best IPTV App for iPhone 2026: Top 5 Free Apps Tested",
+    title: "Best IPTV App for iPhone 2026: 5 Apps Compared",
     description:
-      "We tested the 5 most popular IPTV apps on iPhone to find the fastest, most reliable and easiest to set up in 2026.",
+      "We compared 5 IPTV apps from the App Store using what each listing actually says: price, Chromecast, offline downloads and Apple TV.",
     date: "2026-03-11",
     author: "EDGE IPTV Team",
     readTime: "7 min read",
@@ -44,9 +44,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "meilleure-app-iptv-iphone",
-    title: "Meilleure app IPTV pour iPhone 2026 : 5 apps testées",
+    title: "Meilleure app IPTV pour iPhone 2026 : 5 apps comparées",
     description:
-      "Nous avons testé les 5 apps IPTV les plus populaires sur iPhone pour trouver la plus rapide, la plus fiable et la plus simple à configurer.",
+      "Nous avons comparé 5 apps IPTV de l'App Store à partir de ce que dit vraiment leur fiche : prix, Chromecast, téléchargements hors ligne et Apple TV.",
     date: "2026-10-01",
     author: "Équipe EDGE IPTV",
     readTime: "7 min",
@@ -57,9 +57,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "mejor-app-iptv-iphone",
-    title: "Mejor app IPTV para iPhone 2026: 5 apps probadas",
+    title: "Mejor app IPTV para iPhone 2026: 5 apps comparadas",
     description:
-      "Probamos las 5 apps IPTV más populares en iPhone para encontrar la más rápida, la más fiable y la más fácil de configurar.",
+      "Comparamos 5 apps IPTV de la App Store a partir de lo que dice realmente su ficha: precio, Chromecast, descargas sin conexión y Apple TV.",
     date: "2026-10-01",
     author: "Equipo EDGE IPTV",
     readTime: "7 min",
@@ -70,9 +70,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "melhor-app-iptv-iphone",
-    title: "Melhor app IPTV para iPhone 2026: 5 apps testados",
+    title: "Melhor app IPTV para iPhone 2026: 5 apps comparados",
     description:
-      "Testamos os 5 apps IPTV mais populares no iPhone para encontrar o mais rápido, o mais confiável e o mais fácil de configurar.",
+      "Comparamos 5 apps IPTV da App Store a partir do que a página de cada um realmente diz: preço, Chromecast, downloads offline e Apple TV.",
     date: "2026-10-01",
     author: "Equipe EDGE IPTV",
     readTime: "7 min",
@@ -83,9 +83,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "beste-iptv-app-iphone",
-    title: "Beste IPTV-App für iPhone 2026: 5 Apps im Test",
+    title: "Beste IPTV-App für iPhone 2026: 5 Apps im Vergleich",
     description:
-      "Wir haben die 5 beliebtesten IPTV-Apps auf dem iPhone getestet, um die schnellste, zuverlässigste und am einfachsten einzurichtende zu finden.",
+      "Wir haben 5 IPTV-Apps aus dem App Store verglichen, und zwar nach dem, was ihre Store-Seiten tatsächlich angeben: Preis, Chromecast, Offline-Downloads und Apple TV.",
     date: "2026-10-01",
     author: "EDGE IPTV Team",
     readTime: "7 Min.",
@@ -96,9 +96,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-iptv-app-for-iphone",
-    title: "أفضل تطبيق IPTV للآيفون 2026: اختبرنا 5 تطبيقات",
+    title: "أفضل تطبيق IPTV للآيفون 2026: مقارنة 5 تطبيقات",
     description:
-      "اختبرنا أشهر 5 تطبيقات IPTV على الآيفون لنجد الأسرع والأكثر ثباتًا والأسهل في الإعداد.",
+      "قارنّا 5 تطبيقات IPTV من App Store بناءً على ما تذكره صفحة كل تطبيق فعلًا: السعر وChromecast والتحميل دون اتصال وApple TV.",
     date: "2026-10-01",
     author: "فريق EDGE IPTV",
     readTime: "7 دقائق",
@@ -109,9 +109,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "migliore-app-iptv-iphone",
-    title: "Migliore app IPTV per iPhone 2026: 5 app provate",
+    title: "Migliore app IPTV per iPhone 2026: 5 app a confronto",
     description:
-      "Abbiamo provato le 5 app IPTV più popolari su iPhone per trovare la più veloce, la più affidabile e la più semplice da configurare.",
+      "Abbiamo confrontato 5 app IPTV dell'App Store in base a ciò che dice davvero la loro scheda: prezzo, Chromecast, download offline e Apple TV.",
     date: "2026-10-01",
     author: "Team EDGE IPTV",
     readTime: "7 min",
@@ -122,9 +122,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "beste-iptv-app-iphone",
-    title: "Beste IPTV-app voor iPhone 2026: top 5 getest",
+    title: "Beste IPTV-app voor iPhone 2026: 5 apps vergeleken",
     description:
-      "We testten de 5 populairste IPTV-apps op iPhone om de snelste, betrouwbaarste en makkelijkst in te stellen app te vinden.",
+      "We vergeleken 5 IPTV-apps uit de App Store op wat hun pagina echt zegt: prijs, Chromecast, offline downloads en Apple TV.",
     date: "2026-10-20",
     author: "Team EDGE IPTV",
     readTime: "7 min",

@@ -10,6 +10,17 @@ import type { Lang } from "@/lib/i18n";
  *
  * `**word**` renders as <strong>. Everything said about EDGE IPTV must match
  * the app: free to download, 7-day trial, then a subscription to watch.
+ *
+ * Competitor facts come only from their US App Store listings, read on
+ * 2026-10-26: GSE SMART IPTV PRO (id6443923265, $2.99 paid, iOS 9+, last
+ * update 2022-11-14; description lists Chromecast, AirPlay, recording),
+ * Flex IPTV (id1182930255, free, "Pro Version" for iOS and for tvOS $5.99
+ * each, iOS 17.4+; description lists XMLTV EPG and recording), Smarters Pro
+ * (id6450746159, free, Premium $4.99, iOS 15.6+, Apple TV, "Data Used to
+ * Track You: Usage Data"), IPTV Player - Opus (id1592313576, free, in-app
+ * purchases $4.99 to $79.99 incl. $29.99/year, iOS 15.1+, Apple TV app per
+ * its description, "Data Used to Track You: Usage Data"). A feature their
+ * listing does not mention is shown as unknown, never as missing.
  */
 
 export interface StepCopy {
@@ -17,9 +28,10 @@ export interface StepCopy {
   description: string;
 }
 
+export type AppId = "edge" | "gse" | "flex" | "smarters" | "opus";
+
 export interface CompetitorCopy {
-  /** Key into COMPETITORS in the component. */
-  id: "gse" | "flex" | "smarters" | "opus";
+  id: Exclude<AppId, "edge">;
   name: string;
   meta: string;
   text: string;
@@ -54,15 +66,15 @@ export interface BestIphoneCopy {
   tableTitle: string;
   table: {
     app: string;
-    rating: string;
     price: string;
     chromecast: string;
     offline: string;
-    setup: string;
+    appleTv: string;
   };
-  newLabel: string;
+  /** Dated source of the competitor facts, and what a dash means. */
+  tableNote: string;
   topPick: string;
-  prices: { edge: string; iap: string; free: string };
+  prices: Record<AppId, string>;
 
   edgeTitle: string;
   iconAlt: string;
@@ -93,13 +105,11 @@ export interface BestIphoneCopy {
 export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
   en: {
     slug: "best-iptv-app-for-iphone",
-    metaTitle: "Best IPTV App for iPhone 2026: Top 5 Free Apps Tested",
-    metaDescription:
-      "Looking for the best IPTV app for iPhone? We tested the top 5 apps in 2026 to see which is fastest to set up, supports Chromecast and works best on iOS.",
-    socialDescription:
-      "We tested the top 5 IPTV apps for iPhone in 2026: setup speed, Chromecast, offline viewing.",
-    title: "Best IPTV App for iPhone 2026: Top 5 Free Apps Tested",
-    lead: "We tested the 5 most popular IPTV apps on iPhone to find the fastest, most reliable and easiest to set up.",
+    metaTitle: "Best IPTV App for iPhone 2026: 5 Apps Compared",
+    metaDescription: "Which IPTV app for iPhone in 2026? 5 App Store apps compared on price, Chromecast, offline downloads and Apple TV, from their own listings.",
+    socialDescription: "5 IPTV apps for iPhone compared: price, Chromecast, offline downloads and Apple TV.",
+    title: "Best IPTV App for iPhone 2026: 5 Apps Compared",
+    lead: "We compared 5 IPTV apps from the App Store using what each listing actually says: price, Chromecast, offline downloads and Apple TV.",
     readTime: "7 min read",
     author: "EDGE IPTV Team",
     keywords: [
@@ -113,11 +123,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "Blog",
     breadcrumb: "Best IPTV App for iPhone 2026",
 
-    intro:
-      "Yes, you **can watch IPTV on your iPhone**, and you don't need a jailbreak or a sideloaded app. All five apps in this guide are on the App Store. We tested each one for setup speed, stream quality, Chromecast support and iOS integration to find the best IPTV app for iPhone in 2026.",
+    intro: "Yes, you **can watch IPTV on your iPhone**, and you don't need a jailbreak or a sideloaded app. All five apps in this guide are on the App Store. We compared them on price, Chromecast, offline downloads and Apple TV, taking each competitor's features from its own App Store page.",
     quickLabel: "Quick answer",
-    quickAnswer:
-      "**EDGE IPTV** is the best IPTV app for iPhone in 2026. It's the only app in this test with Chromecast, offline downloads and a setup under 2 minutes. It's free to download, then $3.99 a month after a 7-day free trial.",
+    quickAnswer: "**EDGE IPTV** is our pick for iPhone. We make it, so the table below sticks to facts you can check. Built for iOS only, it combines Chromecast and AirPlay, offline downloads and no ads. It's free to download with a 7-day free trial, then $3.99 a month or $19.99 a year.",
     trialCta: "Start your 7-day free trial",
     trialCtaStore: "Start your 7-day free trial on the App Store",
 
@@ -145,24 +153,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "Top 5 IPTV Apps for iPhone: Side-by-Side Comparison",
+    tableTitle: "5 IPTV Apps for iPhone: Side-by-Side Comparison",
     table: {
       app: "App",
-      rating: "Rating",
       price: "Price",
       chromecast: "Chromecast",
-      offline: "Offline",
-      setup: "Setup",
+      offline: "Offline downloads",
+      appleTv: "Apple TV app",
     },
-    newLabel: "New",
-    topPick: "#1 Pick",
-    prices: { edge: "7-day trial, then $3.99/mo", iap: "Free (IAP)", free: "Free" },
-
-    edgeTitle: "#1 Best IPTV App for iPhone: EDGE IPTV",
+    tableNote: "Competitor details from their US App Store pages on 26 October 2026. ✓ means the app's own page lists the feature; – means its page doesn't mention it (it may still exist).",
+    topPick: "Our pick",
+    prices: {
+      edge: "7-day trial, then $3.99/mo",
+      gse: "$2.99 (paid app)",
+      flex: "Free, Pro $5.99",
+      smarters: "Free, Premium $4.99",
+      opus: "Free, paid plans from $4.99",
+    },
+    edgeTitle: "Our Pick for iPhone: EDGE IPTV",
     iconAlt: "EDGE IPTV app icon, best IPTV app for iPhone",
     trialBadge: "7-day free trial",
-    edgeSummary:
-      "Built from the ground up for iPhone and iPad, EDGE IPTV is the only player in this test that combines Chromecast casting, offline downloads and a fully native iOS interface in one app.",
+    edgeSummary: "Built from the ground up for iPhone and iPad, EDGE IPTV puts Chromecast and AirPlay, offline downloads and a fully native iOS interface in one app, with no ads.",
     edgeFeatures: [
       "Set up with Xtream Codes or M3U in under 2 minutes",
       "Chromecast and AirPlay to your TV",
@@ -172,47 +183,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "iPhone and iPad on iOS 17 or later",
     ],
     whyTitle: "Why EDGE IPTV Stands Out on iPhone",
-    why: [
-      "Most IPTV players for iOS are ports from Android. They work, but they feel foreign on iPhone. EDGE IPTV was designed for iOS only, and it shows in every interaction: gestures feel natural, the keyboard appears where expected, and the app follows system conventions like Dynamic Type and Dark Mode.",
-      "**Chromecast support** is what sets it apart here: none of the other four apps in this test can cast to a Chromecast or Google TV. Combined with **offline downloads**, it covers both the at-home and the on-the-go use cases iPhone owners care about most.",
-    ],
-
+    why: ["Most IPTV players for iOS are ports from Android. They work, but they feel foreign on iPhone. EDGE IPTV was designed for iOS only, and it shows in every interaction: gestures feel natural, the keyboard appears where expected, and the app follows system conventions like Dynamic Type and Dark Mode.", "**Chromecast and offline downloads** cover the two ways people watch on an iPhone: on the TV at home, and on the train with no signal. What it doesn't do: EDGE IPTV does not record live TV and has no Apple TV app (you send the picture with AirPlay instead). If you need those, look at the apps below."],
     othersTitle: "Other IPTV Apps for iPhone Worth Knowing",
     others: [
       {
         id: "gse",
-        name: "#2 — GSE Smart IPTV",
-        meta: "Rating: ★ 4.1 · Free with in-app purchases",
-        text: "GSE has been around for years and has a loyal user base. It supports M3U and Xtream codes and includes a built-in EPG. Advanced features like multi-screen are locked behind an in-app purchase, and there is no Chromecast support.",
-        pros: ["M3U + Xtream support", "Built-in EPG"],
-        cons: ["No Chromecast", "Key features paid"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · $2.99 · iOS 9 or later",
+        text: "One of the oldest IPTV players on iOS. Its App Store page lists M3U and Xtream Codes playlists, an EPG timeline, Chromecast, AirPlay, live TV recording and parental control. It is a paid app, and its listing shows no update since November 2022.",
+        pros: ["Chromecast and AirPlay", "Records live TV"],
+        cons: ["Paid upfront", "Last updated November 2022"],
       },
       {
         id: "flex",
-        name: "#3 — Flex IPTV",
-        meta: "Rating: ★ 3.8 · Free with in-app purchases",
-        text: "Flex IPTV has a clean interface and supports M3U playlists. The free tier is limited to 4 saved playlists, and the UI feels dated next to modern iOS design. AirPlay works, but Chromecast is not supported.",
-        pros: ["Clean UI", "AirPlay support"],
-        cons: ["Limited free playlists", "No Chromecast"],
+        name: "Flex IPTV",
+        meta: "Free · Pro version $5.99 · iOS 17.4 or later",
+        text: "Flex IPTV is free, with a one-time Pro version sold separately for iPhone/iPad and for Apple TV ($5.99 each). Its listing mentions XMLTV EPG support, favourite channels and recording live streams.",
+        pros: ["One-time Pro purchase", "Records live streams"],
+        cons: ["Pro bought again for Apple TV"],
       },
       {
         id: "smarters",
-        name: "#4 — IPTV Smarters Pro",
-        meta: "Rating: ★ 3.5 · Free with in-app purchases",
-        text: "A well-known name in the IPTV world. The iOS version lags behind its Android counterpart: setup is clunkier and the interface doesn't feel native to iPhone. It supports Xtream codes but takes several steps to configure.",
-        pros: ["Xtream codes support"],
-        cons: ["Not optimised for iOS", "No Chromecast or offline"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · Free · Premium $4.99 · iOS 15.6 or later",
+        text: "The best-known name among IPTV players, also available on Apple TV. Premium costs $4.99. Its App Store privacy label lists usage data that may be used to track you across other companies' apps and websites.",
+        pros: ["Low price", "Apple TV app", "Runs on iOS 15.6"],
+        cons: ["Data used to track you (App Store label)"],
       },
       {
         id: "opus",
-        name: "#5 — Opus IPTV Player",
-        meta: "Rating: ★ 3.7 · Free",
-        text: "Opus supports M3U playlists and has a reasonably modern look. It's free with no obvious paywall, but it lacks Chromecast and offline mode, and its Xtream codes support is less reliable than the competition.",
-        pros: ["Fully free", "M3U support"],
-        cons: ["No Chromecast or offline", "Unreliable Xtream codes"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · Free · paid plans from $4.99 · iOS 15.1 or later",
+        text: "Opus handles M3U and Xtream Codes and a custom XMLTV EPG, and syncs playlists and watch progress through an Opus account. Its Apple TV app picks up your playlists from a QR code. The paid options on its listing range from $4.99 to a $29.99 yearly plan or $79.99 for life.",
+        pros: ["Apple TV app", "Sync between devices"],
+        cons: ["Paid plans up to $79.99", "Data used to track you (App Store label)"],
       },
     ],
-
     stepsTitle: "How to Download an IPTV App on iPhone (2-Minute Setup)",
     stepsIntro: "Here's how to go from nothing to streaming in under 2 minutes with EDGE IPTV:",
     steps: [
@@ -301,13 +307,11 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
 
   fr: {
     slug: "meilleure-app-iptv-iphone",
-    metaTitle: "Meilleure app IPTV pour iPhone 2026 : 5 apps testées",
-    metaDescription:
-      "Quelle est la meilleure app IPTV pour iPhone ? Nous avons testé les 5 plus populaires en 2026 : installation, Chromecast, hors ligne et confort sur iOS.",
-    socialDescription:
-      "5 apps IPTV pour iPhone testées en 2026 : installation, Chromecast, visionnage hors ligne.",
-    title: "Meilleure app IPTV pour iPhone 2026 : 5 apps testées",
-    lead: "Nous avons testé les 5 apps IPTV les plus populaires sur iPhone pour trouver la plus rapide, la plus fiable et la plus simple à configurer.",
+    metaTitle: "Meilleure app IPTV pour iPhone 2026 : 5 apps comparées",
+    metaDescription: "Quelle app IPTV choisir sur iPhone en 2026 ? 5 apps de l'App Store comparées : prix, Chromecast, hors ligne et Apple TV, d'après leurs fiches.",
+    socialDescription: "5 apps IPTV pour iPhone comparées : prix, Chromecast, téléchargements hors ligne et Apple TV.",
+    title: "Meilleure app IPTV pour iPhone 2026 : 5 apps comparées",
+    lead: "Nous avons comparé 5 apps IPTV de l'App Store à partir de ce que dit vraiment leur fiche : prix, Chromecast, téléchargements hors ligne et Apple TV.",
     readTime: "7 min",
     author: "Équipe EDGE IPTV",
     keywords: [
@@ -321,11 +325,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "Blog",
     breadcrumb: "Meilleure app IPTV pour iPhone 2026",
 
-    intro:
-      "Oui, vous **pouvez regarder l'IPTV sur votre iPhone**, sans jailbreak ni app installée en dehors de l'App Store. Les cinq apps de ce comparatif y sont toutes disponibles. Nous les avons testées sur la rapidité d'installation, la qualité de lecture, le Chromecast et l'intégration à iOS pour désigner la meilleure app IPTV pour iPhone en 2026.",
+    intro: "Oui, vous **pouvez regarder l'IPTV sur votre iPhone**, sans jailbreak ni app installée en dehors de l'App Store. Les cinq apps de ce comparatif y sont toutes disponibles. Nous les avons comparées sur le prix, le Chromecast, les téléchargements hors ligne et l'Apple TV, en reprenant pour chaque concurrent ce qu'indique sa propre fiche App Store.",
     quickLabel: "Réponse rapide",
-    quickAnswer:
-      "**EDGE IPTV** est la meilleure app IPTV pour iPhone en 2026. C'est la seule de ce test à réunir le Chromecast, les téléchargements hors ligne et une installation en moins de 2 minutes. Elle est gratuite au téléchargement, puis coûte 3,99 € par mois après 7 jours d'essai gratuit.",
+    quickAnswer: "**EDGE IPTV** est notre choix sur iPhone. C'est notre app : le tableau ci-dessous s'en tient donc à des faits vérifiables. Conçue uniquement pour iOS, elle réunit Chromecast et AirPlay, téléchargements hors ligne et zéro publicité. Elle est gratuite au téléchargement avec 7 jours d'essai, puis coûte 3,99 € par mois ou 19,99 € par an.",
     trialCta: "Démarrer l'essai gratuit de 7 jours",
     trialCtaStore: "Démarrer l'essai gratuit sur l'App Store",
 
@@ -355,28 +357,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "Les 5 meilleures apps IPTV pour iPhone : le comparatif",
+    tableTitle: "5 apps IPTV pour iPhone : le comparatif",
     table: {
       app: "App",
-      rating: "Note",
       price: "Prix",
       chromecast: "Chromecast",
       offline: "Hors ligne",
-      setup: "Installation",
+      appleTv: "App Apple TV",
     },
-    newLabel: "Nouveau",
-    topPick: "N° 1",
+    tableNote: "Informations sur les concurrents relevées sur leurs fiches de l'App Store américain le 26 octobre 2026 (prix en dollars). ✓ : la fiche de l'app mentionne la fonction ; – : sa fiche n'en parle pas (elle peut exister quand même).",
+    topPick: "Notre choix",
     prices: {
-      edge: "7 j d'essai, puis 3,99 €/mois",
-      iap: "Gratuit (achats intégrés)",
-      free: "Gratuit",
+      edge: "7 jours d'essai, puis 3,99 €/mois",
+      gse: "2,99 $ (app payante)",
+      flex: "Gratuit, Pro 5,99 $",
+      smarters: "Gratuit, Premium 4,99 $",
+      opus: "Gratuit, offres dès 4,99 $",
     },
-
-    edgeTitle: "N° 1 des apps IPTV pour iPhone : EDGE IPTV",
+    edgeTitle: "Notre choix pour iPhone : EDGE IPTV",
     iconAlt: "Icône de l'app EDGE IPTV, meilleure app IPTV pour iPhone",
     trialBadge: "7 jours d'essai gratuit",
-    edgeSummary:
-      "Conçue de zéro pour l'iPhone et l'iPad, EDGE IPTV est le seul lecteur de ce test à réunir la diffusion Chromecast, les téléchargements hors ligne et une interface iOS entièrement native.",
+    edgeSummary: "Conçue de zéro pour l'iPhone et l'iPad, EDGE IPTV réunit Chromecast et AirPlay, téléchargements hors ligne et une interface iOS entièrement native, sans publicité.",
     edgeFeatures: [
       "Configuration Xtream Codes ou M3U en moins de 2 minutes",
       "Chromecast et AirPlay vers votre TV",
@@ -386,47 +387,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "iPhone et iPad sous iOS 17 ou plus récent",
     ],
     whyTitle: "Pourquoi EDGE IPTV se démarque sur iPhone",
-    why: [
-      "La plupart des lecteurs IPTV pour iOS sont des portages d'apps Android. Ils fonctionnent, mais on sent qu'ils n'ont pas été pensés pour l'iPhone. EDGE IPTV a été conçue uniquement pour iOS, et cela se voit à chaque geste : les balayages sont naturels, le clavier apparaît là où on l'attend, et l'app respecte les conventions du système comme la taille de texte dynamique et le mode sombre.",
-      "Le **Chromecast** fait la différence : aucune des quatre autres apps de ce test ne sait diffuser vers un Chromecast ou une Google TV. Avec les **téléchargements hors ligne**, EDGE IPTV couvre à la fois l'usage à la maison et en déplacement, les deux qui comptent le plus sur iPhone.",
-    ],
-
+    why: ["La plupart des lecteurs IPTV pour iOS sont des portages d'apps Android. Ils fonctionnent, mais on sent qu'ils n'ont pas été pensés pour l'iPhone. EDGE IPTV a été conçue uniquement pour iOS, et cela se voit à chaque geste : les balayages sont naturels, le clavier apparaît là où on l'attend, et l'app respecte les conventions du système comme la taille de texte dynamique et le mode sombre.", "Le **Chromecast et les téléchargements hors ligne** couvrent les deux usages de l'iPhone : sur la TV à la maison, et dans le train sans réseau. Ce qu'elle ne fait pas : EDGE IPTV n'enregistre pas la TV en direct et n'a pas d'app Apple TV (l'image passe par AirPlay). Si vous en avez besoin, regardez les apps ci-dessous."],
     othersTitle: "Les autres apps IPTV pour iPhone à connaître",
     others: [
       {
         id: "gse",
-        name: "N° 2 — GSE Smart IPTV",
-        meta: "Note : ★ 4,1 · Gratuit avec achats intégrés",
-        text: "GSE existe depuis des années et garde une base d'utilisateurs fidèle. Il gère M3U et Xtream et intègre un guide des programmes. Mais les fonctions avancées comme le multi-écran sont payantes, et il n'y a pas de Chromecast.",
-        pros: ["M3U + Xtream", "Guide des programmes intégré"],
-        cons: ["Pas de Chromecast", "Fonctions clés payantes"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · 2,99 $ · iOS 9 ou plus récent",
+        text: "L'un des plus anciens lecteurs IPTV sur iOS. Sa fiche App Store mentionne les playlists M3U et Xtream Codes, un guide des programmes, le Chromecast, AirPlay, l'enregistrement de la TV en direct et le contrôle parental. C'est une app payante, sans mise à jour depuis novembre 2022 d'après sa fiche.",
+        pros: ["Chromecast et AirPlay", "Enregistre la TV en direct"],
+        cons: ["Payante dès le téléchargement", "Dernière mise à jour en novembre 2022"],
       },
       {
         id: "flex",
-        name: "N° 3 — Flex IPTV",
-        meta: "Note : ★ 3,8 · Gratuit avec achats intégrés",
-        text: "Flex IPTV a une interface épurée et gère les playlists M3U. La version gratuite est limitée à 4 playlists, et le design paraît daté face aux standards actuels d'iOS. AirPlay fonctionne, pas le Chromecast.",
-        pros: ["Interface épurée", "AirPlay"],
-        cons: ["Playlists gratuites limitées", "Pas de Chromecast"],
+        name: "Flex IPTV",
+        meta: "Gratuit · version Pro 5,99 $ · iOS 17.4 ou plus récent",
+        text: "Flex IPTV est gratuit, avec une version Pro en achat unique vendue séparément pour l'iPhone/iPad et pour l'Apple TV (5,99 $ chacune). Sa fiche mentionne le guide XMLTV, les chaînes favorites et l'enregistrement des flux en direct.",
+        pros: ["Pro en achat unique", "Enregistre les flux en direct"],
+        cons: ["Pro à racheter pour l'Apple TV"],
       },
       {
         id: "smarters",
-        name: "N° 4 — IPTV Smarters Pro",
-        meta: "Note : ★ 3,5 · Gratuit avec achats intégrés",
-        text: "Un nom connu dans le monde de l'IPTV. La version iOS reste en retrait par rapport à celle d'Android : l'installation est plus laborieuse et l'interface ne fait pas native sur iPhone. Xtream est pris en charge, mais demande plusieurs étapes.",
-        pros: ["Codes Xtream pris en charge"],
-        cons: ["Peu optimisé pour iOS", "Ni Chromecast ni hors ligne"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · Gratuit · Premium 4,99 $ · iOS 15.6 ou plus récent",
+        text: "Le nom le plus connu des lecteurs IPTV, aussi disponible sur Apple TV. La version Premium coûte 4,99 $. Son étiquette de confidentialité sur l'App Store indique des données d'utilisation susceptibles de servir à vous suivre sur les apps et sites d'autres sociétés.",
+        pros: ["Petit prix", "App Apple TV", "Fonctionne dès iOS 15.6"],
+        cons: ["Données utilisées pour vous suivre (étiquette App Store)"],
       },
       {
         id: "opus",
-        name: "N° 5 — Opus IPTV Player",
-        meta: "Note : ★ 3,7 · Gratuit",
-        text: "Opus gère les playlists M3U et a un look plutôt moderne. Il est gratuit sans paywall visible, mais il lui manque le Chromecast et le mode hors ligne, et sa prise en charge de Xtream est moins fiable que celle de la concurrence.",
-        pros: ["Entièrement gratuit", "M3U"],
-        cons: ["Ni Chromecast ni hors ligne", "Xtream peu fiable"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · Gratuit · offres payantes dès 4,99 $ · iOS 15.1 ou plus récent",
+        text: "Opus gère M3U et Xtream Codes et un guide XMLTV personnalisé, et synchronise playlists et reprise de lecture via un compte Opus. Son app Apple TV récupère vos playlists par QR code. Les offres payantes de sa fiche vont de 4,99 $ à un abonnement annuel à 29,99 $ ou un achat à vie à 79,99 $.",
+        pros: ["App Apple TV", "Synchronisation entre appareils"],
+        cons: ["Offres jusqu'à 79,99 $", "Données utilisées pour vous suivre (étiquette App Store)"],
       },
     ],
-
     stepsTitle: "Comment installer une app IPTV sur iPhone (en 2 minutes)",
     stepsIntro: "Voici comment passer de rien à la lecture en moins de 2 minutes avec EDGE IPTV :",
     steps: [
@@ -517,13 +513,11 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
 
   es: {
     slug: "mejor-app-iptv-iphone",
-    metaTitle: "Mejor app IPTV para iPhone 2026: 5 apps probadas",
-    metaDescription:
-      "¿Cuál es la mejor app IPTV para iPhone? Probamos las 5 más populares en 2026: rapidez de configuración, Chromecast, descargas sin conexión y experiencia en iOS.",
-    socialDescription:
-      "5 apps IPTV para iPhone probadas en 2026: configuración, Chromecast y visualización sin conexión.",
-    title: "Mejor app IPTV para iPhone 2026: 5 apps probadas",
-    lead: "Probamos las 5 apps IPTV más populares en iPhone para encontrar la más rápida, la más fiable y la más fácil de configurar.",
+    metaTitle: "Mejor app IPTV para iPhone 2026: 5 apps comparadas",
+    metaDescription: "¿Qué app IPTV elegir en iPhone en 2026? 5 apps de la App Store comparadas: precio, Chromecast, descargas sin conexión y Apple TV, según sus fichas.",
+    socialDescription: "5 apps IPTV para iPhone comparadas: precio, Chromecast, descargas sin conexión y Apple TV.",
+    title: "Mejor app IPTV para iPhone 2026: 5 apps comparadas",
+    lead: "Comparamos 5 apps IPTV de la App Store a partir de lo que dice realmente su ficha: precio, Chromecast, descargas sin conexión y Apple TV.",
     readTime: "7 min",
     author: "Equipo EDGE IPTV",
     keywords: [
@@ -537,11 +531,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "Blog",
     breadcrumb: "Mejor app IPTV para iPhone 2026",
 
-    intro:
-      "Sí, **puedes ver IPTV en tu iPhone**, sin jailbreak y sin instalar apps fuera de la App Store. Las cinco apps de esta guía están disponibles allí. Probamos cada una en rapidez de configuración, calidad de reproducción, Chromecast e integración con iOS para elegir la mejor app IPTV para iPhone en 2026.",
+    intro: "Sí, **puedes ver IPTV en tu iPhone**, sin jailbreak y sin instalar apps fuera de la App Store. Las cinco apps de esta guía están disponibles allí. Las comparamos en precio, Chromecast, descargas sin conexión y Apple TV, tomando de cada competidor lo que indica su propia ficha de la App Store.",
     quickLabel: "Respuesta rápida",
-    quickAnswer:
-      "**EDGE IPTV** es la mejor app IPTV para iPhone en 2026. Es la única de esta prueba que reúne Chromecast, descargas sin conexión y una configuración en menos de 2 minutos. Se descarga gratis y cuesta 3,99 € al mes tras 7 días de prueba gratuita.",
+    quickAnswer: "**EDGE IPTV** es nuestra elección para iPhone. Es nuestra app, así que la tabla de abajo se limita a datos que puedes comprobar. Creada solo para iOS, reúne Chromecast y AirPlay, descargas sin conexión y cero anuncios. Se descarga gratis con 7 días de prueba y después cuesta 3,99 € al mes o 19,99 € al año.",
     trialCta: "Empieza tu prueba gratuita de 7 días",
     trialCtaStore: "Empieza tu prueba gratuita en la App Store",
 
@@ -569,28 +561,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "Las 5 mejores apps IPTV para iPhone: comparativa",
+    tableTitle: "5 apps IPTV para iPhone: comparativa",
     table: {
       app: "App",
-      rating: "Nota",
       price: "Precio",
       chromecast: "Chromecast",
       offline: "Sin conexión",
-      setup: "Configuración",
+      appleTv: "App Apple TV",
     },
-    newLabel: "Nueva",
-    topPick: "N.º 1",
+    tableNote: "Datos de los competidores tomados de sus fichas de la App Store de EE. UU. el 26 de octubre de 2026 (precios en dólares). ✓: la ficha de la app menciona la función; –: su ficha no la menciona (puede existir igualmente).",
+    topPick: "Nuestra elección",
     prices: {
       edge: "7 días de prueba, luego 3,99 €/mes",
-      iap: "Gratis (compras en la app)",
-      free: "Gratis",
+      gse: "2,99 $ (app de pago)",
+      flex: "Gratis, Pro 5,99 $",
+      smarters: "Gratis, Premium 4,99 $",
+      opus: "Gratis, planes desde 4,99 $",
     },
-
-    edgeTitle: "N.º 1 en apps IPTV para iPhone: EDGE IPTV",
+    edgeTitle: "Nuestra elección para iPhone: EDGE IPTV",
     iconAlt: "Icono de la app EDGE IPTV, la mejor app IPTV para iPhone",
     trialBadge: "7 días de prueba gratis",
-    edgeSummary:
-      "Creada desde cero para iPhone y iPad, EDGE IPTV es el único reproductor de esta prueba que reúne Chromecast, descargas sin conexión y una interfaz de iOS totalmente nativa.",
+    edgeSummary: "Creada desde cero para iPhone y iPad, EDGE IPTV reúne Chromecast y AirPlay, descargas sin conexión y una interfaz de iOS totalmente nativa, sin anuncios.",
     edgeFeatures: [
       "Configuración Xtream Codes o M3U en menos de 2 minutos",
       "Chromecast y AirPlay a tu TV",
@@ -600,47 +591,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "iPhone y iPad con iOS 17 o posterior",
     ],
     whyTitle: "Por qué EDGE IPTV destaca en iPhone",
-    why: [
-      "La mayoría de los reproductores IPTV para iOS son adaptaciones de apps de Android. Funcionan, pero se nota que no se pensaron para el iPhone. EDGE IPTV se diseñó solo para iOS, y se nota en cada gesto: los deslizamientos son naturales, el teclado aparece donde lo esperas y la app respeta las convenciones del sistema, como el texto dinámico y el modo oscuro.",
-      "El **Chromecast** marca la diferencia: ninguna de las otras cuatro apps de esta prueba puede enviar la imagen a un Chromecast o una Google TV. Junto con las **descargas sin conexión**, EDGE IPTV cubre tanto el uso en casa como fuera de ella, los dos que más importan en un iPhone.",
-    ],
-
+    why: ["La mayoría de los reproductores IPTV para iOS son adaptaciones de apps de Android. Funcionan, pero se nota que no se pensaron para el iPhone. EDGE IPTV se diseñó solo para iOS, y se nota en cada gesto: los deslizamientos son naturales, el teclado aparece donde lo esperas y la app respeta las convenciones del sistema, como el texto dinámico y el modo oscuro.", "**Chromecast y las descargas sin conexión** cubren las dos formas de ver en un iPhone: en la tele de casa y en el tren sin cobertura. Lo que no hace: EDGE IPTV no graba la TV en directo y no tiene app para Apple TV (la imagen se envía por AirPlay). Si lo necesitas, mira las apps de abajo."],
     othersTitle: "Otras apps IPTV para iPhone que conviene conocer",
     others: [
       {
         id: "gse",
-        name: "N.º 2 — GSE Smart IPTV",
-        meta: "Nota: ★ 4,1 · Gratis con compras en la app",
-        text: "GSE lleva años en el mercado y tiene usuarios fieles. Admite M3U y Xtream e incluye una guía de programación. Pero las funciones avanzadas, como la multipantalla, son de pago, y no tiene Chromecast.",
-        pros: ["M3U + Xtream", "Guía de programación integrada"],
-        cons: ["Sin Chromecast", "Funciones clave de pago"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · 2,99 $ · iOS 9 o posterior",
+        text: "Uno de los reproductores IPTV más antiguos de iOS. Su ficha de la App Store menciona listas M3U y Xtream Codes, guía de programación, Chromecast, AirPlay, grabación de TV en directo y control parental. Es una app de pago y, según su ficha, no se actualiza desde noviembre de 2022.",
+        pros: ["Chromecast y AirPlay", "Graba la TV en directo"],
+        cons: ["De pago desde la descarga", "Última actualización: noviembre de 2022"],
       },
       {
         id: "flex",
-        name: "N.º 3 — Flex IPTV",
-        meta: "Nota: ★ 3,8 · Gratis con compras en la app",
-        text: "Flex IPTV tiene una interfaz limpia y admite listas M3U. La versión gratuita se limita a 4 listas y el diseño se ve anticuado frente a iOS actual. AirPlay funciona, Chromecast no.",
-        pros: ["Interfaz limpia", "AirPlay"],
-        cons: ["Listas gratuitas limitadas", "Sin Chromecast"],
+        name: "Flex IPTV",
+        meta: "Gratis · versión Pro 5,99 $ · iOS 17.4 o posterior",
+        text: "Flex IPTV es gratis, con una versión Pro de pago único que se vende por separado para iPhone/iPad y para Apple TV (5,99 $ cada una). Su ficha menciona guía XMLTV, canales favoritos y grabación de emisiones en directo.",
+        pros: ["Pro de pago único", "Graba emisiones en directo"],
+        cons: ["Pro aparte para Apple TV"],
       },
       {
         id: "smarters",
-        name: "N.º 4 — IPTV Smarters Pro",
-        meta: "Nota: ★ 3,5 · Gratis con compras en la app",
-        text: "Un nombre conocido en el mundo IPTV. La versión de iOS va por detrás de la de Android: la configuración es más torpe y la interfaz no se siente nativa en el iPhone. Admite Xtream, pero requiere varios pasos.",
-        pros: ["Admite códigos Xtream"],
-        cons: ["Poco optimizada para iOS", "Sin Chromecast ni modo sin conexión"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · Gratis · Premium 4,99 $ · iOS 15.6 o posterior",
+        text: "El nombre más conocido entre los reproductores IPTV, también disponible en Apple TV. La versión Premium cuesta 4,99 $. Su etiqueta de privacidad en la App Store indica datos de uso que pueden servir para rastrearte en apps y webs de otras empresas.",
+        pros: ["Precio bajo", "App para Apple TV", "Funciona desde iOS 15.6"],
+        cons: ["Datos usados para rastrearte (etiqueta App Store)"],
       },
       {
         id: "opus",
-        name: "N.º 5 — Opus IPTV Player",
-        meta: "Nota: ★ 3,7 · Gratis",
-        text: "Opus admite listas M3U y tiene un aspecto bastante moderno. Es gratis y sin muros de pago visibles, pero le faltan Chromecast y modo sin conexión, y su soporte de Xtream es menos fiable que el de la competencia.",
-        pros: ["Totalmente gratis", "M3U"],
-        cons: ["Sin Chromecast ni modo sin conexión", "Xtream poco fiable"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · Gratis · planes de pago desde 4,99 $ · iOS 15.1 o posterior",
+        text: "Opus admite M3U y Xtream Codes y una guía XMLTV personalizada, y sincroniza listas y progreso con una cuenta Opus. Su app para Apple TV recupera tus listas con un código QR. Los planes de pago de su ficha van de 4,99 $ a una suscripción anual de 29,99 $ o un pago de por vida de 79,99 $.",
+        pros: ["App para Apple TV", "Sincronización entre dispositivos"],
+        cons: ["Planes de hasta 79,99 $", "Datos usados para rastrearte (etiqueta App Store)"],
       },
     ],
-
     stepsTitle: "Cómo instalar una app IPTV en iPhone (en 2 minutos)",
     stepsIntro: "Así pasas de cero a ver contenido en menos de 2 minutos con EDGE IPTV:",
     steps: [
@@ -730,13 +716,11 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
 
   pt: {
     slug: "melhor-app-iptv-iphone",
-    metaTitle: "Melhor app IPTV para iPhone 2026: 5 apps testados",
-    metaDescription:
-      "Qual é o melhor app IPTV para iPhone? Testamos os 5 mais populares em 2026: rapidez de configuração, Chromecast, downloads offline e experiência no iOS.",
-    socialDescription:
-      "5 apps IPTV para iPhone testados em 2026: configuração, Chromecast e visualização offline.",
-    title: "Melhor app IPTV para iPhone 2026: 5 apps testados",
-    lead: "Testamos os 5 apps IPTV mais populares no iPhone para encontrar o mais rápido, o mais confiável e o mais fácil de configurar.",
+    metaTitle: "Melhor app IPTV para iPhone 2026: 5 apps comparados",
+    metaDescription: "Qual app IPTV escolher no iPhone em 2026? 5 apps da App Store comparados: preço, Chromecast, downloads offline e Apple TV, segundo as suas páginas.",
+    socialDescription: "5 apps IPTV para iPhone comparados: preço, Chromecast, downloads offline e Apple TV.",
+    title: "Melhor app IPTV para iPhone 2026: 5 apps comparados",
+    lead: "Comparamos 5 apps IPTV da App Store a partir do que a página de cada um realmente diz: preço, Chromecast, downloads offline e Apple TV.",
     readTime: "7 min",
     author: "Equipe EDGE IPTV",
     keywords: [
@@ -750,11 +734,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "Blog",
     breadcrumb: "Melhor app IPTV para iPhone 2026",
 
-    intro:
-      "Sim, você **pode assistir IPTV no iPhone**, sem jailbreak e sem instalar apps fora da App Store. Os cinco apps deste guia estão todos lá. Testamos cada um em rapidez de configuração, qualidade de reprodução, Chromecast e integração com o iOS para escolher o melhor app IPTV para iPhone em 2026.",
+    intro: "Sim, você **pode assistir IPTV no iPhone**, sem jailbreak e sem instalar apps fora da App Store. Os cinco apps deste guia estão todos lá. Comparamos preço, Chromecast, downloads offline e Apple TV, usando para cada concorrente o que diz a sua própria página na App Store.",
     quickLabel: "Resposta rápida",
-    quickAnswer:
-      "O **EDGE IPTV** é o melhor app IPTV para iPhone em 2026. É o único deste teste que reúne Chromecast, downloads offline e configuração em menos de 2 minutos. O download é grátis, e depois custa US$ 3,99 por mês após 7 dias de teste grátis.",
+    quickAnswer: "O **EDGE IPTV** é a nossa escolha para iPhone. O app é nosso, então a tabela abaixo fica só em fatos que você pode conferir. Feito só para iOS, ele reúne Chromecast e AirPlay, downloads offline e nenhum anúncio. O download é grátis com 7 dias de teste, depois custa US$ 3,99 por mês ou US$ 19,99 por ano.",
     trialCta: "Comece seu teste grátis de 7 dias",
     trialCtaStore: "Comece seu teste grátis na App Store",
 
@@ -782,28 +764,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "Os 5 melhores apps IPTV para iPhone: comparação",
+    tableTitle: "5 apps IPTV para iPhone: comparação",
     table: {
       app: "App",
-      rating: "Nota",
       price: "Preço",
       chromecast: "Chromecast",
       offline: "Offline",
-      setup: "Configuração",
+      appleTv: "App Apple TV",
     },
-    newLabel: "Novo",
-    topPick: "Nº 1",
+    tableNote: "Dados dos concorrentes tirados das páginas da App Store dos EUA em 26 de outubro de 2026. ✓: a página do app cita o recurso; –: a página não fala dele (ele pode existir mesmo assim).",
+    topPick: "Nossa escolha",
     prices: {
       edge: "7 dias de teste, depois US$ 3,99/mês",
-      iap: "Grátis (compras no app)",
-      free: "Grátis",
+      gse: "US$ 2,99 (app pago)",
+      flex: "Grátis, Pro US$ 5,99",
+      smarters: "Grátis, Premium US$ 4,99",
+      opus: "Grátis, planos a partir de US$ 4,99",
     },
-
-    edgeTitle: "Nº 1 entre os apps IPTV para iPhone: EDGE IPTV",
+    edgeTitle: "Nossa escolha para iPhone: EDGE IPTV",
     iconAlt: "Ícone do app EDGE IPTV, o melhor app IPTV para iPhone",
     trialBadge: "7 dias de teste grátis",
-    edgeSummary:
-      "Criado do zero para iPhone e iPad, o EDGE IPTV é o único player deste teste que reúne Chromecast, downloads offline e uma interface iOS totalmente nativa.",
+    edgeSummary: "Criado do zero para iPhone e iPad, o EDGE IPTV reúne Chromecast e AirPlay, downloads offline e uma interface iOS totalmente nativa, sem anúncios.",
     edgeFeatures: [
       "Configuração Xtream Codes ou M3U em menos de 2 minutos",
       "Chromecast e AirPlay para a sua TV",
@@ -813,47 +794,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "iPhone e iPad com iOS 17 ou posterior",
     ],
     whyTitle: "Por que o EDGE IPTV se destaca no iPhone",
-    why: [
-      "A maioria dos players IPTV para iOS são adaptações de apps Android. Funcionam, mas dá para sentir que não foram pensados para o iPhone. O EDGE IPTV foi feito só para iOS, e isso aparece em cada gesto: os deslizes são naturais, o teclado surge onde você espera e o app segue as convenções do sistema, como texto dinâmico e modo escuro.",
-      "O **Chromecast** faz a diferença: nenhum dos outros quatro apps deste teste transmite para um Chromecast ou Google TV. Somado aos **downloads offline**, o EDGE IPTV cobre o uso em casa e fora dela, os dois que mais importam no iPhone.",
-    ],
-
+    why: ["A maioria dos players IPTV para iOS são adaptações de apps Android. Funcionam, mas dá para sentir que não foram pensados para o iPhone. O EDGE IPTV foi feito só para iOS, e isso aparece em cada gesto: os deslizes são naturais, o teclado surge onde você espera e o app segue as convenções do sistema, como texto dinâmico e modo escuro.", "O **Chromecast e os downloads offline** cobrem os dois jeitos de assistir no iPhone: na TV de casa e no ônibus sem sinal. O que ele não faz: o EDGE IPTV não grava a TV ao vivo e não tem app para Apple TV (a imagem vai por AirPlay). Se você precisa disso, veja os apps abaixo."],
     othersTitle: "Outros apps IPTV para iPhone que vale conhecer",
     others: [
       {
         id: "gse",
-        name: "Nº 2 — GSE Smart IPTV",
-        meta: "Nota: ★ 4,1 · Grátis com compras no app",
-        text: "O GSE existe há anos e tem usuários fiéis. Aceita M3U e Xtream e traz guia de programação. Mas recursos avançados, como multitela, são pagos, e não há suporte a Chromecast.",
-        pros: ["M3U + Xtream", "Guia de programação integrado"],
-        cons: ["Sem Chromecast", "Recursos-chave pagos"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · US$ 2,99 · iOS 9 ou posterior",
+        text: "Um dos players IPTV mais antigos do iOS. A sua página na App Store cita listas M3U e Xtream Codes, guia de programação, Chromecast, AirPlay, gravação da TV ao vivo e controle parental. É um app pago e, segundo a página, não é atualizado desde novembro de 2022.",
+        pros: ["Chromecast e AirPlay", "Grava a TV ao vivo"],
+        cons: ["Pago já no download", "Última atualização em novembro de 2022"],
       },
       {
         id: "flex",
-        name: "Nº 3 — Flex IPTV",
-        meta: "Nota: ★ 3,8 · Grátis com compras no app",
-        text: "O Flex IPTV tem interface limpa e aceita listas M3U. A versão grátis se limita a 4 listas, e o visual parece datado perto do iOS atual. AirPlay funciona, Chromecast não.",
-        pros: ["Interface limpa", "AirPlay"],
-        cons: ["Listas grátis limitadas", "Sem Chromecast"],
+        name: "Flex IPTV",
+        meta: "Grátis · versão Pro US$ 5,99 · iOS 17.4 ou posterior",
+        text: "O Flex IPTV é grátis, com uma versão Pro de compra única vendida separadamente para iPhone/iPad e para Apple TV (US$ 5,99 cada). A página cita guia XMLTV, canais favoritos e gravação de transmissões ao vivo.",
+        pros: ["Pro com compra única", "Grava transmissões ao vivo"],
+        cons: ["Pro comprado de novo para Apple TV"],
       },
       {
         id: "smarters",
-        name: "Nº 4 — IPTV Smarters Pro",
-        meta: "Nota: ★ 3,5 · Grátis com compras no app",
-        text: "Um nome conhecido no mundo IPTV. A versão iOS fica atrás da de Android: a configuração é mais trabalhosa e a interface não parece nativa no iPhone. Aceita Xtream, mas exige várias etapas.",
-        pros: ["Aceita códigos Xtream"],
-        cons: ["Pouco otimizado para iOS", "Sem Chromecast nem offline"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · Grátis · Premium US$ 4,99 · iOS 15.6 ou posterior",
+        text: "O nome mais conhecido entre os players IPTV, também disponível na Apple TV. O Premium custa US$ 4,99. O seu rótulo de privacidade na App Store indica dados de uso que podem ser usados para rastrear você em apps e sites de outras empresas.",
+        pros: ["Preço baixo", "App para Apple TV", "Funciona a partir do iOS 15.6"],
+        cons: ["Dados usados para rastrear você (rótulo da App Store)"],
       },
       {
         id: "opus",
-        name: "Nº 5 — Opus IPTV Player",
-        meta: "Nota: ★ 3,7 · Grátis",
-        text: "O Opus aceita listas M3U e tem visual razoavelmente moderno. É grátis e sem paywall aparente, mas não tem Chromecast nem modo offline, e o suporte a Xtream é menos confiável que o da concorrência.",
-        pros: ["Totalmente grátis", "M3U"],
-        cons: ["Sem Chromecast nem offline", "Xtream pouco confiável"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · Grátis · planos pagos a partir de US$ 4,99 · iOS 15.1 ou posterior",
+        text: "O Opus aceita M3U e Xtream Codes e guia XMLTV personalizado, e sincroniza listas e progresso com uma conta Opus. O app para Apple TV puxa as suas listas por QR code. As opções pagas da página vão de US$ 4,99 a um plano anual de US$ 29,99 ou US$ 79,99 vitalício.",
+        pros: ["App para Apple TV", "Sincronização entre aparelhos"],
+        cons: ["Planos de até US$ 79,99", "Dados usados para rastrear você (rótulo da App Store)"],
       },
     ],
-
     stepsTitle: "Como instalar um app IPTV no iPhone (em 2 minutos)",
     stepsIntro: "Veja como sair do zero e começar a assistir em menos de 2 minutos com o EDGE IPTV:",
     steps: [
@@ -943,13 +919,11 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
 
   de: {
     slug: "beste-iptv-app-iphone",
-    metaTitle: "Beste IPTV-App für iPhone 2026: 5 Apps im Test",
-    metaDescription:
-      "Welche ist die beste IPTV-App fürs iPhone? Wir haben die 5 beliebtesten 2026 getestet: Einrichtung, Chromecast, Offline-Downloads und Bedienung unter iOS.",
-    socialDescription:
-      "5 IPTV-Apps fürs iPhone im Test 2026: Einrichtung, Chromecast und Offline-Wiedergabe.",
-    title: "Beste IPTV-App für iPhone 2026: 5 Apps im Test",
-    lead: "Wir haben die 5 beliebtesten IPTV-Apps auf dem iPhone getestet, um die schnellste, zuverlässigste und am einfachsten einzurichtende zu finden.",
+    metaTitle: "Beste IPTV-App für iPhone 2026: 5 Apps im Vergleich",
+    metaDescription: "Welche IPTV-App fürs iPhone 2026? 5 Apps aus dem App Store im Vergleich: Preis, Chromecast, Offline-Downloads und Apple TV, laut ihren Store-Seiten.",
+    socialDescription: "5 IPTV-Apps fürs iPhone im Vergleich: Preis, Chromecast, Offline-Downloads und Apple TV.",
+    title: "Beste IPTV-App für iPhone 2026: 5 Apps im Vergleich",
+    lead: "Wir haben 5 IPTV-Apps aus dem App Store verglichen, und zwar nach dem, was ihre Store-Seiten tatsächlich angeben: Preis, Chromecast, Offline-Downloads und Apple TV.",
     readTime: "7 Min.",
     author: "EDGE IPTV Team",
     keywords: [
@@ -963,11 +937,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "Blog",
     breadcrumb: "Beste IPTV-App für iPhone 2026",
 
-    intro:
-      "Ja, du **kannst IPTV auf dem iPhone schauen**, ganz ohne Jailbreak und ohne Apps außerhalb des App Store. Alle fünf Apps in diesem Test gibt es dort. Wir haben jede auf Einrichtungszeit, Wiedergabequalität, Chromecast und iOS-Integration geprüft, um die beste IPTV-App fürs iPhone 2026 zu finden.",
+    intro: "Ja, du **kannst IPTV auf dem iPhone schauen**, ganz ohne Jailbreak und ohne Apps außerhalb des App Store. Alle fünf Apps in diesem Vergleich gibt es dort. Wir haben Preis, Chromecast, Offline-Downloads und Apple TV verglichen und für jede Konkurrenz-App nur übernommen, was auf ihrer eigenen App-Store-Seite steht.",
     quickLabel: "Kurz gesagt",
-    quickAnswer:
-      "**EDGE IPTV** ist 2026 die beste IPTV-App fürs iPhone. Als einzige App in diesem Test bietet sie Chromecast, Offline-Downloads und eine Einrichtung in unter 2 Minuten. Der Download ist kostenlos, danach kostet sie nach 7 Tagen Gratis-Test 3,99 € im Monat.",
+    quickAnswer: "**EDGE IPTV** ist unsere Empfehlung fürs iPhone. Die App ist von uns, deshalb hält sich die Tabelle unten an nachprüfbare Fakten. Nur für iOS gebaut, vereint sie Chromecast und AirPlay, Offline-Downloads und keine Werbung. Der Download ist kostenlos mit 7 Tagen Gratis-Test, danach kostet sie 3,99 € im Monat oder 19,99 € im Jahr.",
     trialCta: "7 Tage kostenlos testen",
     trialCtaStore: "Im App Store 7 Tage kostenlos testen",
 
@@ -995,28 +967,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "Die 5 besten IPTV-Apps fürs iPhone im Vergleich",
+    tableTitle: "5 IPTV-Apps fürs iPhone im Vergleich",
     table: {
       app: "App",
-      rating: "Bewertung",
       price: "Preis",
       chromecast: "Chromecast",
       offline: "Offline",
-      setup: "Einrichtung",
+      appleTv: "Apple-TV-App",
     },
-    newLabel: "Neu",
-    topPick: "Platz 1",
+    tableNote: "Angaben zu den anderen Apps von ihren Seiten im US-App-Store, Stand 26. Oktober 2026 (Preise in Dollar). ✓: Die Seite der App nennt die Funktion; –: Ihre Seite erwähnt sie nicht (sie kann trotzdem vorhanden sein).",
+    topPick: "Unsere Wahl",
     prices: {
-      edge: "7 Tage gratis, dann 3,99 €/Monat",
-      iap: "Gratis (In-App-Käufe)",
-      free: "Gratis",
+      edge: "7 Tage Test, dann 3,99 €/Monat",
+      gse: "2,99 $ (Kauf-App)",
+      flex: "Gratis, Pro 5,99 $",
+      smarters: "Gratis, Premium 4,99 $",
+      opus: "Gratis, Tarife ab 4,99 $",
     },
-
-    edgeTitle: "Platz 1 der IPTV-Apps fürs iPhone: EDGE IPTV",
+    edgeTitle: "Unsere Wahl fürs iPhone: EDGE IPTV",
     iconAlt: "App-Symbol von EDGE IPTV, der besten IPTV-App fürs iPhone",
     trialBadge: "7 Tage kostenlos",
-    edgeSummary:
-      "Von Grund auf für iPhone und iPad gebaut, ist EDGE IPTV der einzige Player in diesem Test, der Chromecast, Offline-Downloads und eine durchgehend native iOS-Oberfläche vereint.",
+    edgeSummary: "Von Grund auf für iPhone und iPad gebaut, vereint EDGE IPTV Chromecast und AirPlay, Offline-Downloads und eine durchgehend native iOS-Oberfläche, ohne Werbung.",
     edgeFeatures: [
       "Einrichtung per Xtream Codes oder M3U in unter 2 Minuten",
       "Chromecast und AirPlay auf den Fernseher",
@@ -1026,47 +997,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "iPhone und iPad ab iOS 17",
     ],
     whyTitle: "Warum EDGE IPTV auf dem iPhone heraussticht",
-    why: [
-      "Die meisten IPTV-Player für iOS sind Portierungen von Android-Apps. Sie funktionieren, wirken auf dem iPhone aber fremd. EDGE IPTV wurde ausschließlich für iOS entwickelt, und das merkt man bei jeder Geste: Wischen fühlt sich natürlich an, die Tastatur erscheint da, wo man sie erwartet, und die App folgt Systemkonventionen wie dynamischer Schriftgröße und Dunkelmodus.",
-      "Den Unterschied macht **Chromecast**: Keine der vier anderen Apps in diesem Test kann auf einen Chromecast oder ein Google TV streamen. Zusammen mit den **Offline-Downloads** deckt EDGE IPTV beides ab, Zuhause und unterwegs, also genau das, worauf es iPhone-Nutzern ankommt.",
-    ],
-
+    why: ["Die meisten IPTV-Player für iOS sind Portierungen von Android-Apps. Sie funktionieren, wirken auf dem iPhone aber fremd. EDGE IPTV wurde ausschließlich für iOS entwickelt, und das merkt man bei jeder Geste: Wischen fühlt sich natürlich an, die Tastatur erscheint da, wo man sie erwartet, und die App folgt Systemkonventionen wie dynamischer Schriftgröße und Dunkelmodus.", "**Chromecast und Offline-Downloads** decken die zwei Arten ab, wie man auf dem iPhone schaut: auf dem Fernseher zu Hause und im Zug ohne Netz. Was die App nicht kann: EDGE IPTV nimmt kein Live-TV auf und hat keine Apple-TV-App (das Bild kommt per AirPlay auf den Fernseher). Wenn du das brauchst, sieh dir die Apps unten an."],
     othersTitle: "Weitere IPTV-Apps fürs iPhone, die man kennen sollte",
     others: [
       {
         id: "gse",
-        name: "Platz 2 — GSE Smart IPTV",
-        meta: "Bewertung: ★ 4,1 · Gratis mit In-App-Käufen",
-        text: "GSE gibt es seit Jahren, und die App hat eine treue Nutzerschaft. Sie unterstützt M3U und Xtream und bringt einen Programmführer mit. Erweiterte Funktionen wie Multiscreen kosten aber extra, und Chromecast fehlt.",
-        pros: ["M3U + Xtream", "Integrierter Programmführer"],
-        cons: ["Kein Chromecast", "Wichtige Funktionen kostenpflichtig"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · 2,99 $ · ab iOS 9",
+        text: "Einer der ältesten IPTV-Player unter iOS. Seine App-Store-Seite nennt M3U- und Xtream-Codes-Playlists, eine EPG-Zeitleiste, Chromecast, AirPlay, Aufnahme von Live-TV und Kindersicherung. Die App kostet beim Download, und laut ihrer Seite gab es seit November 2022 kein Update.",
+        pros: ["Chromecast und AirPlay", "Nimmt Live-TV auf"],
+        cons: ["Kostet schon beim Download", "Letztes Update: November 2022"],
       },
       {
         id: "flex",
-        name: "Platz 3 — Flex IPTV",
-        meta: "Bewertung: ★ 3,8 · Gratis mit In-App-Käufen",
-        text: "Flex IPTV hat eine aufgeräumte Oberfläche und unterstützt M3U-Playlists. Die Gratisversion ist auf 4 Playlists begrenzt, und das Design wirkt neben modernem iOS veraltet. AirPlay geht, Chromecast nicht.",
-        pros: ["Aufgeräumte Oberfläche", "AirPlay"],
-        cons: ["Begrenzte Gratis-Playlists", "Kein Chromecast"],
+        name: "Flex IPTV",
+        meta: "Gratis · Pro-Version 5,99 $ · ab iOS 17.4",
+        text: "Flex IPTV ist gratis, mit einer Pro-Version als Einmalkauf, getrennt für iPhone/iPad und für Apple TV (je 5,99 $). Die Seite nennt XMLTV-EPG, Lieblingssender und die Aufnahme von Live-Streams.",
+        pros: ["Pro als Einmalkauf", "Nimmt Live-Streams auf"],
+        cons: ["Pro für Apple TV extra"],
       },
       {
         id: "smarters",
-        name: "Platz 4 — IPTV Smarters Pro",
-        meta: "Bewertung: ★ 3,5 · Gratis mit In-App-Käufen",
-        text: "Ein bekannter Name in der IPTV-Welt. Die iOS-Version hinkt der Android-Version hinterher: Die Einrichtung ist umständlicher, und die Oberfläche wirkt auf dem iPhone nicht nativ. Xtream wird unterstützt, braucht aber mehrere Schritte.",
-        pros: ["Unterstützt Xtream Codes"],
-        cons: ["Kaum für iOS optimiert", "Weder Chromecast noch offline"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · Gratis · Premium 4,99 $ · ab iOS 15.6",
+        text: "Der bekannteste Name unter den IPTV-Playern, auch auf Apple TV. Premium kostet 4,99 $. Das Datenschutz-Etikett im App Store nennt Nutzungsdaten, die verwendet werden können, um dich über Apps und Websites anderer Unternehmen hinweg zu tracken.",
+        pros: ["Günstig", "Apple-TV-App", "Läuft ab iOS 15.6"],
+        cons: ["Daten zum Tracking (App-Store-Etikett)"],
       },
       {
         id: "opus",
-        name: "Platz 5 — Opus IPTV Player",
-        meta: "Bewertung: ★ 3,7 · Gratis",
-        text: "Opus unterstützt M3U-Playlists und sieht recht modern aus. Die App ist gratis ohne erkennbare Bezahlschranke, aber Chromecast und Offline-Modus fehlen, und die Xtream-Unterstützung ist unzuverlässiger als bei der Konkurrenz.",
-        pros: ["Komplett gratis", "M3U"],
-        cons: ["Weder Chromecast noch offline", "Unzuverlässiges Xtream"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · Gratis · Bezahl-Tarife ab 4,99 $ · ab iOS 15.1",
+        text: "Opus kann M3U und Xtream Codes und eine eigene XMLTV-EPG, und synchronisiert Playlists und Wiedergabestand über ein Opus-Konto. Die Apple-TV-App übernimmt deine Playlists per QR-Code. Die Bezahl-Optionen auf der Seite reichen von 4,99 $ bis zu einem Jahresabo für 29,99 $ oder 79,99 $ auf Lebenszeit.",
+        pros: ["Apple-TV-App", "Sync zwischen Geräten"],
+        cons: ["Tarife bis 79,99 $", "Daten zum Tracking (App-Store-Etikett)"],
       },
     ],
-
     stepsTitle: "IPTV-App auf dem iPhone einrichten (in 2 Minuten)",
     stepsIntro: "So kommst du mit EDGE IPTV in unter 2 Minuten vom Download zum ersten Sender:",
     steps: [
@@ -1157,13 +1123,11 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
 
   ar: {
     slug: "best-iptv-app-for-iphone",
-    metaTitle: "أفضل تطبيق IPTV للآيفون 2026: اختبرنا 5 تطبيقات",
-    metaDescription:
-      "ما أفضل تطبيق IPTV للآيفون؟ اختبرنا أشهر 5 تطبيقات في 2026: سرعة الإعداد، ودعم Chromecast، والتحميل للمشاهدة دون اتصال، وسهولة الاستخدام على iOS.",
-    socialDescription:
-      "اختبرنا 5 تطبيقات IPTV للآيفون في 2026: الإعداد وChromecast والمشاهدة دون اتصال.",
-    title: "أفضل تطبيق IPTV للآيفون 2026: اختبرنا 5 تطبيقات",
-    lead: "اختبرنا أشهر 5 تطبيقات IPTV على الآيفون لنجد الأسرع والأكثر ثباتًا والأسهل في الإعداد.",
+    metaTitle: "أفضل تطبيق IPTV للآيفون 2026: مقارنة 5 تطبيقات",
+    metaDescription: "أي تطبيق IPTV تختار للآيفون في 2026؟ قارنّا 5 تطبيقات من App Store في السعر وChromecast والتحميل دون اتصال وApple TV، وفق صفحاتها الرسمية.",
+    socialDescription: "مقارنة 5 تطبيقات IPTV للآيفون: السعر وChromecast والتحميل دون اتصال وApple TV.",
+    title: "أفضل تطبيق IPTV للآيفون 2026: مقارنة 5 تطبيقات",
+    lead: "قارنّا 5 تطبيقات IPTV من App Store بناءً على ما تذكره صفحة كل تطبيق فعلًا: السعر وChromecast والتحميل دون اتصال وApple TV.",
     readTime: "7 دقائق",
     author: "فريق EDGE IPTV",
     keywords: [
@@ -1177,11 +1141,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "المدونة",
     breadcrumb: "أفضل تطبيق IPTV للآيفون 2026",
 
-    intro:
-      "نعم، **يمكنك مشاهدة IPTV على الآيفون**، دون جيلبريك ودون تثبيت تطبيقات من خارج App Store. التطبيقات الخمسة في هذا الدليل متوفرة كلها هناك. اختبرنا كلًّا منها من حيث سرعة الإعداد وجودة التشغيل ودعم Chromecast والتكامل مع iOS لنختار أفضل تطبيق IPTV للآيفون في 2026.",
+    intro: "نعم، **يمكنك مشاهدة IPTV على الآيفون**، دون جيلبريك ودون تثبيت تطبيقات من خارج App Store. التطبيقات الخمسة في هذا الدليل متوفرة كلها هناك. قارنّاها في السعر وChromecast والتحميل دون اتصال وApple TV، واعتمدنا لكل تطبيق منافس على ما تذكره صفحته في App Store.",
     quickLabel: "الإجابة باختصار",
-    quickAnswer:
-      "**EDGE IPTV** هو أفضل تطبيق IPTV للآيفون في 2026. إنه التطبيق الوحيد في هذا الاختبار الذي يجمع بين Chromecast والتحميل للمشاهدة دون اتصال وإعداد في أقل من دقيقتين. تحميله مجاني، وبعد تجربة مجانية لسبعة أيام يكلّف 3.99 دولار شهريًا.",
+    quickAnswer: "**EDGE IPTV** هو اختيارنا للآيفون. التطبيق من صنعنا، لذلك يكتفي الجدول أدناه بحقائق يمكنك التحقق منها. صُمّم لنظام iOS وحده، ويجمع Chromecast وAirPlay والتحميل للمشاهدة دون اتصال، بلا إعلانات. تنزيله مجاني مع تجربة لمدة 7 أيام، ثم 3.99 دولار شهريًا أو 19.99 دولار سنويًا.",
     trialCta: "ابدأ تجربتك المجانية لسبعة أيام",
     trialCtaStore: "ابدأ تجربتك المجانية من App Store",
 
@@ -1207,28 +1169,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "أفضل 5 تطبيقات IPTV للآيفون: مقارنة جنبًا إلى جنب",
+    tableTitle: "5 تطبيقات IPTV للآيفون: مقارنة جنبًا إلى جنب",
     table: {
       app: "التطبيق",
-      rating: "التقييم",
       price: "السعر",
       chromecast: "Chromecast",
       offline: "دون اتصال",
-      setup: "الإعداد",
+      appleTv: "تطبيق Apple TV",
     },
-    newLabel: "جديد",
-    topPick: "الخيار الأول",
+    tableNote: "معلومات التطبيقات المنافسة مأخوذة من صفحاتها في App Store الأمريكي بتاريخ 26 أكتوبر 2026. ✓: صفحة التطبيق تذكر الميزة؛ –: صفحته لا تذكرها (وقد تكون موجودة رغم ذلك).",
+    topPick: "اختيارنا",
     prices: {
-      edge: "تجربة 7 أيام، ثم 3.99 دولار شهريًا",
-      iap: "مجاني (مشتريات داخلية)",
-      free: "مجاني",
+      edge: "تجربة 7 أيام، ثم 3.99 $ شهريًا",
+      gse: "2.99 $ (تطبيق مدفوع)",
+      flex: "مجاني، Pro بسعر 5.99 $",
+      smarters: "مجاني، Premium بسعر 4.99 $",
+      opus: "مجاني، خطط مدفوعة من 4.99 $",
     },
-
-    edgeTitle: "أفضل تطبيق IPTV للآيفون: EDGE IPTV",
+    edgeTitle: "اختيارنا للآيفون: EDGE IPTV",
     iconAlt: "أيقونة تطبيق EDGE IPTV، أفضل تطبيق IPTV للآيفون",
     trialBadge: "تجربة مجانية لسبعة أيام",
-    edgeSummary:
-      "صُمّم EDGE IPTV من الصفر للآيفون والآيباد، وهو المشغل الوحيد في هذا الاختبار الذي يجمع بين البث إلى Chromecast والتحميل للمشاهدة دون اتصال وواجهة iOS أصلية بالكامل.",
+    edgeSummary: "صُمّم EDGE IPTV من الصفر للآيفون والآيباد، ويجمع Chromecast وAirPlay والتحميل للمشاهدة دون اتصال وواجهة iOS أصلية بالكامل، بلا إعلانات.",
     edgeFeatures: [
       "إعداد عبر Xtream Codes أو M3U في أقل من دقيقتين",
       "Chromecast وAirPlay إلى التلفاز",
@@ -1238,47 +1199,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "آيفون وآيباد بنظام iOS 17 أو أحدث",
     ],
     whyTitle: "لماذا يتميّز EDGE IPTV على الآيفون",
-    why: [
-      "معظم مشغلات IPTV على iOS منقولة عن تطبيقات أندرويد. تعمل، لكنها تبدو غريبة على الآيفون. أما EDGE IPTV فصُمّم لنظام iOS وحده، ويظهر ذلك في كل لمسة: السحب طبيعي، ولوحة المفاتيح تظهر حيث تتوقعها، والتطبيق يلتزم بأعراف النظام مثل حجم النص الديناميكي والوضع الداكن.",
-      "**دعم Chromecast** هو ما يصنع الفرق: لا يستطيع أيٌّ من التطبيقات الأربعة الأخرى في هذا الاختبار البث إلى Chromecast أو Google TV. ومع **التحميل للمشاهدة دون اتصال**، يغطي EDGE IPTV الاستخدام في المنزل وخارجه، وهما أكثر ما يهمّ مستخدمي الآيفون.",
-    ],
-
+    why: ["معظم مشغلات IPTV على iOS منقولة عن تطبيقات أندرويد. تعمل، لكنها تبدو غريبة على الآيفون. أما EDGE IPTV فصُمّم لنظام iOS وحده، ويظهر ذلك في كل لمسة: السحب طبيعي، ولوحة المفاتيح تظهر حيث تتوقعها، والتطبيق يلتزم بأعراف النظام مثل حجم النص الديناميكي والوضع الداكن.", "يغطي **Chromecast والتحميل دون اتصال** طريقتي المشاهدة على الآيفون: على التلفاز في البيت، وفي القطار بلا شبكة. ما لا يفعله: لا يسجّل EDGE IPTV البث المباشر وليس له تطبيق على Apple TV (تُرسَل الصورة عبر AirPlay). إن كنت تحتاج ذلك، فاطّلع على التطبيقات أدناه."],
     othersTitle: "تطبيقات IPTV أخرى للآيفون تستحق المعرفة",
     others: [
       {
         id: "gse",
-        name: "رقم 2 — GSE Smart IPTV",
-        meta: "التقييم: ★ 4.1 · مجاني مع مشتريات داخلية",
-        text: "يوجد GSE منذ سنوات ولديه قاعدة مستخدمين وفية. يدعم M3U وXtream ويتضمن دليل برامج. لكن الميزات المتقدمة مثل تعدد الشاشات مدفوعة، ولا يدعم Chromecast.",
-        pros: ["دعم M3U وXtream", "دليل برامج مدمج"],
-        cons: ["لا يدعم Chromecast", "ميزات أساسية مدفوعة"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · 2.99 $ · iOS 9 أو أحدث",
+        text: "من أقدم مشغلات IPTV على iOS. تذكر صفحته في App Store قوائم M3U وXtream Codes ودليل برامج زمنيًا وChromecast وAirPlay وتسجيل البث المباشر والرقابة الأبوية. التطبيق مدفوع، ولم يُحدَّث منذ نوفمبر 2022 بحسب صفحته.",
+        pros: ["Chromecast وAirPlay", "يسجّل البث المباشر"],
+        cons: ["مدفوع منذ التنزيل", "آخر تحديث في نوفمبر 2022"],
       },
       {
         id: "flex",
-        name: "رقم 3 — Flex IPTV",
-        meta: "التقييم: ★ 3.8 · مجاني مع مشتريات داخلية",
-        text: "يتميّز Flex IPTV بواجهة مرتبة ويدعم قوائم M3U. النسخة المجانية محدودة بـ4 قوائم، وتصميمه يبدو قديمًا مقارنة بـiOS الحديث. يعمل AirPlay، أما Chromecast فلا.",
-        pros: ["واجهة مرتبة", "دعم AirPlay"],
-        cons: ["قوائم مجانية محدودة", "لا يدعم Chromecast"],
+        name: "Flex IPTV",
+        meta: "مجاني · نسخة Pro بسعر 5.99 $ · iOS 17.4 أو أحدث",
+        text: "Flex IPTV مجاني، مع نسخة Pro بشراء لمرة واحدة تُباع بشكل منفصل للآيفون/الآيباد ولـ Apple TV (‏5.99 $ لكل منهما). تذكر صفحته دليل XMLTV والقنوات المفضلة وتسجيل البث المباشر.",
+        pros: ["Pro بشراء لمرة واحدة", "يسجّل البث المباشر"],
+        cons: ["Pro يُشترى مجددًا لـ Apple TV"],
       },
       {
         id: "smarters",
-        name: "رقم 4 — IPTV Smarters Pro",
-        meta: "التقييم: ★ 3.5 · مجاني مع مشتريات داخلية",
-        text: "اسم معروف في عالم IPTV. لكن نسخة iOS متأخرة عن نسخة أندرويد: الإعداد أكثر تعقيدًا والواجهة لا تبدو أصلية على الآيفون. يدعم Xtream لكنه يتطلب عدة خطوات.",
-        pros: ["يدعم Xtream Codes"],
-        cons: ["غير محسّن لنظام iOS", "لا Chromecast ولا مشاهدة دون اتصال"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · مجاني · Premium بسعر 4.99 $ · iOS 15.6 أو أحدث",
+        text: "أشهر اسم بين مشغلات IPTV، ومتوفر أيضًا على Apple TV. نسخة Premium بسعر 4.99 $. يذكر ملصق الخصوصية في App Store بيانات استخدام قد تُستعمل لتتبّعك عبر تطبيقات ومواقع شركات أخرى.",
+        pros: ["سعر منخفض", "تطبيق Apple TV", "يعمل من iOS 15.6"],
+        cons: ["بيانات تُستخدم لتتبّعك (ملصق App Store)"],
       },
       {
         id: "opus",
-        name: "رقم 5 — Opus IPTV Player",
-        meta: "التقييم: ★ 3.7 · مجاني",
-        text: "يدعم Opus قوائم M3U ويبدو عصريًا إلى حد ما. إنه مجاني دون حواجز دفع واضحة، لكنه يفتقد Chromecast ووضع المشاهدة دون اتصال، ودعمه لـXtream أقل موثوقية من المنافسين.",
-        pros: ["مجاني بالكامل", "دعم M3U"],
-        cons: ["لا Chromecast ولا مشاهدة دون اتصال", "دعم Xtream غير موثوق"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · مجاني · خطط مدفوعة من 4.99 $ · iOS 15.1 أو أحدث",
+        text: "يدعم Opus قوائم M3U وXtream Codes ودليل XMLTV مخصصًا، ويزامن القوائم وموضع المشاهدة عبر حساب Opus. يستلم تطبيقه على Apple TV قوائمك عبر رمز QR. تتراوح الخيارات المدفوعة في صفحته بين 4.99 $ واشتراك سنوي بـ 29.99 $ أو 79.99 $ مدى الحياة.",
+        pros: ["تطبيق Apple TV", "مزامنة بين الأجهزة"],
+        cons: ["خطط تصل إلى 79.99 $", "بيانات تُستخدم لتتبّعك (ملصق App Store)"],
       },
     ],
-
     stepsTitle: "كيف تثبّت تطبيق IPTV على الآيفون (في دقيقتين)",
     stepsIntro: "إليك كيف تبدأ المشاهدة في أقل من دقيقتين مع EDGE IPTV:",
     steps: [
@@ -1364,13 +1320,11 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
 
   it: {
     slug: "migliore-app-iptv-iphone",
-    metaTitle: "Migliore app IPTV per iPhone 2026: 5 app provate",
-    metaDescription:
-      "Qual è la migliore app IPTV per iPhone? Abbiamo provato le 5 più popolari nel 2026: velocità di configurazione, Chromecast, download offline e uso su iOS.",
-    socialDescription:
-      "5 app IPTV per iPhone provate nel 2026: configurazione, Chromecast e visione offline.",
-    title: "Migliore app IPTV per iPhone 2026: 5 app provate",
-    lead: "Abbiamo provato le 5 app IPTV più popolari su iPhone per trovare la più veloce, la più affidabile e la più semplice da configurare.",
+    metaTitle: "Migliore app IPTV per iPhone 2026: 5 app a confronto",
+    metaDescription: "Quale app IPTV scegliere su iPhone nel 2026? 5 app dell'App Store a confronto: prezzo, Chromecast, download offline e Apple TV, dalle loro schede.",
+    socialDescription: "5 app IPTV per iPhone a confronto: prezzo, Chromecast, download offline e Apple TV.",
+    title: "Migliore app IPTV per iPhone 2026: 5 app a confronto",
+    lead: "Abbiamo confrontato 5 app IPTV dell'App Store in base a ciò che dice davvero la loro scheda: prezzo, Chromecast, download offline e Apple TV.",
     readTime: "7 min",
     author: "Team EDGE IPTV",
     keywords: [
@@ -1384,11 +1338,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "Blog",
     breadcrumb: "Migliore app IPTV per iPhone 2026",
 
-    intro:
-      "Sì, **puoi guardare l'IPTV sul tuo iPhone**, senza jailbreak e senza installare app fuori dall'App Store. Le cinque app di questa guida sono tutte lì. Le abbiamo provate su velocità di configurazione, qualità di riproduzione, Chromecast e integrazione con iOS per scegliere la migliore app IPTV per iPhone nel 2026.",
+    intro: "Sì, **puoi guardare l'IPTV sul tuo iPhone**, senza jailbreak e senza installare app fuori dall'App Store. Le cinque app di questa guida sono tutte lì. Le abbiamo confrontate su prezzo, Chromecast, download offline e Apple TV, prendendo per ogni concorrente solo ciò che indica la sua scheda sull'App Store.",
     quickLabel: "In breve",
-    quickAnswer:
-      "**EDGE IPTV** è la migliore app IPTV per iPhone nel 2026. È l'unica di questo test a riunire Chromecast, download offline e una configurazione in meno di 2 minuti. Il download è gratuito, poi costa 3,99 € al mese dopo 7 giorni di prova gratuita.",
+    quickAnswer: "**EDGE IPTV** è la nostra scelta per iPhone. L'app è nostra, quindi la tabella qui sotto si limita a fatti verificabili. Pensata solo per iOS, riunisce Chromecast e AirPlay, download offline e zero pubblicità. Il download è gratuito con 7 giorni di prova, poi costa 3,99 € al mese o 19,99 € all'anno.",
     trialCta: "Inizia la prova gratuita di 7 giorni",
     trialCtaStore: "Inizia la prova gratuita su App Store",
 
@@ -1416,28 +1368,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "Le 5 migliori app IPTV per iPhone a confronto",
+    tableTitle: "5 app IPTV per iPhone a confronto",
     table: {
       app: "App",
-      rating: "Voto",
       price: "Prezzo",
       chromecast: "Chromecast",
       offline: "Offline",
-      setup: "Configurazione",
+      appleTv: "App Apple TV",
     },
-    newLabel: "Nuova",
-    topPick: "N. 1",
+    tableNote: "Dati sui concorrenti presi dalle loro schede sull'App Store statunitense il 26 ottobre 2026 (prezzi in dollari). ✓: la scheda dell'app cita la funzione; –: la scheda non ne parla (può esistere comunque).",
+    topPick: "La nostra scelta",
     prices: {
       edge: "7 giorni di prova, poi 3,99 €/mese",
-      iap: "Gratis (acquisti in-app)",
-      free: "Gratis",
+      gse: "2,99 $ (app a pagamento)",
+      flex: "Gratis, Pro 5,99 $",
+      smarters: "Gratis, Premium 4,99 $",
+      opus: "Gratis, piani da 4,99 $",
     },
-
-    edgeTitle: "N. 1 tra le app IPTV per iPhone: EDGE IPTV",
+    edgeTitle: "La nostra scelta per iPhone: EDGE IPTV",
     iconAlt: "Icona dell'app EDGE IPTV, la migliore app IPTV per iPhone",
     trialBadge: "7 giorni di prova gratuita",
-    edgeSummary:
-      "Progettata da zero per iPhone e iPad, EDGE IPTV è l'unico lettore di questo test che riunisce Chromecast, download offline e un'interfaccia iOS completamente nativa.",
+    edgeSummary: "Progettata da zero per iPhone e iPad, EDGE IPTV riunisce Chromecast e AirPlay, download offline e un'interfaccia iOS completamente nativa, senza pubblicità.",
     edgeFeatures: [
       "Configurazione Xtream Codes o M3U in meno di 2 minuti",
       "Chromecast e AirPlay verso la TV",
@@ -1447,47 +1398,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "iPhone e iPad con iOS 17 o successivo",
     ],
     whyTitle: "Perché EDGE IPTV si distingue su iPhone",
-    why: [
-      "La maggior parte dei lettori IPTV per iOS sono adattamenti di app Android. Funzionano, ma si sente che non sono nati per l'iPhone. EDGE IPTV è stata progettata solo per iOS, e si vede in ogni gesto: gli scorrimenti sono naturali, la tastiera compare dove te l'aspetti e l'app rispetta le convenzioni del sistema come il testo dinamico e la modalità scura.",
-      "La differenza la fa **Chromecast**: nessuna delle altre quattro app di questo test può trasmettere a un Chromecast o a una Google TV. Insieme ai **download offline**, EDGE IPTV copre sia l'uso a casa sia quello fuori casa, i due che contano di più su iPhone.",
-    ],
-
+    why: ["La maggior parte dei lettori IPTV per iOS sono adattamenti di app Android. Funzionano, ma si sente che non sono nati per l'iPhone. EDGE IPTV è stata progettata solo per iOS, e si vede in ogni gesto: gli scorrimenti sono naturali, la tastiera compare dove te l'aspetti e l'app rispetta le convenzioni del sistema come il testo dinamico e la modalità scura.", "**Chromecast e download offline** coprono i due modi di guardare su iPhone: sulla TV di casa e in treno senza rete. Cosa non fa: EDGE IPTV non registra la TV in diretta e non ha un'app per Apple TV (l'immagine passa con AirPlay). Se ti servono, guarda le app qui sotto."],
     othersTitle: "Altre app IPTV per iPhone da conoscere",
     others: [
       {
         id: "gse",
-        name: "N. 2 — GSE Smart IPTV",
-        meta: "Voto: ★ 4,1 · Gratis con acquisti in-app",
-        text: "GSE esiste da anni e ha una base di utenti fedele. Supporta M3U e Xtream e include una guida TV. Ma le funzioni avanzate come il multischermo sono a pagamento, e manca Chromecast.",
-        pros: ["M3U + Xtream", "Guida TV integrata"],
-        cons: ["Niente Chromecast", "Funzioni chiave a pagamento"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · 2,99 $ · iOS 9 o successivo",
+        text: "Uno dei lettori IPTV più vecchi su iOS. La sua scheda sull'App Store cita playlist M3U e Xtream Codes, guida TV a timeline, Chromecast, AirPlay, registrazione della TV in diretta e controllo parentale. È un'app a pagamento e, secondo la scheda, non viene aggiornata da novembre 2022.",
+        pros: ["Chromecast e AirPlay", "Registra la TV in diretta"],
+        cons: ["A pagamento già al download", "Ultimo aggiornamento a novembre 2022"],
       },
       {
         id: "flex",
-        name: "N. 3 — Flex IPTV",
-        meta: "Voto: ★ 3,8 · Gratis con acquisti in-app",
-        text: "Flex IPTV ha un'interfaccia pulita e supporta le playlist M3U. La versione gratuita è limitata a 4 playlist e il design sembra datato rispetto a iOS moderno. AirPlay funziona, Chromecast no.",
-        pros: ["Interfaccia pulita", "AirPlay"],
-        cons: ["Playlist gratuite limitate", "Niente Chromecast"],
+        name: "Flex IPTV",
+        meta: "Gratis · versione Pro 5,99 $ · iOS 17.4 o successivo",
+        text: "Flex IPTV è gratis, con una versione Pro ad acquisto unico venduta a parte per iPhone/iPad e per Apple TV (5,99 $ ciascuna). La scheda cita guida XMLTV, canali preferiti e registrazione delle dirette.",
+        pros: ["Pro ad acquisto unico", "Registra le dirette"],
+        cons: ["Pro da ricomprare per Apple TV"],
       },
       {
         id: "smarters",
-        name: "N. 4 — IPTV Smarters Pro",
-        meta: "Voto: ★ 3,5 · Gratis con acquisti in-app",
-        text: "Un nome noto nel mondo IPTV. La versione iOS è indietro rispetto a quella Android: la configurazione è più macchinosa e l'interfaccia non sembra nativa su iPhone. Supporta Xtream, ma richiede diversi passaggi.",
-        pros: ["Supporta i codici Xtream"],
-        cons: ["Poco ottimizzata per iOS", "Né Chromecast né offline"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · Gratis · Premium 4,99 $ · iOS 15.6 o successivo",
+        text: "Il nome più noto tra i lettori IPTV, disponibile anche su Apple TV. Premium costa 4,99 $. La sua etichetta privacy sull'App Store indica dati di utilizzo che possono servire a tracciarti su app e siti di altre aziende.",
+        pros: ["Prezzo basso", "App per Apple TV", "Funziona da iOS 15.6"],
+        cons: ["Dati usati per tracciarti (etichetta App Store)"],
       },
       {
         id: "opus",
-        name: "N. 5 — Opus IPTV Player",
-        meta: "Voto: ★ 3,7 · Gratis",
-        text: "Opus supporta le playlist M3U e ha un aspetto abbastanza moderno. È gratis e senza paywall evidenti, ma mancano Chromecast e modalità offline, e il supporto Xtream è meno affidabile della concorrenza.",
-        pros: ["Completamente gratis", "M3U"],
-        cons: ["Né Chromecast né offline", "Xtream poco affidabile"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · Gratis · piani a pagamento da 4,99 $ · iOS 15.1 o successivo",
+        text: "Opus gestisce M3U e Xtream Codes e una guida XMLTV personalizzata, e sincronizza playlist e avanzamento con un account Opus. La sua app per Apple TV recupera le tue playlist con un codice QR. Le opzioni a pagamento della scheda vanno da 4,99 $ a un piano annuale da 29,99 $ o 79,99 $ a vita.",
+        pros: ["App per Apple TV", "Sincronizzazione tra dispositivi"],
+        cons: ["Piani fino a 79,99 $", "Dati usati per tracciarti (etichetta App Store)"],
       },
     ],
-
     stepsTitle: "Come installare un'app IPTV su iPhone (in 2 minuti)",
     stepsIntro: "Ecco come passare da zero alla visione in meno di 2 minuti con EDGE IPTV:",
     steps: [
@@ -1576,13 +1522,11 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
   },
   nl: {
     slug: "beste-iptv-app-iphone",
-    metaTitle: "Beste IPTV-app voor iPhone 2026: top 5 getest",
-    metaDescription:
-      "Op zoek naar de beste IPTV-app voor iPhone? We testten de top 5 van 2026: welke is het snelst ingesteld, ondersteunt Chromecast en werkt het best op iOS?",
-    socialDescription:
-      "We testten de top 5 IPTV-apps voor iPhone in 2026: snelheid van instellen, Chromecast, offline kijken.",
-    title: "Beste IPTV-app voor iPhone 2026: top 5 getest",
-    lead: "We testten de 5 populairste IPTV-apps op iPhone om de snelste, betrouwbaarste en makkelijkst in te stellen app te vinden.",
+    metaTitle: "Beste IPTV-app voor iPhone 2026: 5 apps vergeleken",
+    metaDescription: "Welke IPTV-app kies je in 2026 voor je iPhone? 5 apps uit de App Store vergeleken op prijs, Chromecast, offline kijken en Apple TV, volgens hun pagina.",
+    socialDescription: "5 IPTV-apps voor iPhone vergeleken: prijs, Chromecast, offline downloads en Apple TV.",
+    title: "Beste IPTV-app voor iPhone 2026: 5 apps vergeleken",
+    lead: "We vergeleken 5 IPTV-apps uit de App Store op wat hun pagina echt zegt: prijs, Chromecast, offline downloads en Apple TV.",
     readTime: "7 min lezen",
     author: "Team EDGE IPTV",
     keywords: [
@@ -1596,11 +1540,9 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
     blog: "Blog",
     breadcrumb: "Beste IPTV-app voor iPhone 2026",
 
-    intro:
-      "Ja, je **kunt IPTV kijken op je iPhone**, en je hebt geen jailbreak of buiten de App Store geïnstalleerde app nodig. Alle vijf de apps in deze gids staan in de App Store. We testten ze op snelheid van instellen, streamkwaliteit, Chromecast-ondersteuning en integratie met iOS om de beste IPTV-app voor iPhone in 2026 te vinden.",
+    intro: "Ja, je **kunt IPTV kijken op je iPhone**, en je hebt geen jailbreak of buiten de App Store geïnstalleerde app nodig. Alle vijf de apps in deze gids staan in de App Store. We vergeleken ze op prijs, Chromecast, offline downloads en Apple TV, en namen voor elke concurrent alleen over wat op zijn eigen App Store-pagina staat.",
     quickLabel: "Kort antwoord",
-    quickAnswer:
-      "**EDGE IPTV** is de beste IPTV-app voor iPhone in 2026. Het is de enige app in deze test met Chromecast, offline downloads en instellen in minder dan 2 minuten. Gratis te downloaden, daarna € 3,99 per maand na 7 dagen gratis proberen.",
+    quickAnswer: "**EDGE IPTV** is onze keuze voor iPhone. De app is van ons, dus de tabel hieronder houdt het bij feiten die je kunt nagaan. Alleen voor iOS gebouwd, met Chromecast en AirPlay, offline downloads en geen advertenties. Gratis te downloaden met 7 dagen gratis proberen, daarna € 3,99 per maand of € 19,99 per jaar.",
     trialCta: "Probeer 7 dagen gratis",
     trialCtaStore: "Probeer 7 dagen gratis in de App Store",
 
@@ -1627,24 +1569,27 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       },
     ],
 
-    tableTitle: "Top 5 IPTV-apps voor iPhone: vergelijking",
+    tableTitle: "5 IPTV-apps voor iPhone: vergelijking",
     table: {
       app: "App",
-      rating: "Beoordeling",
       price: "Prijs",
       chromecast: "Chromecast",
       offline: "Offline",
-      setup: "Instellen",
+      appleTv: "Apple TV-app",
     },
-    newLabel: "Nieuw",
+    tableNote: "Gegevens over de andere apps van hun pagina's in de Amerikaanse App Store, op 26 oktober 2026 (prijzen in dollars). ✓: de pagina van de app noemt de functie; –: de pagina noemt haar niet (ze kan wel bestaan).",
     topPick: "Onze keuze",
-    prices: { edge: "7 dagen gratis, daarna € 3,99/mnd", iap: "Gratis (in-app)", free: "Gratis" },
-
-    edgeTitle: "Beste IPTV-app voor iPhone: EDGE IPTV",
+    prices: {
+      edge: "7 dagen gratis, daarna € 3,99/mnd",
+      gse: "$ 2,99 (betaalde app)",
+      flex: "Gratis, Pro $ 5,99",
+      smarters: "Gratis, Premium $ 4,99",
+      opus: "Gratis, abonnementen vanaf $ 4,99",
+    },
+    edgeTitle: "Onze keuze voor iPhone: EDGE IPTV",
     iconAlt: "App-icoon van EDGE IPTV, de beste IPTV-app voor iPhone",
     trialBadge: "7 dagen gratis",
-    edgeSummary:
-      "EDGE IPTV is vanaf de basis gebouwd voor iPhone en iPad, en is de enige speler in deze test die Chromecast, offline downloads en een volledig native iOS-interface in één app combineert.",
+    edgeSummary: "EDGE IPTV is vanaf de basis gebouwd voor iPhone en iPad, en combineert Chromecast en AirPlay, offline downloads en een volledig native iOS-interface in één app, zonder advertenties.",
     edgeFeatures: [
       "Instellen met Xtream Codes of M3U in minder dan 2 minuten",
       "Chromecast en AirPlay naar je tv",
@@ -1654,47 +1599,42 @@ export const BEST_IPHONE_COPY: Record<Lang, BestIphoneCopy> = {
       "iPhone en iPad met iOS 17 of nieuwer",
     ],
     whyTitle: "Waarom EDGE IPTV opvalt op iPhone",
-    why: [
-      "De meeste IPTV-spelers voor iOS zijn overgezet van Android. Ze werken, maar voelen vreemd aan op iPhone. EDGE IPTV is alleen voor iOS ontworpen, en dat merk je bij elke handeling: gebaren voelen natuurlijk, het toetsenbord verschijnt waar je het verwacht en de app volgt systeemconventies zoals Dynamic Type en de donkere modus.",
-      "**Chromecast-ondersteuning** maakt hier het verschil: geen van de andere vier apps in deze test kan casten naar een Chromecast of Google TV. Samen met **offline downloads** dekt de app zowel thuis als onderweg, de twee situaties waar iPhone-gebruikers het meest om geven.",
-    ],
-
+    why: ["De meeste IPTV-spelers voor iOS zijn overgezet van Android. Ze werken, maar voelen vreemd aan op iPhone. EDGE IPTV is alleen voor iOS ontworpen, en dat merk je bij elke handeling: gebaren voelen natuurlijk, het toetsenbord verschijnt waar je het verwacht en de app volgt systeemconventies zoals Dynamic Type en de donkere modus.", "**Chromecast en offline downloads** dekken de twee manieren waarop je op een iPhone kijkt: op de tv thuis en in de trein zonder bereik. Wat de app niet doet: EDGE IPTV neemt geen live tv op en heeft geen Apple TV-app (het beeld gaat via AirPlay). Heb je dat nodig, kijk dan naar de apps hieronder."],
     othersTitle: "Andere IPTV-apps voor iPhone om te kennen",
     others: [
       {
         id: "gse",
-        name: "#2 — GSE Smart IPTV",
-        meta: "Beoordeling: ★ 4.1 · Gratis met in-app-aankopen",
-        text: "GSE bestaat al jaren en heeft een trouwe gebruikersgroep. De app ondersteunt M3U en Xtream Codes en heeft een ingebouwde EPG. Geavanceerde functies zoals multiscreen zitten achter een in-app-aankoop, en Chromecast wordt niet ondersteund.",
-        pros: ["M3U + Xtream", "Ingebouwde EPG"],
-        cons: ["Geen Chromecast", "Belangrijke functies betaald"],
+        name: "GSE SMART IPTV PRO",
+        meta: "GSE Technology Ltd · $ 2,99 · iOS 9 of nieuwer",
+        text: "Een van de oudste IPTV-spelers op iOS. Zijn App Store-pagina noemt M3U- en Xtream Codes-playlists, een EPG-tijdlijn, Chromecast, AirPlay, live tv opnemen en ouderlijk toezicht. Het is een betaalde app, en volgens de pagina is hij sinds november 2022 niet bijgewerkt.",
+        pros: ["Chromecast en AirPlay", "Neemt live tv op"],
+        cons: ["Betalen bij het downloaden", "Laatste update: november 2022"],
       },
       {
         id: "flex",
-        name: "#3 — Flex IPTV",
-        meta: "Beoordeling: ★ 3.8 · Gratis met in-app-aankopen",
-        text: "Flex IPTV heeft een overzichtelijke interface en ondersteunt M3U-playlists. De gratis versie is beperkt tot 4 opgeslagen playlists, en de interface oogt gedateerd naast modern iOS-design. AirPlay werkt, Chromecast niet.",
-        pros: ["Overzichtelijke interface", "AirPlay"],
-        cons: ["Beperkt aantal gratis playlists", "Geen Chromecast"],
+        name: "Flex IPTV",
+        meta: "Gratis · Pro-versie $ 5,99 · iOS 17.4 of nieuwer",
+        text: "Flex IPTV is gratis, met een Pro-versie als eenmalige aankoop, apart te koop voor iPhone/iPad en voor Apple TV ($ 5,99 per stuk). De pagina noemt XMLTV-EPG, favoriete zenders en live streams opnemen.",
+        pros: ["Pro als eenmalige aankoop", "Neemt live streams op"],
+        cons: ["Pro opnieuw kopen voor Apple TV"],
       },
       {
         id: "smarters",
-        name: "#4 — IPTV Smarters Pro",
-        meta: "Beoordeling: ★ 3.5 · Gratis met in-app-aankopen",
-        text: "Een bekende naam in de IPTV-wereld. De iOS-versie loopt achter op de Android-versie: instellen is omslachtiger en de interface voelt niet native op iPhone. Xtream Codes worden ondersteund, maar het instellen kost meerdere stappen.",
-        pros: ["Xtream Codes"],
-        cons: ["Niet geoptimaliseerd voor iOS", "Geen Chromecast of offline"],
+        name: "Smarters Pro",
+        meta: "Tech Smarters Private Limited · Gratis · Premium $ 4,99 · iOS 15.6 of nieuwer",
+        text: "De bekendste naam onder de IPTV-spelers, ook op Apple TV. Premium kost $ 4,99. Het privacylabel in de App Store noemt gebruiksgegevens die gebruikt kunnen worden om je te volgen via apps en websites van andere bedrijven.",
+        pros: ["Lage prijs", "Apple TV-app", "Werkt vanaf iOS 15.6"],
+        cons: ["Gegevens om je te volgen (App Store-label)"],
       },
       {
         id: "opus",
-        name: "#5 — Opus IPTV Player",
-        meta: "Beoordeling: ★ 3.7 · Gratis",
-        text: "Opus ondersteunt M3U-playlists en ziet er redelijk modern uit. De app is gratis zonder duidelijke betaalmuur, maar mist Chromecast en een offline modus, en de ondersteuning voor Xtream Codes is minder betrouwbaar dan bij de concurrentie.",
-        pros: ["Volledig gratis", "M3U"],
-        cons: ["Geen Chromecast of offline", "Onbetrouwbare Xtream Codes"],
+        name: "IPTV Player - Opus",
+        meta: "BIEL LLC · Gratis · abonnementen vanaf $ 4,99 · iOS 15.1 of nieuwer",
+        text: "Opus ondersteunt M3U en Xtream Codes en een eigen XMLTV-EPG, en synchroniseert playlists en kijkvoortgang via een Opus-account. De Apple TV-app haalt je playlists op met een QR-code. De betaalde opties op de pagina lopen van $ 4,99 tot een jaarabonnement van $ 29,99 of $ 79,99 voor altijd.",
+        pros: ["Apple TV-app", "Synchronisatie tussen apparaten"],
+        cons: ["Abonnementen tot $ 79,99", "Gegevens om je te volgen (App Store-label)"],
       },
     ],
-
     stepsTitle: "Zo download je een IPTV-app op iPhone (in 2 minuten ingesteld)",
     stepsIntro: "Zo ga je met EDGE IPTV in minder dan 2 minuten van niets naar kijken:",
     steps: [
