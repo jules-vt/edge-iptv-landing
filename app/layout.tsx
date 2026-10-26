@@ -5,10 +5,11 @@ import { WebVitals } from "./web-vitals";
 import { SITE, defaultOG, defaultTwitter, homeAlternates } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-  // Title optimized for: "best iptv app for iphone", "iptv player ios", "edge iptv"
-  title: "EDGE IPTV — Best IPTV App for iPhone & iPad 2026 | Free Download",
+  // Fallback for pages without their own metadata (blog index, legal pages,
+  // 404). Same rule as everywhere else: no "#1", no "free" without the trial.
+  title: "EDGE IPTV — IPTV Player for iPhone & iPad (M3U & Xtream)",
   description:
-    "EDGE IPTV is the #1 IPTV player for iPhone & iPad. Watch live TV, movies and series with easy Xtream codes or M3U setup, Chromecast, offline viewing and 4K. Free download.",
+    "EDGE IPTV plays your M3U and Xtream playlists on iPhone and iPad: live TV, movies, series, TV guide, Chromecast, AirPlay. 7-day free trial, then a subscription.",
   authors: [{ name: SITE.name }],
   keywords: [
     "edge iptv",
@@ -21,8 +22,7 @@ export const metadata: Metadata = {
     "m3u player iphone",
     "chromecast iptv",
     "iptv offline viewing",
-    "free iptv player iphone",
-    "best iptv player 2026",
+    "iptv player iphone",
   ],
   robots: "index, follow",
   icons: {
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
     ...defaultOG,
     type: "website",
     url: SITE.url,
-    title: "EDGE IPTV — Best IPTV App for iPhone & iPad 2026",
+    title: "EDGE IPTV — IPTV Player for iPhone & iPad",
     description:
-      "The #1 IPTV player for iPhone & iPad. Live TV, movies and series with 2-minute setup, Chromecast, offline mode and 4K. Free download.",
+      "EDGE IPTV plays your M3U and Xtream playlists on iPhone and iPad: live TV, movies, series, TV guide, Chromecast, AirPlay. 7-day free trial, then a subscription.",
   },
   twitter: {
     ...defaultTwitter,
-    title: "EDGE IPTV — Best IPTV App for iPhone & iPad 2026",
+    title: "EDGE IPTV — IPTV Player for iPhone & iPad",
     description:
-      "The #1 IPTV player for iOS. Watch live TV and movies with Chromecast, offline mode and 4K. Free download.",
+      "EDGE IPTV plays your M3U and Xtream playlists on iPhone and iPad: live TV, movies, series, TV guide, Chromecast, AirPlay. 7-day free trial, then a subscription.",
   },
   other: {
     "apple-itunes-app": `app-id=${SITE.appStoreUrl.match(/id(\d+)/)?.[1]}`,
