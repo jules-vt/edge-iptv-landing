@@ -9,26 +9,27 @@ import { defaultOG, defaultTwitter, SITE } from '@/lib/seo-config';
 import { buildBlogAlternates } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  // Title optimized for: "what is m3u playlist", "m3u playlist url", "m3u url", "how to use m3u playlist"
-  title: 'What is an M3U Playlist? Setup Guide 2026 | Get Your M3U URL',
+  // Search Console (2026-10-24): "what is a playlist url" and "what is an m3u
+  // playlist" rank around position 8 with no clicks, so the title answers them.
+  title: 'What Is an M3U Playlist URL? Set It Up on iPhone (2026)',
   description:
-    'Learn what an M3U playlist is, how to get your M3U URL, add it to EDGE IPTV, and fix common errors. Complete 2026 guide for iPhone and iPad.',
+    'An M3U playlist URL is the link your IPTV provider gives you to load its channels. Where to find it, how to add it on iPhone or iPad, and how to fix errors.',
   alternates: buildBlogAlternates('m3u-playlist-setup-guide', 'en'),
   openGraph: {
     ...defaultOG,
-    title: 'What is an M3U Playlist? How to Get & Use Your M3U URL (2026)',
+    title: 'What Is an M3U Playlist URL? Set It Up on iPhone (2026)',
     description:
-      'Complete guide: what M3U playlists are, how to find your M3U URL, configure it in EDGE IPTV, and troubleshoot M3U vs M3U8 issues.',
+      'An M3U playlist URL is the link your IPTV provider gives you to load its channels. Where to find it, how to add it on iPhone or iPad, and how to fix errors.',
     images: [`${SITE.url}/images/series-view.png`],
     type: 'article',
     publishedTime: '2026-01-12',
-    modifiedTime: '2026-03-11',
+    modifiedTime: '2026-10-26',
   },
   twitter: {
     ...defaultTwitter,
-    title: 'What is an M3U Playlist? 2026 Setup Guide',
+    title: 'What Is an M3U Playlist URL? Set It Up on iPhone (2026)',
     description:
-      'Discover what M3U playlists are, how to get your M3U URL, add it to EDGE IPTV on iPhone & iPad.',
+      'An M3U playlist URL is the link your IPTV provider gives you to load its channels. Where to find it, how to add it on iPhone or iPad, and how to fix errors.',
   },
 };
 
@@ -52,7 +53,7 @@ export default function M3UPlaylistGuide() {
       }
     },
     "datePublished": "2026-01-12",
-    "dateModified": "2026-03-11"
+    "dateModified": "2026-10-26"
   };
 
   return (
@@ -83,6 +84,12 @@ export default function M3UPlaylistGuide() {
         </p>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">What is an M3U Playlist?</h2>
+
+        <p>
+          <strong>In short:</strong> an M3U playlist is a text file that lists your IPTV channels, and the
+          playlist URL (or M3U URL) is the web link to that file, given to you by your IPTV provider. Paste
+          that link into an IPTV player such as EDGE IPTV and it loads the channels.
+        </p>
         
         <div className="bg-blue-50 rounded-xl p-6 my-6">
           <div className="flex items-start gap-4">
